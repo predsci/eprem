@@ -1,0 +1,202 @@
+numNodesPerStream: 20
+numRowsPerFace: 2
+numColumnsPerFace: 2
+numEnergySteps: 12
+numMuSteps: 6
+rScale: 4.6505e-03
+flowMag: 5.0000e+07
+mhdDensityAu: 8.3000e+00
+mhdBAu: 1.6000e-05
+simStartTime: 0.0000e+00
+tDel: 4.1667e-02
+simStopTime: 5.0000e-02
+numEpSteps: 5
+aziSunStart: 0.0000e+00
+omegaSun: 1.4298e-03
+lamo: 1.0000e+00
+dsh_min: 5.0000e-05
+dsh_hel_min: 2.5000e-04
+kperxkpar: 1.0000e-02
+mfpRadialPower: 2.0000e+00
+rigidityPower: 3.3333e-01
+focusingLimit: 1.0000e+00
+eMin: 1.0000e+00
+eMax: 2.0000e+02
+useStochastic: 0
+useEPBoundary: 1
+checkSeedPopulation: 1
+seedFunctionTest: 1
+fluxLimiter: 1
+gammaEhigh: 0.0000e+00
+gammaElow: 0.0000e+00
+FailModeDump: 1
+outputFloat: 0
+unifiedOutput: 1
+unifiedOutputTime: 0.0000e+00
+pointObserverOutput: 0
+pointObserverOutputTime: 0.0000e+00
+streamFluxOutput: 0
+streamFluxOutputTime: 0.0000e+00
+subTimeCouple: 0
+epremDomain: 0
+epremDomainOutputTime: 0.0000e+00
+unstructuredDomain: 0
+unstructuredDomainOutputTime: 0.0000e+00
+useAdiabaticChange: 0
+useAdiabaticFocus: 0
+useShellDiffusion: 0
+useParallelDiffusion: 0
+useDrift: 0
+numSpecies: 1
+mass: 1.0000e+00 
+charge: 1.0000e+00 
+numObservers: 0
+obsR: Using default values.  First element: 0.0000e+00 
+obsTheta: Using default values.  First element: 0.0000e+00 
+obsPhi: Using default values.  First element: 0.0000e+00 
+idw_p: 3.0000e+00
+masTriLinear: 1
+masCouple: 0
+masCorRotateFake: 0
+masHelCouple: 0
+masNumFiles: 0
+masHelNumFiles: 0
+useMasSteadyStateDt: 1
+masSteadyState: 1
+masDirectory:  
+masHelDirectory:  
+masDigits: 3
+masHelDigits: 3
+masCoupledTime: 1
+masStartTime: 0.0000e+00
+epEquilibriumCalcDuration: 0.0000e+00
+preEruptionDuration: 0.0000e+00
+masRadialMin: 0.0000e+00
+masRadialMax: 0.0000e+00
+masHelRadialMin: 0.0000e+00
+masHelRadialMax: 0.0000e+00
+masVmin: 5.0000e+06
+masInitFromOuterBoundary: 2
+masInitMonteCarlo: 0
+masInitRadius: 0.0000e+00
+masInitTimeStep: 1.1574e-05
+useManualStreamSpawnLoc: 0
+parallelFlow: 0.0000e+00
+fieldAligned: 0
+epCalcStartTime: 0.0000e+00
+masRotateSolution: 1
+useBoundaryFunction: 1
+boundaryFunctionInitDomain: 1
+boundaryFunctAmplitude: 1.0000e+00
+boundaryFunctXi: 1.0000e-01
+boundaryFunctGamma: 2.0000e+00
+boundaryFunctBeta: 1.7000e+00
+boundaryFunctEcutoff: 1.0000e+00
+shockSolver: 0
+shockDetectPercent: 1.0000e+00
+minInjectionEnergy: 1.0000e-02
+shockInjectionFactor: 1.0000e+00
+idealShock: 0
+idealShockSharpness: 1.0000e+00
+idealShockScaleLength: 4.6491e-03
+idealShockJump: 4.0000e+00
+idealShockFalloff: 1.0000e+00
+idealShockSpeed: 1.5000e+08
+idealShockInitTime: 0.0000e+00
+idealShockTheta: 1.5708e+00
+idealShockPhi: 0.0000e+00
+idealShockWidth: 0.0000e+00
+dumpFreq: 1
+outputRestart: 0
+dumpOnAbort: 0
+saveRestartFile: 0
+warningsFile: warningsXXX.txt
+adiabaticChangeAlg: 1
+adiabaticFocusAlg: 1
+
+******************************************************************
+*******************  EPREM Version 1.14.2  ************************
+******************************************************************
+Shells: 20
+Processors: 6
+Inner boundary: 0.999570
+Start: 0.000000 JD, EP Calc: 0.000000 JD
+******************************************************************
+
+ 
+*************************************************
+****SEEDING NODES********************************
+*************************************************
+Step: 000001  TIME: -1.44287194e+02  [JD  -0.83333]  DTIME: 7.21435969e+00  [JD 0.04167]
+  --> Compute time for step:             0.0000 seconds.
+Step: 000002  TIME: -1.37072834e+02  [JD  -0.79167]  DTIME: 7.21435969e+00  [JD 0.04167]
+  --> Compute time for step:             0.0001 seconds.
+Step: 000003  TIME: -1.29858475e+02  [JD  -0.75000]  DTIME: 7.21435969e+00  [JD 0.04167]
+  --> Compute time for step:             0.0003 seconds.
+Step: 000004  TIME: -1.22644115e+02  [JD  -0.70833]  DTIME: 7.21435969e+00  [JD 0.04167]
+  --> Compute time for step:             0.0000 seconds.
+Step: 000005  TIME: -1.15429755e+02  [JD  -0.66667]  DTIME: 7.21435969e+00  [JD 0.04167]
+  --> Compute time for step:             0.0000 seconds.
+Step: 000006  TIME: -1.08215395e+02  [JD  -0.62500]  DTIME: 7.21435969e+00  [JD 0.04167]
+  --> Compute time for step:             0.0000 seconds.
+Step: 000007  TIME: -1.01001036e+02  [JD  -0.58333]  DTIME: 7.21435969e+00  [JD 0.04167]
+  --> Compute time for step:             0.0000 seconds.
+Step: 000008  TIME: -9.37866760e+01  [JD  -0.54167]  DTIME: 7.21435969e+00  [JD 0.04167]
+  --> Compute time for step:             0.0000 seconds.
+Step: 000009  TIME: -8.65723163e+01  [JD  -0.50000]  DTIME: 7.21435969e+00  [JD 0.04167]
+  --> Compute time for step:             0.0000 seconds.
+Step: 000010  TIME: -7.93579566e+01  [JD  -0.45833]  DTIME: 7.21435969e+00  [JD 0.04167]
+  --> Compute time for step:             0.0000 seconds.
+Step: 000011  TIME: -7.21435969e+01  [JD  -0.41667]  DTIME: 7.21435969e+00  [JD 0.04167]
+  --> Compute time for step:             0.0000 seconds.
+Step: 000012  TIME: -6.49292373e+01  [JD  -0.37500]  DTIME: 7.21435969e+00  [JD 0.04167]
+  --> Compute time for step:             0.0000 seconds.
+Step: 000013  TIME: -5.77148776e+01  [JD  -0.33333]  DTIME: 7.21435969e+00  [JD 0.04167]
+  --> Compute time for step:             0.0000 seconds.
+Step: 000014  TIME: -5.05005179e+01  [JD  -0.29167]  DTIME: 7.21435969e+00  [JD 0.04167]
+  --> Compute time for step:             0.0000 seconds.
+Step: 000015  TIME: -4.32861582e+01  [JD  -0.25000]  DTIME: 7.21435969e+00  [JD 0.04167]
+  --> Compute time for step:             0.0000 seconds.
+Step: 000016  TIME: -3.60717985e+01  [JD  -0.20833]  DTIME: 7.21435969e+00  [JD 0.04167]
+  --> Compute time for step:             0.0000 seconds.
+Step: 000017  TIME: -2.88574388e+01  [JD  -0.16667]  DTIME: 7.21435969e+00  [JD 0.04167]
+  --> Compute time for step:             0.0000 seconds.
+Step: 000018  TIME: -2.16430791e+01  [JD  -0.12500]  DTIME: 7.21435969e+00  [JD 0.04167]
+  --> Compute time for step:             0.0000 seconds.
+Step: 000019  TIME: -1.44287194e+01  [JD  -0.08333]  DTIME: 7.21435969e+00  [JD 0.04167]
+  --> Compute time for step:             0.0000 seconds.
+Step: 000020  TIME: -7.21435969e+00  [JD  -0.04167]  DTIME: 7.21435969e+00  [JD 0.04167]
+  --> Compute time for step:             0.0000 seconds.
+ 
+*************************************************
+****STARTING SIMULATION**************************
+*************************************************
+NOTE:  Initializing seed population.
+NOTE:  Syncing t_global [5.15143483e-14] to config.simStartTimeDay [0.00000000e+00]
+ 
+*************************************************
+****STARTING ENERGETIC PARTICLE CALCULATIONS*****
+*************************************************
+Step: 000021  TIME: 0.00000000e+00  [JD   0.00000]  DTIME: 7.21435969e+00  [JD 0.04167]
+  --> NOTE:  Reinitializing seed population.
+  --> NOTE:  Reinitializing seed population.
+  --> Maximum subcycles for Adiabatic Change:   0 
+  --> Maximum subcycles for Adiabatic Focusing: 0 
+  --> Minimum MFP timescale (tau): 4.24603415e-04    DTIME/TAU:       16990.82
+  --> Compute time for step:             0.0022 seconds.
+Step: 000022  TIME: 7.21435969e+00  [JD   0.04167]  DTIME: 7.21435969e+00  [JD 0.04167]
+  --> IO: Wrote observer data to file.
+  --> NOTE:  Reinitializing seed population.
+  --> Maximum subcycles for Adiabatic Change:   0 
+  --> Maximum subcycles for Adiabatic Focusing: 0 
+  --> Minimum MFP timescale (tau): 4.24603415e-04    DTIME/TAU:       16990.82
+  --> Compute time for step:             0.0021 seconds.
+ 
+********************************
+****RUN COMPLETE****************
+********************************
+Run started  on Tue Jul 25 15:59:09 2023
+Run finished on Tue Jul 25 15:59:09 2023
+Run real time duration is 0.000000 minutes (or 0.000000 hours, or 0.000000 days)
+Run data time duration is 0.0500 days
+********************************

@@ -1,0 +1,166 @@
+#-------------------------------------------------------------------------------
+#  Input file for running EPREM-MAS coupled run.
+#-------------------------------------------------------------------------------
+
+# Grid parameters.
+# ================
+
+# Number of rows and columns of streams per face.
+# Total number of streams = (6 * numRowsPerFace * numColumnsPerFace).
+numRowsPerFace=2
+numColumnsPerFace=2
+
+# Number of nodes per stream.
+numNodesPerStream=192
+
+# Number of energy levels.
+numEnergySteps=8
+
+# Number of pitch angle steps.
+numMuSteps=4
+
+#Whether to use the uniform distribution of nodes or not
+# 0 Don't use
+# 1 One node cross + const time step
+# 2 All nodes cross + const time step
+masInitFromOuterBoundary=2
+
+#Time step for the backward propogation of nodes [JD]
+masInitTimeStep=0.0001
+
+# MAS information.
+# ================
+
+# EPREM-MAS coupled run flag.
+masCouple=1
+
+# Directory of MAS run.
+masDirectory="../input/data/"
+
+# Simulation times.
+# =================
+
+# Relaxation time (days).
+epEquilibriumCalcDuration=0.0
+
+# Pre-eruption time (days).
+preEruptionDuration=0.0
+
+# Core parameters.
+# ================
+
+# Minimum and maximum energies (MeV/nucleon).
+eMin=1.0
+eMax=500.0
+
+# Mean-free-path (AU) at 1 AU and 1 GV.
+lamo=1.0
+
+mfpRadialPower=2.0
+
+# Use particle drifts.
+useDrift=0
+
+# Use perpendicular diffusion.
+useShellDiffusion=0
+
+# Efficiency of perpendicular diffusion (Kper/Kpar).
+kperxkpar=0.01
+
+# IO parameters.
+# ==============
+
+# Output all mhd and particle data for every node along streams (NetCDF).
+unifiedOutput=1
+
+# Output position data for entire domain (NetCDF).
+epremDomain=1
+
+# Output cadence for all output and restart files (steps).
+dumpFreq=10
+
+# Output NetCDF files in 32-bit precision (1) or 64-bit precision (0).
+outputFloat=0
+
+# Background solar wind parameters.
+# =================================
+
+# Flow velocity of background constant solar wind (cm/s).
+flowMag=500.0e5
+
+# Number density (cm-3) at 1 AU.
+mhdDensityAu=8.30
+
+# Magnetic field (Gauss) at 1 AU.
+mhdBAu=1.60e-5
+
+# Solar energetic particle source function parameters.
+# ====================================================
+
+# Amplitude of source function in number / (cm^2*s*sr*MeV/nucleon) @ 1 AU for
+# 4He.
+boundaryFunctAmplitude=1.0
+
+# Ratio :: 4He / H.
+boundaryFunctXi=0.10
+
+# Power law for He.
+boundaryFunctGamma=2.0
+
+# Radial power law inverse exponent.
+boundaryFunctBeta=1.7
+
+# Cutoff energy (MeV).
+boundaryFunctEcutoff=1.0
+
+# Advanced options and parameters.
+# ================================
+
+# Rotate MAS solution with the solar rotation.
+masRotateSolution=1
+
+# Use (masTime[1] - masTime[0]) as relaxation time-step.
+useMasSteadyStateDt=0
+
+# Relaxation time-step (if not using MAS dt) (days).
+tDel=0.005
+
+# Number of digits in HDF4 number sequence.
+masDigits=3
+
+# Number of substeps for EP computation.
+numEpSteps=30
+
+# Use parallel diffusion.
+useParallelDiffusion=1
+
+# Use adiabatic change.
+useAdiabaticChange=1
+
+# Use adiabatic focusing.
+useAdiabaticFocus=1
+
+# Number of particle species.
+numSpecies=1
+
+# Masses in nucleons (length of array must match numSpecies).
+mass=[1.0]
+
+# Charges (e-) (length of array must match numSpecies).
+charge=[1.0]
+
+# Floor distribution if it drops below background.
+checkSeedPopulation=1
+
+# Flag to use the flux limiter in the adiabatic change function or not
+fluxLimiter=1
+
+# Off-limits parameters.
+# ======================
+
+# Solar rotation rate (radians/AU/c).
+omegaSun=.001429813000000
+
+# Dump out fail mode values.
+FailModeDump=1
+

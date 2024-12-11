@@ -1,0 +1,191 @@
+#-------------------------------------------------------------------------------
+# Config File for EPREM Constant Solar Wind Test
+#-------------------------------------------------------------------------------
+
+#---------Grid Parameters-------------------------------------------------------
+
+outputFloat=0
+
+#Number of rows
+numRowsPerFace=1
+
+#Number of columns
+numColumnsPerFace=1
+
+#Number of nodes per stream
+numNodesPerStream=120
+
+#Number of energy levels.
+numEnergySteps=12
+
+#Number of pitch angle steps. 
+numMuSteps=8
+
+
+#---------Core Parameters-------------------------------------------------------
+
+# Inner boundary [AU]
+rScale=0.00465047
+
+# Simulation start time [JD]
+simStartTime=0.0
+
+# Simulation stop time [JD]
+simStopTime=3.0
+
+#-------------------------------------------------------------------------------
+
+
+#-----------Core Parameters-------------------------------------------------
+
+# Minimum and Maximum Energies (MeV/nucleon)
+eMin=1.0
+eMax=200.0
+
+# Mean-Free-Path (AU) at 1 AU and 1 GV
+lamo=1.0
+
+# Use particle drifts
+useDrift=0
+
+# Use perpendicular diffusion
+useShellDiffusion=0
+
+# Efficiency of perp diffusion (Kper/Kpar)
+kperxkpar=0.01
+
+#-------------------------------------------------------------------------------
+
+
+#----------IO Parameters-------------------------------------------
+
+# Outputs all mhd and particle data for every node along streams (netCDF)
+unifiedOutput=1
+
+# Output position data for entire domain
+epremDomain=1
+
+# Output cadence for all output and restart files (in steps)
+dumpFreq=2
+
+#-------------------------------------------------------------------------------
+
+
+#----------Point Observer Parameters-------------------------------------------
+
+# number of point observers (needs to match the arrays below or be 0)
+numObservers=0
+
+# List of observer positions (theta=colatitude, R in AU)
+obsR=[1.0]
+obsTheta=[1.571]
+obsPhi=[3.142]
+
+# Weighting factor for stream interpolation
+idw_p=3.0
+
+#-------------------------------------------------------------------------------
+
+
+#----------Ideal Shock Parameters-----------------------------------------------
+
+idealShock=1
+idealShockSharpness=10.0
+idealShockScaleLength=0.0046491
+idealShockJump=4.0
+idealShockSpeed=1700.0e5
+idealShockInitTime=0.5
+
+#-------------------------------------------------------------------------------
+
+
+#-----------Shock Conditions----------------------------------------------------
+
+
+#-------------------------------------------------------------------------------
+
+
+#---------Background Solar Wind Parameters--------------------------------------
+
+# Flow velocity of background constant solar wind (cm/s)
+flowMag=400.0e5
+
+# Number density (cm-3) at 1 AU
+mhdDensityAu=8.30
+
+# Magnetic field (Guass) at 1 AU
+mhdBAu=1.60e-5
+
+#-------------------------------------------------------------------------------
+
+
+#----------Solar Energetic Particle Source Function Parameters------------------
+
+# Amplitude of source function in number / (cm^2*s*sr*MeV/nucleon) @ 1 AU for 4He
+boundaryFunctAmplitude=1.0
+
+# Ratio :: 4He / H
+boundaryFunctXi=0.10
+
+# Power law for He
+boundaryFunctGamma=2.0
+
+# Radial power law inverse exponent
+boundaryFunctBeta=1.7
+
+# Cutoff energy [MeV]
+boundaryFunctEcutoff=1.0
+
+#-------------------------------------------------------------------------------
+
+
+#---------Advanced Options and Parameters---------------------------------------
+
+# Relaxation time-step (if not using MAS dt) (JD)
+tDel=0.010416666666667
+
+# The number of substeps for EP computation
+numEpSteps=20
+
+# Use parallel diffusion
+useParallelDiffusion=1
+
+# Use adiabatic change
+useAdiabaticChange=1
+
+# Use adiabatic focusing
+useAdiabaticFocus=1
+
+# Number of particle species (length needs to match arrays below)
+numSpecies=1
+
+# Masses in nucleons (length needs to be eq to NUM_SPECIES)
+mass=[1.0]
+
+# Charges (e-)       (length needs to be eq to NUM_SPECIES)
+charge=[1.0]
+
+# negative slope of f at the lower energy boundary
+gammaElow=0.0
+
+# negative slope of f at the upper energy boundary
+gammaEhigh=0.0
+
+# Initialize particle source function over entire domain
+boundaryFunctionInitDomain=1
+
+# Floor distribution if it drops below background
+checkSeedPopulation=1
+
+
+#-------------------------------------------------------------------------------
+
+
+#---------Off-limits Parameters-----------------------------------------
+
+omegaSun=0.001429813    # Solar rotation rate (radians/AU/c)
+subTimeCouple=0         # Couple on the sub-timesteps
+FailModeDump=1          # Dump out fail mode values
+masCouple=0             # Turns the MAS coupling on/off
+
+#-------------------------------------------------------------------------------

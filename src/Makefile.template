@@ -1,0 +1,126 @@
+CC = <CC>
+
+INCLUDE_FLAGS = -I<HDF5_INCLUDE_DIR> -I<HDF4_INCLUDE_DIR> -I<NETCDF_INCLUDE_DIR> -I<LIBCONFIG_INCLUDE_DIR> -I<ZLIB_INCLUDE_DIR> -I<JPEG_INCLUDE_DIR>
+
+LDFLAGS = -L<HDF5_LIB_DIR> -L<HDF4_LIB_DIR> -L<ZLIB_LIB_DIR> -L<JPEG_LIB_DIR> -L<NETCDF_LIB_DIR> -L<LIBCONFIG_LIB_DIR> <HDF4_LIB_FLAGS> <HDF5_LIB_FLAGS> <LIBCONFIG_LIB_FLAGS> <NETCDF_LIB_FLAGS> <CC_LD_OPTS>
+
+CFLAGS = <CFLAGS> $(INCLUDE_FLAGS)
+
+OBJS = baseTypes.o configuration.o cubeShellInit.o cubeShellStruct.o energeticParticlesBoundary.o energeticParticles.o energeticParticlesInit.o energeticParticlesTypes.o eprem.o error.o flow.o geometry.o global.o masInterp.o masIO.o mpiInit.o nearestGridNode.o observerOutput.o readMAS.o search.o simCore.o unifiedOutput.o
+
+all: $(OBJS)
+	$(CC) $(CFLAGS) $(INCLUDE_FLAGS) $(OBJS) $(LDFLAGS) -o eprem
+	rm -f *.o 2>/dev/null
+
+clean:
+	rm -f eprem 2>/dev/null
+	rm -f *.o 2>/dev/null
+
+install:
+	cp eprem ../bin/
+
+baseTypes = baseTypes.h baseTypes.c
+
+configuration = configuration.h configuration.c cubeShellStruct.h cubeShellStruct.c error.h error.c global.h global.c mpiInit.h mpiInit.c
+
+cubeShellInit = baseTypes.h baseTypes.c configuration.h configuration.c cubeShellInit.h cubeShellInit.c cubeShellStruct.h cubeShellStruct.c energeticParticlesBoundary.h energeticParticlesBoundary.c error.h error.c geometry.h geometry.c global.h global.c masInterp.h masInterp.c observerOutput.h observerOutput.c readMAS.h readMAS.c searchTypes.h
+
+cubeShellStruct = baseTypes.h baseTypes.c configuration.h configuration.c cubeShellStruct.h cubeShellStruct.c energeticParticlesTypes.h energeticParticlesTypes.c global.h global.c mpiInit.h mpiInit.c
+
+energeticParticlesBoundary = configuration.h configuration.c cubeShellStruct.h cubeShellStruct.c energeticParticles.h energeticParticles.c energeticParticlesBoundary.h energeticParticlesBoundary.c error.h error.c flow.h flow.c global.h global.c simCore.h simCore.c
+
+energeticParticlesInit = configuration.h configuration.c energeticParticlesBoundary.h energeticParticlesBoundary.c energeticParticlesInit.h energeticParticlesInit.c energeticParticlesTypes.h energeticParticlesTypes.c error.h error.c global.h global.c
+
+energeticParticlesTypes = configuration.h configuration.c energeticParticlesTypes.h energeticParticlesTypes.c global.h global.c
+
+eprem = configuration.h configuration.c cubeShellInit.h cubeShellInit.c energeticParticles.h energeticParticles.c energeticParticlesInit.h energeticParticlesInit.c flow.h flow.c global.h global.c masInterp.h masInterp.c observerOutput.h observerOutput.c readMAS.h readMAS.c searchTypes.h simCore.h simCore.c timers.h unifiedOutput.h unifiedOutput.c
+
+error = configuration.h configuration.c cubeShellStruct.h cubeShellStruct.c error.h error.c mpiInit.h mpiInit.c simCore.h simCore.c
+
+flow = configuration.h configuration.c flow.h flow.c geometry.h geometry.c global.h global.c masInterp.h masInterp.c readMAS.h readMAS.c simCore.h simCore.c
+
+geometry = configuration.h configuration.c cubeShellStruct.h cubeShellStruct.c geometry.h geometry.c global.h global.c
+
+global = baseTypes.h baseTypes.c configuration.h configuration.c cubeShellStruct.h cubeShellStruct.c global.h global.c
+
+masInterp = configuration.h configuration.c error.h error.c flow.h flow.c geometry.h geometry.c global.h global.c masInterp.h masInterp.c mpiInit.h mpiInit.c readMAS.h readMAS.c simCore.h simCore.c
+
+masIO = configuration.h configuration.c cubeShellStruct.h cubeShellStruct.c error.h error.c flow.h flow.c global.h global.c mpiInit.h mpiInit.c observerOutput.h observerOutput.c readMAS.h readMAS.c simCore.h simCore.c timers.h
+
+mpiInit = baseTypes.h baseTypes.c configuration.h configuration.c error.h error.c global.h global.c mpiInit.h mpiInit.c searchTypes.h
+
+nearestGridNode = configuration.h configuration.c cubeShellStruct.h cubeShellStruct.c geometry.h geometry.c global.h global.c nearestGridNode.h nearestGridNode.c
+
+observerOutput = configuration.h configuration.c error.h error.c geometry.h geometry.c global.h global.c observerOutput.h observerOutput.c searchTypes.h simCore.h simCore.c timers.h
+
+readMAS = configuration.h configuration.c cubeShellStruct.h cubeShellStruct.c error.h error.c flow.h flow.c global.h global.c masIO.h masIO.c mpiInit.h mpiInit.c observerOutput.h observerOutput.c readMAS.h readMAS.c simCore.h simCore.c timers.h
+
+search = configuration.h configuration.c error.h error.c geometry.h geometry.c global.h global.c observerOutput.h observerOutput.c searchTypes.h simCore.h simCore.c timers.h
+
+unifiedOutput = configuration.h configuration.c cubeShellStruct.h cubeShellStruct.c error.h error.c geometry.h geometry.c global.h global.c masInterp.h masInterp.c safeNetcdf.h searchTypes.h simCore.h simCore.c timers.h unifiedOutput.h unifiedOutput.c
+
+baseTypes.o: $(baseTypes)
+	$(CC) $(CFLAGS) -c baseTypes.c
+
+configuration.o: $(configuration)
+	$(CC) $(CFLAGS) -c configuration.c
+
+cubeShellInit.o: $(cubeShellInit)
+	$(CC) $(CFLAGS) -c cubeShellInit.c
+
+cubeShellStruct.o: $(cubeShellStruct)
+	$(CC) $(CFLAGS) -c cubeShellStruct.c
+
+energeticParticlesBoundary.o: $(energeticParticlesBoundary)
+	$(CC) $(CFLAGS) -c energeticParticlesBoundary.c
+
+energeticParticles.o: $(energeticParticles)
+	$(CC) $(CFLAGS) -c energeticParticles.c
+
+energeticParticlesInit.o: $(energeticParticlesInit)
+	$(CC) $(CFLAGS) -c energeticParticlesInit.c
+
+energeticParticlesTypes.o: $(energeticParticlesTypes)
+	$(CC) $(CFLAGS) -c energeticParticlesTypes.c
+
+eprem.o: $(eprem)
+	$(CC) $(CFLAGS) -c eprem.c
+
+error.o: $(error)
+	$(CC) $(CFLAGS) -c error.c
+
+flow.o: $(flow)
+	$(CC) $(CFLAGS) -c flow.c
+
+geometry.o: $(geometry)
+	$(CC) $(CFLAGS) -c geometry.c
+
+global.o: $(global)
+	$(CC) $(CFLAGS) -c global.c
+
+masInterp.o: $(masInterp)
+	$(CC) $(CFLAGS) -c masInterp.c
+
+masIO.o: $(masIO)
+	$(CC) $(CFLAGS) -c masIO.c
+
+mpiInit.o: $(mpiInit)
+	$(CC) $(CFLAGS) -c mpiInit.c
+
+nearestGridNode.o: $(nearestGridNode)
+	$(CC) $(CFLAGS) -c nearestGridNode.c
+
+observerOutput.o: $(observerOutput)
+	$(CC) $(CFLAGS) -c observerOutput.c
+
+readMAS.o: $(readMAS)
+	$(CC) $(CFLAGS) -c readMAS.c
+
+search.o: $(search)
+	$(CC) $(CFLAGS) -c search.c
+
+simCore.o: $(simCore)
+	$(CC) $(CFLAGS) -c simCore.c
+
+unifiedOutput.o: $(unifiedOutput)
+	$(CC) $(CFLAGS) -c unifiedOutput.c

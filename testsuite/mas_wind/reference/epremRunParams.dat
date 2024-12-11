@@ -1,0 +1,53 @@
+
+******************************************************************
+*******************  EPREM Version 1.14.2  ************************
+******************************************************************
+Inner coupling boundary: 1.000000 Rs -- Outer coupling boundary: 230.000000 Rs
+Start: 0.000000 JD, EP Calc: 0.000000 JD, MAS Start: 0.000000 JD, Eruption: 0.000000 JD, Stop: 1.673461 JD
+******************************************************************
+
+RUNTIME PARAMETERS:
+NUM_FACES
+6
+FACE_ROWS
+2
+FACE_COLS
+2
+LOCAL_NUM_SHELLS
+33
+NUM_SPECIES
+1
+NUM_ESTEPS
+8
+NUM_MUSTEPS
+4
+N_PROCS
+6
+TOTAL_NUM_SHELLS
+192
+
+TIMING
+********************************
+Run started on Tue Jul 25 15:59:20 2023
+Run finished on Tue Jul 25 15:59:32 2023
+Run real time duration is 0.200000 minutes (or 0.003333 hours, or 0.000139 days)
+Run data time duration is 1.6735 days
+********************************
+-------------------DETAILED TIMING----------------------
+Code portion                   mean        max        min
+--------------------------------------------------------
+|->MPI (Gather/Scatter)        2.24       2.60       1.18
+|->MPI (Send/Recv)             0.05       0.08       0.03
+Initialization                 0.71       0.72       0.70
+IO (EPREM)                     0.04       0.04       0.03
+IO (MAS)                       0.00       0.02       0.00
+EP Total                      10.77      10.79      10.76
+|->EP DiffuseStream            5.71       5.82       5.58
+|->EP Adiabatic Focus          0.78       1.85       0.53
+|->EP Adiabatic Change         1.30       1.32       1.26
+|->EP Diffuse Shell            0.00       0.00       0.00
+|->EP Drift Shell              0.00       0.00       0.00
+Other                          0.43       0.45       0.40
+Total (Wall)                  11.94      11.94      11.94
+--------------------------------------------------------
+
