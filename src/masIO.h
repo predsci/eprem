@@ -14,13 +14,12 @@
 #define MASIO_H
 #include <hdf5.h>
 #include <hdf5_hl.h>
-#include <mfhdf.h>
 #include <unistd.h>
 #include "cubeShellStruct.h"
 
 
-void masReadMeshDimensions( char *fname , char *dsetname, int dsetnumber, int32 *DimMax );
-void masReadMesh( char *fname , char *dsetname, int dsetnumber, float * *Dim );
+void masReadMeshDimensions( char *fname , char *dsetname, int32_t *DimMax );
+void masReadMesh( char *fname , char *dsetname, float * *Dim );
 void masReadDatafromFile(char *fname, float * *buf );
 void masDatafile_type();
 #endif

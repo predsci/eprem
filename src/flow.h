@@ -109,8 +109,7 @@ extern "C" {
 /*--*/    mhdB( Vec_t position, Scalar_t rmag,                      /*---*/
 /*--*/	        Scalar_t *Br,   Scalar_t *Btheta,                   /*---*/
 /*--*/          Scalar_t *Bphi, Scalar_t *Bmag,                     /*---*/
-/*--*/ 	        Vec_t *Bvec,    Scalar_t Vr,                        /*---*/
-/*--*/          Index_t idealShockNode);                            /*---*/
+/*--*/ 	        Vec_t *Bvec,    Scalar_t Vr);                       /*---*/
 /*--*                                                                *---*/
 /*--* Calculate the local vec(B).                                    *---*/
 /*--*                                                                *---*/

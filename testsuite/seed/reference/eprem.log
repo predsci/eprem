@@ -13,11 +13,12 @@ simStopTime: 5.0000e-02
 numEpSteps: 5
 aziSunStart: 0.0000e+00
 omegaSun: 1.4298e-03
-lamo: 1.0000e+00
 dsh_min: 5.0000e-05
 dsh_hel_min: 2.5000e-04
 kperxkpar: 1.0000e-02
+lamo: 1.0000e+00
 mfpRadialPower: 2.0000e+00
+mfpInverseB: 0
 rigidityPower: 3.3333e-01
 focusingLimit: 1.0000e+00
 eMin: 1.0000e+00
@@ -43,6 +44,7 @@ epremDomainOutputTime: 0.0000e+00
 unstructuredDomain: 0
 unstructuredDomainOutputTime: 0.0000e+00
 useAdiabaticChange: 0
+dampCooling: 0.0000e+00
 useAdiabaticFocus: 0
 useShellDiffusion: 0
 useParallelDiffusion: 0
@@ -100,7 +102,7 @@ idealShock: 0
 idealShockSharpness: 1.0000e+00
 idealShockScaleLength: 4.6491e-03
 idealShockJump: 4.0000e+00
-idealShockFalloff: 1.0000e+00
+idealShockFalloff: 0.0000e+00
 idealShockSpeed: 1.5000e+08
 idealShockInitTime: 0.0000e+00
 idealShockTheta: 1.5708e+00
@@ -115,7 +117,7 @@ adiabaticChangeAlg: 1
 adiabaticFocusAlg: 1
 
 ******************************************************************
-*******************  EPREM Version 1.14.2  ************************
+*******************  EPREM Version 1.16.0  ************************
 ******************************************************************
 Shells: 20
 Processors: 6
@@ -128,45 +130,45 @@ Start: 0.000000 JD, EP Calc: 0.000000 JD
 ****SEEDING NODES********************************
 *************************************************
 Step: 000001  TIME: -1.44287194e+02  [JD  -0.83333]  DTIME: 7.21435969e+00  [JD 0.04167]
-  --> Compute time for step:             0.0000 seconds.
+  --> Compute time for step:             0.0002 seconds.
 Step: 000002  TIME: -1.37072834e+02  [JD  -0.79167]  DTIME: 7.21435969e+00  [JD 0.04167]
-  --> Compute time for step:             0.0001 seconds.
+  --> Compute time for step:             0.0002 seconds.
 Step: 000003  TIME: -1.29858475e+02  [JD  -0.75000]  DTIME: 7.21435969e+00  [JD 0.04167]
-  --> Compute time for step:             0.0003 seconds.
+  --> Compute time for step:             0.0002 seconds.
 Step: 000004  TIME: -1.22644115e+02  [JD  -0.70833]  DTIME: 7.21435969e+00  [JD 0.04167]
-  --> Compute time for step:             0.0000 seconds.
+  --> Compute time for step:             0.0002 seconds.
 Step: 000005  TIME: -1.15429755e+02  [JD  -0.66667]  DTIME: 7.21435969e+00  [JD 0.04167]
-  --> Compute time for step:             0.0000 seconds.
+  --> Compute time for step:             0.0002 seconds.
 Step: 000006  TIME: -1.08215395e+02  [JD  -0.62500]  DTIME: 7.21435969e+00  [JD 0.04167]
-  --> Compute time for step:             0.0000 seconds.
+  --> Compute time for step:             0.0002 seconds.
 Step: 000007  TIME: -1.01001036e+02  [JD  -0.58333]  DTIME: 7.21435969e+00  [JD 0.04167]
-  --> Compute time for step:             0.0000 seconds.
+  --> Compute time for step:             0.0002 seconds.
 Step: 000008  TIME: -9.37866760e+01  [JD  -0.54167]  DTIME: 7.21435969e+00  [JD 0.04167]
-  --> Compute time for step:             0.0000 seconds.
+  --> Compute time for step:             0.0002 seconds.
 Step: 000009  TIME: -8.65723163e+01  [JD  -0.50000]  DTIME: 7.21435969e+00  [JD 0.04167]
-  --> Compute time for step:             0.0000 seconds.
+  --> Compute time for step:             0.0002 seconds.
 Step: 000010  TIME: -7.93579566e+01  [JD  -0.45833]  DTIME: 7.21435969e+00  [JD 0.04167]
-  --> Compute time for step:             0.0000 seconds.
+  --> Compute time for step:             0.0002 seconds.
 Step: 000011  TIME: -7.21435969e+01  [JD  -0.41667]  DTIME: 7.21435969e+00  [JD 0.04167]
-  --> Compute time for step:             0.0000 seconds.
+  --> Compute time for step:             0.0002 seconds.
 Step: 000012  TIME: -6.49292373e+01  [JD  -0.37500]  DTIME: 7.21435969e+00  [JD 0.04167]
-  --> Compute time for step:             0.0000 seconds.
+  --> Compute time for step:             0.0002 seconds.
 Step: 000013  TIME: -5.77148776e+01  [JD  -0.33333]  DTIME: 7.21435969e+00  [JD 0.04167]
-  --> Compute time for step:             0.0000 seconds.
+  --> Compute time for step:             0.0002 seconds.
 Step: 000014  TIME: -5.05005179e+01  [JD  -0.29167]  DTIME: 7.21435969e+00  [JD 0.04167]
-  --> Compute time for step:             0.0000 seconds.
+  --> Compute time for step:             0.0002 seconds.
 Step: 000015  TIME: -4.32861582e+01  [JD  -0.25000]  DTIME: 7.21435969e+00  [JD 0.04167]
-  --> Compute time for step:             0.0000 seconds.
+  --> Compute time for step:             0.0002 seconds.
 Step: 000016  TIME: -3.60717985e+01  [JD  -0.20833]  DTIME: 7.21435969e+00  [JD 0.04167]
-  --> Compute time for step:             0.0000 seconds.
+  --> Compute time for step:             0.0002 seconds.
 Step: 000017  TIME: -2.88574388e+01  [JD  -0.16667]  DTIME: 7.21435969e+00  [JD 0.04167]
-  --> Compute time for step:             0.0000 seconds.
+  --> Compute time for step:             0.0002 seconds.
 Step: 000018  TIME: -2.16430791e+01  [JD  -0.12500]  DTIME: 7.21435969e+00  [JD 0.04167]
-  --> Compute time for step:             0.0000 seconds.
+  --> Compute time for step:             0.0002 seconds.
 Step: 000019  TIME: -1.44287194e+01  [JD  -0.08333]  DTIME: 7.21435969e+00  [JD 0.04167]
-  --> Compute time for step:             0.0000 seconds.
+  --> Compute time for step:             0.0002 seconds.
 Step: 000020  TIME: -7.21435969e+00  [JD  -0.04167]  DTIME: 7.21435969e+00  [JD 0.04167]
-  --> Compute time for step:             0.0000 seconds.
+  --> Compute time for step:             0.0002 seconds.
  
 *************************************************
 ****STARTING SIMULATION**************************
@@ -183,20 +185,20 @@ Step: 000021  TIME: 0.00000000e+00  [JD   0.00000]  DTIME: 7.21435969e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   0 
   --> Maximum subcycles for Adiabatic Focusing: 0 
   --> Minimum MFP timescale (tau): 4.24603415e-04    DTIME/TAU:       16990.82
-  --> Compute time for step:             0.0022 seconds.
+  --> Compute time for step:             0.0128 seconds.
 Step: 000022  TIME: 7.21435969e+00  [JD   0.04167]  DTIME: 7.21435969e+00  [JD 0.04167]
   --> IO: Wrote observer data to file.
   --> NOTE:  Reinitializing seed population.
   --> Maximum subcycles for Adiabatic Change:   0 
   --> Maximum subcycles for Adiabatic Focusing: 0 
   --> Minimum MFP timescale (tau): 4.24603415e-04    DTIME/TAU:       16990.82
-  --> Compute time for step:             0.0021 seconds.
+  --> Compute time for step:             0.0109 seconds.
  
 ********************************
 ****RUN COMPLETE****************
 ********************************
-Run started  on Tue Jul 25 15:59:09 2023
-Run finished on Tue Jul 25 15:59:09 2023
+Run started  on Wed Aug 20 12:53:31 2025
+Run finished on Wed Aug 20 12:53:31 2025
 Run real time duration is 0.000000 minutes (or 0.000000 hours, or 0.000000 days)
 Run data time duration is 0.0500 days
 ********************************

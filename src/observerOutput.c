@@ -34,7 +34,7 @@ time_t start_time;
 {/*-----------------------------------------------------------------*/
 
   FILE *rpout;
-  
+
   double radMax;
 
   /* Here print out the main parameters of the run */
@@ -218,11 +218,11 @@ time_t start_time;
   MPI_Allgather (&timer_MPIgatherscatter,1,MPI_DOUBLE,all_timer_MPIgatherscatter,1,MPI_DOUBLE,MPI_COMM_WORLD);
   MPI_Allgather (&timer_MPIsendrecv,     1,MPI_DOUBLE,all_timer_MPIsendrecv,     1,MPI_DOUBLE,MPI_COMM_WORLD);
 
-  
+
   if (mpi_rank == 0){
-    
+
     time ( &curr_time );
-    
+
     printf(" \n");
     printf("********************************\n");
     printf("****RUN COMPLETE****************\n");
@@ -250,9 +250,9 @@ time_t start_time;
     fprintf(rpout,"Run data time duration is %6.4lf days\n",config.simStopTime-config.simStartTime);
     fprintf(rpout,"********************************\n");
 
-    fprintf(rpout,"-------------------DETAILED TIMING----------------------\n");
+    fprintf(rpout,"-------------------DETAILED TIMING-----------------------\n");
     fprintf(rpout,"%-24s  %*s  %*s  %*s\n","Code portion",9,"mean",9,"max",9,"min");
-    fprintf(rpout,"--------------------------------------------------------\n");
+    fprintf(rpout,"---------------------------------------------------------\n");
 
     max_tmp=0.0;
     min_tmp=1.0e200;
@@ -264,7 +264,7 @@ time_t start_time;
     }
     mean = mean/N_PROCS;
     fprintf(rpout,"%-24s  %9.2f  %9.2f  %9.2f\n","|->MPI (Gather/Scatter)",mean,max_tmp,min_tmp);
-    
+
     max_tmp=0.0;
     min_tmp=1.0e200;
     mean=0.0;
@@ -275,7 +275,7 @@ time_t start_time;
     }
     mean = mean/N_PROCS;
     fprintf(rpout,"%-24s  %9.2f  %9.2f  %9.2f\n","|->MPI (Send/Recv)",mean,max_tmp,min_tmp);
-    
+
     max_tmp=0.0;
     min_tmp=1.0e200;
     mean=0.0;
@@ -286,7 +286,7 @@ time_t start_time;
     }
     mean = mean/N_PROCS;
     fprintf(rpout,"%-24s  %9.2f  %9.2f  %9.2f\n","Initialization",mean,max_tmp,min_tmp);
- 
+
     max_tmp=0.0;
     min_tmp=1.0e200;
     mean=0.0;
@@ -397,7 +397,7 @@ time_t start_time;
     mean = mean/N_PROCS;
     fprintf(rpout,"%-24s  %9.2f  %9.2f  %9.2f\n","Total (Wall)",mean,max_tmp,min_tmp);
 
-    fprintf(rpout,"--------------------------------------------------------\n\n");
+    fprintf(rpout,"---------------------------------------------------------\n\n");
 
     fclose(rpout);
   }

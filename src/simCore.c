@@ -32,7 +32,6 @@
 #include "flow.h"
 #include "readMAS.h"
 #include "masInterp.h"
-#include "readMAS.h"
 #include "unifiedOutput.h"
 #include "searchTypes.h"
 #include "cubeShellStruct.h"
@@ -52,7 +51,6 @@ Index_t       num_loops;
 Index_t weInitializedEPs;
 Index_t mhdGridStatus;
 Index_t sync_hel=0;
-Index_t hdf5_input=0;              // Set=1 if hdf5 input files (RMC move this)
 /*-----------------------------------------------------------------------*/
 /*-----------------------------------------------------------------------*/
 /*--*/          void                                                /*---*/
@@ -241,8 +239,7 @@ Index_t hdf5_input=0;              // Set=1 if hdf5 input files (RMC move this)
   MPI_Waitall(num_calls, request_eparts, MPI_STATUSES_IGNORE);
   MPI_Waitall(num_calls, request_grid,   MPI_STATUSES_IGNORE);
 
-  timer_MPIgatherscatter = timer_MPIgatherscatter
-                           + (MPI_Wtime() - timer_tmp);
+  timer_MPIgatherscatter = timer_MPIgatherscatter + (MPI_Wtime() - timer_tmp);
 
 }
 /*-----------------------------------------------------------------------*/
@@ -316,8 +313,7 @@ Index_t hdf5_input=0;              // Set=1 if hdf5 input files (RMC move this)
   MPI_Waitall(num_calls, request_eparts, MPI_STATUSES_IGNORE);
   MPI_Waitall(num_calls, request_grid,   MPI_STATUSES_IGNORE);
 
-  timer_MPIgatherscatter = timer_MPIgatherscatter
-                           + (MPI_Wtime() - timer_tmp);
+  timer_MPIgatherscatter = timer_MPIgatherscatter + (MPI_Wtime() - timer_tmp);
 
 }
 /*-----------------------------------------------------------------------*/

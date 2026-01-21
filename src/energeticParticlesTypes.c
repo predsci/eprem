@@ -33,12 +33,13 @@ Scalar_t lnpmax;
 Scalar_t dlnp;
 Scalar_t dmu;
 
-Scalar_t *restrict  mugrid;   /*-- mu steps [central mu]  --*/
-Scalar_t *restrict dlPerMin;   /*-- minimum perp length .. sets the min time step --*/
-Scalar_t *restrict vgrid;    /*-- Corresponing Speed -- Grid v = speed/c --*/
-Scalar_t *restrict pgrid;    /*-- Momentum Grid     --*/
+Scalar_t *restrict mugrid;   /*-- mu steps [central mu]                         --*/
+Scalar_t *restrict dlPerMin; /*-- minimum perp length .. sets the min time step --*/
+Scalar_t *restrict vgrid;    /*-- Corresponing Speed -- Grid v = speed/c        --*/
+Scalar_t *restrict vgrid_i;  /*-- Inverse of vgrid for comp eff                 --*/
+Scalar_t *restrict pgrid;    /*-- Momentum Grid                                 --*/
 Scalar_t *restrict egrid;    /*-- Central Energy -- Kin. Energy Grid - E/(mc^2) --*/
-Scalar_t *restrict rigidity; /*-- rigidity pc/q in GV    --*/
+Scalar_t *restrict rigidity; /*-- rigidity pc/q in GV                           --*/
 
 
 /*----------------------------------------------------------*/
@@ -55,12 +56,13 @@ Scalar_t *restrict rigidity; /*-- rigidity pc/q in GV    --*/
      declerations to new files later*/
 
   vgrid    = (Scalar_t*)malloc(NUM_ESTEPS*sizeof(Scalar_t));
+  vgrid_i  = (Scalar_t*)malloc(NUM_ESTEPS*sizeof(Scalar_t));
   pgrid    = (Scalar_t*)malloc(NUM_ESTEPS*sizeof(Scalar_t));
   egrid    = (Scalar_t*)malloc(NUM_ESTEPS*sizeof(Scalar_t));
   rigidity = (Scalar_t*)malloc(NUM_SPECIES*NUM_ESTEPS*sizeof(Scalar_t));
 
   /*-- mu steps [central mu]  --*/
-  mugrid = (Scalar_t*)malloc(NUM_MUSTEPS*sizeof(Scalar_t));
+  mugrid   = (Scalar_t*)malloc(NUM_MUSTEPS*sizeof(Scalar_t));
   dlPerMin = (Scalar_t*)malloc(LOCAL_NUM_SHELLS*sizeof(Scalar_t));
 
 }

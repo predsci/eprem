@@ -55,8 +55,9 @@ case $i in
     ;;
     *)
     echo "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
-    echo "%%%% Warning!  Unknown option! %%%%"
+    echo "%%%% ERROR!  Unknown option!   %%%%"
     echo "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
+    exit 1
     ;;
 esac
 done
@@ -174,7 +175,7 @@ then
   then
     ${echo} "${cY}==> ERROR eprem bin not in PATH!${cX}"
     ${echo} "${cY}==> Setting PATH...${cX}"
-    PATH="${BINDIR}:${PATH}"
+    export PATH="${BINDIR}:${PATH}"
   fi
   PTEST=$(which epremdiff.py)
   if [ -z "${PTEST}" ]; then
@@ -322,7 +323,7 @@ do
   if [ -z "${run_completed_test}" ]
   then
    ${echo} "${cR}!!!> ERROR! Test ${TESTNAME} did not seem to run correctly!${cX}"
-   exit 1
+   continue
   fi
 
   if [ ${setrefdata} -eq 1 ] && [ ${norun} -eq 0 ]

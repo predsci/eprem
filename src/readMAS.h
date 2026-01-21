@@ -14,7 +14,6 @@
 #define READMAS_H
 #include <hdf5.h>
 #include <hdf5_hl.h>
-#include <mfhdf.h>
 #include "cubeShellStruct.h"
 
 extern Scalar_t *masTime;
@@ -31,56 +30,56 @@ extern Index_t masHelFileIndex1;
 extern Index_t masMallocFlag;
 extern Index_t masEqFileFlag;
 
-extern int32 masDimMin[1];
+extern int32_t masDimMin[1];
 
-extern int32 masBppDimMax[1];
-extern int32 masBptDimMax[1];
-extern int32 masBprDimMax[1];
-extern int32 masHelBppDimMax[1];
-extern int32 masHelBptDimMax[1];
-extern int32 masHelBprDimMax[1];
+extern int32_t masBppDimMax[1];
+extern int32_t masBptDimMax[1];
+extern int32_t masBprDimMax[1];
+extern int32_t masHelBppDimMax[1];
+extern int32_t masHelBptDimMax[1];
+extern int32_t masHelBprDimMax[1];
 
-extern int32 masBtpDimMax[1];
-extern int32 masBttDimMax[1];
-extern int32 masBtrDimMax[1];
-extern int32 masHelBtpDimMax[1];
-extern int32 masHelBttDimMax[1];
-extern int32 masHelBtrDimMax[1];
+extern int32_t masBtpDimMax[1];
+extern int32_t masBttDimMax[1];
+extern int32_t masBtrDimMax[1];
+extern int32_t masHelBtpDimMax[1];
+extern int32_t masHelBttDimMax[1];
+extern int32_t masHelBtrDimMax[1];
 
-extern int32 masBrpDimMax[1];
-extern int32 masBrtDimMax[1];
-extern int32 masBrrDimMax[1];
-extern int32 masHelBrpDimMax[1];
-extern int32 masHelBrtDimMax[1];
-extern int32 masHelBrrDimMax[1];
+extern int32_t masBrpDimMax[1];
+extern int32_t masBrtDimMax[1];
+extern int32_t masBrrDimMax[1];
+extern int32_t masHelBrpDimMax[1];
+extern int32_t masHelBrtDimMax[1];
+extern int32_t masHelBrrDimMax[1];
 
-extern int32 masVppDimMax[1];
-extern int32 masVptDimMax[1];
-extern int32 masVprDimMax[1];
-extern int32 masHelVppDimMax[1];
-extern int32 masHelVptDimMax[1];
-extern int32 masHelVprDimMax[1];
+extern int32_t masVppDimMax[1];
+extern int32_t masVptDimMax[1];
+extern int32_t masVprDimMax[1];
+extern int32_t masHelVppDimMax[1];
+extern int32_t masHelVptDimMax[1];
+extern int32_t masHelVprDimMax[1];
 
-extern int32 masVtpDimMax[1];
-extern int32 masVttDimMax[1];
-extern int32 masVtrDimMax[1];
-extern int32 masHelVtpDimMax[1];
-extern int32 masHelVttDimMax[1];
-extern int32 masHelVtrDimMax[1];
+extern int32_t masVtpDimMax[1];
+extern int32_t masVttDimMax[1];
+extern int32_t masVtrDimMax[1];
+extern int32_t masHelVtpDimMax[1];
+extern int32_t masHelVttDimMax[1];
+extern int32_t masHelVtrDimMax[1];
 
-extern int32 masVrpDimMax[1];
-extern int32 masVrtDimMax[1];
-extern int32 masVrrDimMax[1];
-extern int32 masHelVrpDimMax[1];
-extern int32 masHelVrtDimMax[1];
-extern int32 masHelVrrDimMax[1];
+extern int32_t masVrpDimMax[1];
+extern int32_t masVrtDimMax[1];
+extern int32_t masVrrDimMax[1];
+extern int32_t masHelVrpDimMax[1];
+extern int32_t masHelVrtDimMax[1];
+extern int32_t masHelVrrDimMax[1];
 
-extern int32 masDpDimMax[1];
-extern int32 masDtDimMax[1];
-extern int32 masDrDimMax[1];
-extern int32 masHelDpDimMax[1];
-extern int32 masHelDtDimMax[1];
-extern int32 masHelDrDimMax[1];
+extern int32_t masDpDimMax[1];
+extern int32_t masDtDimMax[1];
+extern int32_t masDrDimMax[1];
+extern int32_t masHelDpDimMax[1];
+extern int32_t masHelDtDimMax[1];
+extern int32_t masHelDrDimMax[1];
 
 extern float * masBppDim;
 extern float * masBptDim;
@@ -194,7 +193,7 @@ extern MPI_Win masHelVr_1_win;
 extern MPI_Win masHelD_1_win;
 extern char file_extension[5];
 
-void ERR(intn);
+void ERR(int);
 
 void masFetchCouplingInfo(void);
 

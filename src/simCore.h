@@ -26,7 +26,6 @@
 extern Index_t weInitializedEPs;
 extern Index_t mhdGridStatus;
 extern Index_t sync_hel;
-extern Index_t hdf5_input;
 
 /*-- (The simulation parameters are set in Makefile.am and the configuration file) --*/
 extern Time_t        t_global;             /*-- Simulation current time.         --*/

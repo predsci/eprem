@@ -57,6 +57,41 @@
  --
  -- NOTE TO DEVS: BE SURE TO UPDATE VERSION NUMBER IN GLOBAL.H!
  --
+ -- ## Version 2.2.1, 01/15/2026
+ -- ### modified by RC
+ --       - Cleaned up HDF5 readers with error checking.
+ --
+ -- ## Version 2.2.0, 01/14/2026
+ -- ### modified by RC
+ --       - Removed HDF4 completely.
+ --       - Must use code with HDF5 for MAS runs.
+ --
+ -- ## Version 1.18.0, 08/20/2025
+ -- ### modified by RC
+ --       - Changed how dampCooling works.
+ --         The 3/5 factor has been removed.
+ --         Now, the default is 0.0 and the 
+ --         damping factor is defined as 
+ --         1.0-dampCooling where dampCooling is in [0,1].
+ --
+ -- ## Version 1.17.0, 08/20/2025
+ -- ### modified by RC
+ --       - Changed MFP input parameters:
+ --         Added mfpBPower to set the power on inverse B.
+ --         Added mfpRadialPower to set the power on inverse r.
+ --         Added mfpType to set r-dept (1) or b-dept (2)
+ --         Removed mfpInverseB
+ --       - Refactored particle routines to have shell loop inside.
+ --         This is start of an optimization.
+ --
+ -- ## Version 1.16.0, 04/02/2025
+ -- ### modified by MY+RC
+ --       - Added B-dept MFP.  Activate by setting config.mfpInverseB=1.
+ --       - Reworked MFP function and removed inlined version
+ --         in stream diffusion for now.
+ --       - Removed shocksolution and isotropize as they were not being used.
+ --       - Bug fix for ideal shock.
+ --
  -- ## Version 1.15.0, 01/10/2024
  -- ### modified by RC
  --       - Added new input dampCooling.
@@ -542,7 +577,8 @@ int main(int argc, char *argv[]) {
     // -------------------------------------------------------------------------
     // -------------------------------------------------------------------------
 
-    if ((config.masRotateSolution > 0) && (config.masCouple > 0) && (simStarted > 0) && (unwindPhiOffset == 0)) {
+    if ((config.masRotateSolution > 0) && (config.masCouple > 0)
+        && (simStarted > 0) && (unwindPhiOffset == 0)) {
       unwindPhiOffset = 1;
       resetDomainOffset();
     // Since we have just moved the nodes to a new position,
@@ -651,28 +687,25 @@ int main(int argc, char *argv[]) {
 
     if (epInit == 1){
 
-    MPI_Reduce(&maxsubcycles_energychange,
-               &maxsubcycles_energychangeGlobal,
-               1, MPI_INT, MPI_MAX, 0, MPI_COMM_WORLD);
-    MPI_Reduce(&maxsubcycles_focusing,
-               &maxsubcycles_focusingGlobal,
-               1, MPI_INT, MPI_MAX, 0, MPI_COMM_WORLD);
-    MPI_Reduce(&min_tau,
-               &min_tau_global,
-               1, MPI_DOUBLE, MPI_MIN, 0, MPI_COMM_WORLD);
+      MPI_Reduce(&maxsubcycles_energychange, &maxsubcycles_energychangeGlobal,
+                 1, MPI_INT, MPI_MAX, 0, MPI_COMM_WORLD);
+      MPI_Reduce(&maxsubcycles_focusing, &maxsubcycles_focusingGlobal,
+                 1, MPI_INT, MPI_MAX, 0, MPI_COMM_WORLD);
+      MPI_Reduce(&min_tau, &min_tau_global,
+                 1, MPI_DOUBLE, MPI_MIN, 0, MPI_COMM_WORLD);
 
-    if (mpi_rank == 0){
-      printf("  --> Maximum subcycles for Adiabatic Change:   %d \n", maxsubcycles_energychangeGlobal);
-      printf("  --> Maximum subcycles for Adiabatic Focusing: %d \n", maxsubcycles_focusingGlobal);
-      printf("  --> Minimum MFP timescale (tau): %14.8e    DTIME/TAU: %14.2f\n", min_tau_global, config.tDel/min_tau_global);
-    }
-    // Reset these values:
-    maxsubcycles_energychangeGlobal = 0;
-    maxsubcycles_focusingGlobal = 0;
-    maxsubcycles_energychange = 0;
-    maxsubcycles_focusing = 0;
-    min_tau = DBL_MAX;
-    min_tau_global = DBL_MAX;
+      if (mpi_rank == 0){
+        printf("  --> Maximum subcycles for Adiabatic Change:   %d \n", maxsubcycles_energychangeGlobal);
+        printf("  --> Maximum subcycles for Adiabatic Focusing: %d \n", maxsubcycles_focusingGlobal);
+        printf("  --> Minimum MFP timescale (tau): %14.8e    DTIME/TAU: %14.2f\n", min_tau_global, config.tDel/min_tau_global);
+      }
+      // Reset these values:
+      maxsubcycles_energychangeGlobal = 0;
+      maxsubcycles_focusingGlobal = 0;
+      maxsubcycles_energychange = 0;
+      maxsubcycles_focusing = 0;
+      min_tau = DBL_MAX;
+      min_tau_global = DBL_MAX;
 
     }
 

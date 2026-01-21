@@ -72,11 +72,15 @@ getParams( char* configFilename)
   config.aziSunStart = readDouble("aziSunStart", 0.0, 0.0, BADVALUE);
   // This omega makes EPREM and MAS omega values equal to double precision.
   config.omegaSun = readDouble("omegaSun", (0.004144/MAS_TIME_NORM)*TAU, 0.0, BADVALUE);
-  config.lamo = readDouble("lamo", 1.0, VERYSMALL, BADVALUE);
   config.dsh_min = readDouble("dsh_min", 5.0e-5, VERYSMALL, BADVALUE);
   config.dsh_hel_min = readDouble("dsh_hel_min", 2.5e-4, VERYSMALL, BADVALUE);
   config.kperxkpar = readDouble("kperxkpar", 0.01, VERYSMALL, BADVALUE);
-  config.mfpRadialPower = readDouble("mfpRadialPower", 2.0, -1.0 * BADVALUE, BADVALUE);
+  config.lamo = readDouble("lamo", 1.0, VERYSMALL, BADVALUE);
+  // Mean free path options:
+  config.mfpType        = readInt("mfpType", 1, 1, 2);
+  // ***  mfpType:  1 = radial scaling  2 = B-dependent.
+  config.mfpRadialPower = readDouble("mfpRadialPower",2.0,VERYSMALL, BADVALUE);
+  config.mfpBPower      = readDouble("mfpBPower",0.75,VERYSMALL, BADVALUE);
   config.rigidityPower = readDouble("rigidityPower", third, VERYSMALL, BADVALUE);
   config.focusingLimit = readDouble("focusingLimit", 1.0, 0.0, 1.0);
 
@@ -115,7 +119,7 @@ getParams( char* configFilename)
   config.unstructuredDomainOutputTime = readDouble("unstructuredDomainOutputTime", 0.0, 0.0, BADVALUE);
 
   config.useAdiabaticChange = readInt("useAdiabaticChange", 1, 0, 1);
-  config.dampCooling = readDouble("dampCooling", 0.0, 0.0, BADVALUE);
+  config.dampCooling = readDouble("dampCooling", 0.0, 0.0, 1.0);
   config.useAdiabaticFocus = readInt("useAdiabaticFocus", 1, 0, 1);
   config.useShellDiffusion = readInt("useShellDiffusion", 0, 0, 1);
   config.useParallelDiffusion = readInt("useParallelDiffusion", 1, 0, 1);

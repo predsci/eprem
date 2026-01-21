@@ -39,7 +39,9 @@ typedef struct {
   Scalar_t  lamo;
   Scalar_t  dsh_min;
   Scalar_t  dsh_hel_min;
+  Index_t   mfpType;
   Scalar_t  mfpRadialPower;
+  Scalar_t  mfpBPower;
   Scalar_t  rigidityPower;
 
   Scalar_t  kperxkpar;

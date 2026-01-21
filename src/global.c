@@ -42,7 +42,7 @@ Scalar_t s_hel;
 
 Index_t simStarted;
 
-Index_t FACE_ROWS, FACE_COLS, LOCAL_NUM_SHELLS;
+Index_t FACE_ROWS, FACE_COLS, LOCAL_NUM_SHELLS, innerComputeShell;
 Index_t NUM_SPECIES, NUM_ESTEPS, NUM_MUSTEPS;
 Index_t TOTAL_NUM_SHELLS, NUM_OBS;
 Index_t N_PROCS;

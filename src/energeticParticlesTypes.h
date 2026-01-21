@@ -43,10 +43,11 @@ extern Scalar_t dmu;
 /*-- minimum perp length .. sets the min time step */
 extern Scalar_t *restrict dlPerMin;
 
-extern Scalar_t *restrict vgrid;                            /*-- Corresponing Speed -- Grid v = speed/c --*/
-extern Scalar_t *restrict pgrid;    /*-- Momentum Grid     --*/
+extern Scalar_t *restrict vgrid;    /*-- Corresponing Speed -- Grid v = speed/c --*/
+extern Scalar_t *restrict vgrid_i;  /*-- Inverse of vgrid for comp eff          --*/
+extern Scalar_t *restrict pgrid;    /*-- Momentum Grid                          --*/
 extern Scalar_t *restrict egrid;    /*-- Central Energy -- Kin. Energy Grid - E/(mc^2) --*/
-extern Scalar_t *restrict rigidity; /*-- rigidity pc/q in GV    --*/
+extern Scalar_t *restrict rigidity; /*-- rigidity pc/q in GV                    --*/
 
 /*---*/         void                                   /*---*/
 /*---*/   initMPI_energeticParticlesTypes(void )       /*---*/;

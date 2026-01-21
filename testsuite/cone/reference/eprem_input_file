@@ -90,10 +90,10 @@ idw_p=3.0
 #----------Ideal Shock Parameters-----------------------------------------------
 
 idealShock=1
-idealShockSharpness=10.0
+idealShockSharpness=1.0
 idealShockScaleLength=0.0046491
-idealShockJump=4.0
-idealShockSpeed=1700.0e5
+idealShockJump=2.9
+idealShockSpeed=0.9e8
 idealShockInitTime=0.5
 
 #-------------------------------------------------------------------------------
@@ -108,7 +108,7 @@ idealShockInitTime=0.5
 #---------Background Solar Wind Parameters--------------------------------------
 
 # Flow velocity of background constant solar wind (cm/s)
-flowMag=400.0e5
+flowMag=300.0e5
 
 # Number density (cm-3) at 1 AU
 mhdDensityAu=8.30

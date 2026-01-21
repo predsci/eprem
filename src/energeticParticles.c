@@ -41,6 +41,7 @@
 #include "masInterp.h"
 #include "observerOutput.h"
 #include "timers.h"
+#include "meanFreePath.h"
 
 Scalar_t *deltaShell;
 Scalar_t *shockDist;
@@ -63,28 +64,6 @@ Scalar_t leaving_right = 0;
 Scalar_t leaving_leftGlobal = 0;
 Scalar_t leaving_rightGlobal = 0;
 
-/*---------------------------------------------------------------*/
-/*---------------------------------------------------------------*/
-/*--*/    Scalar_t                                           /*--*/
-/*--*/    meanFreePath(Index_t species,                      /*--*/
-/*--*/                 Index_t energy,                       /*--*/
-/*--*/                 Scalar_t range)                       /*--*/
-/*--*/                                                       /*--*/
-/*--  range needs to be expressed in AU, not code units        --*/
-/* -- Mean Free Path in AU ------------------------------------- */
-{/*--------------------------------------------------------------*/
-
-  Scalar_t mfp;
-
-  mfp = rigidity[idx_se(species, energy)]
-        * pow(range, config.mfpRadialPower) * config.lamo;
-
-  return mfp;
-
-} /*----------------------------------------------------------------*/
-/*------------------------------------------------------------------*/
-
-
 /*------------------------------------------------------------------*/
 /*------------------------------------------------------------------*/
 /*--*/             void                                         /*--*/
@@ -100,7 +79,7 @@ Scalar_t leaving_rightGlobal = 0;
 /*------------------------------------------------------------------*/
 {/*-----------------------------------------------------------------*/
 
-  Index_t face, row, col, shell, innerComputeShell, step, idx;
+  Index_t face, row, col, shell, step;
   Time_t  t_global_saved;
   Scalar_t dt,tau;
   Index_t computeIndex, numIters, iterIndex, species, energy;
@@ -110,18 +89,8 @@ Scalar_t leaving_rightGlobal = 0;
 
   double timer_tmp = 0;
 
-  /* Allocate temporary arrays used in several functions here */
-  deltaShell    = (Scalar_t*) malloc(sizeof(Scalar_t)*FRC*NUM_MUSTEPS);
-  shockDist     = (Scalar_t*) malloc(sizeof(Scalar_t)*NUM_FACES
-                                                  *FACE_ROWS*FACE_COLS
-                                         *LOCAL_NUM_SHELLS*NUM_SPECIES
-                                               *NUM_ESTEPS*NUM_MUSTEPS);
-  shockFlag     = (Index_t*)  calloc(NUM_FACES*FACE_ROWS*FACE_COLS
-                                     *LOCAL_NUM_SHELLS*NUM_SPECIES,
-                                     sizeof(Index_t));
-  shockCalcFlag = (Index_t*)  calloc(NUM_FACES*FACE_ROWS*FACE_COLS
-                                     *LOCAL_NUM_SHELLS*NUM_SPECIES,
-                                     sizeof(Index_t));
+  /* Allocate temporary array used in several functions here */
+  deltaShell = (Scalar_t*) malloc(sizeof(Scalar_t)*FRC*NUM_MUSTEPS);
 
   // Save global time (the time step update happens after this routine).
   t_global_saved = t_global;
@@ -132,7 +101,9 @@ Scalar_t leaving_rightGlobal = 0;
   // Loop over the number of EP steps.
   for (step = 0; step < config.numEpSteps; step++ )
   {
-
+//
+//      ****** STREAM DIFFUSION ******
+//
     // Requires entire stream on one process.  Sequential on the rank.
     for (iterIndex = 0; iterIndex <= numIters; iterIndex++)
     {
@@ -141,12 +112,10 @@ Scalar_t leaving_rightGlobal = 0;
       update_stream_from_shells( iterIndex );
 
       // Set stream values that require +/- nodes along the stream.
-      // NOTE!  This sets imporant values used in focusing!
+      // NOTE!  This sets important values used in focusing!
       updateStreamValues( iterIndex );
 
-      if (config.checkSeedPopulation > 0){
-        seedPopulationCheck( iterIndex );
-      }
+      if (config.checkSeedPopulation > 0) seedPopulationCheck( iterIndex );
 
       if (config.useParallelDiffusion > 0)
       {
@@ -159,122 +128,65 @@ Scalar_t leaving_rightGlobal = 0;
         // Compute the stream "diffusion" (advection along the stream).
         DiffuseStreamData( iterIndex, dt );
 
-        timer_diffusestream = timer_diffusestream
-                              + (MPI_Wtime() - timer_tmp);
+        timer_diffusestream = timer_diffusestream + (MPI_Wtime() - timer_tmp);
       }
 
       // Scatter current stream to shells across all ranks.
       update_shells_from_stream( iterIndex );
 
-    }
-
-    // Make sure not to compute the inner shell on proc 0
-    // since it has no time history
-    if (mpi_rank == 0) {
-      innerComputeShell = INNER_ACTIVE_SHELL + 1;
-    } else {
-      innerComputeShell = INNER_ACTIVE_SHELL;
-    }
-
-    for (shell = innerComputeShell; shell < LOCAL_NUM_SHELLS; shell++ )
+    } // iterIndex
+//
+//  ****** CALCULATIONS ON SHELLS ******
+//
+//    ****** FACE, ROW, COL loop.
+    for (computeIndex = 0; computeIndex < NUM_STREAMS; computeIndex++)
     {
-
-      // computed on local process
-      for (computeIndex = 0; computeIndex < NUM_STREAMS; computeIndex++)
-      {
-
-        face = computeLines[computeIndex][0];
-        row  = computeLines[computeIndex][1];
-        col  = computeLines[computeIndex][2];
-        idx = idx_frcs(face,row,col,shell);
+      face = computeLines[computeIndex][0];
+      row  = computeLines[computeIndex][1];
+      col  = computeLines[computeIndex][2];
 //
-//     ****** Find minimum mean free path time scale.
-//
-        for (species = 0; species < NUM_SPECIES; species++) {
-          for (energy = 0; energy < NUM_ESTEPS; energy++) {
-            tau = meanFreePath(species, energy,
-                  grid[idx_frcs(face,row,col,shell)].rmag*config.rScale)
-                  /vgrid[energy];
-            if (tau < min_tau){
-              min_tau = tau;
-            }
+//      ****** Find minimum mean free path time scale.
+      for (species = 0; species < NUM_SPECIES; species++) {
+        for (energy = 0; energy < NUM_ESTEPS; energy++) {
+          for (shell = innerComputeShell; shell < LOCAL_NUM_SHELLS; shell++ ) {
+            tau = meanFreePath(species,energy,grid[idx_frcs(face,row,col,shell)])*vgrid_i[energy];
+            if (tau < min_tau) min_tau = tau;
           }
         }
+      }
 //
-//      ****** ADIABATIC FOCUS ******
+//      ****** ADIABATIC FOCUSING ******
 //
-        if ( config.useAdiabaticFocus > 0 ){
-
-          timer_tmp = MPI_Wtime();
-
-          AdiabaticFocusing(face, row, col, shell, dt);
-
-          timer_adiabaticfocus = timer_adiabaticfocus
-                                 + (MPI_Wtime() - timer_tmp);
-
-        }
+      if ( config.useAdiabaticFocus > 0 ){
+        timer_tmp = MPI_Wtime();
+        AdiabaticFocusing(face, row, col, dt);
+        timer_adiabaticfocus = timer_adiabaticfocus + (MPI_Wtime() - timer_tmp);
+      }
 //
 //      ****** ADIABATIC CHANGE ******
 //
-        if ( config.useAdiabaticChange > 0 ) {
-
-          timer_tmp = MPI_Wtime();
-
-          // If not running MAS-coupled run, always accelerate
-          // everywhere in the domain.
-          if (config.masCouple == 0) {
-            AdiabaticChange(face, row, col, shell, dt);
-          }
-          //MAS Coupling Run.
-          else {
-            if (config.masHelCouple == 0){
-              AdiabaticChange(face, row, col, shell, dt);
-            }
-            // If this is a heliospheric run, only accelerate
-            // in corona when it is still evolving.
-            else {
-              if (t_global <= masTime[config.masNumFiles - 1]){
-                AdiabaticChange(face, row, col, shell, dt);
-              }
-              else if ( (grid[idx].rmag * config.rScale)
-                      > (config.masRadialMax * RSAU)     ){
-                AdiabaticChange(face, row, col, shell, dt);
-              }
-            }
-          }
-
-          timer_adiabaticchange = timer_adiabaticchange
-                                  + (MPI_Wtime() - timer_tmp);
-
-        } // adiabaticChange
-
-      } // Stream index
+      if ( config.useAdiabaticChange > 0 ) {
+        timer_tmp = MPI_Wtime();
+        AdiabaticChange(face, row, col, dt);
+        timer_adiabaticchange = timer_adiabaticchange + (MPI_Wtime() - timer_tmp);
+      }
+//
+    } // Stream index (FACE, ROW, COL loop)
 //
 //    ****** DIFFUSE SHELL DATA ******
 //
-      if ( config.useShellDiffusion > 0){
-
-        timer_tmp = MPI_Wtime();
-
-        DiffuseShellData( shell, dt );
-
-        timer_diffuseshell = timer_diffuseshell
-                           + (MPI_Wtime() - timer_tmp);
-      }
+    if ( config.useShellDiffusion > 0){
+      timer_tmp = MPI_Wtime();
+      DiffuseShellData( dt );
+      timer_diffuseshell = timer_diffuseshell + (MPI_Wtime() - timer_tmp);
+    }
 //
 //    ****** DRIFT SHELL DATA ******
 //
-      if (config.useDrift > 0){
-
-        timer_tmp = MPI_Wtime();
-
-        DriftShellData( shell, dt );
-
-        timer_driftshell = timer_driftshell
-                           + (MPI_Wtime() - timer_tmp);
-
-      }
-
+    if (config.useDrift > 0){
+      timer_tmp = MPI_Wtime();
+      DriftShellData( dt );
+      timer_driftshell = timer_driftshell + (MPI_Wtime() - timer_tmp);
     }
 //
 //   ****** UPDATE EpSubcycle TIME ******
@@ -284,9 +196,6 @@ Scalar_t leaving_rightGlobal = 0;
 
   // Free up temporary arrays.
   free(deltaShell);
-  free(shockDist);
-  free(shockFlag);
-  free(shockCalcFlag);
 
   // Reset time since t_global is updated after this routine.
   t_global = t_global_saved;
@@ -507,8 +416,7 @@ Scalar_t leaving_rightGlobal = 0;
 /*------------------------------------------------------------------*/
 /*------------------------------------------------------------------*/
 /*--*/     void                                                 /*--*/
-/*--*/     DiffuseShellData(  Index_t shell,                    /*--*/
-/*--*/                        Scalar_t dt )                     /*--*/
+/*--*/     DiffuseShellData(  Scalar_t dt )                     /*--*/
 /*--                                                              --*/
 /*-- Diffuse Data within a Shell                                  --*/
 /*-- perp diffusion                                               --*/
@@ -516,7 +424,7 @@ Scalar_t leaving_rightGlobal = 0;
 /*------------------------------------------------------------------*/
 {/*-----------------------------------------------------------------*/
 
-  Index_t face, row, col, species, energy, mu;
+  Index_t face, row, col, species, energy, mu, shell;
 
   Scalar_t* mfp;
 
@@ -525,6 +433,9 @@ Scalar_t leaving_rightGlobal = 0;
   Node_t node;
 
   mfp = (Scalar_t*)malloc(NUM_FACES*FACE_ROWS*FACE_COLS*sizeof(Scalar_t));
+
+  for (shell = innerComputeShell; shell < LOCAL_NUM_SHELLS; shell++ )
+  {
 
   for (species = 0; species < NUM_SPECIES; species++)
   {
@@ -545,8 +456,7 @@ Scalar_t leaving_rightGlobal = 0;
               deltaShell[idx_frcm(face,row,col,mu)] = 0.0;
 
             mfp[idx_frc(face,row,col)] =
-               meanFreePath(species, energy,
-               grid[idx_frcs(face,row,col,shell)].rmag * config.rScale);
+               meanFreePath(species, energy,grid[idx_frcs(face,row,col,shell)]);
 
           }
 
@@ -637,6 +547,7 @@ Scalar_t leaving_rightGlobal = 0;
     }
 
   }
+  } //shell
 
   free(mfp);
 
@@ -647,16 +558,15 @@ Scalar_t leaving_rightGlobal = 0;
 /*------------------------------------------------------------------*/
 /*------------------------------------------------------------------*/
 /*--*/     void                                                 /*--*/
-/*--*/     DriftShellData(  Index_t shell,                      /*--*/
-/*--*/              Scalar_t dt )                               /*--*/
+/*--*/     DriftShellData( Scalar_t dt )                        /*--*/
 /*--                                                              --*/
 /*-- Move Data within a Shell                                     --*/
 /*-- due to drift motion                                          --*/
 /*------------------------------------------------------------------*/
-/*-----------------------------------------------------------------*/
+/*------------------------------------------------------------------*/
 {
 
-  Index_t species, energy, face, row, col, mu;
+  Index_t species, energy, face, row, col, mu, shell;
 
   Node_t node, node1;
   Neighbor_t n, e, w, s;
@@ -665,6 +575,8 @@ Scalar_t leaving_rightGlobal = 0;
 
   Scalar_t vdp, del;
 
+  for (shell = innerComputeShell; shell < LOCAL_NUM_SHELLS; shell++ )
+  {
 
   for (species = 0; species < NUM_SPECIES; species++)
   {
@@ -884,6 +796,7 @@ Scalar_t leaving_rightGlobal = 0;
 
     }
   }
+  } //shell
 
 }
 /*----------- END DriftShellData()    ------------------------------*/
@@ -895,7 +808,6 @@ Scalar_t leaving_rightGlobal = 0;
 /*--*/     AdiabaticChange(  Index_t face,                      /*--*/
 /*--*/                       Index_t row,                       /*--*/
 /*--*/                       Index_t col,                       /*--*/
-/*--*/                       Index_t shell,                     /*--*/
 /*--*/                       Scalar_t dt )                      /*--*/
 /*--                                                              --*/
 /*-- Evaluate the adiabatic change using upwinding                --*/
@@ -910,31 +822,40 @@ Scalar_t leaving_rightGlobal = 0;
 
   Node_t node;
 
-  Index_t N_subcycles                      = 1;
-  Scalar_t safety_factor                   = 0.9;
-  Scalar_t vel_abs_max                     = 0.0;
-  Scalar_t half                            = 0.5;
-  Scalar_t one                             = 1.0;
-  Index_t s, species, energy, mu, idx;
+  Index_t N_subcycles    = 1;
+  Scalar_t safety_factor = 0.9;
+  Scalar_t vel_abs_max   = 0.0;
+  Scalar_t half          = 0.5;
+  Scalar_t one           = 1.0;
 
-  Scalar_t *restrict vel, *restrict f, *restrict f1;
-  Scalar_t *restrict v_avg;
+  Index_t s, species, energy, mu, idx, shell;
 
-  Scalar_t dt_full, dt_stable, dt_subcycle;
-  Scalar_t DlnBDt, DlnNDt, DuParDt;
+  Scalar_t *restrict vel, *restrict f, *restrict f1, *restrict v_avg;
+  Scalar_t dt_full, dt_stable, dt_subcycle, DlnBDt, DlnNDt, DuParDt;
   Scalar_t a, b, muval, cool_damp_fac;
 
   // Allocate space for the dist function, effective advection velocity, and fluxes.
-
   f    = (Scalar_t *) malloc(sizeof(Scalar_t) * NUM_SPECIES * NUM_ESTEPS * NUM_MUSTEPS);
   f1   = (Scalar_t *) malloc(sizeof(Scalar_t) * NUM_SPECIES * NUM_ESTEPS * NUM_MUSTEPS);
   vel  = (Scalar_t *) malloc(sizeof(Scalar_t) * NUM_SPECIES * NUM_ESTEPS * NUM_MUSTEPS);
   v_avg  = (Scalar_t *) malloc(sizeof(Scalar_t) * NUM_SPECIES * (NUM_ESTEPS+1) * NUM_MUSTEPS);
 
+  for (shell = innerComputeShell; shell < LOCAL_NUM_SHELLS; shell++ )
+  {
+
+  vel_abs_max   = 0.0;
+
   // Get the current node.  This contains the MHD differences
   // after the node has been moved (e.g. Delta-MHD = MHD^n+1-MHD^n)
-
   node = grid[idx_frcs(face,row,col,shell)];
+
+  if (config.masCouple > 0 && config.masHelCouple > 0) {
+    // If this is a heliospheric run, only accelerate
+    // in corona when it is still evolving.
+    if (  (t_global > masTime[config.masNumFiles - 1])      &&
+          (grid[idx_frcs(face,row,col,shell)].rmag * config.rScale
+          <= (config.masRadialMax * RSAU))   ) continue;
+  }
 
   // Get the full timestep value and use it to compute MHD derivative terms.
   dt_full = dt*config.numEpSteps;
@@ -942,9 +863,9 @@ Scalar_t leaving_rightGlobal = 0;
   DlnNDt  = node.mhdDlnN/dt_full;
 
   // Cooling damping:
-  if (DlnNDt<0 && config.dampCooling>0){
-    cool_damp_fac = config.dampCooling * 3.0/5.0;
-  }else{
+  if (DlnNDt<0){
+    cool_damp_fac = 1.0 - config.dampCooling;
+  } else {
     cool_damp_fac = 1.0;
   }
 
@@ -966,10 +887,9 @@ Scalar_t leaving_rightGlobal = 0;
         muval = mugrid[mu];
 
         a = -muval * DuParDt;
-        b = muval*muval * (DlnNDt - DlnBDt)
-            + half*(one-muval*muval) * DlnBDt;
+        b = muval*muval * (DlnNDt - DlnBDt) + half*(one-muval*muval) * DlnBDt;
 
-        vel[idx] = cool_damp_fac * (a/vgrid[energy] + b);
+        vel[idx] = cool_damp_fac * (a*vgrid_i[energy] + b);
 
         if (fabs(vel[idx]) > vel_abs_max) vel_abs_max = fabs(vel[idx]);
 
@@ -1137,14 +1057,16 @@ Scalar_t leaving_rightGlobal = 0;
         // Check if distribution dropped below double minimum.
         // If so, set it to double minimum.
         if ( eParts[idx] < DBL_MIN ){
-       //   warn(face, row, col, shell, species, energy, mu,
-       //       "AdiabaticChange: distribution less than DBL_MIN", &eParts[idx]);
+        // warn(face, row, col, shell, species, energy, mu,
+        //      "AdiabaticChange: distribution less than DBL_MIN", &eParts[idx]);
           eParts[idx] = DBL_MIN;
         }
 
       }
     }
   }
+
+  }//shell
 
   // Free up temporary arrays.
   free(v_avg);
@@ -1171,7 +1093,9 @@ Scalar_t leaving_rightGlobal = 0;
 
   Scalar_t *restrict flux;
   Index_t species, energy, mu;
-  Scalar_t cce;
+  Scalar_t cce, dlnp_i, bc_val0, bc_val1;
+
+  dlnp_i = 1.0/dlnp;
 
   flux = (Scalar_t *) malloc(sizeof(Scalar_t) * NUM_SPECIES * (NUM_ESTEPS+1) * NUM_MUSTEPS);
 
@@ -1197,7 +1121,7 @@ Scalar_t leaving_rightGlobal = 0;
       for (mu = 0; mu < NUM_MUSTEPS; mu++) {
 
         f1[idx_spem(species,energy,mu)]=(flux[idx_spep1m(species,energy+1,mu)] -
-                                         flux[idx_spep1m(species,energy  ,mu)])/dlnp;
+                                         flux[idx_spep1m(species,energy  ,mu)])*dlnp_i;
 
       }
     }
@@ -1208,6 +1132,11 @@ Scalar_t leaving_rightGlobal = 0;
   // For inflow, use Dirichlet of seed population for point "past the grid"
 
   for (species = 0; species < NUM_SPECIES; species++) {
+
+    // Since these are not dependent on mu, pre-calulate here.
+    bc_val0 = log(sepSeedFunction(egrid[idx_se(species,            0)], node.rmag));
+    bc_val1 = log(sepSeedFunction(egrid[idx_se(species, NUM_ESTEPS-1)], node.rmag));
+
     for (mu = 0; mu < NUM_MUSTEPS; mu++) {
 
       // Left boundary
@@ -1217,13 +1146,12 @@ Scalar_t leaving_rightGlobal = 0;
       if (v_avg[idx_spep1m(species,energy+1,mu)] <= 0) {
         f1[idx_spem(species,energy,mu)] = v_avg[idx_spep1m(species,energy+1,mu)]
                                         *(f[idx_spem(species,energy+1,mu)] -
-                                          f[idx_spem(species,energy  ,mu)])/dlnp;
+                                          f[idx_spem(species,energy  ,mu)])*dlnp_i;
       }
       else
       {
         f1[idx_spem(species,energy,mu)] = v_avg[idx_spep1m(species,energy+1,mu)]
-                          *(f[idx_spem(species,energy,mu)] -
-                    log(sepSeedFunction(egrid[idx_se(species, energy)], node.rmag)))/dlnp;
+                          *(f[idx_spem(species,energy,mu)] - bc_val0)*dlnp_i;
       }
 
       // Right boundary
@@ -1233,13 +1161,12 @@ Scalar_t leaving_rightGlobal = 0;
       if (v_avg[idx_spep1m(species,energy,mu)] >= 0) {
         f1[idx_spem(species,energy,mu)] = v_avg[idx_spep1m(species,energy,mu)]
                                          *(f[idx_spem(species,energy  ,mu)] -
-                                           f[idx_spem(species,energy-1,mu)])/dlnp;
+                                           f[idx_spem(species,energy-1,mu)])*dlnp_i;
       }
       else
       {
-        f1[idx_spem(species,energy,mu)] = v_avg[idx_spep1m(species,energy,mu)]*
-                    (log(sepSeedFunction(egrid[idx_se(species, energy)], node.rmag)) -
-                                           f[idx_spem(species,energy,mu)])/dlnp;
+        f1[idx_spem(species,energy,mu)] = v_avg[idx_spep1m(species,energy,mu)]
+                          *(bc_val1 - f[idx_spem(species,energy,mu)])*dlnp_i;
       }
     }
   }
@@ -1500,355 +1427,6 @@ Scalar_t leaving_rightGlobal = 0;
 } /*-------- END AdiabaticChange_Operator_WENO3( ) -----------------*/
 /*------------------------------------------------------------------*/
 
-
-/*------------------------------------------------------------------*/
-/*------------------------------------------------------------------*/
-/*--*/             void                                         /*--*/
-/*--*/     ShockSolution( Index_t face,                         /*--*/
-/*--*/                    Index_t row,                          /*--*/
-/*--*/                    Index_t col,                          /*--*/
-/*--*/                    Index_t shell,                        /*--*/
-/*--*/                    Index_t species,                      /*--*/
-/*--*/                    Scalar_t dt)                          /*--*/
-/*--                                                              --*/
-/*-- Evaluate the adiabatic change                                --*/
-/*------------------------------------------------------------------*/
-{/*-----------------------------------------------------------------*/
-
-  Node_t node;
-  Scalar_t r0, r1, b0, b1, u0, u1, n0, n1;
-  Scalar_t cr, gamma, beta;
-  Scalar_t b_dn2xb_up2, cos2_tBN, sin2_tBN, thetaBN, denominator;
-  Scalar_t vInj, pInj, eInj;
-  Scalar_t pMin, pMax, pProj, pProjDist, pProjStepGrid;
-  Scalar_t p, p1, p2, f1, f2;
-  Index_t mu, energy, eMinStep, fInjIndex, pProjStep;
-  Scalar_t fInj, p_fInjIndex;
-  Scalar_t oneOverGamma, v, lambda0, lambda1;
-  Scalar_t kappa0, kappa1, kappaPar0, kappaPar1, kappaPerp0, kappaPerp1;
-  Scalar_t ionGyroFreq0, ionGyroFreq1, ionGyroRadius0, ionGyroRadius1;
-  Scalar_t dx, deltaU;
-  Scalar_t seedFunction;
-
-  node = grid[idx_frcs(face,row,col,shell)];
-
-
-  // the compiler throws up a complaint about these maybe being uninitialized, so I'm setting a value here to keep
-  // it quiet.  If they're used, they are initialized, I've gone through the logic.
-  p_fInjIndex = 0;
-  fInj = 0.0;
-  fInjIndex = 0;
-
-  // paramaters necessary for shock solution
-
-  // there is a slight funny business w/ regards to the up and downstream positions:
-  // due to everything being measured in the moving frame, the position of the downstream
-  // node ends up being ahead of the upstream node.  The only place this is used is for the
-  // seed function and the spatial difference is so small it probably doesn't matter.  But,
-  // just to be consistent, we're swapping their positions.
-  r0 = node.rmag;
-  r1 = sqrt(node.rOlder.x*node.rOlder.x + node.rOlder.y*node.rOlder.y + node.rOlder.z*node.rOlder.z);
-
-  n1 = node.mhdDensity;
-  n0 = node.mhdDensityOld;
-  b1 = node.mhdBmag;
-  b0 = node.mhdBmagOld;
-  u1 = node.mhdVmag;
-  u0 = sqrt(node.mhdVsphOld.r*node.mhdVsphOld.r + node.mhdVsphOld.theta*node.mhdVsphOld.theta + node.mhdVsphOld.phi*node.mhdVsphOld.phi);
-
-  // compression ratio and check against maximum
-  cr = n1 / n0;
-
-  if (cr > 4.0)
-    cr = 4.0;
-
-  gamma = 3.0 * cr / (cr - 1.0);
-
-  if (cr > 1.3) {
-
-    // deltaU
-    deltaU = sqrt(pow(node.r.x - node.rOlder.x,2.0) + pow(node.r.y - node.rOlder.y,2.0) + pow(node.r.z - node.rOlder.z,2.0)) * config.rScale * log(cr);
-
-    // determining the shock angle and injection energy
-    b_dn2xb_up2 = b1 * b1 / (b0 * b0 + VERYSMALL);
-
-    if ( fabs(b_dn2xb_up2 - 1.0) > (cr * cr - 1.0) ) {
-
-      cos2_tBN = 0.0;
-      sin2_tBN = 1.0;
-      thetaBN = PI / 2.0;
-      vInj = u0;
-
-    } else {
-
-      thetaBN = asin( sqrt(fabs(b_dn2xb_up2 - 1.0) / (cr * cr - 1.0)) );
-      sin2_tBN = sin(thetaBN) * sin(thetaBN);
-      cos2_tBN = cos(thetaBN) * cos(thetaBN);
-      denominator = config.kperxkpar * sin2_tBN + cos2_tBN;
-      vInj = u0 * sqrt( 1.0 + ((1.0 - config.kperxkpar) * (1.0 - config.kperxkpar) * sin2_tBN * cos2_tBN /
-                               (denominator * denominator)) );
-
-    }
-
-    // injection momentum, energy, and distribution
-    pInj = vInj / (sqrt(1.0 - vInj * vInj) + VERYSMALL);
-    eInj = sqrt( 1.0 + pInj * pInj ) - 1.0;
-
-    // making sure there is a lower bound on the injection energy
-    if (eInj < (config.minInjectionEnergy * MEV / (MP * C * C))) {
-
-      eInj = config.minInjectionEnergy * MEV / (MP * C * C);
-      pInj = sqrt((eInj + 1.0) * (eInj + 1.0) - 1.0);
-
-    }
-
-    // storing the seed function, it is called many times later
-    seedFunction = sepSeedFunction(eInj, r0) * config.shockInjectionFactor;
-
-    // determining the lowest step on the grid to be accelerated and the injection
-    pMin = exp(lnpmin);
-    pMax = exp(lnpmin + (NUM_ESTEPS - 1) * dlnp);
-
-    if (pInj < pMin) {
-
-      fInj = seedFunction;
-      eMinStep = 0;
-
-    } else if (pInj >= pMax) {
-
-      eMinStep = NUM_ESTEPS;
-
-    } else {
-
-      fInjIndex = floor( log(pInj / pMin) / dlnp + 0.5);
-      p_fInjIndex = exp(lnpmin + fInjIndex * dlnp);
-
-      if (fInjIndex >= (NUM_ESTEPS - 1))
-        eMinStep = NUM_ESTEPS;
-      else
-        eMinStep = fInjIndex + 1;
-
-    }
-
-    ionGyroFreq1 = fabs(config.charge[species]) * OM * b1 / config.mass[species];
-    ionGyroFreq0 = fabs(config.charge[species]) * OM * b0 / config.mass[species];
-
-    // looping over the energy bins which get accelerated
-    for (energy = eMinStep; energy < NUM_ESTEPS; energy++) {
-
-      // determine the scale length
-      v = vgrid[energy];
-      p = exp(lnpmin + energy * dlnp);
-
-      lambda1 = meanFreePath(species, energy, r1 * config.rScale);
-      lambda0 = meanFreePath(species, energy, r0 * config.rScale);
-
-      kappaPar1 = v * lambda1 / 3.0;
-      kappaPar0 = v * lambda0 / 3.0;
-
-      oneOverGamma = v / p;
-
-      ionGyroRadius1 = v / ( oneOverGamma * ionGyroFreq1 + VERYSMALL);
-      ionGyroRadius0 = v / ( oneOverGamma * ionGyroFreq0 + VERYSMALL);
-
-      kappaPerp1 = kappaPar1 / ( 1.0 + (lambda1 * lambda1) / (ionGyroRadius1 * ionGyroRadius1 + VERYSMALL) );
-      kappaPerp0 = kappaPar0 / ( 1.0 + (lambda0 * lambda0) / (ionGyroRadius0 * ionGyroRadius0 + VERYSMALL) );
-
-      kappa1 = kappaPar1 * cos2_tBN + kappaPerp1 * sin2_tBN;
-      kappa0 = kappaPar0 * cos2_tBN + kappaPerp0 * sin2_tBN;
-
-      dx = kappa1 / (u1 + VERYSMALL) + kappa0 / (u0 + VERYSMALL);
-
-      // calculated the backward projected momentum
-      pProj = p * exp(-1.0 * dt * deltaU / (3.0 * dx + VERYSMALL));
-      pProjStep = floor( log(pProj/pMin) / dlnp + 0.5 );
-
-      if (pProjStep < energy) {
-
-        for (mu = 0; mu < NUM_MUSTEPS; mu++) {
-
-          // determining the injection distribution if the injection energy is on the grid
-          // i'm hardcoding in the logic but it should probably be made a function
-          if (pInj >= pMin) {
-
-            if (pInj > p_fInjIndex) {
-
-              p1 = pgrid[fInjIndex];
-              f1 = eParts[idx_frcsspem(face,row,col,shell,species,fInjIndex,mu)];
-              p2 = pgrid[fInjIndex+1];
-              f2 = eParts[idx_frcsspem(face,row,col,shell,species,fInjIndex+1,mu)];
-
-              if ((f1 == 0.0) || (f2 == 0.0))
-                fInj = linInterp(f1, f2, pInj, p1, p2);
-              else {
-
-                beta = log(f2 / f1) / dlnp;
-
-                if (fabs(beta) > 1.0)
-                  fInj = f1 * pow(pInj / p_fInjIndex, beta);
-                else
-                  fInj = linInterp(f1, f2, pInj, p1, p2);
-
-              }
-
-            } else if (pInj < p_fInjIndex) {
-
-              p1 = pgrid[fInjIndex-1];
-              f1 = eParts[idx_frcsspem(face,row,col,shell,species,fInjIndex-1,mu)];
-              p2 = pgrid[fInjIndex];
-              f2 = eParts[idx_frcsspem(face,row,col,shell,species,fInjIndex,mu)];
-
-              if ((f1 == 0.0) || (f2 == 0.0))
-                fInj = linInterp(f1, f2, pInj, p1, p2);
-              else {
-
-                beta = log(f2 / f1) / dlnp;
-
-                if (fabs(beta) > 1.0)
-                  fInj = f1 * pow(p_fInjIndex / pInj, beta);
-                else
-                  fInj = linInterp(f1, f2, pInj, p1, p2);
-
-              }
-
-            } else
-              fInj = eParts[idx_frcsspem(face,row,col,shell,species,fInjIndex,mu)];
-
-            if (fInj < seedFunction)
-              fInj = seedFunction;
-
-          }
-
-          //if (mpi_rank == 2)
-          //  printf("e:%i\tcr:%0.3f\tpMin:%0.3e\tpInj:%0.3e\tpProj:%0.3e\tpProjStep:%i\n", energy, cr, pMin, pInj, pProj, pProjStep);
-
-          // three cases: pProj < pInj; pInj < pProj < pMin; pMin < pProj
-          if (pProj <= pInj) {
-
-            shockDist[idx_frcsspem(face,row,col,shell,species,energy,mu)] = fInj * pow(p / pInj, -1.0 * gamma);
-            //eParts[idx_frcsspem(face,row,col,shell,species,energy,mu)] = fInj * pow(p / pInj, -1.0 * gamma);
-
-          } else if (pProj < pMin) {
-
-            p1 = pInj;
-            f1 = fInj;
-            p2 = pMin;
-            f2 = eParts[idx_frcsspem(face,row,col,shell,species,0,mu)];
-
-            if ((f1 == 0.0) || (f2 == 0.0))
-              shockDist[idx_frcsspem(face,row,col,shell,species,energy,mu)] = linInterp(f1, f2, pProj, p1, p2);
-              //eParts[idx_frcsspem(face,row,col,shell,species,energy,mu)] = linInterp(f1, f2, pProj, p1, p2);
-
-            else {
-
-              beta = log(f2 / f1) / log(p2 / p1);
-
-              if (fabs(beta) > 1.0)
-                shockDist[idx_frcsspem(face,row,col,shell,species,energy,mu)] = fInj * pow(pProj / pInj, beta) * pow(p / pProj, -1.0 * gamma);
-                //eParts[idx_frcsspem(face,row,col,shell,species,energy,mu)] = fInj * pow(pProj / pInj, beta) * pow(p / pProj, -1.0 * gamma);
-              else
-                shockDist[idx_frcsspem(face,row,col,shell,species,energy,mu)] = linInterp(f1, f2, pProj, p1, p2);
-                //eParts[idx_frcsspem(face,row,col,shell,species,energy,mu)] = linInterp(f1, f2, pProj, p1, p2);
-
-            }
-
-          } else {
-
-            if (pProjStep <= 0) {
-
-              pProj = pMin;
-              pProjDist = eParts[idx_frcsspem(face,row,col,shell,species,0,mu)];
-
-              if (pProjDist < (sepSeedFunction(egrid[idx_se(species,0)], r0) * config.shockInjectionFactor))
-                pProjDist = sepSeedFunction(egrid[idx_se(species,0)], r0) * config.shockInjectionFactor;
-
-              shockDist[idx_frcsspem(face,row,col,shell,species,energy,mu)] = pProjDist * pow(p / pProj, -1.0 * gamma);
-              //eParts[idx_frcsspem(face,row,col,shell,species,energy,mu)] = pProjDist * pow(p / pProj, -1.0 * gamma);
-
-            } else if (pProjStep >= (NUM_ESTEPS - 1)) {
-
-              pProj = pMax;
-              pProjDist = eParts[idx_frcsspem(face,row,col,shell,species,NUM_ESTEPS - 1,mu)];
-
-              if (pProjDist < (sepSeedFunction(egrid[idx_se(species,NUM_ESTEPS - 1)], r0) * config.shockInjectionFactor))
-                pProjDist = sepSeedFunction(egrid[idx_se(species,NUM_ESTEPS - 1)], r0) * config.shockInjectionFactor;
-
-              shockDist[idx_frcsspem(face,row,col,shell,species,energy,mu)] = pProjDist * pow(p / pProj, -1.0 * gamma);
-              //eParts[idx_frcsspem(face,row,col,shell,species,energy,mu)] = pProjDist * pow(p / pProj, -1.0 * gamma);
-
-            } else {
-
-              pProjStepGrid = pgrid[pProjStep];
-
-              if (pProj > pProjStepGrid) {
-
-                p1 = pgrid[pProjStep];
-                f1 = eParts[idx_frcsspem(face,row,col,shell,species,pProjStep,mu)];
-                p2 = pgrid[pProjStep+1];
-                f2 = eParts[idx_frcsspem(face,row,col,shell,species,pProjStep+1,mu)];
-
-                if ((f1 == 0.0) || (f2 == 0.0))
-                  pProjDist = linInterp(f1, f2, pProj, p1, p2);
-                else {
-
-                  beta = log(f2 / f1) / dlnp;
-
-                  if (fabs(beta) > 1.0)
-                    pProjDist = f1 * pow(pProj / pProjStepGrid, beta);
-                  else
-                    pProjDist = linInterp(f1, f2, pProj, p1, p2);
-
-                }
-
-              } else if (pProj < pProjStepGrid) {
-
-                p1 = pgrid[pProjStep-1];
-                f1 = eParts[idx_frcsspem(face,row,col,shell,species,pProjStep - 1,mu)];
-                p2 = pgrid[pProjStep];
-                f2 = eParts[idx_frcsspem(face,row,col,shell,species,pProjStep,mu)];
-
-                if ((f1 == 0.0) || (f2 == 0.0))
-                  pProjDist = linInterp(f1, f2, pProj, p1, p2);
-                else {
-
-                  beta = log(f2 / f1) / dlnp;
-
-                  if (fabs(beta) > 1.0)
-                    pProjDist = f1 * pow(pProjStepGrid / pProj, beta);
-                  else
-                    pProjDist = linInterp(f1, f2, pProj, p1, p2);
-
-                }
-
-              } else
-                pProjDist = eParts[idx_frcsspem(face,row,col,shell,species,pProjStep,mu)];
-
-              if (pProjDist < (sepSeedFunction(egrid[idx_se(species,pProjStep)], r0) * config.shockInjectionFactor))
-                pProjDist = sepSeedFunction(egrid[idx_se(species,pProjStep)], r0) * config.shockInjectionFactor;
-
-              shockDist[idx_frcsspem(face,row,col,shell,species,energy,mu)] = pProjDist * pow(p / pProj, -1.0 * gamma);
-              //eParts[idx_frcsspem(face,row,col,shell,species,energy,mu)] = pProjDist * pow(p / pProj, -1.0 * gamma);
-
-            }
-
-          }
-
-          if (shockDist[idx_frcsspem(face,row,col,shell,species,energy,mu)] < eParts[idx_frcsspem(face,row,col,shell,species,energy,mu)])
-            shockDist[idx_frcsspem(face,row,col,shell,species,energy,mu)] = eParts[idx_frcsspem(face,row,col,shell,species,energy,mu)];
-
-        }
-
-      }
-
-    }
-
-  }
-
-}
-/*---------- END ShockSolver( ) ------------------------------------*/
-/*------------------------------------------------------------------*/
-
-
 /*------------------------------------------------------------------*/
 /*------------------------------------------------------------------*/
 /*------------------------------------------------------------------*/
@@ -1868,9 +1446,9 @@ Scalar_t leaving_rightGlobal = 0;
 
   Index_t species, energy, mu;
 
-  Scalar_t dmu, mum, mup, muval;
+  Scalar_t muval;
   Scalar_t Af, Bf, Cf;
-  Scalar_t beta, delta, Xi;
+  Scalar_t beta, delta;
   Scalar_t dlnBds;
   Scalar_t* delEP;
 
@@ -1904,12 +1482,6 @@ Scalar_t leaving_rightGlobal = 0;
       {
 
         muval = mugrid[mu];
-
-//        mum = -1.0 + mu * dmu;
-//        mup = -1.0 + (mu + 1.0) * dmu;
-
-//        beta = (Af - Bf) * (1.0 / (6.0 * dmu)) * (3.0 * dmu - mup*mup*mup + mum*mum*mum) +
-//        Cf * (1.0 / (8.0 * dmu)) * (2.0 * (mup*mup - mum*mum) - mup*mup*mup*mup + mum*mum*mum*mum);
 
         beta = 0.5*(1.0-muval*muval)*((Af - Bf) + muval*Cf);
 
@@ -1965,7 +1537,6 @@ Scalar_t leaving_rightGlobal = 0;
 /*--*/     AdiabaticFocusing( Index_t face,                     /*--*/
 /*--*/                        Index_t row,                      /*--*/
 /*--*/                        Index_t col,                      /*--*/
-/*--*/                        Index_t shell,                    /*--*/
 /*--*/                        Scalar_t dt )                     /*--*/
 /*--                                                              --*/
 /*-- Calculate adiabatic focusing along a stream                  --*/
@@ -1989,32 +1560,37 @@ Scalar_t leaving_rightGlobal = 0;
   Scalar_t two                             = 2.0;
   Scalar_t three                           = 3.0;
 
-  Index_t s, species, energy, mu, idx;
+  Index_t s, species, energy, mu, idx, shell;
 
   Scalar_t *restrict vel, *restrict f, *restrict f1;
-  Scalar_t *restrict v_avg;
+  Scalar_t *restrict v_avg, *restrict b, *restrict DuParDt, *restrict dlnBds;
 
   Scalar_t dt_full, dt_stable, dt_subcycle;
-  Scalar_t DlnBDt, DlnNDt, DuParDt, dlnBds;
-  Scalar_t a, b, muval;
+  Scalar_t a, muval;
 
   // Allocate space for the dist function, effective advection velocity, and fluxes.
 
-  f    = (Scalar_t *) malloc(sizeof(Scalar_t) * NUM_SPECIES * NUM_ESTEPS * NUM_MUSTEPS);
-  f1   = (Scalar_t *) malloc(sizeof(Scalar_t) * NUM_SPECIES * NUM_ESTEPS * NUM_MUSTEPS);
-  vel  = (Scalar_t *) malloc(sizeof(Scalar_t) * NUM_SPECIES * NUM_ESTEPS * NUM_MUSTEPS);
-  v_avg  = (Scalar_t *) malloc(sizeof(Scalar_t) * NUM_SPECIES * NUM_ESTEPS * (NUM_MUSTEPS+1));
-
-  // Get the current node.  This contains the MHD differences
-  // after the node has been moved (e.g. Delta-MHD = MHD^n+1-MHD^n)
-
-  node = grid[idx_frcs(face,row,col,shell)];
+  f       = (Scalar_t *) malloc(sizeof(Scalar_t) * NUM_SPECIES * NUM_ESTEPS * NUM_MUSTEPS);
+  f1      = (Scalar_t *) malloc(sizeof(Scalar_t) * NUM_SPECIES * NUM_ESTEPS * NUM_MUSTEPS);
+  vel     = (Scalar_t *) malloc(sizeof(Scalar_t) * NUM_SPECIES * NUM_ESTEPS * NUM_MUSTEPS);
+  v_avg   = (Scalar_t *) malloc(sizeof(Scalar_t) * NUM_SPECIES * NUM_ESTEPS * (NUM_MUSTEPS+1));
+  b       = (Scalar_t *) malloc(sizeof(Scalar_t) * LOCAL_NUM_SHELLS);
+  DuParDt = (Scalar_t *) malloc(sizeof(Scalar_t) * LOCAL_NUM_SHELLS);
+  dlnBds  = (Scalar_t *) malloc(sizeof(Scalar_t) * LOCAL_NUM_SHELLS);
 
   // Get the full timestep value and use it to compute MHD derivative terms.
   dt_full = dt*config.numEpSteps;
-  DlnBDt  = node.mhdDlnB/dt_full;
-  DlnNDt  = node.mhdDlnN/dt_full;
-  DuParDt = node.mhdDuPar/dt_full;
+
+  // Set quantities that are only shell dependent.
+  for (shell = innerComputeShell; shell < LOCAL_NUM_SHELLS; shell++ )
+  {
+    // Get the current node.  This contains the MHD differences
+    // after the node has been moved (e.g. Delta-MHD = MHD^n+1-MHD^n)
+    // idx_frcs(f,r,c,s) ((s)+(c)*LOCAL_NUM_SHELLS+(r)*CS+(f)*RCS)
+    node = grid[idx_frcs(face,row,col,shell)];
+
+    DuParDt[shell] = node.mhdDuPar / dt_full;
+    b[shell]       = two * (node.mhdDlnN/dt_full) - three * (node.mhdDlnB/dt_full);
 
   // Set spatial derivative of b-hat*Grad[ln(B)]:
   // NOTE! These values (ds,Bmag+/-) are set
@@ -2024,33 +1600,27 @@ Scalar_t leaving_rightGlobal = 0;
   // Leaving it in for now...
   // ALSO, this is a central difference..   maybe it should be upwinded in the direction of B?
   if ((node.mhdBmagPlus == 0.0) || (node.mhdBmagMinus == 0.0))
-    dlnBds = 0.0;
+    dlnBds[shell] = 0.0;
   else
-    dlnBds = (log(node.mhdBmagPlus) - log(node.mhdBmagMinus)) / (two * node.ds + DBL_MIN);
+    dlnBds[shell] = (log(node.mhdBmagPlus) - log(node.mhdBmagMinus)) / (two * node.ds + DBL_MIN);
+  }
 
-  // Compute velocites.
-  // Copy the distribution function into f
-  // in case we want to later test integrating in ln space.
-
-  b = two * DlnNDt - three * DlnBDt;
-
-  for (species = 0; species < NUM_SPECIES; species++) {
-    for (energy = 0; energy < NUM_ESTEPS; energy++) {
-      for (mu = 0; mu < NUM_MUSTEPS; mu++) {
-
-        idx = idx_spem(species,energy,mu);
-
-        f[idx] = eParts[idx_frcsspem(face,row,col,shell,species,energy,mu)];
-
-        muval = mugrid[mu];
-
-        a = -vgrid[energy] * dlnBds - (two / vgrid[energy]) * DuParDt;
-
-        vel[idx] = half*(one-muval*muval)*(a + muval*b);
-
+  for (shell = innerComputeShell; shell < LOCAL_NUM_SHELLS; shell++ )
+  {
+    vel_abs_max = 0.0;
+    // Compute velocites.
+    // Copy the distribution function into f
+    for (species = 0; species < NUM_SPECIES; species++) {
+      for (energy = 0; energy < NUM_ESTEPS; energy++) {
+        for (mu = 0; mu < NUM_MUSTEPS; mu++) {
+          idx = idx_spem(species,energy,mu);
+          f[idx] = eParts[idx_frcsspem(face,row,col,shell,species,energy,mu)];
+          muval = mugrid[mu];
+          a = -vgrid[energy] * dlnBds[shell] - (two / vgrid[energy]) * DuParDt[shell];
+          vel[idx] = half*(one-muval*muval)*(a + muval*b[shell]);
+        }
       }
     }
-  }
 
   // Generate extended v_avg array.
   // Eventually, and alternative vgrid array should be made to
@@ -2060,11 +1630,9 @@ Scalar_t leaving_rightGlobal = 0;
   for (species = 0; species < NUM_SPECIES; species++) {
     for (energy = 0; energy < NUM_ESTEPS; energy++) {
       for (mu = 0; mu < NUM_MUSTEPS-1; mu++) {
-
         v_avg[idx_spemp1(species,energy,mu+1)] = half * (
                           vel[idx_spem(species,energy,mu+1)]
                         + vel[idx_spem(species,energy,mu  )]);
-
         if (fabs(v_avg[idx_spemp1(species,energy,mu+1)]) > vel_abs_max){
           vel_abs_max = fabs(v_avg[idx_spemp1(species,energy,mu+1)]);
         }
@@ -2221,12 +1789,16 @@ Scalar_t leaving_rightGlobal = 0;
       }
     }
   }
+  } //shell
 
   // Free up temporary arrays.
   free(v_avg);
   free(vel);
   free(f1);
   free(f);
+  free(b);
+  free(DuParDt);
+  free(dlnBds);
 
 }/*-------- END AdiabaticFocusing() --------------------------------*/
 /*------------------------------------------------------------------*/
@@ -2676,7 +2248,7 @@ Scalar_t leaving_rightGlobal = 0;
   Index_t   nsteps, step, species, energy, mu, slist;
   Scalar_t  NUM_MUSTEPS_I;
   Scalar_t  dtMin, dtProp,dtProp_i,vgrid_current,vgrid_current_i;
-  Scalar_t  del_fac, iso, tau, rig;
+  Scalar_t  del_fac, iso, tau;
 
   Scalar_t  *restrict f_old,          *restrict f_new;
   Scalar_t  *restrict iso_vec;
@@ -2701,6 +2273,20 @@ Scalar_t leaving_rightGlobal = 0;
     f_old = malloc(streamlistSize*NUM_MUSTEPS*sizeof(Scalar_t));
     f_new = malloc(streamlistSize*NUM_MUSTEPS*sizeof(Scalar_t));
 
+
+    // OK...  so...
+    // What if the f arrays are set to each processors num shells plus
+    // ghost cells.
+    // Then, create a seam routine for f arrays
+    // seam when needed.
+    // seam should be for all streams
+    // Inner loop for everything here should be face/row/col
+    // Number of ranks limited by num shells - bad for scaling to many streams...
+    // Especially with time-step changes, will have less total shells....
+    // Otherwise, whole code needs to change to be on streams primarily,
+    // distributed across ranks/6 and shell-drift/diff needs neighbor structs...
+
+
     sep_seed_vec         = malloc(3*sizeof(Scalar_t));
     ds_i_multiplier_vec  = malloc(streamlistSize*sizeof(Scalar_t));
     exp_mdt_tau_vec      = malloc(streamlistSize*sizeof(Scalar_t));
@@ -2718,17 +2304,14 @@ Scalar_t leaving_rightGlobal = 0;
 // ****** Get current particle velocity and rigidity^p.
 //
         vgrid_current   =     vgrid[energy];
-        vgrid_current_i = one/vgrid[energy];
-        rig             =  rigidity[energy];
+        vgrid_current_i =   vgrid_i[energy];
 //
 // ****** Compute stable time-step for explicit Euler sub-cycles.
 //
         dtMin    = 0.4*dsMin*vgrid_current_i;
 
-
         // Need to modify V based on Nathans new document.
         // After modification, need to recalculate stable Euler dt...
-
 
         nsteps   = (Index_t) floor(dt/dtMin + one);
         dtProp   = dt/(one*nsteps);
@@ -2741,10 +2324,7 @@ Scalar_t leaving_rightGlobal = 0;
           shell = shellList[slist];
 
 // ****** Modifiy multiplier based on time-scale of mean-free-path.
-          tau = vgrid_current_i*rig*pow(streamGrid[shell].rmag*config.rScale,
-                                        config.mfpRadialPower)*config.lamo;
-//          tau = vgrid_current_i*rig*config.lamo;
-//          tau = vgrid_current_i*rig*(config.mhdBsAu/streamGrid[shell].mhdBmag)*config.lamo;
+          tau = vgrid_current_i * meanFreePath(species, energy, streamGrid[shell]);
           if (dtProp > tau){
              ds_i_multiplier_vec[slist] = ds_i[slist]*tau*dtProp_i;
           }else{
@@ -2847,7 +2427,6 @@ Scalar_t leaving_rightGlobal = 0;
 
           // Should the bondary conditions above be applied here too?
 
-
         } /*-- END OF SUB-CYCLE STEPS --*/
 // *********************************************************************
 
@@ -2932,13 +2511,10 @@ Scalar_t leaving_rightGlobal = 0;
   for (slist = 0 ; slist < streamlistSize;  slist++ ) {
 
     thisShell = shellList[slist];
-    /*     printf("thisShell = %d\n",thisShell); */
 
     if (slist == 0 ) {
 
       nextShell = shellList[slist + 1];
-
-      /*  printf("nextShell = %d\n",nextShell); */
 
       r1.x = streamGrid[nextShell].r.x * config.rScale;
       r1.y = streamGrid[nextShell].r.y * config.rScale;
@@ -2961,7 +2537,6 @@ Scalar_t leaving_rightGlobal = 0;
     } else if (slist == ( streamlistSize - 1 )) {
 
       lastShell = shellList[slist-1];
-      /* printf("lastShell = %d\n",lastShell); */
 
       r9.x = streamGrid[lastShell].r.x * config.rScale;
       r9.y = streamGrid[lastShell].r.y * config.rScale;
@@ -3024,41 +2599,4 @@ Scalar_t leaving_rightGlobal = 0;
   } /* shell loop */
 
 }/*-------- END FindSementLengths() --------------------------------*/
-/*------------------------------------------------------------------*/
-
-
-/*------------------------------------------------------------------*/
-/*------------------------------------------------------------------*/
-/*--*/             void                                         /*--*/
-/*--*/     isotropize(Scalar_t dt,
-                      Index_t species,
-                      Index_t energy,
-                      Index_t shell )
-/*--                                                              --*/
-/*--  returns a relaxed distribution over the relaxation time     --*/
-/*------------------------------------------------------------------*/
-{/*-----------------------------------------------------------------*/
-
-  Scalar_t tau;
-  Scalar_t iso;
-  Index_t mu;
-
-  // r = streamGrid[shell].rmag * config.rScale;
-
-  iso = 0.0;
-  tau = 0.0;
-
-  for (mu = 0; mu < NUM_MUSTEPS; mu++)
-    iso += ePartsStream[idx_sspem(shell, species, energy, mu)];
-
-  iso /= (1.0 * NUM_MUSTEPS);
-
-  tau = meanFreePath(species, energy,
-                     streamGrid[shell].rmag*config.rScale)/vgrid[energy];
-
-  for (mu = 0; mu < NUM_MUSTEPS; mu++)
-    ePartsStream[idx_sspem(shell, species, energy, mu)] =
-        iso + (ePartsStream[idx_sspem(shell, species, energy, mu)] - iso) * exp(-dt / tau);
-
-} /*-------- END isotropize( ) -------------------------------------*/
 /*------------------------------------------------------------------*/

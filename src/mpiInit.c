@@ -102,6 +102,12 @@ initMPI_cubeShellStruct();
   displGrid       = (Index_t *) malloc(sizeof(Index_t)*(int)N_PROCS);
   displEparts     = (Index_t *) malloc(sizeof(Index_t)*(int)N_PROCS);
 
+  if (mpi_rank == 0) {
+    innerComputeShell = INNER_ACTIVE_SHELL + 1;
+  } else {
+    innerComputeShell = INNER_ACTIVE_SHELL;
+  }
+
   // calculate number of nodes / proc
   divisor   = config.numNodesPerStream / N_PROCS;
   remainder = config.numNodesPerStream % N_PROCS;

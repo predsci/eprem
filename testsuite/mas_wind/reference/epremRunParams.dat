@@ -1,6 +1,6 @@
 
 ******************************************************************
-*******************  EPREM Version 1.14.2  ************************
+*******************  EPREM Version 1.16.0  ************************
 ******************************************************************
 Inner coupling boundary: 1.000000 Rs -- Outer coupling boundary: 230.000000 Rs
 Start: 0.000000 JD, EP Calc: 0.000000 JD, MAS Start: 0.000000 JD, Eruption: 0.000000 JD, Stop: 1.673461 JD
@@ -28,26 +28,26 @@ TOTAL_NUM_SHELLS
 
 TIMING
 ********************************
-Run started on Tue Jul 25 15:59:20 2023
-Run finished on Tue Jul 25 15:59:32 2023
-Run real time duration is 0.200000 minutes (or 0.003333 hours, or 0.000139 days)
+Run started on Wed Aug 20 12:53:54 2025
+Run finished on Wed Aug 20 12:54:11 2025
+Run real time duration is 0.283333 minutes (or 0.004722 hours, or 0.000197 days)
 Run data time duration is 1.6735 days
 ********************************
--------------------DETAILED TIMING----------------------
+-------------------DETAILED TIMING-----------------------
 Code portion                   mean        max        min
---------------------------------------------------------
-|->MPI (Gather/Scatter)        2.24       2.60       1.18
-|->MPI (Send/Recv)             0.05       0.08       0.03
-Initialization                 0.71       0.72       0.70
-IO (EPREM)                     0.04       0.04       0.03
-IO (MAS)                       0.00       0.02       0.00
-EP Total                      10.77      10.79      10.76
-|->EP DiffuseStream            5.71       5.82       5.58
-|->EP Adiabatic Focus          0.78       1.85       0.53
-|->EP Adiabatic Change         1.30       1.32       1.26
+---------------------------------------------------------
+|->MPI (Gather/Scatter)        3.04       3.54       1.61
+|->MPI (Send/Recv)             0.10       0.13       0.03
+Initialization                 1.03       1.07       1.02
+IO (EPREM)                     0.05       0.05       0.05
+IO (MAS)                       0.01       0.02       0.00
+EP Total                      14.81      14.85      14.80
+|->EP DiffuseStream            8.22       8.35       8.05
+|->EP Adiabatic Focus          1.00       2.49       0.64
+|->EP Adiabatic Change         1.56       1.58       1.52
 |->EP Diffuse Shell            0.00       0.00       0.00
 |->EP Drift Shell              0.00       0.00       0.00
-Other                          0.43       0.45       0.40
-Total (Wall)                  11.94      11.94      11.94
---------------------------------------------------------
+Other                          0.63       0.66       0.59
+Total (Wall)                  16.53      16.53      16.53
+---------------------------------------------------------
 

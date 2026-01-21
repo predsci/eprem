@@ -13,7 +13,6 @@
 #include <math.h>
 #include <hdf5.h>
 #include <hdf5_hl.h>
-#include <mfhdf.h>
 #include <string.h>
 #include <stdlib.h>
 #include "readMAS.h"
@@ -46,56 +45,56 @@ Index_t masHelFileIndex_loaded1=-9999;
 Index_t masMallocFlag;
 Index_t masEqFileFlag;
 
-int32 masDimMin[1] = {0};
+int32_t masDimMin[1] = {0};
 
-int32 masBppDimMax[1];
-int32 masBptDimMax[1];
-int32 masBprDimMax[1];
-int32 masHelBppDimMax[1];
-int32 masHelBptDimMax[1];
-int32 masHelBprDimMax[1];
+int32_t masBppDimMax[1];
+int32_t masBptDimMax[1];
+int32_t masBprDimMax[1];
+int32_t masHelBppDimMax[1];
+int32_t masHelBptDimMax[1];
+int32_t masHelBprDimMax[1];
 
-int32 masBtpDimMax[1];
-int32 masBttDimMax[1];
-int32 masBtrDimMax[1];
-int32 masHelBtpDimMax[1];
-int32 masHelBttDimMax[1];
-int32 masHelBtrDimMax[1];
+int32_t masBtpDimMax[1];
+int32_t masBttDimMax[1];
+int32_t masBtrDimMax[1];
+int32_t masHelBtpDimMax[1];
+int32_t masHelBttDimMax[1];
+int32_t masHelBtrDimMax[1];
 
-int32 masBrpDimMax[1];
-int32 masBrtDimMax[1];
-int32 masBrrDimMax[1];
-int32 masHelBrpDimMax[1];
-int32 masHelBrtDimMax[1];
-int32 masHelBrrDimMax[1];
+int32_t masBrpDimMax[1];
+int32_t masBrtDimMax[1];
+int32_t masBrrDimMax[1];
+int32_t masHelBrpDimMax[1];
+int32_t masHelBrtDimMax[1];
+int32_t masHelBrrDimMax[1];
 
-int32 masVppDimMax[1];
-int32 masVptDimMax[1];
-int32 masVprDimMax[1];
-int32 masHelVppDimMax[1];
-int32 masHelVptDimMax[1];
-int32 masHelVprDimMax[1];
+int32_t masVppDimMax[1];
+int32_t masVptDimMax[1];
+int32_t masVprDimMax[1];
+int32_t masHelVppDimMax[1];
+int32_t masHelVptDimMax[1];
+int32_t masHelVprDimMax[1];
 
-int32 masVtpDimMax[1];
-int32 masVttDimMax[1];
-int32 masVtrDimMax[1];
-int32 masHelVtpDimMax[1];
-int32 masHelVttDimMax[1];
-int32 masHelVtrDimMax[1];
+int32_t masVtpDimMax[1];
+int32_t masVttDimMax[1];
+int32_t masVtrDimMax[1];
+int32_t masHelVtpDimMax[1];
+int32_t masHelVttDimMax[1];
+int32_t masHelVtrDimMax[1];
 
-int32 masVrpDimMax[1];
-int32 masVrtDimMax[1];
-int32 masVrrDimMax[1];
-int32 masHelVrpDimMax[1];
-int32 masHelVrtDimMax[1];
-int32 masHelVrrDimMax[1];
+int32_t masVrpDimMax[1];
+int32_t masVrtDimMax[1];
+int32_t masVrrDimMax[1];
+int32_t masHelVrpDimMax[1];
+int32_t masHelVrtDimMax[1];
+int32_t masHelVrrDimMax[1];
 
-int32 masDpDimMax[1];
-int32 masDtDimMax[1];
-int32 masDrDimMax[1];
-int32 masHelDpDimMax[1];
-int32 masHelDtDimMax[1];
-int32 masHelDrDimMax[1];
+int32_t masDpDimMax[1];
+int32_t masDtDimMax[1];
+int32_t masDrDimMax[1];
+int32_t masHelDpDimMax[1];
+int32_t masHelDtDimMax[1];
+int32_t masHelDrDimMax[1];
 
 float * masBppDim;
 float * masBptDim;
@@ -213,14 +212,17 @@ char file_extension[5];
 /*------------------------------------------------------------------*/
 /*------------------------------------------------------------------*/
 /*--*/     void                                                 /*--*/
-/*--*/     ERR(intn status)                                     /*--*/
+/*--*/     ERR(int status)                                     /*--*/
 /*--                                                              --*/
 /*--  This function checks for an error when loading an SD        --*/
 /*--  element.                                                    --*/
 /*------------------------------------------------------------------*/
 {/*-----------------------------------------------------------------*/
-  if ((status != 0) && (mpi_rank == 0)) {
-    printf("\n\nERROR WITH AN SD! status = %d\n",status);
+  if (status != 0){
+    if (mpi_rank == 0){
+      printf("\n\nERROR WITH AN SD! status = %d\n",status);
+    }
+    exit(1);
   }
 }/*-------- END ERR(intn status)  ----------------------------------*/
 /*------------------------------------------------------------------*/
@@ -314,7 +316,8 @@ char file_extension[5];
   char masTimeFilename[MAX_STRING_SIZE] = "masTime.txt";
   char masTimeFilenameWithPath[MAX_STRING_SIZE];
 
-  Scalar_t initialTime, timeVar;
+  Scalar_t initialTime = 0;
+  Scalar_t timeVar;
 
   MPI_Aint N;
   MPI_Aint size;
@@ -410,13 +413,7 @@ char file_extension[5];
   // Malloc arrays. (Only malloc once).
   if (masMallocFlag == 0) {
 
-    // Set file type to hdf4.  RMC: Eventually this needs to either be
-    // an input flag, or auto-detected (the current autodetection in
-    // masIO.c does not work on some systems).  This will be moved from here
-    // to a more logical place eventually.
-
-    hdf5_input = 0;
-    strncpy(file_extension,".hdf",strlen(".hdf")+1);
+    strncpy(file_extension,".h5",strlen(".h5")+1);
 
     // The size of the index arrays doesn't change in time in this version.
     masReadFieldIndex();
@@ -1127,39 +1124,39 @@ char file_extension[5];
 
   // Read in dimensions --> Allocate the mesh storage --> Read the mesh
 
-    // masBpp
-    masReadMeshDimensions(fileNames[0], "dim3", 0, &masBppDimMax[0]);
-    masBppDim = (float *)malloc(sizeof(float) * (int)(masBppDimMax[0]));
-    masReadMesh(fileNames[0], "dim3", 0, &masBppDim);
+    // masBppDim
+    masReadMeshDimensions(fileNames[0], "dim3", &masBppDimMax[0]);
+    masBppDim = (float *)malloc(sizeof(float) * (int)(masBppDimMax[0])); 
+    masReadMesh(fileNames[0], "dim3", &masBppDim);
 
     // masBptDim
-    masReadMeshDimensions(fileNames[0], "dim2", 1, &masBptDimMax[0]);
+    masReadMeshDimensions(fileNames[0], "dim2", &masBptDimMax[0]);
     masBptDim = (float *)malloc(sizeof(float) * (int)(masBptDimMax[0]));
-    masReadMesh(fileNames[0], "dim2", 1, &masBptDim);
+    masReadMesh(fileNames[0], "dim2", &masBptDim);
 
     // masBprDim
-    masReadMeshDimensions(fileNames[0], "dim1", 2, &masBprDimMax[0]);
+    masReadMeshDimensions(fileNames[0], "dim1", &masBprDimMax[0]);
     masBprDim = (float *)malloc(sizeof(float) * (int)(masBprDimMax[0]));
-    masReadMesh(fileNames[0], "dim1", 2, &masBprDim);
+    masReadMesh(fileNames[0], "dim1", &masBprDim);
 
     // grab the min and max for the r
     rMin = masBprDim[0];
     rMax = masBprDim[masBprDimMax[0] - 1];
 
     // masBtpDim
-    masReadMeshDimensions(fileNames[1], "dim3", 0, &masBtpDimMax[0]);
+    masReadMeshDimensions(fileNames[1], "dim3", &masBtpDimMax[0]);
     masBtpDim = (float *)malloc(sizeof(float) * (int)(masBtpDimMax[0]));
-    masReadMesh(fileNames[1], "dim3", 0, &masBtpDim);
+    masReadMesh(fileNames[1], "dim3", &masBtpDim);
 
     // masBttDim
-    masReadMeshDimensions(fileNames[1], "dim2", 1, &masBttDimMax[0]);
+    masReadMeshDimensions(fileNames[1], "dim2", &masBttDimMax[0]);
     masBttDim = (float *)malloc(sizeof(float) * (int)(masBttDimMax[0]));
-    masReadMesh(fileNames[1], "dim2", 1, &masBttDim);
+    masReadMesh(fileNames[1], "dim2", &masBttDim);
 
     // masBtrDim
-    masReadMeshDimensions(fileNames[1], "dim1", 2, &masBtrDimMax[0]);
+    masReadMeshDimensions(fileNames[1], "dim1", &masBtrDimMax[0]);
     masBtrDim = (float *)malloc(sizeof(float) * (int)(masBtrDimMax[0]));
-    masReadMesh(fileNames[1], "dim1", 2, &masBtrDim);
+    masReadMesh(fileNames[1], "dim1", &masBtrDim);
 
     // grab the min and max for the r
     rTemp = masBtrDim[0];
@@ -1171,19 +1168,19 @@ char file_extension[5];
       rMax = rTemp;
 
     // masBrpDim
-    masReadMeshDimensions(fileNames[2], "dim3", 0, &masBrpDimMax[0]);
+    masReadMeshDimensions(fileNames[2], "dim3", &masBrpDimMax[0]);
     masBrpDim = (float *)malloc(sizeof(float) * (int)(masBrpDimMax[0]));
-    masReadMesh(fileNames[2], "dim3", 0, &masBrpDim);
+    masReadMesh(fileNames[2], "dim3", &masBrpDim);
 
     // masBrtDim
-    masReadMeshDimensions(fileNames[2], "dim2", 1, &masBrtDimMax[0]);
+    masReadMeshDimensions(fileNames[2], "dim2", &masBrtDimMax[0]);
     masBrtDim = (float *)malloc(sizeof(float) * (int)(masBrtDimMax[0]));
-    masReadMesh(fileNames[2], "dim2", 1, &masBrtDim);
+    masReadMesh(fileNames[2], "dim2", &masBrtDim);
 
     // masBrrDim
-    masReadMeshDimensions(fileNames[2], "dim1", 2, &masBrrDimMax[0]);
+    masReadMeshDimensions(fileNames[2], "dim1", &masBrrDimMax[0]);
     masBrrDim = (float *)malloc(sizeof(float) * (int)(masBrrDimMax[0]));
-    masReadMesh(fileNames[2], "dim1", 2, &masBrrDim);
+    masReadMesh(fileNames[2], "dim1", &masBrrDim);
 
     // grab the min and max for the r
     rTemp = masBrrDim[0];
@@ -1195,19 +1192,19 @@ char file_extension[5];
       rMax = rTemp;
 
     // masVppDim
-    masReadMeshDimensions(fileNames[3], "dim3", 0, &masVppDimMax[0]);
+    masReadMeshDimensions(fileNames[3], "dim3", &masVppDimMax[0]);
     masVppDim = (float *)malloc(sizeof(float) * (int)(masVppDimMax[0]));
-    masReadMesh(fileNames[3], "dim3", 0, &masVppDim);
+    masReadMesh(fileNames[3], "dim3", &masVppDim);
 
     // masVptDim
-    masReadMeshDimensions(fileNames[3], "dim2", 1, &masVptDimMax[0]);
+    masReadMeshDimensions(fileNames[3], "dim2", &masVptDimMax[0]);
     masVptDim = (float *)malloc(sizeof(float) * (int)(masVptDimMax[0]));
-    masReadMesh(fileNames[3], "dim2", 1, &masVptDim);
+    masReadMesh(fileNames[3], "dim2", &masVptDim);
 
     // masVprDim
-    masReadMeshDimensions(fileNames[3], "dim1", 2, &masVprDimMax[0]);
+    masReadMeshDimensions(fileNames[3], "dim1", &masVprDimMax[0]);
     masVprDim = (float *)malloc(sizeof(float) * (int)(masVprDimMax[0]));
-    masReadMesh(fileNames[3], "dim1", 2, &masVprDim);
+    masReadMesh(fileNames[3], "dim1", &masVprDim);
 
     // grab the min and max for the r
     rTemp = masVprDim[0];
@@ -1219,19 +1216,19 @@ char file_extension[5];
       rMax = rTemp;
 
     // masVtpDim
-    masReadMeshDimensions(fileNames[4], "dim3", 0, &masVtpDimMax[0]);
+    masReadMeshDimensions(fileNames[4], "dim3", &masVtpDimMax[0]);
     masVtpDim = (float *)malloc(sizeof(float) * (int)(masVtpDimMax[0]));
-    masReadMesh(fileNames[4], "dim3", 0, &masVtpDim);
+    masReadMesh(fileNames[4], "dim3", &masVtpDim);
 
     // masVttDim
-    masReadMeshDimensions(fileNames[4], "dim2", 1, &masVttDimMax[0]);
+    masReadMeshDimensions(fileNames[4], "dim2", &masVttDimMax[0]);
     masVttDim = (float *)malloc(sizeof(float) * (int)(masVttDimMax[0]));
-    masReadMesh(fileNames[4], "dim2", 1, &masVttDim);
+    masReadMesh(fileNames[4], "dim2", &masVttDim);
 
     // masVtrDim
-    masReadMeshDimensions(fileNames[4], "dim1", 2, &masVtrDimMax[0]);
+    masReadMeshDimensions(fileNames[4], "dim1", &masVtrDimMax[0]);
     masVtrDim = (float *)malloc(sizeof(float) * (int)(masVtrDimMax[0]));
-    masReadMesh(fileNames[4], "dim1", 2, &masVtrDim);
+    masReadMesh(fileNames[4], "dim1", &masVtrDim);
 
     // grab the min and max for the r
     rTemp = masVtrDim[0];
@@ -1243,19 +1240,19 @@ char file_extension[5];
       rMax = rTemp;
 
     // masVrpDim
-    masReadMeshDimensions(fileNames[5], "dim3", 0, &masVrpDimMax[0]);
+    masReadMeshDimensions(fileNames[5], "dim3", &masVrpDimMax[0]);
     masVrpDim = (float *)malloc(sizeof(float) * (int)(masVrpDimMax[0]));
-    masReadMesh(fileNames[5], "dim3", 0, &masVrpDim);
+    masReadMesh(fileNames[5], "dim3", &masVrpDim);
 
     // masVrtDim
-    masReadMeshDimensions(fileNames[5], "dim2", 1, &masVrtDimMax[0]);
+    masReadMeshDimensions(fileNames[5], "dim2", &masVrtDimMax[0]);
     masVrtDim = (float *)malloc(sizeof(float) * (int)(masVrtDimMax[0]));
-    masReadMesh(fileNames[5], "dim2", 1, &masVrtDim);
+    masReadMesh(fileNames[5], "dim2", &masVrtDim);
 
     // masVrrDim
-    masReadMeshDimensions(fileNames[5], "dim1", 2, &masVrrDimMax[0]);
+    masReadMeshDimensions(fileNames[5], "dim1", &masVrrDimMax[0]);
     masVrrDim = (float *)malloc(sizeof(float) * (int)(masVrrDimMax[0]));
-    masReadMesh(fileNames[5], "dim1", 2, &masVrrDim);
+    masReadMesh(fileNames[5], "dim1", &masVrrDim);
 
     // grab the min and max for the r
     rTemp = masVrrDim[0];
@@ -1267,19 +1264,19 @@ char file_extension[5];
       rMax = rTemp;
 
     // masDpDim
-    masReadMeshDimensions(fileNames[6], "dim3", 0, &masDpDimMax[0]);
+    masReadMeshDimensions(fileNames[6], "dim3", &masDpDimMax[0]);
     masDpDim = (float *)malloc(sizeof(float) * (int)(masDpDimMax[0]));
-    masReadMesh(fileNames[6], "dim3", 0, &masDpDim);
+    masReadMesh(fileNames[6], "dim3", &masDpDim);
 
     // masDtDim
-    masReadMeshDimensions(fileNames[6], "dim2", 1, &masDtDimMax[0]);
+    masReadMeshDimensions(fileNames[6], "dim2", &masDtDimMax[0]);
     masDtDim = (float *)malloc(sizeof(float) * (int)(masDtDimMax[0]));
-    masReadMesh(fileNames[6], "dim2", 1, &masDtDim);
+    masReadMesh(fileNames[6], "dim2", &masDtDim);
 
     // masDrDim
-    masReadMeshDimensions(fileNames[6], "dim1", 2, &masDrDimMax[0]);
+    masReadMeshDimensions(fileNames[6], "dim1", &masDrDimMax[0]);
     masDrDim = (float *)malloc(sizeof(float) * (int)(masDrDimMax[0]));
-    masReadMesh(fileNames[6], "dim1", 2, &masDrDim);
+    masReadMesh(fileNames[6], "dim1", &masDrDim);
 
     // grab the min and max for the r
     rTemp = masDrDim[0];
@@ -1339,38 +1336,38 @@ char file_extension[5];
   }
 
     // masHelBpp
-    masReadMeshDimensions(fileNames[0], "dim3", 0, &masHelBppDimMax[0]);
+    masReadMeshDimensions(fileNames[0], "dim3", &masHelBppDimMax[0]);
     masHelBppDim = (float *)malloc(sizeof(float) * (int)(masHelBppDimMax[0]));
-    masReadMesh(fileNames[0], "dim3", 0, &masHelBppDim);
+    masReadMesh(fileNames[0], "dim3", &masHelBppDim);
 
     // masHelBptDim
-    masReadMeshDimensions(fileNames[0], "dim2", 1, &masHelBptDimMax[0]);
+    masReadMeshDimensions(fileNames[0], "dim2", &masHelBptDimMax[0]);
     masHelBptDim = (float *)malloc(sizeof(float) * (int)(masHelBptDimMax[0]));
-    masReadMesh(fileNames[0], "dim2", 1, &masHelBptDim);
+    masReadMesh(fileNames[0], "dim2", &masHelBptDim);
 
     // masHelBprDim
-    masReadMeshDimensions(fileNames[0], "dim1", 2, &masHelBprDimMax[0]);
+    masReadMeshDimensions(fileNames[0], "dim1", &masHelBprDimMax[0]);
     masHelBprDim = (float *)malloc(sizeof(float) * (int)(masHelBprDimMax[0]));
-    masReadMesh(fileNames[0], "dim1", 2, &masHelBprDim);
+    masReadMesh(fileNames[0], "dim1", &masHelBprDim);
 
     // grab the min and max for the r
     rMin = masHelBprDim[0];
     rMax = masHelBprDim[masHelBprDimMax[0] - 1];
 
     // masHelBtpDim
-    masReadMeshDimensions(fileNames[1], "dim3", 0, &masHelBtpDimMax[0]);
+    masReadMeshDimensions(fileNames[1], "dim3", &masHelBtpDimMax[0]);
     masHelBtpDim = (float *)malloc(sizeof(float) * (int)(masHelBtpDimMax[0]));
-    masReadMesh(fileNames[1], "dim3", 0, &masHelBtpDim);
+    masReadMesh(fileNames[1], "dim3", &masHelBtpDim);
 
     // masHelBttDim
-    masReadMeshDimensions(fileNames[1], "dim2", 1, &masHelBttDimMax[0]);
+    masReadMeshDimensions(fileNames[1], "dim2", &masHelBttDimMax[0]);
     masHelBttDim = (float *)malloc(sizeof(float) * (int)(masHelBttDimMax[0]));
-    masReadMesh(fileNames[1], "dim2", 1, &masHelBttDim);
+    masReadMesh(fileNames[1], "dim2", &masHelBttDim);
 
     // masHelBtrDim
-    masReadMeshDimensions(fileNames[1], "dim1", 2, &masHelBtrDimMax[0]);
+    masReadMeshDimensions(fileNames[1], "dim1", &masHelBtrDimMax[0]);
     masHelBtrDim = (float *)malloc(sizeof(float) * (int)(masHelBtrDimMax[0]));
-    masReadMesh(fileNames[1], "dim1", 2, &masHelBtrDim);
+    masReadMesh(fileNames[1], "dim1", &masHelBtrDim);
 
     // grab the min and max for the r
     rTemp = masHelBtrDim[0];
@@ -1382,19 +1379,19 @@ char file_extension[5];
       rMax = rTemp;
 
     // masHelBrpDim
-    masReadMeshDimensions(fileNames[2], "dim3", 0, &masHelBrpDimMax[0]);
+    masReadMeshDimensions(fileNames[2], "dim3", &masHelBrpDimMax[0]);
     masHelBrpDim = (float *)malloc(sizeof(float) * (int)(masHelBrpDimMax[0]));
-    masReadMesh(fileNames[2], "dim3", 0, &masHelBrpDim);
+    masReadMesh(fileNames[2], "dim3", &masHelBrpDim);
 
     // masHelBrtDim
-    masReadMeshDimensions(fileNames[2], "dim2", 1, &masHelBrtDimMax[0]);
+    masReadMeshDimensions(fileNames[2], "dim2", &masHelBrtDimMax[0]);
     masHelBrtDim = (float *)malloc(sizeof(float) * (int)(masHelBrtDimMax[0]));
-    masReadMesh(fileNames[2], "dim2", 1, &masHelBrtDim);
+    masReadMesh(fileNames[2], "dim2", &masHelBrtDim);
 
     // masHelBrrDim
-    masReadMeshDimensions(fileNames[2], "dim1", 2, &masHelBrrDimMax[0]);
+    masReadMeshDimensions(fileNames[2], "dim1", &masHelBrrDimMax[0]);
     masHelBrrDim = (float *)malloc(sizeof(float) * (int)(masHelBrrDimMax[0]));
-    masReadMesh(fileNames[2], "dim1", 2, &masHelBrrDim);
+    masReadMesh(fileNames[2], "dim1", &masHelBrrDim);
 
     // grab the min and max for the r
     rTemp = masHelBrrDim[0];
@@ -1406,19 +1403,19 @@ char file_extension[5];
       rMax = rTemp;
 
     // masHelVppDim
-    masReadMeshDimensions(fileNames[3], "dim3", 0, &masHelVppDimMax[0]);
+    masReadMeshDimensions(fileNames[3], "dim3", &masHelVppDimMax[0]);
     masHelVppDim = (float *)malloc(sizeof(float) * (int)(masHelVppDimMax[0]));
-    masReadMesh(fileNames[3], "dim3", 0, &masHelVppDim);
+    masReadMesh(fileNames[3], "dim3", &masHelVppDim);
 
     // masHelVptDim
-    masReadMeshDimensions(fileNames[3], "dim2", 1, &masHelVptDimMax[0]);
+    masReadMeshDimensions(fileNames[3], "dim2", &masHelVptDimMax[0]);
     masHelVptDim = (float *)malloc(sizeof(float) * (int)(masHelVptDimMax[0]));
-    masReadMesh(fileNames[3], "dim2", 1, &masHelVptDim);
+    masReadMesh(fileNames[3], "dim2", &masHelVptDim);
 
     // masHelVprDim
-    masReadMeshDimensions(fileNames[3], "dim1", 2, &masHelVprDimMax[0]);
+    masReadMeshDimensions(fileNames[3], "dim1", &masHelVprDimMax[0]);
     masHelVprDim = (float *)malloc(sizeof(float) * (int)(masHelVprDimMax[0]));
-    masReadMesh(fileNames[3], "dim1", 2, &masHelVprDim);
+    masReadMesh(fileNames[3], "dim1", &masHelVprDim);
 
     // grab the min and max for the r
     rTemp = masHelVprDim[0];
@@ -1430,19 +1427,19 @@ char file_extension[5];
       rMax = rTemp;
 
     // masHelVtpDim
-    masReadMeshDimensions(fileNames[4], "dim3", 0, &masHelVtpDimMax[0]);
+    masReadMeshDimensions(fileNames[4], "dim3", &masHelVtpDimMax[0]);
     masHelVtpDim = (float *)malloc(sizeof(float) * (int)(masHelVtpDimMax[0]));
-    masReadMesh(fileNames[4], "dim3", 0, &masHelVtpDim);
+    masReadMesh(fileNames[4], "dim3", &masHelVtpDim);
 
     // masHelVttDim
-    masReadMeshDimensions(fileNames[4], "dim2", 1, &masHelVttDimMax[0]);
+    masReadMeshDimensions(fileNames[4], "dim2", &masHelVttDimMax[0]);
     masHelVttDim = (float *)malloc(sizeof(float) * (int)(masHelVttDimMax[0]));
-    masReadMesh(fileNames[4], "dim2", 1, &masHelVttDim);
+    masReadMesh(fileNames[4], "dim2", &masHelVttDim);
 
     // masHelVtrDim
-    masReadMeshDimensions(fileNames[4], "dim1", 2, &masHelVtrDimMax[0]);
+    masReadMeshDimensions(fileNames[4], "dim1", &masHelVtrDimMax[0]);
     masHelVtrDim = (float *)malloc(sizeof(float) * (int)(masHelVtrDimMax[0]));
-    masReadMesh(fileNames[4], "dim1", 2, &masHelVtrDim);
+    masReadMesh(fileNames[4], "dim1", &masHelVtrDim);
 
     // grab the min and max for the r
     rTemp = masHelVtrDim[0];
@@ -1454,19 +1451,19 @@ char file_extension[5];
       rMax = rTemp;
 
     // masHelVrpDim
-    masReadMeshDimensions(fileNames[5], "dim3", 0, &masHelVrpDimMax[0]);
+    masReadMeshDimensions(fileNames[5], "dim3", &masHelVrpDimMax[0]);
     masHelVrpDim = (float *)malloc(sizeof(float) * (int)(masHelVrpDimMax[0]));
-    masReadMesh(fileNames[5], "dim3", 0, &masHelVrpDim);
+    masReadMesh(fileNames[5], "dim3", &masHelVrpDim);
 
     // masHelVrtDim
-    masReadMeshDimensions(fileNames[5], "dim2", 1, &masHelVrtDimMax[0]);
+    masReadMeshDimensions(fileNames[5], "dim2", &masHelVrtDimMax[0]);
     masHelVrtDim = (float *)malloc(sizeof(float) * (int)(masHelVrtDimMax[0]));
-    masReadMesh(fileNames[5], "dim2", 1, &masHelVrtDim);
+    masReadMesh(fileNames[5], "dim2", &masHelVrtDim);
 
     // masHelVrrDim
-    masReadMeshDimensions(fileNames[5], "dim1", 2, &masHelVrrDimMax[0]);
+    masReadMeshDimensions(fileNames[5], "dim1", &masHelVrrDimMax[0]);
     masHelVrrDim = (float *)malloc(sizeof(float) * (int)(masHelVrrDimMax[0]));
-    masReadMesh(fileNames[5], "dim1", 2, &masHelVrrDim);
+    masReadMesh(fileNames[5], "dim1", &masHelVrrDim);
 
     // grab the min and max for the r
     rTemp = masHelVrrDim[0];
@@ -1478,19 +1475,19 @@ char file_extension[5];
       rMax = rTemp;
 
     // masHelDpDim
-    masReadMeshDimensions(fileNames[6], "dim3", 0, &masHelDpDimMax[0]);
+    masReadMeshDimensions(fileNames[6], "dim3", &masHelDpDimMax[0]);
     masHelDpDim = (float *)malloc(sizeof(float) * (int)(masHelDpDimMax[0]));
-    masReadMesh(fileNames[6], "dim3", 0, &masHelDpDim);
+    masReadMesh(fileNames[6], "dim3", &masHelDpDim);
 
     // masHelDtDim
-    masReadMeshDimensions(fileNames[6], "dim2", 1, &masHelDtDimMax[0]);
+    masReadMeshDimensions(fileNames[6], "dim2", &masHelDtDimMax[0]);
     masHelDtDim = (float *)malloc(sizeof(float) * (int)(masHelDtDimMax[0]));
-    masReadMesh(fileNames[6], "dim2", 1, &masHelDtDim);
+    masReadMesh(fileNames[6], "dim2", &masHelDtDim);
 
     // masHelDrDim
-    masReadMeshDimensions(fileNames[6], "dim1", 2, &masHelDrDimMax[0]);
+    masReadMeshDimensions(fileNames[6], "dim1", &masHelDrDimMax[0]);
     masHelDrDim = (float *)malloc(sizeof(float) * (int)(masHelDrDimMax[0]));
-    masReadMesh(fileNames[6], "dim1", 2, &masHelDrDim);
+    masReadMesh(fileNames[6], "dim1", &masHelDrDim);
 
     // grab the min and max for the r
     rTemp = masHelDrDim[0];

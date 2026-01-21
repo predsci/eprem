@@ -64,6 +64,7 @@
     egrid[energy]    = sqrt(one+p*p) - one;
     /* printf("energy %d %e\n",energy, egrid[idx_se(species,energy)]*MP*C*C/MEV); */
     vgrid[energy]    = p/sqrt(one+p*p);
+    vgrid_i[energy]  = sqrt(one+p*p)/p;
   }
 
   for (species =0; species < NUM_SPECIES; species++){

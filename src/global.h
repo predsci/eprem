@@ -16,7 +16,7 @@
 #include "baseTypes.h"
 #include "cubeShellStruct.h"
 
-#define VERSION "1.15.1"
+#define VERSION "2.0.1"
 
 // All permutations defined
 extern Index_t RC;
@@ -107,6 +107,7 @@ extern Index_t simStarted;
 extern Index_t FACE_ROWS;
 extern Index_t FACE_COLS;
 extern Index_t LOCAL_NUM_SHELLS;
+extern Index_t innerComputeShell;
 extern Index_t NUM_SPECIES;
 extern Index_t NUM_ESTEPS;
 extern Index_t NUM_MUSTEPS;

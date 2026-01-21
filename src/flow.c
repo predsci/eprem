@@ -86,7 +86,7 @@
                 idealShockNode = 1;
               else {
                 if ((fmin((2 * PI) - fabs(radpos.phi - config.idealShockPhi), fabs(radpos.phi - config.idealShockPhi)) <
-                    (config.idealShockWidth / 2.0)) &&
+                    (config.idealShockWidth / (double)2.0)) &&
                     (fabs(radpos.theta - config.idealShockTheta) < (config.idealShockWidth / 2.0)) )
                   idealShockNode = 1;
               }
@@ -121,8 +121,7 @@
                &grid[idx].mhdBphi,
                &grid[idx].mhdBmag,
                &grid[idx].mhdBvec,
-               grid[idx].mhdVr,
-               idealShockNode);
+               grid[idx].mhdVr);
 
           // update del x B/B^2 (NOT implemented for helio yet!)
           if (config.useDrift > 0)
@@ -282,8 +281,7 @@
 /*--*/    mhdB( Vec_t position, Scalar_t rmag,                      /*---*/
 /*--*/	        Scalar_t *Br,   Scalar_t *Btheta,                   /*---*/
 /*--*/          Scalar_t *Bphi, Scalar_t *Bmag,                     /*---*/
-/*--*/ 	        Vec_t *Bvec,    Scalar_t Vr,                        /*---*/
-/*--*/          Index_t idealShockNode)                             /*---*/
+/*--*/ 	        Vec_t *Bvec,    Scalar_t Vr)                        /*---*/
 /*--*                                                                *---*/
 /*--* Calculate the local vec(B).                                    *---*/
 /*--*                                                                *---*/
@@ -306,7 +304,19 @@
 
     *Bphi = -1.0 * rr * (*Br) * (config.omegaSun / (Vr + VERYSMALL) ) * sin(theta);
 
+
+    // Note on ideal shock: The normal component of the field is unchanged
+    // across the shock. The tangential component compresses but does not
+    // rotate. Since Btheta == 0.0, only Bphi changes. Across the shock,
+    //
+    // Vr1 Bphi1 = Vr2 Bphi2 <=> Bphi2 = Bphi1 (Vr1/Vr2)
+    //
+    // The given value of Vr will thus self-consistently scale Bphi to account
+    // for shock affects (without the need for additional if..else logic), as
+    // long as updateMhd calls this routine after calling mhdV.
+
     // ideal shock test
+    /*
     if ( (config.idealShock > 0) && (idealShockNode > 0) ) {
 
       *Br     *= idealShockFactor(rr);
@@ -314,6 +324,7 @@
       *Bphi   *= idealShockFactor(rr);
 
     }
+    */
 
   }
   else if (mhdGridStatus == MHD_MAS) {
@@ -362,9 +373,8 @@
 
     *Vr = config.mhdUs;
 
-    // ideal shock test (maybe should be *= for Vr...)
     if ( (config.idealShock > 0) && (idealShockNode > 0) )
-      *Vr /= idealShockFactor(rmag * config.rScale);
+      *Vr *= idealShockFactor(rmag * config.rScale);
 
     *Vtheta = 0.0;
 
