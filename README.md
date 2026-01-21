@@ -12,17 +12,15 @@ EPREM-PSI is...
    
 ## HOW TO BUILD EPREM-PSI ##
   
-EPREM-PSI has been tested to work using GCC's `gfortran` (>8), Intel's `ifx`, and NVIDIA's `nvfortran` compilers.
+EPREM-PSI has been tested to work using GCC's `gfortran`, Intel's `ifx`, and NVIDIA's `nvfortran` compilers.
 It is recommended to use the latest compiler version available.  
 
-EPREM-PSI requires the HDF4, NETCDF, LIBCONFIG, and [HDF5](https://www.hdfgroup.org/solutions/hdf5) libraries.  
-The libraries should be compiled by the same compiler HipFT is using (e.g. nvfortran).  
+EPREM-PSI requires the [HDF5](https://www.hdfgroup.org/solutions/hdf5), NETCDF, and LIBCONFIG libraries.  
   
-1. Find the build script from the `build_examples` folder that is closest to your setup and copy it into the top-level directory.  
-2. Modify the script to set the library paths/flags and compiler flags compatible with your system environment.  
-3. Modify the script to set the compiler options to reflect your setup.  
-4. Run the build script (for example, `./my_build.sh`).  
-5. It is recommended to add the `bin` folder to your system path.  
+1. Find the closest configuration file in `/conf` and make a local copy of it.  
+2. Modify the conf file to set the library paths/flags and compiler flags to match your system environment.  
+3. Run the build script (for example, `./build.sh <your_custom_config.conf>`).  
+4. It is recommended to add the `bin` folder to your system path.  
   
 ### RUN THE EPREM-PSI TESTSUITE ###
   
