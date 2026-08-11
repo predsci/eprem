@@ -147,6 +147,7 @@ typedef struct {
   Scalar_t boundaryFunctGamma;
   Scalar_t boundaryFunctBeta;
   Scalar_t boundaryFunctEcutoff;
+  Scalar_t  boundaryFunctR0;
 
   Index_t   shockSolver;
   Scalar_t  shockDetectPercent;

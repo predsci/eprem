@@ -212,9 +212,13 @@ Index_t unwindPhiOffset;
 /*----------------------------------------------------------------------------*/
 {
 
-  int r0, r1, t0, t1, p0, p1;
+  int r0_0, r1_0, t0_0, t1_0, p0_0, p1_0;
 
-  Scalar_t rr, rd, td, pd;
+  int r0_1, r1_1, t0_1, t1_1, p0_1, p1_1;
+
+  Scalar_t rr_0, rd_0, td_0, pd_0;
+
+  Scalar_t rd_1, td_1, pd_1;
 
   Scalar_t Bscale = 2.2068908 / MHD_B_NORM;
 
@@ -223,56 +227,68 @@ Index_t unwindPhiOffset;
   if ((r.r < config.masRadialMax) && (r.r > config.masRadialMin)) {
 
     //Br
-    rd = masTriLinearBinarySearch(masBrrDim, r.r, &r0, &r1, masDimMin[0], masBrrDimMax[0]-1);
-    td = masTriLinearBinarySearch(masBrtDim, r.theta, &t0, &t1, masDimMin[0], masBrtDimMax[0]-1);
-    pd = masTriLinearBinarySearch(masBrpDim, r.phi, &p0, &p1, masDimMin[0], masBrpDimMax[0]-1);
+    rd_0 = masTriLinearBinarySearch(masBrrDim_0, r.r, &r0_0, &r1_0, masDimMin_0[0], masBrrDimMax_0[0]-1);
+    td_0 = masTriLinearBinarySearch(masBrtDim_0, r.theta, &t0_0, &t1_0, masDimMin_0[0], masBrtDimMax_0[0]-1);
+    pd_0 = masTriLinearBinarySearch(masBrpDim_0, r.phi, &p0_0, &p1_0, masDimMin_0[0], masBrpDimMax_0[0]-1);
+
+    rd_1 = masTriLinearBinarySearch(masBrrDim_1, r.r, &r0_1, &r1_1, masDimMin_1[0], masBrrDimMax_1[0]-1);
+    td_1 = masTriLinearBinarySearch(masBrtDim_1, r.theta, &t0_1, &t1_1, masDimMin_1[0], masBrtDimMax_1[0]-1);
+    pd_1 = masTriLinearBinarySearch(masBrpDim_1, r.phi, &p0_1, &p1_1, masDimMin_1[0], masBrpDimMax_1[0]-1);
 
     B.r = ((1.0 - s) * masInterpolate(masBr0,
-                                      r0, r1, t0, t1, p0, p1,
-                                      rd, td, pd,
-                                      masBrrDimMax[0], masBrtDimMax[0]) +
+                                      r0_0, r1_0, t0_0, t1_0, p0_0, p1_0,
+                                      rd_0, td_0, pd_0,
+                                      masBrrDimMax_0[0], masBrtDimMax_0[0]) +
                    s * masInterpolate(masBr1,
-                                      r0, r1, t0, t1, p0, p1,
-                                      rd, td, pd,
-                                      masBrrDimMax[0], masBrtDimMax[0])) * Bscale;
+                                      r0_1, r1_1, t0_1, t1_1, p0_1, p1_1,
+                                      rd_1, td_1, pd_1,
+                                      masBrrDimMax_1[0], masBrtDimMax_1[0])) * Bscale;
 
     //Bt
-    rd = masTriLinearBinarySearch(masBtrDim, r.r, &r0, &r1, masDimMin[0], masBtrDimMax[0]-1);
-    td = masTriLinearBinarySearch(masBttDim, r.theta, &t0, &t1, masDimMin[0], masBttDimMax[0]-1);
-    pd = masTriLinearBinarySearch(masBtpDim, r.phi, &p0, &p1, masDimMin[0], masBtpDimMax[0]-1);
+    rd_0 = masTriLinearBinarySearch(masBtrDim_0, r.r, &r0_0, &r1_0, masDimMin_0[0], masBtrDimMax_0[0]-1);
+    td_0 = masTriLinearBinarySearch(masBttDim_0, r.theta, &t0_0, &t1_0, masDimMin_0[0], masBttDimMax_0[0]-1);
+    pd_0 = masTriLinearBinarySearch(masBtpDim_0, r.phi, &p0_0, &p1_0, masDimMin_0[0], masBtpDimMax_0[0]-1);
+
+    rd_1 = masTriLinearBinarySearch(masBtrDim_1, r.r, &r0_1, &r1_1, masDimMin_1[0], masBtrDimMax_1[0]-1);
+    td_1 = masTriLinearBinarySearch(masBttDim_1, r.theta, &t0_1, &t1_1, masDimMin_1[0], masBttDimMax_1[0]-1);
+    pd_1 = masTriLinearBinarySearch(masBtpDim_1, r.phi, &p0_1, &p1_1, masDimMin_1[0], masBtpDimMax_1[0]-1);
 
     B.theta = ((1.0 - s) * masInterpolate(masBt0,
-                                          r0, r1, t0, t1, p0, p1,
-                                          rd, td, pd,
-                                          masBtrDimMax[0], masBttDimMax[0]) +
+                                          r0_0, r1_0, t0_0, t1_0, p0_0, p1_0,
+                                          rd_0, td_0, pd_0,
+                                          masBtrDimMax_0[0], masBttDimMax_0[0]) +
                        s * masInterpolate(masBt1,
-                                          r0, r1, t0, t1, p0, p1,
-                                          rd, td, pd,
-                                          masBtrDimMax[0], masBttDimMax[0])) * Bscale;
+                                          r0_1, r1_1, t0_1, t1_1, p0_1, p1_1,
+                                          rd_1, td_1, pd_1,
+                                          masBtrDimMax_1[0], masBttDimMax_1[0])) * Bscale;
 
     //Bp
-    rd = masTriLinearBinarySearch(masBprDim, r.r, &r0, &r1, masDimMin[0], masBprDimMax[0]-1);
-    td = masTriLinearBinarySearch(masBptDim, r.theta, &t0, &t1, masDimMin[0], masBptDimMax[0]-1);
-    pd = masTriLinearBinarySearch(masBppDim, r.phi, &p0, &p1, masDimMin[0], masBppDimMax[0]-1);
+    rd_0 = masTriLinearBinarySearch(masBprDim_0, r.r, &r0_0, &r1_0, masDimMin_0[0], masBprDimMax_0[0]-1);
+    td_0 = masTriLinearBinarySearch(masBptDim_0, r.theta, &t0_0, &t1_0, masDimMin_0[0], masBptDimMax_0[0]-1);
+    pd_0 = masTriLinearBinarySearch(masBppDim_0, r.phi, &p0_0, &p1_0, masDimMin_0[0], masBppDimMax_0[0]-1);
+
+    rd_1 = masTriLinearBinarySearch(masBprDim_1, r.r, &r0_1, &r1_1, masDimMin_1[0], masBprDimMax_1[0]-1);
+    td_1 = masTriLinearBinarySearch(masBptDim_1, r.theta, &t0_1, &t1_1, masDimMin_1[0], masBptDimMax_1[0]-1);
+    pd_1 = masTriLinearBinarySearch(masBppDim_1, r.phi, &p0_1, &p1_1, masDimMin_1[0], masBppDimMax_1[0]-1);
 
     B.phi = ((1.0 - s) * masInterpolate(masBp0,
-                                        r0, r1, t0, t1, p0, p1,
-                                        rd, td, pd,
-                                        masBprDimMax[0], masBptDimMax[0]) +
+                                        r0_0, r1_0, t0_0, t1_0, p0_0, p1_0,
+                                        rd_0, td_0, pd_0,
+                                        masBprDimMax_0[0], masBptDimMax_0[0]) +
                      s * masInterpolate(masBp1,
-                                        r0, r1, t0, t1, p0, p1,
-                                        rd, td, pd,
-                                        masBprDimMax[0], masBptDimMax[0])) * Bscale;
+                                        r0_1, r1_1, t0_1, t1_1, p0_1, p1_1,
+                                        rd_1, td_1, pd_1,
+                                        masBprDimMax_1[0], masBptDimMax_1[0])) * Bscale;
 
   } else {
 
-    rr = r.r * RSAU;
+    rr_0 = r.r * RSAU;
 
-    B.r = config.mhdBsAu / (rr * rr);
+    B.r = config.mhdBsAu / (rr_0 * rr_0);
 
     B.theta = 0.0;
 
-    B.phi = -1.0 * rr * (B.r) * (config.omegaSun / (config.mhdUs + VERYSMALL) ) * sin(r.theta);
+    B.phi = -1.0 * rr_0 * (B.r) * (config.omegaSun / (config.mhdUs + VERYSMALL) ) * sin(r.theta);
 
   }
 
@@ -289,15 +305,24 @@ Index_t unwindPhiOffset;
 /*--*/ SphVec_t masCurlBoverB2( SphVec_t r,                               /*--*/
 /*--*/                    float Bp0[], float Bt0[], float Br0[],          /*--*/
 /*--*/                    float Bp1[], float Bt1[], float Br1[],          /*--*/
-/*--*/                    int bp_r0, int bp_r1,                           /*--*/
-/*--*/                    int bp_t0, int bp_t1,                           /*--*/
-/*--*/                    int bp_p0, int bp_p1,                           /*--*/
-/*--*/                    int bt_r0, int bt_r1,                           /*--*/
-/*--*/                    int bt_t0, int bt_t1,                           /*--*/
-/*--*/                    int bt_p0, int bt_p1,                           /*--*/
-/*--*/                    int br_r0, int br_r1,                           /*--*/
-/*--*/                    int br_t0, int br_t1,                           /*--*/
-/*--*/                    int br_p0, int br_p1,                           /*--*/
+/*--*/                    int bp_r0_0, int bp_r1_0,                       /*--*/
+/*--*/                    int bp_t0_0, int bp_t1_0,                       /*--*/
+/*--*/                    int bp_p0_0, int bp_p1_0,                       /*--*/
+/*--*/                    int bt_r0_0, int bt_r1_0,                       /*--*/
+/*--*/                    int bt_t0_0, int bt_t1_0,                       /*--*/
+/*--*/                    int bt_p0_0, int bt_p1_0,                       /*--*/
+/*--*/                    int br_r0_0, int br_r1_0,                       /*--*/
+/*--*/                    int br_t0_0, int br_t1_0,                       /*--*/
+/*--*/                    int br_p0_0, int br_p1_0,                       /*--*/
+/*--*/                    int bp_r0_1, int bp_r1_1,                       /*--*/
+/*--*/                    int bp_t0_1, int bp_t1_1,                       /*--*/
+/*--*/                    int bp_p0_1, int bp_p1_1,                       /*--*/
+/*--*/                    int bt_r0_1, int bt_r1_1,                       /*--*/
+/*--*/                    int bt_t0_1, int bt_t1_1,                       /*--*/
+/*--*/                    int bt_p0_1, int bt_p1_1,                       /*--*/
+/*--*/                    int br_r0_1, int br_r1_1,                       /*--*/
+/*--*/                    int br_t0_1, int br_t1_1,                       /*--*/
+/*--*/                    int br_p0_1, int br_p1_1,                       /*--*/
 /*--*/                    Scalar_t s)                                     /*--*/
 /*--*/                                                                    /*--*/
 /*--*/                                                                    /*--*/
@@ -321,30 +346,19 @@ Index_t unwindPhiOffset;
 
   SphVec_t curl;
 
-
-  // Find the maximum cell width
-  // it is necessary to check each dimension of each component of the field
+  // Find the maximum cell width across both resolutions.
+  // It is necessary to check each dimension of each component of the field
   // due to how the MAS field files are written out.
-  rCellWidth = masBprDim[bp_r1] - masBprDim[bp_r0];
-  thetaCellWidth = masBptDim[bp_t1] - masBptDim[bp_t0];
-  phiCellWidth = masBppDim[bp_p1] - masBppDim[bp_p0];
 
-  rCellWidthTemp = masBtrDim[bt_r1] - masBtrDim[bt_r0];
-  thetaCellWidthTemp = masBttDim[bt_t1] - masBttDim[bt_t0];
-  phiCellWidthTemp = masBtpDim[bt_p1] - masBtpDim[bt_p0];
+  // Bp - resolution 0
+  rCellWidth = masBprDim_0[bp_r1_0] - masBprDim_0[bp_r0_0];
+  thetaCellWidth = masBptDim_0[bp_t1_0] - masBptDim_0[bp_t0_0];
+  phiCellWidth = masBppDim_0[bp_p1_0] - masBppDim_0[bp_p0_0];
 
-  if (rCellWidthTemp > rCellWidth)
-    rCellWidth = rCellWidthTemp;
-
-  if (thetaCellWidthTemp > thetaCellWidth)
-    thetaCellWidth = thetaCellWidthTemp;
-
-  if (phiCellWidthTemp > phiCellWidth)
-    phiCellWidth = phiCellWidthTemp;
-
-  rCellWidthTemp = masBrrDim[br_r1] - masBrrDim[br_r0];
-  thetaCellWidthTemp = masBrtDim[br_t1] - masBrtDim[br_t0];
-  phiCellWidthTemp = masBrpDim[br_p1] - masBrpDim[br_p0];
+  // Bt - resolution 0
+  rCellWidthTemp = masBtrDim_0[bt_r1_0] - masBtrDim_0[bt_r0_0];
+  thetaCellWidthTemp = masBttDim_0[bt_t1_0] - masBttDim_0[bt_t0_0];
+  phiCellWidthTemp = masBtpDim_0[bt_p1_0] - masBtpDim_0[bt_p0_0];
 
   if (rCellWidthTemp > rCellWidth)
     rCellWidth = rCellWidthTemp;
@@ -355,8 +369,64 @@ Index_t unwindPhiOffset;
   if (phiCellWidthTemp > phiCellWidth)
     phiCellWidth = phiCellWidthTemp;
 
+  // Br - resolution 0
+  rCellWidthTemp = masBrrDim_0[br_r1_0] - masBrrDim_0[br_r0_0];
+  thetaCellWidthTemp = masBrtDim_0[br_t1_0] - masBrtDim_0[br_t0_0];
+  phiCellWidthTemp = masBrpDim_0[br_p1_0] - masBrpDim_0[br_p0_0];
 
-  //  assign the spatial values for each delta direction and take into account
+  if (rCellWidthTemp > rCellWidth)
+    rCellWidth = rCellWidthTemp;
+
+  if (thetaCellWidthTemp > thetaCellWidth)
+    thetaCellWidth = thetaCellWidthTemp;
+
+  if (phiCellWidthTemp > phiCellWidth)
+    phiCellWidth = phiCellWidthTemp;
+
+  // Bp - resolution 1
+  rCellWidthTemp = masBprDim_1[bp_r1_1] - masBprDim_1[bp_r0_1];
+  thetaCellWidthTemp = masBptDim_1[bp_t1_1] - masBptDim_1[bp_t0_1];
+  phiCellWidthTemp = masBppDim_1[bp_p1_1] - masBppDim_1[bp_p0_1];
+
+  if (rCellWidthTemp > rCellWidth)
+    rCellWidth = rCellWidthTemp;
+
+  if (thetaCellWidthTemp > thetaCellWidth)
+    thetaCellWidth = thetaCellWidthTemp;
+
+  if (phiCellWidthTemp > phiCellWidth)
+    phiCellWidth = phiCellWidthTemp;
+
+  // Bt - resolution 1
+  rCellWidthTemp = masBtrDim_1[bt_r1_1] - masBtrDim_1[bt_r0_1];
+  thetaCellWidthTemp = masBttDim_1[bt_t1_1] - masBttDim_1[bt_t0_1];
+  phiCellWidthTemp = masBtpDim_1[bt_p1_1] - masBtpDim_1[bt_p0_1];
+
+  if (rCellWidthTemp > rCellWidth)
+    rCellWidth = rCellWidthTemp;
+
+  if (thetaCellWidthTemp > thetaCellWidth)
+    thetaCellWidth = thetaCellWidthTemp;
+
+  if (phiCellWidthTemp > phiCellWidth)
+    phiCellWidth = phiCellWidthTemp;
+
+  // Br - resolution 1
+  rCellWidthTemp = masBrrDim_1[br_r1_1] - masBrrDim_1[br_r0_1];
+  thetaCellWidthTemp = masBrtDim_1[br_t1_1] - masBrtDim_1[br_t0_1];
+  phiCellWidthTemp = masBrpDim_1[br_p1_1] - masBrpDim_1[br_p0_1];
+
+  if (rCellWidthTemp > rCellWidth)
+    rCellWidth = rCellWidthTemp;
+
+  if (thetaCellWidthTemp > thetaCellWidth)
+    thetaCellWidth = thetaCellWidthTemp;
+
+  if (phiCellWidthTemp > phiCellWidth)
+    phiCellWidth = phiCellWidthTemp;
+
+
+  // Assign the spatial values for each delta direction and take into account
   // the boundaries for phi and theta
   rPlus.r = r.r + rCellWidth;
   rPlus.theta = r.theta;
@@ -484,13 +554,18 @@ Index_t unwindPhiOffset;
 
   SphVec_t r;
 
-  int r0, r1, t0, t1, p0, p1;
-  int bp_r0, bp_r1, bp_t0, bp_t1, bp_p0, bp_p1;
-  int bt_r0, bt_r1, bt_t0, bt_t1, bt_p0, bt_p1;
-  int br_r0, br_r1, br_t0, br_t1, br_p0, br_p1;
+  int r0_0, r1_0, t0_0, t1_0, p0_0, p1_0;
+  int bp_r0_0, bp_r1_0, bp_t0_0, bp_t1_0, bp_p0_0, bp_p1_0;
+  int bt_r0_0, bt_r1_0, bt_t0_0, bt_t1_0, bt_p0_0, bt_p1_0;
+  int br_r0_0, br_r1_0, br_t0_0, br_t1_0, br_p0_0, br_p1_0;
 
+  int r0_1, r1_1, t0_1, t1_1, p0_1, p1_1;
+  int bp_r0_1, bp_r1_1, bp_t0_1, bp_t1_1, bp_p0_1, bp_p1_1;
+  int bt_r0_1, bt_r1_1, bt_t0_1, bt_t1_1, bt_p0_1, bt_p1_1;
+  int br_r0_1, br_r1_1, br_t0_1, br_t1_1, br_p0_1, br_p1_1;
 
-  Scalar_t rd, td, pd;
+  Scalar_t rd_0, td_0, pd_0;
+  Scalar_t rd_1, td_1, pd_1;
 
   // convert from units of AU to Solar Radius and leave the
   //   angles alone
@@ -517,106 +592,136 @@ Index_t unwindPhiOffset;
 
 
   //Bp
-  rd = masTriLinearBinarySearch(masBprDim, r.r, &bp_r0, &bp_r1, masDimMin[0], masBprDimMax[0]-1);
-  td = masTriLinearBinarySearch(masBptDim, r.theta, &bp_t0, &bp_t1, masDimMin[0], masBptDimMax[0]-1);
-  pd = masTriLinearBinarySearch(masBppDim, r.phi, &bp_p0, &bp_p1, masDimMin[0], masBppDimMax[0]-1);
+  rd_0 = masTriLinearBinarySearch(masBprDim_0, r.r, &bp_r0_0, &bp_r1_0, masDimMin_0[0], masBprDimMax_0[0]-1);
+  td_0 = masTriLinearBinarySearch(masBptDim_0, r.theta, &bp_t0_0, &bp_t1_0, masDimMin_0[0], masBptDimMax_0[0]-1);
+  pd_0 = masTriLinearBinarySearch(masBppDim_0, r.phi, &bp_p0_0, &bp_p1_0, masDimMin_0[0], masBppDimMax_0[0]-1);
+
+  rd_1 = masTriLinearBinarySearch(masBprDim_1, r.r, &bp_r0_1, &bp_r1_1, masDimMin_1[0], masBprDimMax_1[0]-1);
+  td_1 = masTriLinearBinarySearch(masBptDim_1, r.theta, &bp_t0_1, &bp_t1_1, masDimMin_1[0], masBptDimMax_1[0]-1);
+  pd_1 = masTriLinearBinarySearch(masBppDim_1, r.phi, &bp_p0_1, &bp_p1_1, masDimMin_1[0], masBppDimMax_1[0]-1);
 
   masNode.mhdB.phi = ((1.0 - s) * masInterpolate(masBp0,
-                                                bp_r0, bp_r1, bp_t0, bp_t1, bp_p0, bp_p1,
-                                                rd, td, pd,
-                                                masBprDimMax[0], masBptDimMax[0]) +
+                                                bp_r0_0, bp_r1_0, bp_t0_0, bp_t1_0, bp_p0_0, bp_p1_0,
+                                                rd_0, td_0, pd_0,
+                                                masBprDimMax_0[0], masBptDimMax_0[0]) +
                               s * masInterpolate(masBp1,
-                                                bp_r0, bp_r1, bp_t0, bp_t1, bp_p0, bp_p1,
-                                                rd, td, pd,
-                                                masBprDimMax[0], masBptDimMax[0])) * MAS_B_CONVERT;
+                                                bp_r0_1, bp_r1_1, bp_t0_1, bp_t1_1, bp_p0_1, bp_p1_1,
+                                                rd_1, td_1, pd_1,
+                                                masBprDimMax_1[0], masBptDimMax_1[0])) * MAS_B_CONVERT;
 
   //Bt
-  rd = masTriLinearBinarySearch(masBtrDim, r.r, &bt_r0, &bt_r1, masDimMin[0], masBtrDimMax[0]-1);
-  td = masTriLinearBinarySearch(masBttDim, r.theta, &bt_t0, &bt_t1, masDimMin[0], masBttDimMax[0]-1);
-  pd = masTriLinearBinarySearch(masBtpDim, r.phi, &bt_p0, &bt_p1, masDimMin[0], masBtpDimMax[0]-1);
+  rd_0 = masTriLinearBinarySearch(masBtrDim_0, r.r, &bt_r0_0, &bt_r1_0, masDimMin_0[0], masBtrDimMax_0[0]-1);
+  td_0 = masTriLinearBinarySearch(masBttDim_0, r.theta, &bt_t0_0, &bt_t1_0, masDimMin_0[0], masBttDimMax_0[0]-1);
+  pd_0 = masTriLinearBinarySearch(masBtpDim_0, r.phi, &bt_p0_0, &bt_p1_0, masDimMin_0[0], masBtpDimMax_0[0]-1);
+
+  rd_1 = masTriLinearBinarySearch(masBtrDim_1, r.r, &bt_r0_1, &bt_r1_1, masDimMin_1[0], masBtrDimMax_1[0]-1);
+  td_1 = masTriLinearBinarySearch(masBttDim_1, r.theta, &bt_t0_1, &bt_t1_1, masDimMin_1[0], masBttDimMax_1[0]-1);
+  pd_1 = masTriLinearBinarySearch(masBtpDim_1, r.phi, &bt_p0_1, &bt_p1_1, masDimMin_1[0], masBtpDimMax_1[0]-1);
 
   masNode.mhdB.theta = ((1.0 - s) * masInterpolate(masBt0,
-                                                  bt_r0, bt_r1, bt_t0, bt_t1, bt_p0, bt_p1,
-                                                  rd, td, pd,
-                                                  masBtrDimMax[0], masBttDimMax[0]) +
+                                                  bt_r0_0, bt_r1_0, bt_t0_0, bt_t1_0, bt_p0_0, bt_p1_0,
+                                                  rd_0, td_0, pd_0,
+                                                  masBtrDimMax_0[0], masBttDimMax_0[0]) +
                                 s * masInterpolate(masBt1,
-                                                  bt_r0, bt_r1, bt_t0, bt_t1, bt_p0, bt_p1,
-                                                  rd, td, pd,
-                                                  masBtrDimMax[0], masBttDimMax[0])) * MAS_B_CONVERT;
+                                                  bt_r0_1, bt_r1_1, bt_t0_1, bt_t1_1, bt_p0_1, bt_p1_1,
+                                                  rd_1, td_1, pd_1,
+                                                  masBtrDimMax_1[0], masBttDimMax_1[0])) * MAS_B_CONVERT;
 
   //Br
-  rd = masTriLinearBinarySearch(masBrrDim, r.r, &br_r0, &br_r1, masDimMin[0], masBrrDimMax[0]-1);
-  td = masTriLinearBinarySearch(masBrtDim, r.theta, &br_t0, &br_t1, masDimMin[0], masBrtDimMax[0]-1);
-  pd = masTriLinearBinarySearch(masBrpDim, r.phi, &br_p0, &br_p1, masDimMin[0], masBrpDimMax[0]-1);
+  rd_0 = masTriLinearBinarySearch(masBrrDim_0, r.r, &br_r0_0, &br_r1_0, masDimMin_0[0], masBrrDimMax_0[0]-1);
+  td_0 = masTriLinearBinarySearch(masBrtDim_0, r.theta, &br_t0_0, &br_t1_0, masDimMin_0[0], masBrtDimMax_0[0]-1);
+  pd_0 = masTriLinearBinarySearch(masBrpDim_0, r.phi, &br_p0_0, &br_p1_0, masDimMin_0[0], masBrpDimMax_0[0]-1);
+
+  rd_1 = masTriLinearBinarySearch(masBrrDim_1, r.r, &br_r0_1, &br_r1_1, masDimMin_1[0], masBrrDimMax_1[0]-1);
+  td_1 = masTriLinearBinarySearch(masBrtDim_1, r.theta, &br_t0_1, &br_t1_1, masDimMin_1[0], masBrtDimMax_1[0]-1);
+  pd_1 = masTriLinearBinarySearch(masBrpDim_1, r.phi, &br_p0_1, &br_p1_1, masDimMin_1[0], masBrpDimMax_1[0]-1);
 
   masNode.mhdB.r = ((1.0 - s) * masInterpolate(masBr0,
-                                              br_r0, br_r1, br_t0, br_t1, br_p0, br_p1,
-                                              rd, td, pd,
-                                              masBrrDimMax[0], masBrtDimMax[0]) +
+                                              br_r0_0, br_r1_0, br_t0_0, br_t1_0, br_p0_0, br_p1_0,
+                                              rd_0, td_0, pd_0,
+                                              masBrrDimMax_0[0], masBrtDimMax_0[0]) +
                             s * masInterpolate(masBr1,
-                                              br_r0, br_r1, br_t0, br_t1, br_p0, br_p1,
-                                              rd, td, pd,
-                                              masBrrDimMax[0], masBrtDimMax[0])) * MAS_B_CONVERT;
+                                              br_r0_1, br_r1_1, br_t0_1, br_t1_1, br_p0_1, br_p1_1,
+                                              rd_1, td_1, pd_1,
+                                              masBrrDimMax_1[0], masBrtDimMax_1[0])) * MAS_B_CONVERT;
 
 
   //Vp
-  rd = masTriLinearBinarySearch(masVprDim, r.r, &r0, &r1, masDimMin[0], masVprDimMax[0]-1);
-  td = masTriLinearBinarySearch(masVptDim, r.theta, &t0, &t1, masDimMin[0], masVptDimMax[0]-1);
-  pd = masTriLinearBinarySearch(masVppDim, r.phi, &p0, &p1, masDimMin[0], masVppDimMax[0]-1);
+  rd_0 = masTriLinearBinarySearch(masVprDim_0, r.r, &r0_0, &r1_0, masDimMin_0[0], masVprDimMax_0[0]-1);
+  td_0 = masTriLinearBinarySearch(masVptDim_0, r.theta, &t0_0, &t1_0, masDimMin_0[0], masVptDimMax_0[0]-1);
+  pd_0 = masTriLinearBinarySearch(masVppDim_0, r.phi, &p0_0, &p1_0, masDimMin_0[0], masVppDimMax_0[0]-1);
+
+  rd_1 = masTriLinearBinarySearch(masVprDim_1, r.r, &r0_1, &r1_1, masDimMin_1[0], masVprDimMax_1[0]-1);
+  td_1 = masTriLinearBinarySearch(masVptDim_1, r.theta, &t0_1, &t1_1, masDimMin_1[0], masVptDimMax_1[0]-1);
+  pd_1 = masTriLinearBinarySearch(masVppDim_1, r.phi, &p0_1, &p1_1, masDimMin_1[0], masVppDimMax_1[0]-1);
+
 
   masNode.mhdV.phi = ((1.0 - s) * masInterpolate(masVp0,
-                                                r0, r1, t0, t1, p0, p1,
-                                                rd, td, pd,
-                                                masVprDimMax[0], masVptDimMax[0]) +
+                                                r0_0, r1_0, t0_0, t1_0, p0_0, p1_0,
+                                                rd_0, td_0, pd_0,
+                                                masVprDimMax_0[0], masVptDimMax_0[0]) +
                               s * masInterpolate(masVp1,
-                                                r0, r1, t0, t1, p0, p1,
-                                                rd, td, pd,
-                                                masVprDimMax[0], masVptDimMax[0])) * MAS_V_CONVERT;
+                                                r0_1, r1_1, t0_1, t1_1, p0_1, p1_1,
+                                                rd_1, td_1, pd_1,
+                                                masVprDimMax_1[0], masVptDimMax_1[0])) * MAS_V_CONVERT;
 
   //Vt
-  rd = masTriLinearBinarySearch(masVtrDim, r.r, &r0, &r1, masDimMin[0], masVtrDimMax[0]-1);
-  td = masTriLinearBinarySearch(masVttDim, r.theta, &t0, &t1, masDimMin[0], masVttDimMax[0]-1);
-  pd = masTriLinearBinarySearch(masVtpDim, r.phi, &p0, &p1, masDimMin[0], masVtpDimMax[0]-1);
+  rd_0 = masTriLinearBinarySearch(masVtrDim_0, r.r, &r0_0, &r1_0, masDimMin_0[0], masVtrDimMax_0[0]-1);
+  td_0 = masTriLinearBinarySearch(masVttDim_0, r.theta, &t0_0, &t1_0, masDimMin_0[0], masVttDimMax_0[0]-1);
+  pd_0 = masTriLinearBinarySearch(masVtpDim_0, r.phi, &p0_0, &p1_0, masDimMin_0[0], masVtpDimMax_0[0]-1);
+
+  rd_1 = masTriLinearBinarySearch(masVtrDim_1, r.r, &r0_1, &r1_1, masDimMin_1[0], masVtrDimMax_1[0]-1);
+  td_1 = masTriLinearBinarySearch(masVttDim_1, r.theta, &t0_1, &t1_1, masDimMin_1[0], masVttDimMax_1[0]-1);
+  pd_1 = masTriLinearBinarySearch(masVtpDim_1, r.phi, &p0_1, &p1_1, masDimMin_1[0], masVtpDimMax_1[0]-1);
 
   masNode.mhdV.theta = ((1.0 - s) * masInterpolate(masVt0,
-                                                  r0, r1, t0, t1, p0, p1,
-                                                  rd, td, pd,
-                                                  masVtrDimMax[0], masVttDimMax[0]) +
+                                                  r0_0, r1_0, t0_0, t1_0, p0_0, p1_0,
+                                                  rd_0, td_0, pd_0,
+                                                  masVtrDimMax_0[0], masVttDimMax_0[0]) +
                                 s * masInterpolate(masVt1,
-                                                  r0, r1, t0, t1, p0, p1,
-                                                  rd, td, pd,
-                                                  masVtrDimMax[0], masVttDimMax[0])) * MAS_V_CONVERT;
+                                                  r0_1, r1_1, t0_1, t1_1, p0_1, p1_1,
+                                                  rd_1, td_1, pd_1,
+                                                  masVtrDimMax_1[0], masVttDimMax_1[0])) * MAS_V_CONVERT;
 
   //Vr
-  rd = masTriLinearBinarySearch(masVrrDim, r.r, &r0, &r1, masDimMin[0], masVrrDimMax[0]-1);
-  td = masTriLinearBinarySearch(masVrtDim, r.theta, &t0, &t1, masDimMin[0], masVrtDimMax[0]-1);
-  pd = masTriLinearBinarySearch(masVrpDim, r.phi, &p0, &p1, masDimMin[0], masVrpDimMax[0]-1);
+  rd_0 = masTriLinearBinarySearch(masVrrDim_0, r.r, &r0_0, &r1_0, masDimMin_0[0], masVrrDimMax_0[0]-1);
+  td_0 = masTriLinearBinarySearch(masVrtDim_0, r.theta, &t0_0, &t1_0, masDimMin_0[0], masVrtDimMax_0[0]-1);
+  pd_0 = masTriLinearBinarySearch(masVrpDim_0, r.phi, &p0_0, &p1_0, masDimMin_0[0], masVrpDimMax_0[0]-1);
+
+  rd_1 = masTriLinearBinarySearch(masVrrDim_1, r.r, &r0_1, &r1_1, masDimMin_1[0], masVrrDimMax_1[0]-1);
+  td_1 = masTriLinearBinarySearch(masVrtDim_1, r.theta, &t0_1, &t1_1, masDimMin_1[0], masVrtDimMax_1[0]-1);
+  pd_1 = masTriLinearBinarySearch(masVrpDim_1, r.phi, &p0_1, &p1_1, masDimMin_1[0], masVrpDimMax_1[0]-1);
+
 
   masNode.mhdV.r = ((1.0 - s) * masInterpolate(masVr0,
-                                              r0, r1, t0, t1, p0, p1,
-                                              rd, td, pd,
-                                              masVrrDimMax[0], masVrtDimMax[0]) +
+                                              r0_0, r1_0, t0_0, t1_0, p0_0, p1_0,
+                                              rd_0, td_0, pd_0,
+                                              masVrrDimMax_0[0], masVrtDimMax_0[0]) +
                             s * masInterpolate(masVr1,
-                                              r0, r1, t0, t1, p0, p1,
-                                              rd, td, pd,
-                                              masVrrDimMax[0], masVrtDimMax[0])) * MAS_V_CONVERT;
+                                              r0_1, r1_1, t0_1, t1_1, p0_1, p1_1,
+                                              rd_1, td_1, pd_1,
+                                              masVrrDimMax_1[0], masVrtDimMax_1[0])) * MAS_V_CONVERT;
 
   // check for underflows in Vr and set to min acceptable radial flow
   if ( masNode.mhdV.r < (config.masVmin / C) ) masNode.mhdV.r = (config.masVmin / C);
 
   //D
-  rd = masTriLinearBinarySearch(masDrDim, r.r, &r0, &r1, masDimMin[0], masDrDimMax[0]-1);
-  td = masTriLinearBinarySearch(masDtDim, r.theta, &t0, &t1, masDimMin[0], masDtDimMax[0]-1);
-  pd = masTriLinearBinarySearch(masDpDim, r.phi, &p0, &p1, masDimMin[0], masDpDimMax[0]-1);
+  rd_0 = masTriLinearBinarySearch(masDrDim_0, r.r, &r0_0, &r1_0, masDimMin_0[0], masDrDimMax_0[0]-1);
+  td_0 = masTriLinearBinarySearch(masDtDim_0, r.theta, &t0_0, &t1_0, masDimMin_0[0], masDtDimMax_0[0]-1);
+  pd_0 = masTriLinearBinarySearch(masDpDim_0, r.phi, &p0_0, &p1_0, masDimMin_0[0], masDpDimMax_0[0]-1);
+
+  rd_1 = masTriLinearBinarySearch(masDrDim_1, r.r, &r0_1, &r1_1, masDimMin_1[0], masDrDimMax_1[0]-1);
+  td_1 = masTriLinearBinarySearch(masDtDim_1, r.theta, &t0_1, &t1_1, masDimMin_1[0], masDtDimMax_1[0]-1);
+  pd_1 = masTriLinearBinarySearch(masDpDim_1, r.phi, &p0_1, &p1_1, masDimMin_1[0], masDpDimMax_1[0]-1);
 
   masNode.mhdD = ((1.0 - s) * masInterpolate(masD0,
-                                            r0, r1, t0, t1, p0, p1,
-                                            rd, td, pd,
-                                            masDrDimMax[0], masDtDimMax[0]) +
+                                            r0_0, r1_0, t0_0, t1_0, p0_0, p1_0,
+                                            rd_0, td_0, pd_0,
+                                            masDrDimMax_0[0], masDtDimMax_0[0]) +
                           s * masInterpolate(masD1,
-                                            r0, r1, t0, t1, p0, p1,
-                                            rd, td, pd,
-                                            masDrDimMax[0], masDtDimMax[0])) * MAS_RHO_CONVERT;
+                                            r0_1, r1_1, t0_1, t1_1, p0_1, p1_1,
+                                            rd_1, td_1, pd_1,
+                                            masDrDimMax_1[0], masDtDimMax_1[0])) * MAS_RHO_CONVERT;
 
 
   // calculate the curl of B/B^2 if using shell drift
@@ -624,9 +729,12 @@ Index_t unwindPhiOffset;
     masNode.curlBoverB2 = masCurlBoverB2(r,
                                          masBp0, masBt0, masBr0,
                                          masBp1, masBt1, masBr1,
-                                         bp_r0, bp_r1, bp_t0, bp_t1, bp_p0, bp_p1,
-                                         bt_r0, bt_r1, bt_t0, bt_t1, bt_p0, bt_p1,
-                                         br_r0, br_r1, br_t0, br_t1, br_p0, br_p1,
+                                         bp_r0_0, bp_r1_0, bp_t0_0, bp_t1_0, bp_p0_0, bp_p1_0,
+                                         bt_r0_0, bt_r1_0, bt_t0_0, bt_t1_0, bt_p0_0, bt_p1_0,
+                                         br_r0_0, br_r1_0, br_t0_0, br_t1_0, br_p0_0, br_p1_0,
+                                         bp_r0_1, bp_r1_1, bp_t0_1, bp_t1_1, bp_p0_1, bp_p1_1,
+                                         bt_r0_1, bt_r1_1, bt_t0_1, bt_t1_1, bt_p0_1, bt_p1_1,
+                                         br_r0_1, br_r1_1, br_t0_1, br_t1_1, br_p0_1, br_p1_1,
                                          s);
 
 }
@@ -653,13 +761,18 @@ Index_t unwindPhiOffset;
 
   SphVec_t r;
 
-  int r0, r1, t0, t1, p0, p1;
-  int bp_r0, bp_r1, bp_t0, bp_t1, bp_p0, bp_p1;
-  int bt_r0, bt_r1, bt_t0, bt_t1, bt_p0, bt_p1;
-  int br_r0, br_r1, br_t0, br_t1, br_p0, br_p1;
+  int r0_0, r1_0, t0_0, t1_0, p0_0, p1_0;
+  int bp_r0_0, bp_r1_0, bp_t0_0, bp_t1_0, bp_p0_0, bp_p1_0;
+  int bt_r0_0, bt_r1_0, bt_t0_0, bt_t1_0, bt_p0_0, bt_p1_0;
+  int br_r0_0, br_r1_0, br_t0_0, br_t1_0, br_p0_0, br_p1_0;
 
-  Scalar_t rd, td, pd, phiHelSeedOffset;
+  int r0_1, r1_1, t0_1, t1_1, p0_1, p1_1;
+  int bp_r0_1, bp_r1_1, bp_t0_1, bp_t1_1, bp_p0_1, bp_p1_1;
+  int bt_r0_1, bt_r1_1, bt_t0_1, bt_t1_1, bt_p0_1, bt_p1_1;
+  int br_r0_1, br_r1_1, br_t0_1, br_t1_1, br_p0_1, br_p1_1;
 
+  Scalar_t rd_0, td_0, pd_0, phiHelSeedOffset;
+  Scalar_t rd_1, td_1, pd_1;
   // If we are seeding nodes, the heliosphere is treated as
   // a co-rotating frame.  Thus, we need to shift back at
   // the corona's phiOffset.  Once the simulation starts,
@@ -694,106 +807,133 @@ Index_t unwindPhiOffset;
   masNode.r.phi = position.phi;
 
   //Bp
-  rd = masTriLinearBinarySearch(masHelBprDim, r.r, &bp_r0, &bp_r1, masDimMin[0], masHelBprDimMax[0]-1);
-  td = masTriLinearBinarySearch(masHelBptDim, r.theta, &bp_t0, &bp_t1, masDimMin[0], masHelBptDimMax[0]-1);
-  pd = masTriLinearBinarySearch(masHelBppDim, r.phi, &bp_p0, &bp_p1, masDimMin[0], masHelBppDimMax[0]-1);
+  rd_0 = masTriLinearBinarySearch(masHelBprDim_0, r.r, &bp_r0_0, &bp_r1_0, masDimMin_0[0], masHelBprDimMax_0[0]-1);
+  td_0 = masTriLinearBinarySearch(masHelBptDim_0, r.theta, &bp_t0_0, &bp_t1_0, masDimMin_0[0], masHelBptDimMax_0[0]-1);
+  pd_0 = masTriLinearBinarySearch(masHelBppDim_0, r.phi, &bp_p0_0, &bp_p1_0, masDimMin_0[0], masHelBppDimMax_0[0]-1);
+
+  rd_1 = masTriLinearBinarySearch(masHelBprDim_1, r.r, &bp_r0_1, &bp_r1_1, masDimMin_1[0], masHelBprDimMax_1[0]-1);
+  td_1 = masTriLinearBinarySearch(masHelBptDim_1, r.theta, &bp_t0_1, &bp_t1_1, masDimMin_1[0], masHelBptDimMax_1[0]-1);
+  pd_1 = masTriLinearBinarySearch(masHelBppDim_1, r.phi, &bp_p0_1, &bp_p1_1, masDimMin_1[0], masHelBppDimMax_1[0]-1);
 
   masNode.mhdB.phi = ((1.0 - s) * masInterpolate(masBp0,
-                                                bp_r0, bp_r1, bp_t0, bp_t1, bp_p0, bp_p1,
-                                                rd, td, pd,
-                                                masHelBprDimMax[0], masHelBptDimMax[0]) +
+                                                bp_r0_0, bp_r1_0, bp_t0_0, bp_t1_0, bp_p0_0, bp_p1_0,
+                                                rd_0, td_0, pd_0,
+                                                masHelBprDimMax_0[0], masHelBptDimMax_0[0]) +
                               s * masInterpolate(masBp1,
-                                                bp_r0, bp_r1, bp_t0, bp_t1, bp_p0, bp_p1,
-                                                rd, td, pd,
-                                                masHelBprDimMax[0], masHelBptDimMax[0])) * MAS_B_CONVERT;
+                                                bp_r0_1, bp_r1_1, bp_t0_1, bp_t1_1, bp_p0_1, bp_p1_1,
+                                                rd_1, td_1, pd_1,
+                                                masHelBprDimMax_1[0], masHelBptDimMax_1[0])) * MAS_B_CONVERT;
 
   //Bt
-  rd = masTriLinearBinarySearch(masHelBtrDim, r.r, &bt_r0, &bt_r1, masDimMin[0], masHelBtrDimMax[0]-1);
-  td = masTriLinearBinarySearch(masHelBttDim, r.theta, &bt_t0, &bt_t1, masDimMin[0], masHelBttDimMax[0]-1);
-  pd = masTriLinearBinarySearch(masHelBtpDim, r.phi, &bt_p0, &bt_p1, masDimMin[0], masHelBtpDimMax[0]-1);
+  rd_0 = masTriLinearBinarySearch(masHelBtrDim_0, r.r, &bt_r0_0, &bt_r1_0, masDimMin_0[0], masHelBtrDimMax_0[0]-1);
+  td_0 = masTriLinearBinarySearch(masHelBttDim_0, r.theta, &bt_t0_0, &bt_t1_0, masDimMin_0[0], masHelBttDimMax_0[0]-1);
+  pd_0 = masTriLinearBinarySearch(masHelBtpDim_0, r.phi, &bt_p0_0, &bt_p1_0, masDimMin_0[0], masHelBtpDimMax_0[0]-1);
 
+  rd_1 = masTriLinearBinarySearch(masHelBtrDim_1, r.r, &bt_r0_1, &bt_r1_1, masDimMin_1[0], masHelBtrDimMax_1[0]-1);
+  td_1 = masTriLinearBinarySearch(masHelBttDim_1, r.theta, &bt_t0_1, &bt_t1_1, masDimMin_1[0], masHelBttDimMax_1[0]-1);
+  pd_1 = masTriLinearBinarySearch(masHelBtpDim_1, r.phi, &bt_p0_1, &bt_p1_1, masDimMin_1[0], masHelBtpDimMax_1[0]-1);
   masNode.mhdB.theta = ((1.0 - s) * masInterpolate(masBt0,
-                                                  bt_r0, bt_r1, bt_t0, bt_t1, bt_p0, bt_p1,
-                                                  rd, td, pd,
-                                                  masHelBtrDimMax[0], masHelBttDimMax[0]) +
+                                                  bt_r0_0, bt_r1_0, bt_t0_0, bt_t1_0, bt_p0_0, bt_p1_0,
+                                                  rd_0, td_0, pd_0,
+                                                  masHelBtrDimMax_0[0], masHelBttDimMax_0[0]) +
                                 s * masInterpolate(masBt1,
-                                                  bt_r0, bt_r1, bt_t0, bt_t1, bt_p0, bt_p1,
-                                                  rd, td, pd,
-                                                  masHelBtrDimMax[0], masHelBttDimMax[0])) * MAS_B_CONVERT;
+                                                  bt_r0_1, bt_r1_1, bt_t0_1, bt_t1_1, bt_p0_1, bt_p1_1,
+                                                  rd_1, td_1, pd_1,
+                                                  masHelBtrDimMax_1[0], masHelBttDimMax_1[0])) * MAS_B_CONVERT;
 
   //Br
-  rd = masTriLinearBinarySearch(masHelBrrDim, r.r, &br_r0, &br_r1, masDimMin[0], masHelBrrDimMax[0]-1);
-  td = masTriLinearBinarySearch(masHelBrtDim, r.theta, &br_t0, &br_t1, masDimMin[0], masHelBrtDimMax[0]-1);
-  pd = masTriLinearBinarySearch(masHelBrpDim, r.phi, &br_p0, &br_p1, masDimMin[0], masHelBrpDimMax[0]-1);
+  rd_0 = masTriLinearBinarySearch(masHelBrrDim_0, r.r, &br_r0_0, &br_r1_0, masDimMin_0[0], masHelBrrDimMax_0[0]-1);
+  td_0 = masTriLinearBinarySearch(masHelBrtDim_0, r.theta, &br_t0_0, &br_t1_0, masDimMin_0[0], masHelBrtDimMax_0[0]-1);
+  pd_0 = masTriLinearBinarySearch(masHelBrpDim_0, r.phi, &br_p0_0, &br_p1_0, masDimMin_0[0], masHelBrpDimMax_0[0]-1);
+
+  rd_1 = masTriLinearBinarySearch(masHelBrrDim_1, r.r, &br_r0_1, &br_r1_1, masDimMin_1[0], masHelBrrDimMax_1[0]-1);
+  td_1 = masTriLinearBinarySearch(masHelBrtDim_1, r.theta, &br_t0_1, &br_t1_1, masDimMin_1[0], masHelBrtDimMax_1[0]-1);
+  pd_1 = masTriLinearBinarySearch(masHelBrpDim_1, r.phi, &br_p0_1, &br_p1_1, masDimMin_1[0], masHelBrpDimMax_1[0]-1);
 
   masNode.mhdB.r = ((1.0 - s) * masInterpolate(masBr0,
-                                              br_r0, br_r1, br_t0, br_t1, br_p0, br_p1,
-                                              rd, td, pd,
-                                              masHelBrrDimMax[0], masHelBrtDimMax[0]) +
+                                              br_r0_0, br_r1_0, br_t0_0, br_t1_0, br_p0_0, br_p1_0,
+                                              rd_0, td_0, pd_0,
+                                              masHelBrrDimMax_0[0], masHelBrtDimMax_0[0]) +
                             s * masInterpolate(masBr1,
-                                              br_r0, br_r1, br_t0, br_t1, br_p0, br_p1,
-                                              rd, td, pd,
-                                              masHelBrrDimMax[0], masHelBrtDimMax[0])) * MAS_B_CONVERT;
+                                              br_r0_1, br_r1_1, br_t0_1, br_t1_1, br_p0_1, br_p1_1,
+                                              rd_1, td_1, pd_1,
+                                              masHelBrrDimMax_1[0], masHelBrtDimMax_1[0])) * MAS_B_CONVERT;
 
 
   //Vp
-  rd = masTriLinearBinarySearch(masHelVprDim, r.r, &r0, &r1, masDimMin[0], masHelVprDimMax[0]-1);
-  td = masTriLinearBinarySearch(masHelVptDim, r.theta, &t0, &t1, masDimMin[0], masHelVptDimMax[0]-1);
-  pd = masTriLinearBinarySearch(masHelVppDim, r.phi, &p0, &p1, masDimMin[0], masHelVppDimMax[0]-1);
+  rd_0 = masTriLinearBinarySearch(masHelVprDim_0, r.r, &r0_0, &r1_0, masDimMin_0[0], masHelVprDimMax_0[0]-1);
+  td_0 = masTriLinearBinarySearch(masHelVptDim_0, r.theta, &t0_0, &t1_0, masDimMin_0[0], masHelVptDimMax_0[0]-1);
+  pd_0 = masTriLinearBinarySearch(masHelVppDim_0, r.phi, &p0_0, &p1_0, masDimMin_0[0], masHelVppDimMax_0[0]-1);
+
+  rd_1 = masTriLinearBinarySearch(masHelVprDim_1, r.r, &r0_1, &r1_1, masDimMin_1[0], masHelVprDimMax_1[0]-1);
+  td_1 = masTriLinearBinarySearch(masHelVptDim_1, r.theta, &t0_1, &t1_1, masDimMin_1[0], masHelVptDimMax_1[0]-1);
+  pd_1 = masTriLinearBinarySearch(masHelVppDim_1, r.phi, &p0_1, &p1_1, masDimMin_1[0], masHelVppDimMax_1[0]-1);
 
   masNode.mhdV.phi = ((1.0 - s) * masInterpolate(masVp0,
-                                                r0, r1, t0, t1, p0, p1,
-                                                rd, td, pd,
-                                                masHelVprDimMax[0], masHelVptDimMax[0]) +
+                                                r0_0, r1_0, t0_0, t1_0, p0_0, p1_0,
+                                                rd_0, td_0, pd_0,
+                                                masHelVprDimMax_0[0], masHelVptDimMax_0[0]) +
                               s * masInterpolate(masVp1,
-                                                r0, r1, t0, t1, p0, p1,
-                                                rd, td, pd,
-                                                masHelVprDimMax[0], masHelVptDimMax[0])) * MAS_V_CONVERT;
+                                                r0_1, r1_1, t0_1, t1_1, p0_1, p1_1,
+                                                rd_1, td_1, pd_1,
+                                                masHelVprDimMax_1[0], masHelVptDimMax_1[0])) * MAS_V_CONVERT;
 
   //Vt
-  rd = masTriLinearBinarySearch(masHelVtrDim, r.r, &r0, &r1, masDimMin[0], masHelVtrDimMax[0]-1);
-  td = masTriLinearBinarySearch(masHelVttDim, r.theta, &t0, &t1, masDimMin[0], masHelVttDimMax[0]-1);
-  pd = masTriLinearBinarySearch(masHelVtpDim, r.phi, &p0, &p1, masDimMin[0], masHelVtpDimMax[0]-1);
+  rd_0 = masTriLinearBinarySearch(masHelVtrDim_0, r.r, &r0_0, &r1_0, masDimMin_0[0], masHelVtrDimMax_0[0]-1);
+  td_0 = masTriLinearBinarySearch(masHelVttDim_0, r.theta, &t0_0, &t1_0, masDimMin_0[0], masHelVttDimMax_0[0]-1);
+  pd_0 = masTriLinearBinarySearch(masHelVtpDim_0, r.phi, &p0_0, &p1_0, masDimMin_0[0], masHelVtpDimMax_0[0]-1);
+
+  rd_1 = masTriLinearBinarySearch(masHelVtrDim_1, r.r, &r0_1, &r1_1, masDimMin_1[0], masHelVtrDimMax_1[0]-1);
+  td_1 = masTriLinearBinarySearch(masHelVttDim_1, r.theta, &t0_1, &t1_1, masDimMin_1[0], masHelVttDimMax_1[0]-1);
+  pd_1 = masTriLinearBinarySearch(masHelVtpDim_1, r.phi, &p0_1, &p1_1, masDimMin_1[0], masHelVtpDimMax_1[0]-1);
 
   masNode.mhdV.theta = ((1.0 - s) * masInterpolate(masVt0,
-                                                  r0, r1, t0, t1, p0, p1,
-                                                  rd, td, pd,
-                                                  masHelVtrDimMax[0], masHelVttDimMax[0]) +
+                                                  r0_0, r1_0, t0_0, t1_0, p0_0, p1_0,
+                                                  rd_0, td_0, pd_0,
+                                                  masHelVtrDimMax_0[0], masHelVttDimMax_0[0]) +
                                 s * masInterpolate(masVt1,
-                                                  r0, r1, t0, t1, p0, p1,
-                                                  rd, td, pd,
-                                                  masHelVtrDimMax[0], masHelVttDimMax[0])) * MAS_V_CONVERT;
+                                                  r0_1, r1_1, t0_1, t1_1, p0_1, p1_1,
+                                                  rd_1, td_1, pd_1,
+                                                  masHelVtrDimMax_1[0], masHelVttDimMax_1[0])) * MAS_V_CONVERT;
 
   //Vr
-  rd = masTriLinearBinarySearch(masHelVrrDim, r.r, &r0, &r1, masDimMin[0], masHelVrrDimMax[0]-1);
-  td = masTriLinearBinarySearch(masHelVrtDim, r.theta, &t0, &t1, masDimMin[0], masHelVrtDimMax[0]-1);
-  pd = masTriLinearBinarySearch(masHelVrpDim, r.phi, &p0, &p1, masDimMin[0], masHelVrpDimMax[0]-1);
+  rd_0 = masTriLinearBinarySearch(masHelVrrDim_0, r.r, &r0_0, &r1_0, masDimMin_0[0], masHelVrrDimMax_0[0]-1);
+  td_0 = masTriLinearBinarySearch(masHelVrtDim_0, r.theta, &t0_0, &t1_0, masDimMin_0[0], masHelVrtDimMax_0[0]-1);
+  pd_0 = masTriLinearBinarySearch(masHelVrpDim_0, r.phi, &p0_0, &p1_0, masDimMin_0[0], masHelVrpDimMax_0[0]-1);
+
+  rd_1 = masTriLinearBinarySearch(masHelVrrDim_1, r.r, &r0_1, &r1_1, masDimMin_1[0], masHelVrrDimMax_1[0]-1);
+  td_1 = masTriLinearBinarySearch(masHelVrtDim_1, r.theta, &t0_1, &t1_1, masDimMin_1[0], masHelVrtDimMax_1[0]-1);
+  pd_1 = masTriLinearBinarySearch(masHelVrpDim_1, r.phi, &p0_1, &p1_1, masDimMin_1[0], masHelVrpDimMax_1[0]-1);
 
   masNode.mhdV.r = ((1.0 - s) * masInterpolate(masVr0,
-                                              r0, r1, t0, t1, p0, p1,
-                                              rd, td, pd,
-                                              masHelVrrDimMax[0], masHelVrtDimMax[0]) +
+                                              r0_0, r1_0, t0_0, t1_0, p0_0, p1_0,
+                                              rd_0, td_0, pd_0,
+                                              masHelVrrDimMax_0[0], masHelVrtDimMax_0[0]) +
                             s * masInterpolate(masVr1,
-                                              r0, r1, t0, t1, p0, p1,
-                                              rd, td, pd,
-                                              masHelVrrDimMax[0], masHelVrtDimMax[0])) * MAS_V_CONVERT;
+                                              r0_1, r1_1, t0_1, t1_1, p0_1, p1_1,
+                                              rd_1, td_1, pd_1,
+                                              masHelVrrDimMax_1[0], masHelVrtDimMax_1[0])) * MAS_V_CONVERT;
 
   // check for underflows in Vr and set to min acceptable radial flow
   if ( masNode.mhdV.r < (config.masVmin / C) ) masNode.mhdV.r = (config.masVmin / C);
 
   //D
-  rd = masTriLinearBinarySearch(masHelDrDim, r.r, &r0, &r1, masDimMin[0], masHelDrDimMax[0]-1);
-  td = masTriLinearBinarySearch(masHelDtDim, r.theta, &t0, &t1, masDimMin[0], masHelDtDimMax[0]-1);
-  pd = masTriLinearBinarySearch(masHelDpDim, r.phi, &p0, &p1, masDimMin[0], masHelDpDimMax[0]-1);
+  rd_0 = masTriLinearBinarySearch(masHelDrDim_0, r.r, &r0_0, &r1_0, masDimMin_0[0], masHelDrDimMax_0[0]-1);
+  td_0 = masTriLinearBinarySearch(masHelDtDim_0, r.theta, &t0_0, &t1_0, masDimMin_0[0], masHelDtDimMax_0[0]-1);
+  pd_0 = masTriLinearBinarySearch(masHelDpDim_0, r.phi, &p0_0, &p1_0, masDimMin_0[0], masHelDpDimMax_0[0]-1);
+
+  rd_1 = masTriLinearBinarySearch(masHelDrDim_1, r.r, &r0_1, &r1_1, masDimMin_1[0], masHelDrDimMax_1[0]-1);
+  td_1 = masTriLinearBinarySearch(masHelDtDim_1, r.theta, &t0_1, &t1_1, masDimMin_1[0], masHelDtDimMax_1[0]-1);
+  pd_1 = masTriLinearBinarySearch(masHelDpDim_1, r.phi, &p0_1, &p1_1, masDimMin_1[0], masHelDpDimMax_1[0]-1);
 
   masNode.mhdD = ((1.0 - s) * masInterpolate(masD0,
-                                            r0, r1, t0, t1, p0, p1,
-                                            rd, td, pd,
-                                            masHelDrDimMax[0], masHelDtDimMax[0]) +
+                                            r0_0, r1_0, t0_0, t1_0, p0_0, p1_0,
+                                            rd_0, td_0, pd_0,
+                                            masHelDrDimMax_0[0], masHelDtDimMax_0[0]) +
                           s * masInterpolate(masD1,
-                                            r0, r1, t0, t1, p0, p1,
-                                            rd, td, pd,
-                                            masHelDrDimMax[0], masHelDtDimMax[0])) * MAS_RHO_CONVERT;
+                                            r0_1, r1_1, t0_1, t1_1, p0_1, p1_1,
+                                            rd_1, td_1, pd_1,
+                                            masHelDrDimMax_1[0], masHelDtDimMax_1[0])) * MAS_RHO_CONVERT;
 
   // NOTE!  This needs to be implemented before using this on helio runs!
 

@@ -76,7 +76,6 @@
   Scalar_t normf;
 
   const double two = 2.0;
-  const double r1  = 1.0; // Reference radius = 1 au
   const double E1  = 1.0; // Reference energy = 1 MeV/nuc
   const double efac = MEV / (MP * C * C);
 
@@ -85,13 +84,15 @@
   Scalar_t gamma = config.boundaryFunctGamma;
   Scalar_t beta  = config.boundaryFunctBeta;
   Scalar_t E0    = config.boundaryFunctEcutoff;
+  Scalar_t r0     = config.boundaryFunctR0; // Reference radius
+  Scalar_t rScale = config.rScale;
 
   //if (energy/efac < 1.0){
   //  energy = 1.0 * efac;
   //}
 
   normJ0 = J0 * (MP * C) / (MHD_DENSITY_NORM * MEV);
-  normRadius = r1 / config.rScale;
+  normRadius = r0 / rScale;
   normE1 = E1 * efac;
   normE0 = E0 * efac;
 
@@ -100,18 +101,21 @@
   expTerm      = exp( -(energy / normE0) );
 
   normJHe = normJ0 * radialTerm * powerLawTerm * expTerm;
-  normJ  = normJHe / xi;
 
+  /* Compute the flux spectrum. */
+  normJ = normJHe / xi;
+
+  /* Convert flux to a distribution function. */
   normf = normJ / (two * energy);
 
-  // If value is lower than the minimum double precision value
-  // set it to that value (avoid 0).
-  // This allows the log to be taken in adiabatic change.
-
+  /* Floor the distribution at DBL_MIN, to prevent log(f) = -inf. */
   if (normf < DBL_MIN) normf = DBL_MIN;
 
   return normf;
 
-}
-/*-----------------------------------------------------------------------------*/
-/*-----------------------------------------------------------------------------*/
+} /* END sepSeedFunction */
+
+
+
+
+

@@ -55,15 +55,24 @@ Scalar_t masInterpolate(float *,
 /*--*/ SphVec_t masCurlBoverB2( SphVec_t r,                               /*--*/
 /*--*/                    float Bp0[], float Bt0[], float Br0[],          /*--*/
 /*--*/                    float Bp1[], float Bt1[], float Br1[],          /*--*/
-/*--*/                    int bp_r0, int bp_r1,                           /*--*/
-/*--*/                    int bp_t0, int bp_t1,                           /*--*/
-/*--*/                    int bp_p0, int bp_p1,                           /*--*/
-/*--*/                    int bt_r0, int bt_r1,                           /*--*/
-/*--*/                    int bt_t0, int bt_t1,                           /*--*/
-/*--*/                    int bt_p0, int bt_p1,                           /*--*/
-/*--*/                    int br_r0, int br_r1,                           /*--*/
-/*--*/                    int br_t0, int br_t1,                           /*--*/
-/*--*/                    int br_p0, int br_p1,                           /*--*/
+/*--*/                    int bp_r0_0, int bp_r1_0,                       /*--*/
+/*--*/                    int bp_t0_0, int bp_t1_0,                       /*--*/
+/*--*/                    int bp_p0_0, int bp_p1_0,                       /*--*/
+/*--*/                    int bt_r0_0, int bt_r1_0,                       /*--*/
+/*--*/                    int bt_t0_0, int bt_t1_0,                       /*--*/
+/*--*/                    int bt_p0_0, int bt_p1_0,                       /*--*/
+/*--*/                    int br_r0_0, int br_r1_0,                       /*--*/
+/*--*/                    int br_t0_0, int br_t1_0,                       /*--*/
+/*--*/                    int br_p0_0, int br_p1_0,                       /*--*/
+/*--*/                    int bp_r0_1, int bp_r1_1,                       /*--*/
+/*--*/                    int bp_t0_1, int bp_t1_1,                       /*--*/
+/*--*/                    int bp_p0_1, int bp_p1_1,                       /*--*/
+/*--*/                    int bt_r0_1, int bt_r1_1,                       /*--*/
+/*--*/                    int bt_t0_1, int bt_t1_1,                       /*--*/
+/*--*/                    int bt_p0_1, int bt_p1_1,                       /*--*/
+/*--*/                    int br_r0_1, int br_r1_1,                       /*--*/
+/*--*/                    int br_t0_1, int br_t1_1,                       /*--*/
+/*--*/                    int br_p0_1, int br_p1_1,                       /*--*/
 /*--*/                    Scalar_t s);                                    /*--*/
 /*--*/                                                                    /*--*/
 /*--*/                                                                    /*--*/

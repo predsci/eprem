@@ -57,6 +57,12 @@
  --
  -- NOTE TO DEVS: BE SURE TO UPDATE VERSION NUMBER IN GLOBAL.H!
  --
+ -- ## Version 2.3.0, 04/29/2026
+ -- ### modified by RC
+ --       - Added support for MAS resolution changes within the CME simulaton.
+ --         This allows CORHEL-CME runs to work.
+ --         The multires support is only for the Corona (no Hel). 
+ --
  -- ## Version 2.2.1, 01/15/2026
  -- ### modified by RC
  --       - Cleaned up HDF5 readers with error checking.
@@ -727,7 +733,10 @@ int main(int argc, char *argv[]) {
 
   DumpRunTimes();
   config_destroy(&cfg);
-  cleanupMPIWindows();
+  cleanupMPIWindows("state0");
+  cleanupMPIWindows("state1");
+  cleanupHelMPIWindows("state0");
+  cleanupHelMPIWindows("state1");
   MPI_Finalize();
 
   return(0);

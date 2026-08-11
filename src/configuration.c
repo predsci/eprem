@@ -188,6 +188,7 @@ getParams( char* configFilename)
   config.boundaryFunctGamma = readDouble("boundaryFunctGamma", 2.0, 0.0, BADVALUE);
   config.boundaryFunctBeta = readDouble("boundaryFunctBeta", 1.7, 0.0, BADVALUE);
   config.boundaryFunctEcutoff = readDouble("boundaryFunctEcutoff", 1.0, 0.0, BADVALUE);
+  config.boundaryFunctR0 = readDouble("boundaryFunctR0", 1.0, config.rScale, BADVALUE);
 
   config.shockSolver = readInt("shockSolver", 0, 0, 1);
   config.shockDetectPercent = readDouble("shockDetectPercent", 1.0, 0.0, BADVALUE);
