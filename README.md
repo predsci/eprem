@@ -1,5 +1,6 @@
 <img height=100 src="doc/eprem_logo.png" alt="EPREM"/>  
-# Energetic Particle Radiation Environment Model
+
+# Energetic Particle Radiation Environment Model #
    
 [Predictive Science Inc.](https://www.predsci.com)  
  
