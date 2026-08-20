@@ -17,8 +17,9 @@ dsh_min: 5.0000e-05
 dsh_hel_min: 2.5000e-04
 kperxkpar: 1.0000e-02
 lamo: 1.0000e+00
+mfpType: 1
 mfpRadialPower: 2.0000e+00
-mfpInverseB: 0
+mfpBPower: 7.5000e-01
 rigidityPower: 3.3333e-01
 focusingLimit: 1.0000e+00
 eMin: 1.0000e+00
@@ -94,6 +95,7 @@ boundaryFunctXi: 1.0000e-01
 boundaryFunctGamma: 2.0000e+00
 boundaryFunctBeta: 1.7000e+00
 boundaryFunctEcutoff: 1.0000e+00
+boundaryFunctR0: 1.0000e+00
 shockSolver: 0
 shockDetectPercent: 1.0000e+00
 minInjectionEnergy: 1.0000e-02
@@ -117,7 +119,7 @@ adiabaticChangeAlg: 1
 adiabaticFocusAlg: 1
 
 ******************************************************************
-*******************  EPREM Version 1.16.0  ************************
+*******************  EPREM Version 2.3.0  ************************
 ******************************************************************
 Shells: 120
 Processors: 6
@@ -130,67 +132,67 @@ Start: 0.000000 JD, EP Calc: 0.000000 JD
 ****SEEDING NODES********************************
 *************************************************
 Step: 000001  TIME: -2.16430791e+02  [JD  -1.25000]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0001 seconds.
+  --> Compute time for step:             0.0018 seconds.
 Step: 000002  TIME: -2.14627201e+02  [JD  -1.23958]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0006 seconds.
+  --> Compute time for step:             0.0002 seconds.
 Step: 000003  TIME: -2.12823611e+02  [JD  -1.22917]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Compute time for step:             0.0001 seconds.
 Step: 000004  TIME: -2.11020021e+02  [JD  -1.21875]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0001 seconds.
+  --> Compute time for step:             0.0000 seconds.
 Step: 000005  TIME: -2.09216431e+02  [JD  -1.20833]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0001 seconds.
+  --> Compute time for step:             0.0000 seconds.
 Step: 000006  TIME: -2.07412841e+02  [JD  -1.19792]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0001 seconds.
+  --> Compute time for step:             0.0000 seconds.
 Step: 000007  TIME: -2.05609251e+02  [JD  -1.18750]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0001 seconds.
+  --> Compute time for step:             0.0000 seconds.
 Step: 000008  TIME: -2.03805661e+02  [JD  -1.17708]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Compute time for step:             0.0001 seconds.
 Step: 000009  TIME: -2.02002071e+02  [JD  -1.16667]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0002 seconds.
+  --> Compute time for step:             0.0000 seconds.
 Step: 000010  TIME: -2.00198482e+02  [JD  -1.15625]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0002 seconds.
+  --> Compute time for step:             0.0000 seconds.
 Step: 000011  TIME: -1.98394892e+02  [JD  -1.14583]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0001 seconds.
+  --> Compute time for step:             0.0000 seconds.
 Step: 000012  TIME: -1.96591302e+02  [JD  -1.13542]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Compute time for step:             0.0001 seconds.
 Step: 000013  TIME: -1.94787712e+02  [JD  -1.12500]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0001 seconds.
+  --> Compute time for step:             0.0000 seconds.
 Step: 000014  TIME: -1.92984122e+02  [JD  -1.11458]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0001 seconds.
+  --> Compute time for step:             0.0000 seconds.
 Step: 000015  TIME: -1.91180532e+02  [JD  -1.10417]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0002 seconds.
+  --> Compute time for step:             0.0000 seconds.
 Step: 000016  TIME: -1.89376942e+02  [JD  -1.09375]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0001 seconds.
+  --> Compute time for step:             0.0000 seconds.
 Step: 000017  TIME: -1.87573352e+02  [JD  -1.08333]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Compute time for step:             0.0001 seconds.
 Step: 000018  TIME: -1.85769762e+02  [JD  -1.07292]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Compute time for step:             0.0001 seconds.
 Step: 000019  TIME: -1.83966172e+02  [JD  -1.06250]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0001 seconds.
+  --> Compute time for step:             0.0000 seconds.
 Step: 000020  TIME: -1.82162582e+02  [JD  -1.05208]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0001 seconds.
+  --> Compute time for step:             0.0000 seconds.
 Step: 000021  TIME: -1.80358992e+02  [JD  -1.04167]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0001 seconds.
+  --> Compute time for step:             0.0000 seconds.
 Step: 000022  TIME: -1.78555402e+02  [JD  -1.03125]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Compute time for step:             0.0001 seconds.
 Step: 000023  TIME: -1.76751813e+02  [JD  -1.02083]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Compute time for step:             0.0001 seconds.
 Step: 000024  TIME: -1.74948223e+02  [JD  -1.01042]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0001 seconds.
+  --> Compute time for step:             0.0000 seconds.
 Step: 000025  TIME: -1.73144633e+02  [JD  -1.00000]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Compute time for step:             0.0001 seconds.
 Step: 000026  TIME: -1.71341043e+02  [JD  -0.98958]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0001 seconds.
+  --> Compute time for step:             0.0000 seconds.
 Step: 000027  TIME: -1.69537453e+02  [JD  -0.97917]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0001 seconds.
+  --> Compute time for step:             0.0000 seconds.
 Step: 000028  TIME: -1.67733863e+02  [JD  -0.96875]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0002 seconds.
+  --> Compute time for step:             0.0000 seconds.
 Step: 000029  TIME: -1.65930273e+02  [JD  -0.95833]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0001 seconds.
+  --> Compute time for step:             0.0000 seconds.
 Step: 000030  TIME: -1.64126683e+02  [JD  -0.94792]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0001 seconds.
+  --> Compute time for step:             0.0000 seconds.
 Step: 000031  TIME: -1.62323093e+02  [JD  -0.93750]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0001 seconds.
+  --> Compute time for step:             0.0000 seconds.
 Step: 000032  TIME: -1.60519503e+02  [JD  -0.92708]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Compute time for step:             0.0001 seconds.
 Step: 000033  TIME: -1.58715913e+02  [JD  -0.91667]  DTIME: 1.80358992e+00  [JD 0.01042]
@@ -224,151 +226,151 @@ Step: 000046  TIME: -1.35269244e+02  [JD  -0.78125]  DTIME: 1.80358992e+00  [JD 
 Step: 000047  TIME: -1.33465654e+02  [JD  -0.77083]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Compute time for step:             0.0001 seconds.
 Step: 000048  TIME: -1.31662064e+02  [JD  -0.76042]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0002 seconds.
+  --> Compute time for step:             0.0001 seconds.
 Step: 000049  TIME: -1.29858475e+02  [JD  -0.75000]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0002 seconds.
+  --> Compute time for step:             0.0001 seconds.
 Step: 000050  TIME: -1.28054885e+02  [JD  -0.73958]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Compute time for step:             0.0001 seconds.
 Step: 000051  TIME: -1.26251295e+02  [JD  -0.72917]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0002 seconds.
+  --> Compute time for step:             0.0001 seconds.
 Step: 000052  TIME: -1.24447705e+02  [JD  -0.71875]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Compute time for step:             0.0001 seconds.
 Step: 000053  TIME: -1.22644115e+02  [JD  -0.70833]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Compute time for step:             0.0001 seconds.
 Step: 000054  TIME: -1.20840525e+02  [JD  -0.69792]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0002 seconds.
+  --> Compute time for step:             0.0001 seconds.
 Step: 000055  TIME: -1.19036935e+02  [JD  -0.68750]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0002 seconds.
+  --> Compute time for step:             0.0001 seconds.
 Step: 000056  TIME: -1.17233345e+02  [JD  -0.67708]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0002 seconds.
+  --> Compute time for step:             0.0001 seconds.
 Step: 000057  TIME: -1.15429755e+02  [JD  -0.66667]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0002 seconds.
+  --> Compute time for step:             0.0001 seconds.
 Step: 000058  TIME: -1.13626165e+02  [JD  -0.65625]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0002 seconds.
+  --> Compute time for step:             0.0001 seconds.
 Step: 000059  TIME: -1.11822575e+02  [JD  -0.64583]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0002 seconds.
+  --> Compute time for step:             0.0001 seconds.
 Step: 000060  TIME: -1.10018985e+02  [JD  -0.63542]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0002 seconds.
+  --> Compute time for step:             0.0001 seconds.
 Step: 000061  TIME: -1.08215395e+02  [JD  -0.62500]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0002 seconds.
+  --> Compute time for step:             0.0001 seconds.
 Step: 000062  TIME: -1.06411805e+02  [JD  -0.61458]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0002 seconds.
+  --> Compute time for step:             0.0001 seconds.
 Step: 000063  TIME: -1.04608216e+02  [JD  -0.60417]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0002 seconds.
+  --> Compute time for step:             0.0001 seconds.
 Step: 000064  TIME: -1.02804626e+02  [JD  -0.59375]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0002 seconds.
+  --> Compute time for step:             0.0001 seconds.
 Step: 000065  TIME: -1.01001036e+02  [JD  -0.58333]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0002 seconds.
+  --> Compute time for step:             0.0001 seconds.
 Step: 000066  TIME: -9.91974458e+01  [JD  -0.57292]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0002 seconds.
+  --> Compute time for step:             0.0001 seconds.
 Step: 000067  TIME: -9.73938559e+01  [JD  -0.56250]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0002 seconds.
+  --> Compute time for step:             0.0001 seconds.
 Step: 000068  TIME: -9.55902660e+01  [JD  -0.55208]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0002 seconds.
+  --> Compute time for step:             0.0001 seconds.
 Step: 000069  TIME: -9.37866760e+01  [JD  -0.54167]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0002 seconds.
+  --> Compute time for step:             0.0001 seconds.
 Step: 000070  TIME: -9.19830861e+01  [JD  -0.53125]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0002 seconds.
+  --> Compute time for step:             0.0001 seconds.
 Step: 000071  TIME: -9.01794962e+01  [JD  -0.52083]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0002 seconds.
+  --> Compute time for step:             0.0001 seconds.
 Step: 000072  TIME: -8.83759063e+01  [JD  -0.51042]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0002 seconds.
+  --> Compute time for step:             0.0001 seconds.
 Step: 000073  TIME: -8.65723163e+01  [JD  -0.50000]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0002 seconds.
+  --> Compute time for step:             0.0001 seconds.
 Step: 000074  TIME: -8.47687264e+01  [JD  -0.48958]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0002 seconds.
+  --> Compute time for step:             0.0001 seconds.
 Step: 000075  TIME: -8.29651365e+01  [JD  -0.47917]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0002 seconds.
+  --> Compute time for step:             0.0001 seconds.
 Step: 000076  TIME: -8.11615466e+01  [JD  -0.46875]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0002 seconds.
+  --> Compute time for step:             0.0001 seconds.
 Step: 000077  TIME: -7.93579566e+01  [JD  -0.45833]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0002 seconds.
+  --> Compute time for step:             0.0001 seconds.
 Step: 000078  TIME: -7.75543667e+01  [JD  -0.44792]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0002 seconds.
+  --> Compute time for step:             0.0001 seconds.
 Step: 000079  TIME: -7.57507768e+01  [JD  -0.43750]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0002 seconds.
+  --> Compute time for step:             0.0001 seconds.
 Step: 000080  TIME: -7.39471869e+01  [JD  -0.42708]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0002 seconds.
+  --> Compute time for step:             0.0001 seconds.
 Step: 000081  TIME: -7.21435969e+01  [JD  -0.41667]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0002 seconds.
+  --> Compute time for step:             0.0001 seconds.
 Step: 000082  TIME: -7.03400070e+01  [JD  -0.40625]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0002 seconds.
+  --> Compute time for step:             0.0001 seconds.
 Step: 000083  TIME: -6.85364171e+01  [JD  -0.39583]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0002 seconds.
+  --> Compute time for step:             0.0001 seconds.
 Step: 000084  TIME: -6.67328272e+01  [JD  -0.38542]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0002 seconds.
+  --> Compute time for step:             0.0001 seconds.
 Step: 000085  TIME: -6.49292373e+01  [JD  -0.37500]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0002 seconds.
+  --> Compute time for step:             0.0001 seconds.
 Step: 000086  TIME: -6.31256473e+01  [JD  -0.36458]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0002 seconds.
+  --> Compute time for step:             0.0001 seconds.
 Step: 000087  TIME: -6.13220574e+01  [JD  -0.35417]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0002 seconds.
+  --> Compute time for step:             0.0001 seconds.
 Step: 000088  TIME: -5.95184675e+01  [JD  -0.34375]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0002 seconds.
+  --> Compute time for step:             0.0001 seconds.
 Step: 000089  TIME: -5.77148776e+01  [JD  -0.33333]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0002 seconds.
+  --> Compute time for step:             0.0001 seconds.
 Step: 000090  TIME: -5.59112876e+01  [JD  -0.32292]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0002 seconds.
+  --> Compute time for step:             0.0001 seconds.
 Step: 000091  TIME: -5.41076977e+01  [JD  -0.31250]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0002 seconds.
+  --> Compute time for step:             0.0001 seconds.
 Step: 000092  TIME: -5.23041078e+01  [JD  -0.30208]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0002 seconds.
+  --> Compute time for step:             0.0001 seconds.
 Step: 000093  TIME: -5.05005179e+01  [JD  -0.29167]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0002 seconds.
+  --> Compute time for step:             0.0001 seconds.
 Step: 000094  TIME: -4.86969279e+01  [JD  -0.28125]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0002 seconds.
+  --> Compute time for step:             0.0001 seconds.
 Step: 000095  TIME: -4.68933380e+01  [JD  -0.27083]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0002 seconds.
+  --> Compute time for step:             0.0001 seconds.
 Step: 000096  TIME: -4.50897481e+01  [JD  -0.26042]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0002 seconds.
+  --> Compute time for step:             0.0001 seconds.
 Step: 000097  TIME: -4.32861582e+01  [JD  -0.25000]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0002 seconds.
+  --> Compute time for step:             0.0001 seconds.
 Step: 000098  TIME: -4.14825682e+01  [JD  -0.23958]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0002 seconds.
+  --> Compute time for step:             0.0001 seconds.
 Step: 000099  TIME: -3.96789783e+01  [JD  -0.22917]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0002 seconds.
+  --> Compute time for step:             0.0001 seconds.
 Step: 000100  TIME: -3.78753884e+01  [JD  -0.21875]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0002 seconds.
+  --> Compute time for step:             0.0001 seconds.
 Step: 000101  TIME: -3.60717985e+01  [JD  -0.20833]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0002 seconds.
+  --> Compute time for step:             0.0001 seconds.
 Step: 000102  TIME: -3.42682086e+01  [JD  -0.19792]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0002 seconds.
+  --> Compute time for step:             0.0001 seconds.
 Step: 000103  TIME: -3.24646186e+01  [JD  -0.18750]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0002 seconds.
+  --> Compute time for step:             0.0001 seconds.
 Step: 000104  TIME: -3.06610287e+01  [JD  -0.17708]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0002 seconds.
+  --> Compute time for step:             0.0001 seconds.
 Step: 000105  TIME: -2.88574388e+01  [JD  -0.16667]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0002 seconds.
+  --> Compute time for step:             0.0001 seconds.
 Step: 000106  TIME: -2.70538489e+01  [JD  -0.15625]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0002 seconds.
+  --> Compute time for step:             0.0001 seconds.
 Step: 000107  TIME: -2.52502589e+01  [JD  -0.14583]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0002 seconds.
+  --> Compute time for step:             0.0001 seconds.
 Step: 000108  TIME: -2.34466690e+01  [JD  -0.13542]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0002 seconds.
+  --> Compute time for step:             0.0001 seconds.
 Step: 000109  TIME: -2.16430791e+01  [JD  -0.12500]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0002 seconds.
+  --> Compute time for step:             0.0001 seconds.
 Step: 000110  TIME: -1.98394892e+01  [JD  -0.11458]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0002 seconds.
+  --> Compute time for step:             0.0001 seconds.
 Step: 000111  TIME: -1.80358992e+01  [JD  -0.10417]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0002 seconds.
+  --> Compute time for step:             0.0001 seconds.
 Step: 000112  TIME: -1.62323093e+01  [JD  -0.09375]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0002 seconds.
+  --> Compute time for step:             0.0001 seconds.
 Step: 000113  TIME: -1.44287194e+01  [JD  -0.08333]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0002 seconds.
+  --> Compute time for step:             0.0001 seconds.
 Step: 000114  TIME: -1.26251295e+01  [JD  -0.07292]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0002 seconds.
+  --> Compute time for step:             0.0001 seconds.
 Step: 000115  TIME: -1.08215395e+01  [JD  -0.06250]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0002 seconds.
+  --> Compute time for step:             0.0001 seconds.
 Step: 000116  TIME: -9.01794962e+00  [JD  -0.05208]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0002 seconds.
+  --> Compute time for step:             0.0001 seconds.
 Step: 000117  TIME: -7.21435969e+00  [JD  -0.04167]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0002 seconds.
+  --> Compute time for step:             0.0001 seconds.
 Step: 000118  TIME: -5.41076977e+00  [JD  -0.03125]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0002 seconds.
+  --> Compute time for step:             0.0001 seconds.
 Step: 000119  TIME: -3.60717985e+00  [JD  -0.02083]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0002 seconds.
+  --> Compute time for step:             0.0001 seconds.
 Step: 000120  TIME: -1.80358992e+00  [JD  -0.01042]  DTIME: 1.80358992e+00  [JD 0.01042]
-  --> Compute time for step:             0.0002 seconds.
+  --> Compute time for step:             0.0001 seconds.
  
 *************************************************
 ****STARTING SIMULATION**************************
@@ -384,31 +386,31 @@ Step: 000121  TIME: 0.00000000e+00  [JD   0.00000]  DTIME: 1.80358992e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 36 
   --> Minimum MFP timescale (tau): 6.35745673e-05    DTIME/TAU:       28369.68
-  --> Compute time for step:             0.0476 seconds.
+  --> Compute time for step:             0.0346 seconds.
 Step: 000122  TIME: 1.80358992e+00  [JD   0.01042]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 36 
   --> Minimum MFP timescale (tau): 6.35745673e-05    DTIME/TAU:       28369.68
-  --> Compute time for step:             0.0309 seconds.
+  --> Compute time for step:             0.0323 seconds.
 Step: 000123  TIME: 3.60717985e+00  [JD   0.02083]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 36 
   --> Minimum MFP timescale (tau): 6.35745673e-05    DTIME/TAU:       28369.68
-  --> Compute time for step:             0.0237 seconds.
+  --> Compute time for step:             0.0330 seconds.
 Step: 000124  TIME: 5.41076977e+00  [JD   0.03125]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 36 
   --> Minimum MFP timescale (tau): 6.35745673e-05    DTIME/TAU:       28369.68
-  --> Compute time for step:             0.0185 seconds.
+  --> Compute time for step:             0.0204 seconds.
 Step: 000125  TIME: 7.21435969e+00  [JD   0.04167]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 36 
   --> Minimum MFP timescale (tau): 6.35745673e-05    DTIME/TAU:       28369.68
-  --> Compute time for step:             0.0196 seconds.
+  --> Compute time for step:             0.0194 seconds.
 Step: 000126  TIME: 9.01794962e+00  [JD   0.05208]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 36 
@@ -420,36 +422,36 @@ Step: 000127  TIME: 1.08215395e+01  [JD   0.06250]  DTIME: 1.80358992e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 36 
   --> Minimum MFP timescale (tau): 6.35745673e-05    DTIME/TAU:       28369.68
-  --> Compute time for step:             0.0197 seconds.
+  --> Compute time for step:             0.0195 seconds.
 Step: 000128  TIME: 1.26251295e+01  [JD   0.07292]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 36 
   --> Minimum MFP timescale (tau): 6.35745673e-05    DTIME/TAU:       28369.68
-  --> Compute time for step:             0.0189 seconds.
+  --> Compute time for step:             0.0185 seconds.
 Step: 000129  TIME: 1.44287194e+01  [JD   0.08333]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 36 
   --> Minimum MFP timescale (tau): 6.35745673e-05    DTIME/TAU:       28369.68
-  --> Compute time for step:             0.0199 seconds.
+  --> Compute time for step:             0.0195 seconds.
 Step: 000130  TIME: 1.62323093e+01  [JD   0.09375]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 36 
   --> Minimum MFP timescale (tau): 6.35745673e-05    DTIME/TAU:       28369.68
-  --> Compute time for step:             0.0191 seconds.
+  --> Compute time for step:             0.0185 seconds.
 Step: 000131  TIME: 1.80358992e+01  [JD   0.10417]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 36 
   --> Minimum MFP timescale (tau): 6.35745673e-05    DTIME/TAU:       28369.68
-  --> Compute time for step:             0.0198 seconds.
+  --> Compute time for step:             0.0195 seconds.
 Step: 000132  TIME: 1.98394892e+01  [JD   0.11458]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 36 
   --> Minimum MFP timescale (tau): 6.35745673e-05    DTIME/TAU:       28369.68
-  --> Compute time for step:             0.0187 seconds.
+  --> Compute time for step:             0.0185 seconds.
 Step: 000133  TIME: 2.16430791e+01  [JD   0.12500]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
@@ -461,7 +463,7 @@ Step: 000134  TIME: 2.34466690e+01  [JD   0.13542]  DTIME: 1.80358992e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 36 
   --> Minimum MFP timescale (tau): 6.35745673e-05    DTIME/TAU:       28369.68
-  --> Compute time for step:             0.0187 seconds.
+  --> Compute time for step:             0.0185 seconds.
 Step: 000135  TIME: 2.52502589e+01  [JD   0.14583]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
@@ -473,26 +475,26 @@ Step: 000136  TIME: 2.70538489e+01  [JD   0.15625]  DTIME: 1.80358992e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 36 
   --> Minimum MFP timescale (tau): 6.35745673e-05    DTIME/TAU:       28369.68
-  --> Compute time for step:             0.0186 seconds.
+  --> Compute time for step:             0.0184 seconds.
 Step: 000137  TIME: 2.88574388e+01  [JD   0.16667]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 36 
   --> Minimum MFP timescale (tau): 6.35745673e-05    DTIME/TAU:       28369.68
-  --> Compute time for step:             0.0195 seconds.
+  --> Compute time for step:             0.0197 seconds.
 Step: 000138  TIME: 3.06610287e+01  [JD   0.17708]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 36 
   --> Minimum MFP timescale (tau): 6.35745673e-05    DTIME/TAU:       28369.68
-  --> Compute time for step:             0.0187 seconds.
+  --> Compute time for step:             0.0186 seconds.
 Step: 000139  TIME: 3.24646186e+01  [JD   0.18750]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 36 
   --> Minimum MFP timescale (tau): 6.35745673e-05    DTIME/TAU:       28369.68
-  --> Compute time for step:             0.0195 seconds.
+  --> Compute time for step:             0.0196 seconds.
 Step: 000140  TIME: 3.42682086e+01  [JD   0.19792]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 36 
@@ -504,31 +506,31 @@ Step: 000141  TIME: 3.60717985e+01  [JD   0.20833]  DTIME: 1.80358992e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 36 
   --> Minimum MFP timescale (tau): 6.35745673e-05    DTIME/TAU:       28369.68
-  --> Compute time for step:             0.0195 seconds.
+  --> Compute time for step:             0.0197 seconds.
 Step: 000142  TIME: 3.78753884e+01  [JD   0.21875]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 36 
   --> Minimum MFP timescale (tau): 6.35745673e-05    DTIME/TAU:       28369.68
-  --> Compute time for step:             0.0186 seconds.
+  --> Compute time for step:             0.0185 seconds.
 Step: 000143  TIME: 3.96789783e+01  [JD   0.22917]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 36 
   --> Minimum MFP timescale (tau): 6.35745673e-05    DTIME/TAU:       28369.68
-  --> Compute time for step:             0.0195 seconds.
+  --> Compute time for step:             0.0197 seconds.
 Step: 000144  TIME: 4.14825682e+01  [JD   0.23958]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 36 
   --> Minimum MFP timescale (tau): 6.35745673e-05    DTIME/TAU:       28369.68
-  --> Compute time for step:             0.0186 seconds.
+  --> Compute time for step:             0.0185 seconds.
 Step: 000145  TIME: 4.32861582e+01  [JD   0.25000]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 36 
   --> Minimum MFP timescale (tau): 6.35745673e-05    DTIME/TAU:       28369.68
-  --> Compute time for step:             0.0196 seconds.
+  --> Compute time for step:             0.0198 seconds.
 Step: 000146  TIME: 4.50897481e+01  [JD   0.26042]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 36 
@@ -540,79 +542,79 @@ Step: 000147  TIME: 4.68933380e+01  [JD   0.27083]  DTIME: 1.80358992e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 36 
   --> Minimum MFP timescale (tau): 6.35745673e-05    DTIME/TAU:       28369.68
-  --> Compute time for step:             0.0194 seconds.
+  --> Compute time for step:             0.0199 seconds.
 Step: 000148  TIME: 4.86969279e+01  [JD   0.28125]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 36 
   --> Minimum MFP timescale (tau): 6.35745673e-05    DTIME/TAU:       28369.68
-  --> Compute time for step:             0.0186 seconds.
+  --> Compute time for step:             0.0185 seconds.
 Step: 000149  TIME: 5.05005179e+01  [JD   0.29167]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 36 
   --> Minimum MFP timescale (tau): 6.35745673e-05    DTIME/TAU:       28369.68
-  --> Compute time for step:             0.0195 seconds.
+  --> Compute time for step:             0.0199 seconds.
 Step: 000150  TIME: 5.23041078e+01  [JD   0.30208]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 36 
   --> Minimum MFP timescale (tau): 6.35745673e-05    DTIME/TAU:       28369.68
-  --> Compute time for step:             0.0187 seconds.
+  --> Compute time for step:             0.0185 seconds.
 Step: 000151  TIME: 5.41076977e+01  [JD   0.31250]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 36 
   --> Minimum MFP timescale (tau): 6.35745673e-05    DTIME/TAU:       28369.68
-  --> Compute time for step:             0.0198 seconds.
+  --> Compute time for step:             0.0199 seconds.
 Step: 000152  TIME: 5.59112876e+01  [JD   0.32292]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 36 
   --> Minimum MFP timescale (tau): 6.35745673e-05    DTIME/TAU:       28369.68
-  --> Compute time for step:             0.0187 seconds.
+  --> Compute time for step:             0.0185 seconds.
 Step: 000153  TIME: 5.77148776e+01  [JD   0.33333]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 36 
   --> Minimum MFP timescale (tau): 6.35745673e-05    DTIME/TAU:       28369.68
-  --> Compute time for step:             0.0196 seconds.
+  --> Compute time for step:             0.0200 seconds.
 Step: 000154  TIME: 5.95184675e+01  [JD   0.34375]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 36 
   --> Minimum MFP timescale (tau): 6.35745673e-05    DTIME/TAU:       28369.68
-  --> Compute time for step:             0.0186 seconds.
+  --> Compute time for step:             0.0185 seconds.
 Step: 000155  TIME: 6.13220574e+01  [JD   0.35417]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 36 
   --> Minimum MFP timescale (tau): 6.35745673e-05    DTIME/TAU:       28369.68
-  --> Compute time for step:             0.0207 seconds.
+  --> Compute time for step:             0.0199 seconds.
 Step: 000156  TIME: 6.31256473e+01  [JD   0.36458]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 36 
   --> Minimum MFP timescale (tau): 6.35745673e-05    DTIME/TAU:       28369.68
-  --> Compute time for step:             0.0185 seconds.
+  --> Compute time for step:             0.0184 seconds.
 Step: 000157  TIME: 6.49292373e+01  [JD   0.37500]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 36 
   --> Minimum MFP timescale (tau): 6.35745673e-05    DTIME/TAU:       28369.68
-  --> Compute time for step:             0.0195 seconds.
+  --> Compute time for step:             0.0200 seconds.
 Step: 000158  TIME: 6.67328272e+01  [JD   0.38542]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 36 
   --> Minimum MFP timescale (tau): 6.35745673e-05    DTIME/TAU:       28369.68
-  --> Compute time for step:             0.0187 seconds.
+  --> Compute time for step:             0.0185 seconds.
 Step: 000159  TIME: 6.85364171e+01  [JD   0.39583]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 36 
   --> Minimum MFP timescale (tau): 6.35745673e-05    DTIME/TAU:       28369.68
-  --> Compute time for step:             0.0194 seconds.
+  --> Compute time for step:             0.0200 seconds.
 Step: 000160  TIME: 7.03400070e+01  [JD   0.40625]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 36 
@@ -624,19 +626,19 @@ Step: 000161  TIME: 7.21435969e+01  [JD   0.41667]  DTIME: 1.80358992e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 36 
   --> Minimum MFP timescale (tau): 6.35745673e-05    DTIME/TAU:       28369.68
-  --> Compute time for step:             0.0195 seconds.
+  --> Compute time for step:             0.0201 seconds.
 Step: 000162  TIME: 7.39471869e+01  [JD   0.42708]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 36 
   --> Minimum MFP timescale (tau): 6.35745673e-05    DTIME/TAU:       28369.68
-  --> Compute time for step:             0.0186 seconds.
+  --> Compute time for step:             0.0185 seconds.
 Step: 000163  TIME: 7.57507768e+01  [JD   0.43750]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 36 
   --> Minimum MFP timescale (tau): 6.35745729e-05    DTIME/TAU:       28369.67
-  --> Compute time for step:             0.0194 seconds.
+  --> Compute time for step:             0.0204 seconds.
 Step: 000164  TIME: 7.75543667e+01  [JD   0.44792]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 36 
@@ -648,252 +650,252 @@ Step: 000165  TIME: 7.93579566e+01  [JD   0.45833]  DTIME: 1.80358992e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 36 
   --> Minimum MFP timescale (tau): 6.35751584e-05    DTIME/TAU:       28369.41
-  --> Compute time for step:             0.0195 seconds.
+  --> Compute time for step:             0.0203 seconds.
 Step: 000166  TIME: 8.11615466e+01  [JD   0.46875]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 36 
   --> Minimum MFP timescale (tau): 6.35806374e-05    DTIME/TAU:       28366.97
-  --> Compute time for step:             0.0186 seconds.
+  --> Compute time for step:             0.0185 seconds.
 Step: 000167  TIME: 8.29651365e+01  [JD   0.47917]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 36 
   --> Minimum MFP timescale (tau): 6.36368720e-05    DTIME/TAU:       28341.90
-  --> Compute time for step:             0.0194 seconds.
+  --> Compute time for step:             0.0201 seconds.
 Step: 000168  TIME: 8.47687264e+01  [JD   0.48958]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 36 
   --> Minimum MFP timescale (tau): 6.42104693e-05    DTIME/TAU:       28088.72
-  --> Compute time for step:             0.0185 seconds.
+  --> Compute time for step:             0.0184 seconds.
 Step: 000169  TIME: 8.65723163e+01  [JD   0.50000]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 36 
   --> Minimum MFP timescale (tau): 6.97088218e-05    DTIME/TAU:       25873.19
-  --> Compute time for step:             0.0197 seconds.
+  --> Compute time for step:             0.0207 seconds.
 Step: 000170  TIME: 8.83759063e+01  [JD   0.51042]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 33 
   --> Minimum MFP timescale (tau): 1.01831803e-04    DTIME/TAU:       17711.46
-  --> Compute time for step:             0.0200 seconds.
+  --> Compute time for step:             0.0199 seconds.
 Step: 000171  TIME: 9.01794962e+01  [JD   0.52083]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 29 
   --> Minimum MFP timescale (tau): 1.40023867e-04    DTIME/TAU:       12880.59
-  --> Compute time for step:             0.0235 seconds.
+  --> Compute time for step:             0.0242 seconds.
 Step: 000172  TIME: 9.19830861e+01  [JD   0.53125]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.48089561e-04    DTIME/TAU:       12179.05
-  --> Compute time for step:             0.0260 seconds.
+  --> Compute time for step:             0.0255 seconds.
 Step: 000173  TIME: 9.37866760e+01  [JD   0.54167]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.48963899e-04    DTIME/TAU:       12107.56
-  --> Compute time for step:             0.0307 seconds.
+  --> Compute time for step:             0.0315 seconds.
 Step: 000174  TIME: 9.55902660e+01  [JD   0.55208]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49049968e-04    DTIME/TAU:       12100.57
-  --> Compute time for step:             0.0332 seconds.
+  --> Compute time for step:             0.0330 seconds.
 Step: 000175  TIME: 9.73938559e+01  [JD   0.56250]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49058358e-04    DTIME/TAU:       12099.89
-  --> Compute time for step:             0.0370 seconds.
+  --> Compute time for step:             0.0372 seconds.
 Step: 000176  TIME: 9.91974458e+01  [JD   0.57292]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059174e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0391 seconds.
+  --> Compute time for step:             0.0379 seconds.
 Step: 000177  TIME: 1.01001036e+02  [JD   0.58333]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059254e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0432 seconds.
+  --> Compute time for step:             0.0446 seconds.
 Step: 000178  TIME: 1.02804626e+02  [JD   0.59375]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0451 seconds.
+  --> Compute time for step:             0.0452 seconds.
 Step: 000179  TIME: 1.04608216e+02  [JD   0.60417]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0483 seconds.
+  --> Compute time for step:             0.0475 seconds.
 Step: 000180  TIME: 1.06411805e+02  [JD   0.61458]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0497 seconds.
+  --> Compute time for step:             0.0477 seconds.
 Step: 000181  TIME: 1.08215395e+02  [JD   0.62500]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0537 seconds.
+  --> Compute time for step:             0.0551 seconds.
 Step: 000182  TIME: 1.10018985e+02  [JD   0.63542]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0550 seconds.
+  --> Compute time for step:             0.0551 seconds.
 Step: 000183  TIME: 1.11822575e+02  [JD   0.64583]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0572 seconds.
+  --> Compute time for step:             0.0565 seconds.
 Step: 000184  TIME: 1.13626165e+02  [JD   0.65625]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0581 seconds.
+  --> Compute time for step:             0.0558 seconds.
 Step: 000185  TIME: 1.15429755e+02  [JD   0.66667]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0620 seconds.
+  --> Compute time for step:             0.0630 seconds.
 Step: 000186  TIME: 1.17233345e+02  [JD   0.67708]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0628 seconds.
+  --> Compute time for step:             0.0622 seconds.
 Step: 000187  TIME: 1.19036935e+02  [JD   0.68750]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0646 seconds.
+  --> Compute time for step:             0.0635 seconds.
 Step: 000188  TIME: 1.20840525e+02  [JD   0.69792]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0650 seconds.
+  --> Compute time for step:             0.0623 seconds.
 Step: 000189  TIME: 1.22644115e+02  [JD   0.70833]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0678 seconds.
+  --> Compute time for step:             0.0687 seconds.
 Step: 000190  TIME: 1.24447705e+02  [JD   0.71875]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0680 seconds.
+  --> Compute time for step:             0.0675 seconds.
 Step: 000191  TIME: 1.26251295e+02  [JD   0.72917]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0696 seconds.
+  --> Compute time for step:             0.0677 seconds.
 Step: 000192  TIME: 1.28054885e+02  [JD   0.73958]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0697 seconds.
+  --> Compute time for step:             0.0661 seconds.
 Step: 000193  TIME: 1.29858475e+02  [JD   0.75000]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0724 seconds.
+  --> Compute time for step:             0.0736 seconds.
 Step: 000194  TIME: 1.31662064e+02  [JD   0.76042]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0725 seconds.
+  --> Compute time for step:             0.0718 seconds.
 Step: 000195  TIME: 1.33465654e+02  [JD   0.77083]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0741 seconds.
+  --> Compute time for step:             0.0716 seconds.
 Step: 000196  TIME: 1.35269244e+02  [JD   0.78125]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0739 seconds.
+  --> Compute time for step:             0.0696 seconds.
 Step: 000197  TIME: 1.37072834e+02  [JD   0.79167]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0760 seconds.
+  --> Compute time for step:             0.0770 seconds.
 Step: 000198  TIME: 1.38876424e+02  [JD   0.80208]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0764 seconds.
+  --> Compute time for step:             0.0748 seconds.
 Step: 000199  TIME: 1.40680014e+02  [JD   0.81250]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0765 seconds.
+  --> Compute time for step:             0.0755 seconds.
 Step: 000200  TIME: 1.42483604e+02  [JD   0.82292]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0760 seconds.
+  --> Compute time for step:             0.0717 seconds.
 Step: 000201  TIME: 1.44287194e+02  [JD   0.83333]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0778 seconds.
+  --> Compute time for step:             0.0808 seconds.
 Step: 000202  TIME: 1.46090784e+02  [JD   0.84375]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0774 seconds.
+  --> Compute time for step:             0.0770 seconds.
 Step: 000203  TIME: 1.47894374e+02  [JD   0.85417]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0781 seconds.
+  --> Compute time for step:             0.0764 seconds.
 Step: 000204  TIME: 1.49697964e+02  [JD   0.86458]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0777 seconds.
+  --> Compute time for step:             0.0737 seconds.
 Step: 000205  TIME: 1.51501554e+02  [JD   0.87500]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0800 seconds.
+  --> Compute time for step:             0.0829 seconds.
 Step: 000206  TIME: 1.53305144e+02  [JD   0.88542]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0793 seconds.
+  --> Compute time for step:             0.0788 seconds.
 Step: 000207  TIME: 1.55108733e+02  [JD   0.89583]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
@@ -905,115 +907,115 @@ Step: 000208  TIME: 1.56912323e+02  [JD   0.90625]  DTIME: 1.80358992e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0792 seconds.
+  --> Compute time for step:             0.0750 seconds.
 Step: 000209  TIME: 1.58715913e+02  [JD   0.91667]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0817 seconds.
+  --> Compute time for step:             0.0875 seconds.
 Step: 000210  TIME: 1.60519503e+02  [JD   0.92708]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0812 seconds.
+  --> Compute time for step:             0.0827 seconds.
 Step: 000211  TIME: 1.62323093e+02  [JD   0.93750]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0818 seconds.
+  --> Compute time for step:             0.0820 seconds.
 Step: 000212  TIME: 1.64126683e+02  [JD   0.94792]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0811 seconds.
+  --> Compute time for step:             0.0773 seconds.
 Step: 000213  TIME: 1.65930273e+02  [JD   0.95833]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0813 seconds.
+  --> Compute time for step:             0.0846 seconds.
 Step: 000214  TIME: 1.67733863e+02  [JD   0.96875]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0807 seconds.
+  --> Compute time for step:             0.0798 seconds.
 Step: 000215  TIME: 1.69537453e+02  [JD   0.97917]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0815 seconds.
+  --> Compute time for step:             0.0814 seconds.
 Step: 000216  TIME: 1.71341043e+02  [JD   0.98958]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0807 seconds.
+  --> Compute time for step:             0.0766 seconds.
 Step: 000217  TIME: 1.73144633e+02  [JD   1.00000]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0829 seconds.
+  --> Compute time for step:             0.0856 seconds.
 Step: 000218  TIME: 1.74948223e+02  [JD   1.01042]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0822 seconds.
+  --> Compute time for step:             0.0808 seconds.
 Step: 000219  TIME: 1.76751813e+02  [JD   1.02083]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0824 seconds.
+  --> Compute time for step:             0.0828 seconds.
 Step: 000220  TIME: 1.78555402e+02  [JD   1.03125]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0813 seconds.
+  --> Compute time for step:             0.0780 seconds.
 Step: 000221  TIME: 1.80358992e+02  [JD   1.04167]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0834 seconds.
+  --> Compute time for step:             0.0865 seconds.
 Step: 000222  TIME: 1.82162582e+02  [JD   1.05208]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0827 seconds.
+  --> Compute time for step:             0.0817 seconds.
 Step: 000223  TIME: 1.83966172e+02  [JD   1.06250]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0825 seconds.
+  --> Compute time for step:             0.0826 seconds.
 Step: 000224  TIME: 1.85769762e+02  [JD   1.07292]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0819 seconds.
+  --> Compute time for step:             0.0776 seconds.
 Step: 000225  TIME: 1.87573352e+02  [JD   1.08333]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0843 seconds.
+  --> Compute time for step:             0.0873 seconds.
 Step: 000226  TIME: 1.89376942e+02  [JD   1.09375]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0836 seconds.
+  --> Compute time for step:             0.0823 seconds.
 Step: 000227  TIME: 1.91180532e+02  [JD   1.10417]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
@@ -1025,211 +1027,211 @@ Step: 000228  TIME: 1.92984122e+02  [JD   1.11458]  DTIME: 1.80358992e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0828 seconds.
+  --> Compute time for step:             0.0785 seconds.
 Step: 000229  TIME: 1.94787712e+02  [JD   1.12500]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0846 seconds.
+  --> Compute time for step:             0.0867 seconds.
 Step: 000230  TIME: 1.96591302e+02  [JD   1.13542]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0837 seconds.
+  --> Compute time for step:             0.0819 seconds.
 Step: 000231  TIME: 1.98394892e+02  [JD   1.14583]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0839 seconds.
+  --> Compute time for step:             0.0881 seconds.
 Step: 000232  TIME: 2.00198482e+02  [JD   1.15625]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0828 seconds.
+  --> Compute time for step:             0.0831 seconds.
 Step: 000233  TIME: 2.02002071e+02  [JD   1.16667]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0846 seconds.
+  --> Compute time for step:             0.0893 seconds.
 Step: 000234  TIME: 2.03805661e+02  [JD   1.17708]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0837 seconds.
+  --> Compute time for step:             0.0845 seconds.
 Step: 000235  TIME: 2.05609251e+02  [JD   1.18750]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0841 seconds.
+  --> Compute time for step:             0.0878 seconds.
 Step: 000236  TIME: 2.07412841e+02  [JD   1.19792]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0831 seconds.
+  --> Compute time for step:             0.0828 seconds.
 Step: 000237  TIME: 2.09216431e+02  [JD   1.20833]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0848 seconds.
+  --> Compute time for step:             0.0865 seconds.
 Step: 000238  TIME: 2.11020021e+02  [JD   1.21875]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0839 seconds.
+  --> Compute time for step:             0.0814 seconds.
 Step: 000239  TIME: 2.12823611e+02  [JD   1.22917]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0837 seconds.
+  --> Compute time for step:             0.0836 seconds.
 Step: 000240  TIME: 2.14627201e+02  [JD   1.23958]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0828 seconds.
+  --> Compute time for step:             0.0785 seconds.
 Step: 000241  TIME: 2.16430791e+02  [JD   1.25000]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0848 seconds.
+  --> Compute time for step:             0.0872 seconds.
 Step: 000242  TIME: 2.18234381e+02  [JD   1.26042]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0841 seconds.
+  --> Compute time for step:             0.0824 seconds.
 Step: 000243  TIME: 2.20037971e+02  [JD   1.27083]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0847 seconds.
+  --> Compute time for step:             0.0881 seconds.
 Step: 000244  TIME: 2.21841561e+02  [JD   1.28125]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0835 seconds.
+  --> Compute time for step:             0.0829 seconds.
 Step: 000245  TIME: 2.23645151e+02  [JD   1.29167]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0849 seconds.
+  --> Compute time for step:             0.0883 seconds.
 Step: 000246  TIME: 2.25448740e+02  [JD   1.30208]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0838 seconds.
+  --> Compute time for step:             0.0831 seconds.
 Step: 000247  TIME: 2.27252330e+02  [JD   1.31250]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0838 seconds.
+  --> Compute time for step:             0.0885 seconds.
 Step: 000248  TIME: 2.29055920e+02  [JD   1.32292]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0832 seconds.
+  --> Compute time for step:             0.0834 seconds.
 Step: 000249  TIME: 2.30859510e+02  [JD   1.33333]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0853 seconds.
+  --> Compute time for step:             0.0879 seconds.
 Step: 000250  TIME: 2.32663100e+02  [JD   1.34375]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0843 seconds.
+  --> Compute time for step:             0.0829 seconds.
 Step: 000251  TIME: 2.34466690e+02  [JD   1.35417]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0841 seconds.
+  --> Compute time for step:             0.0842 seconds.
 Step: 000252  TIME: 2.36270280e+02  [JD   1.36458]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0833 seconds.
+  --> Compute time for step:             0.0791 seconds.
 Step: 000253  TIME: 2.38073870e+02  [JD   1.37500]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0850 seconds.
+  --> Compute time for step:             0.0869 seconds.
 Step: 000254  TIME: 2.39877460e+02  [JD   1.38542]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0840 seconds.
+  --> Compute time for step:             0.0820 seconds.
 Step: 000255  TIME: 2.41681050e+02  [JD   1.39583]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0839 seconds.
+  --> Compute time for step:             0.0881 seconds.
 Step: 000256  TIME: 2.43484640e+02  [JD   1.40625]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0829 seconds.
+  --> Compute time for step:             0.0834 seconds.
 Step: 000257  TIME: 2.45288230e+02  [JD   1.41667]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0853 seconds.
+  --> Compute time for step:             0.0885 seconds.
 Step: 000258  TIME: 2.47091820e+02  [JD   1.42708]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0842 seconds.
+  --> Compute time for step:             0.0834 seconds.
 Step: 000259  TIME: 2.48895409e+02  [JD   1.43750]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0846 seconds.
+  --> Compute time for step:             0.0883 seconds.
 Step: 000260  TIME: 2.50698999e+02  [JD   1.44792]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0836 seconds.
+  --> Compute time for step:             0.0832 seconds.
 Step: 000261  TIME: 2.52502589e+02  [JD   1.45833]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0859 seconds.
+  --> Compute time for step:             0.0871 seconds.
 Step: 000262  TIME: 2.54306179e+02  [JD   1.46875]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0850 seconds.
+  --> Compute time for step:             0.0822 seconds.
 Step: 000263  TIME: 2.56109769e+02  [JD   1.47917]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
@@ -1241,122 +1243,122 @@ Step: 000264  TIME: 2.57913359e+02  [JD   1.48958]  DTIME: 1.80358992e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0836 seconds.
+  --> Compute time for step:             0.0792 seconds.
 Step: 000265  TIME: 2.59716949e+02  [JD   1.50000]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0852 seconds.
+  --> Compute time for step:             0.0871 seconds.
 Step: 000266  TIME: 2.61520539e+02  [JD   1.51042]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0842 seconds.
+  --> Compute time for step:             0.0822 seconds.
 Step: 000267  TIME: 2.63324129e+02  [JD   1.52083]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0844 seconds.
+  --> Compute time for step:             0.0882 seconds.
 Step: 000268  TIME: 2.65127719e+02  [JD   1.53125]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0835 seconds.
+  --> Compute time for step:             0.0832 seconds.
 Step: 000269  TIME: 2.66931309e+02  [JD   1.54167]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0857 seconds.
+  --> Compute time for step:             0.0883 seconds.
 Step: 000270  TIME: 2.68734899e+02  [JD   1.55208]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0846 seconds.
+  --> Compute time for step:             0.0831 seconds.
 Step: 000271  TIME: 2.70538489e+02  [JD   1.56250]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0846 seconds.
+  --> Compute time for step:             0.0884 seconds.
 Step: 000272  TIME: 2.72342078e+02  [JD   1.57292]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0837 seconds.
+  --> Compute time for step:             0.0835 seconds.
 Step: 000273  TIME: 2.74145668e+02  [JD   1.58333]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0850 seconds.
+  --> Compute time for step:             0.0882 seconds.
 Step: 000274  TIME: 2.75949258e+02  [JD   1.59375]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0840 seconds.
+  --> Compute time for step:             0.0831 seconds.
 Step: 000275  TIME: 2.77752848e+02  [JD   1.60417]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0847 seconds.
+  --> Compute time for step:             0.0844 seconds.
 Step: 000276  TIME: 2.79556438e+02  [JD   1.61458]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0837 seconds.
+  --> Compute time for step:             0.0790 seconds.
 Step: 000277  TIME: 2.81360028e+02  [JD   1.62500]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0854 seconds.
+  --> Compute time for step:             0.0881 seconds.
 Step: 000278  TIME: 2.83163618e+02  [JD   1.63542]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0844 seconds.
+  --> Compute time for step:             0.0831 seconds.
 Step: 000279  TIME: 2.84967208e+02  [JD   1.64583]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0844 seconds.
+  --> Compute time for step:             0.0887 seconds.
 Step: 000280  TIME: 2.86770798e+02  [JD   1.65625]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0834 seconds.
+  --> Compute time for step:             0.0836 seconds.
 Step: 000281  TIME: 2.88574388e+02  [JD   1.66667]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0855 seconds.
+  --> Compute time for step:             0.0889 seconds.
 Step: 000282  TIME: 2.90377978e+02  [JD   1.67708]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0845 seconds.
+  --> Compute time for step:             0.0835 seconds.
 Step: 000283  TIME: 2.92181568e+02  [JD   1.68750]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0845 seconds.
+  --> Compute time for step:             0.0887 seconds.
 Step: 000284  TIME: 2.93985158e+02  [JD   1.69792]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
@@ -1368,31 +1370,31 @@ Step: 000285  TIME: 2.95788747e+02  [JD   1.70833]  DTIME: 1.80358992e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0848 seconds.
+  --> Compute time for step:             0.0878 seconds.
 Step: 000286  TIME: 2.97592337e+02  [JD   1.71875]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0812 seconds.
+  --> Compute time for step:             0.0797 seconds.
 Step: 000287  TIME: 2.99395927e+02  [JD   1.72917]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0592 seconds.
+  --> Compute time for step:             0.0612 seconds.
 Step: 000288  TIME: 3.01199517e+02  [JD   1.73958]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0213 seconds.
+  --> Compute time for step:             0.0208 seconds.
 Step: 000289  TIME: 3.03003107e+02  [JD   1.75000]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0160 seconds.
+  --> Compute time for step:             0.0199 seconds.
 Step: 000290  TIME: 3.04806697e+02  [JD   1.76042]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
@@ -1404,7 +1406,7 @@ Step: 000291  TIME: 3.06610287e+02  [JD   1.77083]  DTIME: 1.80358992e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0151 seconds.
+  --> Compute time for step:             0.0193 seconds.
 Step: 000292  TIME: 3.08413877e+02  [JD   1.78125]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
@@ -1416,7 +1418,7 @@ Step: 000293  TIME: 3.10217467e+02  [JD   1.79167]  DTIME: 1.80358992e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0151 seconds.
+  --> Compute time for step:             0.0195 seconds.
 Step: 000294  TIME: 3.12021057e+02  [JD   1.80208]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
@@ -1428,7 +1430,7 @@ Step: 000295  TIME: 3.13824647e+02  [JD   1.81250]  DTIME: 1.80358992e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0151 seconds.
+  --> Compute time for step:             0.0193 seconds.
 Step: 000296  TIME: 3.15628237e+02  [JD   1.82292]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
@@ -1440,7 +1442,7 @@ Step: 000297  TIME: 3.17431827e+02  [JD   1.83333]  DTIME: 1.80358992e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0151 seconds.
+  --> Compute time for step:             0.0195 seconds.
 Step: 000298  TIME: 3.19235416e+02  [JD   1.84375]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
@@ -1452,19 +1454,19 @@ Step: 000299  TIME: 3.21039006e+02  [JD   1.85417]  DTIME: 1.80358992e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0151 seconds.
+  --> Compute time for step:             0.0195 seconds.
 Step: 000300  TIME: 3.22842596e+02  [JD   1.86458]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0142 seconds.
+  --> Compute time for step:             0.0141 seconds.
 Step: 000301  TIME: 3.24646186e+02  [JD   1.87500]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0152 seconds.
+  --> Compute time for step:             0.0193 seconds.
 Step: 000302  TIME: 3.26449776e+02  [JD   1.88542]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
@@ -1476,19 +1478,19 @@ Step: 000303  TIME: 3.28253366e+02  [JD   1.89583]  DTIME: 1.80358992e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0151 seconds.
+  --> Compute time for step:             0.0192 seconds.
 Step: 000304  TIME: 3.30056956e+02  [JD   1.90625]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0142 seconds.
+  --> Compute time for step:             0.0141 seconds.
 Step: 000305  TIME: 3.31860546e+02  [JD   1.91667]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0151 seconds.
+  --> Compute time for step:             0.0194 seconds.
 Step: 000306  TIME: 3.33664136e+02  [JD   1.92708]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
@@ -1500,67 +1502,67 @@ Step: 000307  TIME: 3.35467726e+02  [JD   1.93750]  DTIME: 1.80358992e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0150 seconds.
+  --> Compute time for step:             0.0192 seconds.
 Step: 000308  TIME: 3.37271316e+02  [JD   1.94792]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0142 seconds.
+  --> Compute time for step:             0.0143 seconds.
 Step: 000309  TIME: 3.39074906e+02  [JD   1.95833]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0152 seconds.
+  --> Compute time for step:             0.0192 seconds.
 Step: 000310  TIME: 3.40878496e+02  [JD   1.96875]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0142 seconds.
+  --> Compute time for step:             0.0143 seconds.
 Step: 000311  TIME: 3.42682086e+02  [JD   1.97917]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0151 seconds.
+  --> Compute time for step:             0.0194 seconds.
 Step: 000312  TIME: 3.44485675e+02  [JD   1.98958]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0142 seconds.
+  --> Compute time for step:             0.0141 seconds.
 Step: 000313  TIME: 3.46289265e+02  [JD   2.00000]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0151 seconds.
+  --> Compute time for step:             0.0193 seconds.
 Step: 000314  TIME: 3.48092855e+02  [JD   2.01042]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0143 seconds.
+  --> Compute time for step:             0.0142 seconds.
 Step: 000315  TIME: 3.49896445e+02  [JD   2.02083]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0150 seconds.
+  --> Compute time for step:             0.0190 seconds.
 Step: 000316  TIME: 3.51700035e+02  [JD   2.03125]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0142 seconds.
+  --> Compute time for step:             0.0141 seconds.
 Step: 000317  TIME: 3.53503625e+02  [JD   2.04167]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0151 seconds.
+  --> Compute time for step:             0.0192 seconds.
 Step: 000318  TIME: 3.55307215e+02  [JD   2.05208]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
@@ -1572,19 +1574,19 @@ Step: 000319  TIME: 3.57110805e+02  [JD   2.06250]  DTIME: 1.80358992e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0151 seconds.
+  --> Compute time for step:             0.0193 seconds.
 Step: 000320  TIME: 3.58914395e+02  [JD   2.07292]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0142 seconds.
+  --> Compute time for step:             0.0141 seconds.
 Step: 000321  TIME: 3.60717985e+02  [JD   2.08333]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0151 seconds.
+  --> Compute time for step:             0.0195 seconds.
 Step: 000322  TIME: 3.62521575e+02  [JD   2.09375]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
@@ -1596,43 +1598,43 @@ Step: 000323  TIME: 3.64325165e+02  [JD   2.10417]  DTIME: 1.80358992e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0150 seconds.
+  --> Compute time for step:             0.0193 seconds.
 Step: 000324  TIME: 3.66128755e+02  [JD   2.11458]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0142 seconds.
+  --> Compute time for step:             0.0141 seconds.
 Step: 000325  TIME: 3.67932344e+02  [JD   2.12500]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0151 seconds.
+  --> Compute time for step:             0.0192 seconds.
 Step: 000326  TIME: 3.69735934e+02  [JD   2.13542]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0142 seconds.
+  --> Compute time for step:             0.0141 seconds.
 Step: 000327  TIME: 3.71539524e+02  [JD   2.14583]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0151 seconds.
+  --> Compute time for step:             0.0192 seconds.
 Step: 000328  TIME: 3.73343114e+02  [JD   2.15625]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0142 seconds.
+  --> Compute time for step:             0.0141 seconds.
 Step: 000329  TIME: 3.75146704e+02  [JD   2.16667]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0151 seconds.
+  --> Compute time for step:             0.0192 seconds.
 Step: 000330  TIME: 3.76950294e+02  [JD   2.17708]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
@@ -1644,19 +1646,19 @@ Step: 000331  TIME: 3.78753884e+02  [JD   2.18750]  DTIME: 1.80358992e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0150 seconds.
+  --> Compute time for step:             0.0192 seconds.
 Step: 000332  TIME: 3.80557474e+02  [JD   2.19792]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0142 seconds.
+  --> Compute time for step:             0.0141 seconds.
 Step: 000333  TIME: 3.82361064e+02  [JD   2.20833]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0151 seconds.
+  --> Compute time for step:             0.0193 seconds.
 Step: 000334  TIME: 3.84164654e+02  [JD   2.21875]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
@@ -1668,79 +1670,79 @@ Step: 000335  TIME: 3.85968244e+02  [JD   2.22917]  DTIME: 1.80358992e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0151 seconds.
+  --> Compute time for step:             0.0190 seconds.
 Step: 000336  TIME: 3.87771834e+02  [JD   2.23958]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0142 seconds.
+  --> Compute time for step:             0.0141 seconds.
 Step: 000337  TIME: 3.89575424e+02  [JD   2.25000]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0151 seconds.
+  --> Compute time for step:             0.0191 seconds.
 Step: 000338  TIME: 3.91379013e+02  [JD   2.26042]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0142 seconds.
+  --> Compute time for step:             0.0141 seconds.
 Step: 000339  TIME: 3.93182603e+02  [JD   2.27083]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0150 seconds.
+  --> Compute time for step:             0.0192 seconds.
 Step: 000340  TIME: 3.94986193e+02  [JD   2.28125]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0146 seconds.
+  --> Compute time for step:             0.0142 seconds.
 Step: 000341  TIME: 3.96789783e+02  [JD   2.29167]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0152 seconds.
+  --> Compute time for step:             0.0193 seconds.
 Step: 000342  TIME: 3.98593373e+02  [JD   2.30208]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0143 seconds.
+  --> Compute time for step:             0.0142 seconds.
 Step: 000343  TIME: 4.00396963e+02  [JD   2.31250]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0152 seconds.
+  --> Compute time for step:             0.0191 seconds.
 Step: 000344  TIME: 4.02200553e+02  [JD   2.32292]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0143 seconds.
+  --> Compute time for step:             0.0142 seconds.
 Step: 000345  TIME: 4.04004143e+02  [JD   2.33333]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0152 seconds.
+  --> Compute time for step:             0.0192 seconds.
 Step: 000346  TIME: 4.05807733e+02  [JD   2.34375]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0142 seconds.
+  --> Compute time for step:             0.0141 seconds.
 Step: 000347  TIME: 4.07611323e+02  [JD   2.35417]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0151 seconds.
+  --> Compute time for step:             0.0193 seconds.
 Step: 000348  TIME: 4.09414913e+02  [JD   2.36458]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
@@ -1752,7 +1754,7 @@ Step: 000349  TIME: 4.11218503e+02  [JD   2.37500]  DTIME: 1.80358992e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0151 seconds.
+  --> Compute time for step:             0.0192 seconds.
 Step: 000350  TIME: 4.13022093e+02  [JD   2.38542]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
@@ -1764,7 +1766,7 @@ Step: 000351  TIME: 4.14825682e+02  [JD   2.39583]  DTIME: 1.80358992e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0151 seconds.
+  --> Compute time for step:             0.0192 seconds.
 Step: 000352  TIME: 4.16629272e+02  [JD   2.40625]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
@@ -1776,7 +1778,7 @@ Step: 000353  TIME: 4.18432862e+02  [JD   2.41667]  DTIME: 1.80358992e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0151 seconds.
+  --> Compute time for step:             0.0193 seconds.
 Step: 000354  TIME: 4.20236452e+02  [JD   2.42708]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
@@ -1788,7 +1790,7 @@ Step: 000355  TIME: 4.22040042e+02  [JD   2.43750]  DTIME: 1.80358992e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0150 seconds.
+  --> Compute time for step:             0.0191 seconds.
 Step: 000356  TIME: 4.23843632e+02  [JD   2.44792]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
@@ -1800,7 +1802,7 @@ Step: 000357  TIME: 4.25647222e+02  [JD   2.45833]  DTIME: 1.80358992e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0152 seconds.
+  --> Compute time for step:             0.0194 seconds.
 Step: 000358  TIME: 4.27450812e+02  [JD   2.46875]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
@@ -1812,19 +1814,19 @@ Step: 000359  TIME: 4.29254402e+02  [JD   2.47917]  DTIME: 1.80358992e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0151 seconds.
+  --> Compute time for step:             0.0196 seconds.
 Step: 000360  TIME: 4.31057992e+02  [JD   2.48958]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0142 seconds.
+  --> Compute time for step:             0.0141 seconds.
 Step: 000361  TIME: 4.32861582e+02  [JD   2.50000]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0151 seconds.
+  --> Compute time for step:             0.0194 seconds.
 Step: 000362  TIME: 4.34665172e+02  [JD   2.51042]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
@@ -1836,7 +1838,7 @@ Step: 000363  TIME: 4.36468762e+02  [JD   2.52083]  DTIME: 1.80358992e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0151 seconds.
+  --> Compute time for step:             0.0191 seconds.
 Step: 000364  TIME: 4.38272351e+02  [JD   2.53125]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
@@ -1848,19 +1850,19 @@ Step: 000365  TIME: 4.40075941e+02  [JD   2.54167]  DTIME: 1.80358992e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0152 seconds.
+  --> Compute time for step:             0.0193 seconds.
 Step: 000366  TIME: 4.41879531e+02  [JD   2.55208]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0142 seconds.
+  --> Compute time for step:             0.0141 seconds.
 Step: 000367  TIME: 4.43683121e+02  [JD   2.56250]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0150 seconds.
+  --> Compute time for step:             0.0194 seconds.
 Step: 000368  TIME: 4.45486711e+02  [JD   2.57292]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
@@ -1872,55 +1874,55 @@ Step: 000369  TIME: 4.47290301e+02  [JD   2.58333]  DTIME: 1.80358992e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0151 seconds.
+  --> Compute time for step:             0.0197 seconds.
 Step: 000370  TIME: 4.49093891e+02  [JD   2.59375]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0142 seconds.
+  --> Compute time for step:             0.0141 seconds.
 Step: 000371  TIME: 4.50897481e+02  [JD   2.60417]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0150 seconds.
+  --> Compute time for step:             0.0194 seconds.
 Step: 000372  TIME: 4.52701071e+02  [JD   2.61458]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0141 seconds.
+  --> Compute time for step:             0.0142 seconds.
 Step: 000373  TIME: 4.54504661e+02  [JD   2.62500]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0151 seconds.
+  --> Compute time for step:             0.0194 seconds.
 Step: 000374  TIME: 4.56308251e+02  [JD   2.63542]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0142 seconds.
+  --> Compute time for step:             0.0141 seconds.
 Step: 000375  TIME: 4.58111841e+02  [JD   2.64583]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0151 seconds.
+  --> Compute time for step:             0.0196 seconds.
 Step: 000376  TIME: 4.59915431e+02  [JD   2.65625]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0141 seconds.
+  --> Compute time for step:             0.0142 seconds.
 Step: 000377  TIME: 4.61719020e+02  [JD   2.66667]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0152 seconds.
+  --> Compute time for step:             0.0195 seconds.
 Step: 000378  TIME: 4.63522610e+02  [JD   2.67708]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
@@ -1932,19 +1934,19 @@ Step: 000379  TIME: 4.65326200e+02  [JD   2.68750]  DTIME: 1.80358992e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0151 seconds.
+  --> Compute time for step:             0.0195 seconds.
 Step: 000380  TIME: 4.67129790e+02  [JD   2.69792]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0141 seconds.
+  --> Compute time for step:             0.0142 seconds.
 Step: 000381  TIME: 4.68933380e+02  [JD   2.70833]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0151 seconds.
+  --> Compute time for step:             0.0197 seconds.
 Step: 000382  TIME: 4.70736970e+02  [JD   2.71875]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
@@ -1956,31 +1958,31 @@ Step: 000383  TIME: 4.72540560e+02  [JD   2.72917]  DTIME: 1.80358992e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0151 seconds.
+  --> Compute time for step:             0.0196 seconds.
 Step: 000384  TIME: 4.74344150e+02  [JD   2.73958]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0142 seconds.
+  --> Compute time for step:             0.0141 seconds.
 Step: 000385  TIME: 4.76147740e+02  [JD   2.75000]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0151 seconds.
+  --> Compute time for step:             0.0196 seconds.
 Step: 000386  TIME: 4.77951330e+02  [JD   2.76042]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0142 seconds.
+  --> Compute time for step:             0.0141 seconds.
 Step: 000387  TIME: 4.79754920e+02  [JD   2.77083]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0150 seconds.
+  --> Compute time for step:             0.0195 seconds.
 Step: 000388  TIME: 4.81558510e+02  [JD   2.78125]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
@@ -1992,19 +1994,19 @@ Step: 000389  TIME: 4.83362100e+02  [JD   2.79167]  DTIME: 1.80358992e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0151 seconds.
+  --> Compute time for step:             0.0195 seconds.
 Step: 000390  TIME: 4.85165689e+02  [JD   2.80208]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0142 seconds.
+  --> Compute time for step:             0.0141 seconds.
 Step: 000391  TIME: 4.86969279e+02  [JD   2.81250]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0151 seconds.
+  --> Compute time for step:             0.0195 seconds.
 Step: 000392  TIME: 4.88772869e+02  [JD   2.82292]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
@@ -2016,19 +2018,19 @@ Step: 000393  TIME: 4.90576459e+02  [JD   2.83333]  DTIME: 1.80358992e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0152 seconds.
+  --> Compute time for step:             0.0192 seconds.
 Step: 000394  TIME: 4.92380049e+02  [JD   2.84375]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0142 seconds.
+  --> Compute time for step:             0.0141 seconds.
 Step: 000395  TIME: 4.94183639e+02  [JD   2.85417]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0151 seconds.
+  --> Compute time for step:             0.0193 seconds.
 Step: 000396  TIME: 4.95987229e+02  [JD   2.86458]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
@@ -2040,7 +2042,7 @@ Step: 000397  TIME: 4.97790819e+02  [JD   2.87500]  DTIME: 1.80358992e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0151 seconds.
+  --> Compute time for step:             0.0195 seconds.
 Step: 000398  TIME: 4.99594409e+02  [JD   2.88542]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
@@ -2052,66 +2054,66 @@ Step: 000399  TIME: 5.01397999e+02  [JD   2.89583]  DTIME: 1.80358992e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0150 seconds.
+  --> Compute time for step:             0.0193 seconds.
 Step: 000400  TIME: 5.03201589e+02  [JD   2.90625]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0142 seconds.
+  --> Compute time for step:             0.0141 seconds.
 Step: 000401  TIME: 5.05005179e+02  [JD   2.91667]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0151 seconds.
+  --> Compute time for step:             0.0193 seconds.
 Step: 000402  TIME: 5.06808769e+02  [JD   2.92708]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0142 seconds.
+  --> Compute time for step:             0.0141 seconds.
 Step: 000403  TIME: 5.08612358e+02  [JD   2.93750]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0151 seconds.
+  --> Compute time for step:             0.0194 seconds.
 Step: 000404  TIME: 5.10415948e+02  [JD   2.94792]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0142 seconds.
+  --> Compute time for step:             0.0140 seconds.
 Step: 000405  TIME: 5.12219538e+02  [JD   2.95833]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0150 seconds.
+  --> Compute time for step:             0.0192 seconds.
 Step: 000406  TIME: 5.14023128e+02  [JD   2.96875]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0142 seconds.
+  --> Compute time for step:             0.0141 seconds.
 Step: 000407  TIME: 5.15826718e+02  [JD   2.97917]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0150 seconds.
+  --> Compute time for step:             0.0192 seconds.
 Step: 000408  TIME: 5.17630308e+02  [JD   2.98958]  DTIME: 1.80358992e+00  [JD 0.01042]
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 26 
   --> Minimum MFP timescale (tau): 1.49059263e-04    DTIME/TAU:       12099.82
-  --> Compute time for step:             0.0141 seconds.
+  --> Compute time for step:             0.0142 seconds.
  
 ********************************
 ****RUN COMPLETE****************
 ********************************
-Run started  on Wed Aug 20 12:53:41 2025
-Run finished on Wed Aug 20 12:53:52 2025
-Run real time duration is 0.183333 minutes (or 0.003056 hours, or 0.000127 days)
+Run started  on Thu Aug 20 14:12:54 2026
+Run finished on Thu Aug 20 14:13:06 2026
+Run real time duration is 0.200000 minutes (or 0.003333 hours, or 0.000139 days)
 Run data time duration is 3.0000 days
 ********************************

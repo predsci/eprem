@@ -51,10 +51,8 @@ To run the testsuite:
 > cd testsuite
 > ./run_test_suite.sh
 ```
-This will run the tests with `bin/eprem` using 6 MPI ranks.  
+This will run the tests with `bin/eprem` using 6 MPI ranks by default.  
 The available options can be viewed by running `./run_test_suite.sh -h`.  
-  
-NOTE:  Currently the testsuite does not validate the solutions, it just runs the tests.
   
 --------------------------------  
   

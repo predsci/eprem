@@ -17,8 +17,9 @@ dsh_min: 5.0000e-05
 dsh_hel_min: 2.5000e-04
 kperxkpar: 1.0000e-02
 lamo: 1.0000e+00
+mfpType: 1
 mfpRadialPower: 2.0000e+00
-mfpInverseB: 0
+mfpBPower: 7.5000e-01
 rigidityPower: 3.3333e-01
 focusingLimit: 1.0000e+00
 eMin: 1.0000e+00
@@ -94,6 +95,7 @@ boundaryFunctXi: 1.0000e-01
 boundaryFunctGamma: 2.0000e+00
 boundaryFunctBeta: 1.7000e+00
 boundaryFunctEcutoff: 1.0000e+00
+boundaryFunctR0: 1.0000e+00
 shockSolver: 0
 shockDetectPercent: 1.0000e+00
 minInjectionEnergy: 1.0000e-02
@@ -145,7 +147,7 @@ Cross count: 23 / 24  DistFromOrigPos:   3.35003540e-10
 Cross count: 24 / 24  DistFromOrigPos:   3.34823728e-10
 
 ******************************************************************
-*******************  EPREM Version 1.16.0  ************************
+*******************  EPREM Version 2.3.0  ************************
 ******************************************************************
 Shells: 192
 Processors: 6
@@ -161,771 +163,771 @@ Start: 0.000000 JD, EP Calc: 0.000000 JD, MAS Start: 0.000000 JD
 Step: 000001  TIME: -1.66218847e+02  [JD  -0.96000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.66218847e+02  Time+Dt: -1.65353124e+02  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0145 seconds.
 Step: 000002  TIME: -1.65353124e+02  [JD  -0.95500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.65353124e+02  Time+Dt: -1.64487401e+02  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0555 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000003  TIME: -1.64487401e+02  [JD  -0.95000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.64487401e+02  Time+Dt: -1.63621678e+02  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000004  TIME: -1.63621678e+02  [JD  -0.94500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.63621678e+02  Time+Dt: -1.62755955e+02  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000005  TIME: -1.62755955e+02  [JD  -0.94000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.62755955e+02  Time+Dt: -1.61890232e+02  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000006  TIME: -1.61890232e+02  [JD  -0.93500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.61890232e+02  Time+Dt: -1.61024508e+02  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0029 seconds.
 Step: 000007  TIME: -1.61024508e+02  [JD  -0.93000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.61024508e+02  Time+Dt: -1.60158785e+02  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0019 seconds.
+  --> Compute time for step:             0.0029 seconds.
 Step: 000008  TIME: -1.60158785e+02  [JD  -0.92500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.60158785e+02  Time+Dt: -1.59293062e+02  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0019 seconds.
+  --> Compute time for step:             0.0029 seconds.
 Step: 000009  TIME: -1.59293062e+02  [JD  -0.92000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.59293062e+02  Time+Dt: -1.58427339e+02  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000010  TIME: -1.58427339e+02  [JD  -0.91500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.58427339e+02  Time+Dt: -1.57561616e+02  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0029 seconds.
 Step: 000011  TIME: -1.57561616e+02  [JD  -0.91000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.57561616e+02  Time+Dt: -1.56695893e+02  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000012  TIME: -1.56695893e+02  [JD  -0.90500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.56695893e+02  Time+Dt: -1.55830169e+02  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000013  TIME: -1.55830169e+02  [JD  -0.90000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.55830169e+02  Time+Dt: -1.54964446e+02  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000014  TIME: -1.54964446e+02  [JD  -0.89500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.54964446e+02  Time+Dt: -1.54098723e+02  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000015  TIME: -1.54098723e+02  [JD  -0.89000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.54098723e+02  Time+Dt: -1.53233000e+02  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000016  TIME: -1.53233000e+02  [JD  -0.88500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.53233000e+02  Time+Dt: -1.52367277e+02  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000017  TIME: -1.52367277e+02  [JD  -0.88000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.52367277e+02  Time+Dt: -1.51501554e+02  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000018  TIME: -1.51501554e+02  [JD  -0.87500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.51501554e+02  Time+Dt: -1.50635830e+02  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000019  TIME: -1.50635830e+02  [JD  -0.87000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.50635830e+02  Time+Dt: -1.49770107e+02  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000020  TIME: -1.49770107e+02  [JD  -0.86500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.49770107e+02  Time+Dt: -1.48904384e+02  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000021  TIME: -1.48904384e+02  [JD  -0.86000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.48904384e+02  Time+Dt: -1.48038661e+02  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000022  TIME: -1.48038661e+02  [JD  -0.85500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.48038661e+02  Time+Dt: -1.47172938e+02  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000023  TIME: -1.47172938e+02  [JD  -0.85000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.47172938e+02  Time+Dt: -1.46307215e+02  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000024  TIME: -1.46307215e+02  [JD  -0.84500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.46307215e+02  Time+Dt: -1.45441491e+02  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000025  TIME: -1.45441491e+02  [JD  -0.84000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.45441491e+02  Time+Dt: -1.44575768e+02  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000026  TIME: -1.44575768e+02  [JD  -0.83500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.44575768e+02  Time+Dt: -1.43710045e+02  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000027  TIME: -1.43710045e+02  [JD  -0.83000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.43710045e+02  Time+Dt: -1.42844322e+02  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000028  TIME: -1.42844322e+02  [JD  -0.82500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.42844322e+02  Time+Dt: -1.41978599e+02  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0026 seconds.
 Step: 000029  TIME: -1.41978599e+02  [JD  -0.82000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.41978599e+02  Time+Dt: -1.41112876e+02  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0026 seconds.
 Step: 000030  TIME: -1.41112876e+02  [JD  -0.81500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.41112876e+02  Time+Dt: -1.40247152e+02  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0026 seconds.
 Step: 000031  TIME: -1.40247152e+02  [JD  -0.81000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.40247152e+02  Time+Dt: -1.39381429e+02  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0026 seconds.
 Step: 000032  TIME: -1.39381429e+02  [JD  -0.80500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.39381429e+02  Time+Dt: -1.38515706e+02  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0026 seconds.
 Step: 000033  TIME: -1.38515706e+02  [JD  -0.80000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.38515706e+02  Time+Dt: -1.37649983e+02  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000034  TIME: -1.37649983e+02  [JD  -0.79500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.37649983e+02  Time+Dt: -1.36784260e+02  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000035  TIME: -1.36784260e+02  [JD  -0.79000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.36784260e+02  Time+Dt: -1.35918537e+02  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000036  TIME: -1.35918537e+02  [JD  -0.78500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.35918537e+02  Time+Dt: -1.35052813e+02  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000037  TIME: -1.35052813e+02  [JD  -0.78000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.35052813e+02  Time+Dt: -1.34187090e+02  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000038  TIME: -1.34187090e+02  [JD  -0.77500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.34187090e+02  Time+Dt: -1.33321367e+02  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000039  TIME: -1.33321367e+02  [JD  -0.77000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.33321367e+02  Time+Dt: -1.32455644e+02  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000040  TIME: -1.32455644e+02  [JD  -0.76500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.32455644e+02  Time+Dt: -1.31589921e+02  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000041  TIME: -1.31589921e+02  [JD  -0.76000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.31589921e+02  Time+Dt: -1.30724198e+02  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000042  TIME: -1.30724198e+02  [JD  -0.75500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.30724198e+02  Time+Dt: -1.29858475e+02  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000043  TIME: -1.29858475e+02  [JD  -0.75000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.29858475e+02  Time+Dt: -1.28992751e+02  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000044  TIME: -1.28992751e+02  [JD  -0.74500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.28992751e+02  Time+Dt: -1.28127028e+02  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000045  TIME: -1.28127028e+02  [JD  -0.74000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.28127028e+02  Time+Dt: -1.27261305e+02  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000046  TIME: -1.27261305e+02  [JD  -0.73500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.27261305e+02  Time+Dt: -1.26395582e+02  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000047  TIME: -1.26395582e+02  [JD  -0.73000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.26395582e+02  Time+Dt: -1.25529859e+02  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000048  TIME: -1.25529859e+02  [JD  -0.72500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.25529859e+02  Time+Dt: -1.24664136e+02  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000049  TIME: -1.24664136e+02  [JD  -0.72000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.24664136e+02  Time+Dt: -1.23798412e+02  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000050  TIME: -1.23798412e+02  [JD  -0.71500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.23798412e+02  Time+Dt: -1.22932689e+02  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0019 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000051  TIME: -1.22932689e+02  [JD  -0.71000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.22932689e+02  Time+Dt: -1.22066966e+02  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000052  TIME: -1.22066966e+02  [JD  -0.70500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.22066966e+02  Time+Dt: -1.21201243e+02  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000053  TIME: -1.21201243e+02  [JD  -0.70000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.21201243e+02  Time+Dt: -1.20335520e+02  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000054  TIME: -1.20335520e+02  [JD  -0.69500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.20335520e+02  Time+Dt: -1.19469797e+02  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000055  TIME: -1.19469797e+02  [JD  -0.69000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.19469797e+02  Time+Dt: -1.18604073e+02  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000056  TIME: -1.18604073e+02  [JD  -0.68500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.18604073e+02  Time+Dt: -1.17738350e+02  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000057  TIME: -1.17738350e+02  [JD  -0.68000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.17738350e+02  Time+Dt: -1.16872627e+02  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000058  TIME: -1.16872627e+02  [JD  -0.67500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.16872627e+02  Time+Dt: -1.16006904e+02  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000059  TIME: -1.16006904e+02  [JD  -0.67000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.16006904e+02  Time+Dt: -1.15141181e+02  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000060  TIME: -1.15141181e+02  [JD  -0.66500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.15141181e+02  Time+Dt: -1.14275458e+02  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000061  TIME: -1.14275458e+02  [JD  -0.66000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.14275458e+02  Time+Dt: -1.13409734e+02  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000062  TIME: -1.13409734e+02  [JD  -0.65500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.13409734e+02  Time+Dt: -1.12544011e+02  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000063  TIME: -1.12544011e+02  [JD  -0.65000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.12544011e+02  Time+Dt: -1.11678288e+02  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000064  TIME: -1.11678288e+02  [JD  -0.64500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.11678288e+02  Time+Dt: -1.10812565e+02  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000065  TIME: -1.10812565e+02  [JD  -0.64000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.10812565e+02  Time+Dt: -1.09946842e+02  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0026 seconds.
 Step: 000066  TIME: -1.09946842e+02  [JD  -0.63500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.09946842e+02  Time+Dt: -1.09081119e+02  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000067  TIME: -1.09081119e+02  [JD  -0.63000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.09081119e+02  Time+Dt: -1.08215395e+02  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000068  TIME: -1.08215395e+02  [JD  -0.62500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.08215395e+02  Time+Dt: -1.07349672e+02  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000069  TIME: -1.07349672e+02  [JD  -0.62000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.07349672e+02  Time+Dt: -1.06483949e+02  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000070  TIME: -1.06483949e+02  [JD  -0.61500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.06483949e+02  Time+Dt: -1.05618226e+02  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000071  TIME: -1.05618226e+02  [JD  -0.61000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.05618226e+02  Time+Dt: -1.04752503e+02  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000072  TIME: -1.04752503e+02  [JD  -0.60500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.04752503e+02  Time+Dt: -1.03886780e+02  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000073  TIME: -1.03886780e+02  [JD  -0.60000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.03886780e+02  Time+Dt: -1.03021056e+02  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000074  TIME: -1.03021056e+02  [JD  -0.59500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.03021056e+02  Time+Dt: -1.02155333e+02  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000075  TIME: -1.02155333e+02  [JD  -0.59000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.02155333e+02  Time+Dt: -1.01289610e+02  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000076  TIME: -1.01289610e+02  [JD  -0.58500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.01289610e+02  Time+Dt: -1.00423887e+02  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000077  TIME: -1.00423887e+02  [JD  -0.58000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.00423887e+02  Time+Dt: -9.95581638e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000078  TIME: -9.95581638e+01  [JD  -0.57500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -9.95581638e+01  Time+Dt: -9.86924406e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0019 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000079  TIME: -9.86924406e+01  [JD  -0.57000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -9.86924406e+01  Time+Dt: -9.78267175e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000080  TIME: -9.78267175e+01  [JD  -0.56500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -9.78267175e+01  Time+Dt: -9.69609943e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000081  TIME: -9.69609943e+01  [JD  -0.56000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -9.69609943e+01  Time+Dt: -9.60952711e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000082  TIME: -9.60952711e+01  [JD  -0.55500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -9.60952711e+01  Time+Dt: -9.52295480e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000083  TIME: -9.52295480e+01  [JD  -0.55000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -9.52295480e+01  Time+Dt: -9.43638248e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000084  TIME: -9.43638248e+01  [JD  -0.54500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -9.43638248e+01  Time+Dt: -9.34981016e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000085  TIME: -9.34981016e+01  [JD  -0.54000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -9.34981016e+01  Time+Dt: -9.26323785e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000086  TIME: -9.26323785e+01  [JD  -0.53500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -9.26323785e+01  Time+Dt: -9.17666553e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000087  TIME: -9.17666553e+01  [JD  -0.53000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -9.17666553e+01  Time+Dt: -9.09009322e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0019 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000088  TIME: -9.09009322e+01  [JD  -0.52500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -9.09009322e+01  Time+Dt: -9.00352090e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000089  TIME: -9.00352090e+01  [JD  -0.52000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -9.00352090e+01  Time+Dt: -8.91694858e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000090  TIME: -8.91694858e+01  [JD  -0.51500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -8.91694858e+01  Time+Dt: -8.83037627e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000091  TIME: -8.83037627e+01  [JD  -0.51000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -8.83037627e+01  Time+Dt: -8.74380395e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000092  TIME: -8.74380395e+01  [JD  -0.50500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -8.74380395e+01  Time+Dt: -8.65723163e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000093  TIME: -8.65723163e+01  [JD  -0.50000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -8.65723163e+01  Time+Dt: -8.57065932e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000094  TIME: -8.57065932e+01  [JD  -0.49500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -8.57065932e+01  Time+Dt: -8.48408700e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000095  TIME: -8.48408700e+01  [JD  -0.49000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -8.48408700e+01  Time+Dt: -8.39751468e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000096  TIME: -8.39751468e+01  [JD  -0.48500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -8.39751468e+01  Time+Dt: -8.31094237e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000097  TIME: -8.31094237e+01  [JD  -0.48000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -8.31094237e+01  Time+Dt: -8.22437005e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000098  TIME: -8.22437005e+01  [JD  -0.47500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -8.22437005e+01  Time+Dt: -8.13779774e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000099  TIME: -8.13779774e+01  [JD  -0.47000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -8.13779774e+01  Time+Dt: -8.05122542e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000100  TIME: -8.05122542e+01  [JD  -0.46500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -8.05122542e+01  Time+Dt: -7.96465310e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0026 seconds.
 Step: 000101  TIME: -7.96465310e+01  [JD  -0.46000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -7.96465310e+01  Time+Dt: -7.87808079e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000102  TIME: -7.87808079e+01  [JD  -0.45500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -7.87808079e+01  Time+Dt: -7.79150847e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0026 seconds.
 Step: 000103  TIME: -7.79150847e+01  [JD  -0.45000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -7.79150847e+01  Time+Dt: -7.70493615e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000104  TIME: -7.70493615e+01  [JD  -0.44500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -7.70493615e+01  Time+Dt: -7.61836384e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0026 seconds.
 Step: 000105  TIME: -7.61836384e+01  [JD  -0.44000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -7.61836384e+01  Time+Dt: -7.53179152e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000106  TIME: -7.53179152e+01  [JD  -0.43500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -7.53179152e+01  Time+Dt: -7.44521920e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0026 seconds.
 Step: 000107  TIME: -7.44521920e+01  [JD  -0.43000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -7.44521920e+01  Time+Dt: -7.35864689e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000108  TIME: -7.35864689e+01  [JD  -0.42500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -7.35864689e+01  Time+Dt: -7.27207457e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000109  TIME: -7.27207457e+01  [JD  -0.42000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -7.27207457e+01  Time+Dt: -7.18550226e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000110  TIME: -7.18550226e+01  [JD  -0.41500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -7.18550226e+01  Time+Dt: -7.09892994e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0026 seconds.
 Step: 000111  TIME: -7.09892994e+01  [JD  -0.41000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -7.09892994e+01  Time+Dt: -7.01235762e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000112  TIME: -7.01235762e+01  [JD  -0.40500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -7.01235762e+01  Time+Dt: -6.92578531e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000113  TIME: -6.92578531e+01  [JD  -0.40000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -6.92578531e+01  Time+Dt: -6.83921299e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000114  TIME: -6.83921299e+01  [JD  -0.39500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -6.83921299e+01  Time+Dt: -6.75264067e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000115  TIME: -6.75264067e+01  [JD  -0.39000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -6.75264067e+01  Time+Dt: -6.66606836e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000116  TIME: -6.66606836e+01  [JD  -0.38500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -6.66606836e+01  Time+Dt: -6.57949604e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000117  TIME: -6.57949604e+01  [JD  -0.38000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -6.57949604e+01  Time+Dt: -6.49292373e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000118  TIME: -6.49292373e+01  [JD  -0.37500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -6.49292373e+01  Time+Dt: -6.40635141e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000119  TIME: -6.40635141e+01  [JD  -0.37000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -6.40635141e+01  Time+Dt: -6.31977909e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000120  TIME: -6.31977909e+01  [JD  -0.36500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -6.31977909e+01  Time+Dt: -6.23320678e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0026 seconds.
 Step: 000121  TIME: -6.23320678e+01  [JD  -0.36000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -6.23320678e+01  Time+Dt: -6.14663446e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0026 seconds.
 Step: 000122  TIME: -6.14663446e+01  [JD  -0.35500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -6.14663446e+01  Time+Dt: -6.06006214e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0026 seconds.
 Step: 000123  TIME: -6.06006214e+01  [JD  -0.35000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -6.06006214e+01  Time+Dt: -5.97348983e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000124  TIME: -5.97348983e+01  [JD  -0.34500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -5.97348983e+01  Time+Dt: -5.88691751e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0026 seconds.
 Step: 000125  TIME: -5.88691751e+01  [JD  -0.34000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -5.88691751e+01  Time+Dt: -5.80034519e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000126  TIME: -5.80034519e+01  [JD  -0.33500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -5.80034519e+01  Time+Dt: -5.71377288e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000127  TIME: -5.71377288e+01  [JD  -0.33000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -5.71377288e+01  Time+Dt: -5.62720056e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000128  TIME: -5.62720056e+01  [JD  -0.32500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -5.62720056e+01  Time+Dt: -5.54062825e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000129  TIME: -5.54062825e+01  [JD  -0.32000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -5.54062825e+01  Time+Dt: -5.45405593e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000130  TIME: -5.45405593e+01  [JD  -0.31500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -5.45405593e+01  Time+Dt: -5.36748361e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0026 seconds.
 Step: 000131  TIME: -5.36748361e+01  [JD  -0.31000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -5.36748361e+01  Time+Dt: -5.28091130e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000132  TIME: -5.28091130e+01  [JD  -0.30500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -5.28091130e+01  Time+Dt: -5.19433898e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000133  TIME: -5.19433898e+01  [JD  -0.30000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -5.19433898e+01  Time+Dt: -5.10776666e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000134  TIME: -5.10776666e+01  [JD  -0.29500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -5.10776666e+01  Time+Dt: -5.02119435e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000135  TIME: -5.02119435e+01  [JD  -0.29000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -5.02119435e+01  Time+Dt: -4.93462203e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000136  TIME: -4.93462203e+01  [JD  -0.28500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -4.93462203e+01  Time+Dt: -4.84804971e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000137  TIME: -4.84804971e+01  [JD  -0.28000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -4.84804971e+01  Time+Dt: -4.76147740e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000138  TIME: -4.76147740e+01  [JD  -0.27500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -4.76147740e+01  Time+Dt: -4.67490508e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000139  TIME: -4.67490508e+01  [JD  -0.27000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -4.67490508e+01  Time+Dt: -4.58833277e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000140  TIME: -4.58833277e+01  [JD  -0.26500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -4.58833277e+01  Time+Dt: -4.50176045e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000141  TIME: -4.50176045e+01  [JD  -0.26000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -4.50176045e+01  Time+Dt: -4.41518813e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000142  TIME: -4.41518813e+01  [JD  -0.25500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -4.41518813e+01  Time+Dt: -4.32861582e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000143  TIME: -4.32861582e+01  [JD  -0.25000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -4.32861582e+01  Time+Dt: -4.24204350e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0019 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000144  TIME: -4.24204350e+01  [JD  -0.24500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -4.24204350e+01  Time+Dt: -4.15547118e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0029 seconds.
 Step: 000145  TIME: -4.15547118e+01  [JD  -0.24000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -4.15547118e+01  Time+Dt: -4.06889887e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0026 seconds.
 Step: 000146  TIME: -4.06889887e+01  [JD  -0.23500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -4.06889887e+01  Time+Dt: -3.98232655e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000147  TIME: -3.98232655e+01  [JD  -0.23000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -3.98232655e+01  Time+Dt: -3.89575424e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000148  TIME: -3.89575424e+01  [JD  -0.22500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -3.89575424e+01  Time+Dt: -3.80918192e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000149  TIME: -3.80918192e+01  [JD  -0.22000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -3.80918192e+01  Time+Dt: -3.72260960e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0026 seconds.
 Step: 000150  TIME: -3.72260960e+01  [JD  -0.21500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -3.72260960e+01  Time+Dt: -3.63603729e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0026 seconds.
 Step: 000151  TIME: -3.63603729e+01  [JD  -0.21000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -3.63603729e+01  Time+Dt: -3.54946497e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0026 seconds.
 Step: 000152  TIME: -3.54946497e+01  [JD  -0.20500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -3.54946497e+01  Time+Dt: -3.46289265e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0026 seconds.
 Step: 000153  TIME: -3.46289265e+01  [JD  -0.20000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -3.46289265e+01  Time+Dt: -3.37632034e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000154  TIME: -3.37632034e+01  [JD  -0.19500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -3.37632034e+01  Time+Dt: -3.28974802e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000155  TIME: -3.28974802e+01  [JD  -0.19000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -3.28974802e+01  Time+Dt: -3.20317570e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000156  TIME: -3.20317570e+01  [JD  -0.18500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -3.20317570e+01  Time+Dt: -3.11660339e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000157  TIME: -3.11660339e+01  [JD  -0.18000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -3.11660339e+01  Time+Dt: -3.03003107e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000158  TIME: -3.03003107e+01  [JD  -0.17500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -3.03003107e+01  Time+Dt: -2.94345876e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000159  TIME: -2.94345876e+01  [JD  -0.17000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -2.94345876e+01  Time+Dt: -2.85688644e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000160  TIME: -2.85688644e+01  [JD  -0.16500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -2.85688644e+01  Time+Dt: -2.77031412e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000161  TIME: -2.77031412e+01  [JD  -0.16000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -2.77031412e+01  Time+Dt: -2.68374181e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000162  TIME: -2.68374181e+01  [JD  -0.15500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -2.68374181e+01  Time+Dt: -2.59716949e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000163  TIME: -2.59716949e+01  [JD  -0.15000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -2.59716949e+01  Time+Dt: -2.51059717e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000164  TIME: -2.51059717e+01  [JD  -0.14500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -2.51059717e+01  Time+Dt: -2.42402486e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000165  TIME: -2.42402486e+01  [JD  -0.14000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -2.42402486e+01  Time+Dt: -2.33745254e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000166  TIME: -2.33745254e+01  [JD  -0.13500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -2.33745254e+01  Time+Dt: -2.25088022e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0026 seconds.
 Step: 000167  TIME: -2.25088022e+01  [JD  -0.13000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -2.25088022e+01  Time+Dt: -2.16430791e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0026 seconds.
 Step: 000168  TIME: -2.16430791e+01  [JD  -0.12500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -2.16430791e+01  Time+Dt: -2.07773559e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000169  TIME: -2.07773559e+01  [JD  -0.12000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -2.07773559e+01  Time+Dt: -1.99116328e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000170  TIME: -1.99116328e+01  [JD  -0.11500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.99116328e+01  Time+Dt: -1.90459096e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000171  TIME: -1.90459096e+01  [JD  -0.11000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.90459096e+01  Time+Dt: -1.81801864e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0026 seconds.
 Step: 000172  TIME: -1.81801864e+01  [JD  -0.10500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.81801864e+01  Time+Dt: -1.73144633e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0026 seconds.
 Step: 000173  TIME: -1.73144633e+01  [JD  -0.10000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.73144633e+01  Time+Dt: -1.64487401e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000174  TIME: -1.64487401e+01  [JD  -0.09500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.64487401e+01  Time+Dt: -1.55830169e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0026 seconds.
 Step: 000175  TIME: -1.55830169e+01  [JD  -0.09000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.55830169e+01  Time+Dt: -1.47172938e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0026 seconds.
 Step: 000176  TIME: -1.47172938e+01  [JD  -0.08500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.47172938e+01  Time+Dt: -1.38515706e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000177  TIME: -1.38515706e+01  [JD  -0.08000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.38515706e+01  Time+Dt: -1.29858475e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000178  TIME: -1.29858475e+01  [JD  -0.07500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.29858475e+01  Time+Dt: -1.21201243e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000179  TIME: -1.21201243e+01  [JD  -0.07000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.21201243e+01  Time+Dt: -1.12544011e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000180  TIME: -1.12544011e+01  [JD  -0.06500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.12544011e+01  Time+Dt: -1.03886780e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000181  TIME: -1.03886780e+01  [JD  -0.06000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.03886780e+01  Time+Dt: -9.52295480e+00  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000182  TIME: -9.52295480e+00  [JD  -0.05500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -9.52295480e+00  Time+Dt: -8.65723163e+00  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000183  TIME: -8.65723163e+00  [JD  -0.05000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -8.65723163e+00  Time+Dt: -7.79150847e+00  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000184  TIME: -7.79150847e+00  [JD  -0.04500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -7.79150847e+00  Time+Dt: -6.92578531e+00  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000185  TIME: -6.92578531e+00  [JD  -0.04000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -6.92578531e+00  Time+Dt: -6.06006214e+00  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000186  TIME: -6.06006214e+00  [JD  -0.03500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -6.06006214e+00  Time+Dt: -5.19433898e+00  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000187  TIME: -5.19433898e+00  [JD  -0.03000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -5.19433898e+00  Time+Dt: -4.32861582e+00  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0026 seconds.
 Step: 000188  TIME: -4.32861582e+00  [JD  -0.02500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -4.32861582e+00  Time+Dt: -3.46289265e+00  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0026 seconds.
 Step: 000189  TIME: -3.46289265e+00  [JD  -0.02000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -3.46289265e+00  Time+Dt: -2.59716949e+00  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0019 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000190  TIME: -2.59716949e+00  [JD  -0.01500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -2.59716949e+00  Time+Dt: -1.73144633e+00  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0026 seconds.
 Step: 000191  TIME: -1.73144633e+00  [JD  -0.01000]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -1.73144633e+00  Time+Dt: -8.65723163e-01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000192  TIME: -8.65723163e-01  [JD  -0.00500]  DTIME: 8.65723163e-01  [JD 0.00500]
   --> MAS(C) Couple: Time: -8.65723163e-01  Time+Dt: -2.51132448e-13  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0026 seconds.
  
 *************************************************
 ****STARTING SIMULATION**************************
@@ -945,7 +947,7 @@ Step: 000193  TIME: 0.00000000e+00  [JD   0.00000]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 31 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.2997 seconds.
+  --> Compute time for step:             0.2996 seconds.
 Step: 000194  TIME: 2.89750735e+00  [JD   0.01673]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 004 read.
   --> MAS(C) Couple: Time: 2.89750735e+00  Time+Dt: 5.79501471e+00  s_cor: 0.00000000
@@ -953,7 +955,7 @@ Step: 000194  TIME: 2.89750735e+00  [JD   0.01673]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.2916 seconds.
+  --> Compute time for step:             0.2996 seconds.
 Step: 000195  TIME: 5.79501471e+00  [JD   0.03347]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 005 read.
   --> MAS(C) Couple: Time: 5.79501471e+00  Time+Dt: 8.69252206e+00  s_cor: 0.00000000
@@ -961,7 +963,7 @@ Step: 000195  TIME: 5.79501471e+00  [JD   0.03347]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.2893 seconds.
+  --> Compute time for step:             0.2938 seconds.
 Step: 000196  TIME: 8.69252206e+00  [JD   0.05020]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 006 read.
   --> MAS(C) Couple: Time: 8.69252206e+00  Time+Dt: 1.15900294e+01  s_cor: 0.00000000
@@ -969,7 +971,7 @@ Step: 000196  TIME: 8.69252206e+00  [JD   0.05020]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.2892 seconds.
+  --> Compute time for step:             0.2925 seconds.
 Step: 000197  TIME: 1.15900294e+01  [JD   0.06694]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 007 read.
   --> MAS(C) Couple: Time: 1.15900294e+01  Time+Dt: 1.44875368e+01  s_cor: 0.00000000
@@ -977,7 +979,7 @@ Step: 000197  TIME: 1.15900294e+01  [JD   0.06694]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.2886 seconds.
+  --> Compute time for step:             0.2910 seconds.
 Step: 000198  TIME: 1.44875368e+01  [JD   0.08367]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 008 read.
   --> MAS(C) Couple: Time: 1.44875368e+01  Time+Dt: 1.73850441e+01  s_cor: 0.00000000
@@ -985,7 +987,7 @@ Step: 000198  TIME: 1.44875368e+01  [JD   0.08367]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.2889 seconds.
+  --> Compute time for step:             0.2897 seconds.
 Step: 000199  TIME: 1.73850441e+01  [JD   0.10041]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 009 read.
   --> MAS(C) Couple: Time: 1.73850441e+01  Time+Dt: 2.02825515e+01  s_cor: 0.00000000
@@ -993,7 +995,7 @@ Step: 000199  TIME: 1.73850441e+01  [JD   0.10041]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.2845 seconds.
+  --> Compute time for step:             0.2859 seconds.
 Step: 000200  TIME: 2.02825515e+01  [JD   0.11714]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 010 read.
   --> MAS(C) Couple: Time: 2.02825515e+01  Time+Dt: 2.31800588e+01  s_cor: 0.00000000
@@ -1001,7 +1003,7 @@ Step: 000200  TIME: 2.02825515e+01  [JD   0.11714]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.2480 seconds.
+  --> Compute time for step:             0.2485 seconds.
 Step: 000201  TIME: 2.31800588e+01  [JD   0.13388]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
@@ -1011,7 +1013,7 @@ Step: 000201  TIME: 2.31800588e+01  [JD   0.13388]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.2181 seconds.
+  --> Compute time for step:             0.2184 seconds.
 Step: 000202  TIME: 2.60775662e+01  [JD   0.15061]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 012 read.
   --> MAS(C) Couple: Time: 2.60775662e+01  Time+Dt: 2.89750735e+01  s_cor: 0.00000000
@@ -1019,7 +1021,7 @@ Step: 000202  TIME: 2.60775662e+01  [JD   0.15061]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1869 seconds.
+  --> Compute time for step:             0.1884 seconds.
 Step: 000203  TIME: 2.89750735e+01  [JD   0.16735]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 013 read.
   --> MAS(C) Couple: Time: 2.89750735e+01  Time+Dt: 3.18725809e+01  s_cor: 0.00000000
@@ -1027,7 +1029,7 @@ Step: 000203  TIME: 2.89750735e+01  [JD   0.16735]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1656 seconds.
+  --> Compute time for step:             0.1674 seconds.
 Step: 000204  TIME: 3.18725809e+01  [JD   0.18408]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 014 read.
   --> MAS(C) Couple: Time: 3.18725809e+01  Time+Dt: 3.47700882e+01  s_cor: 0.00000000
@@ -1035,7 +1037,7 @@ Step: 000204  TIME: 3.18725809e+01  [JD   0.18408]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1481 seconds.
+  --> Compute time for step:             0.1492 seconds.
 Step: 000205  TIME: 3.47700882e+01  [JD   0.20082]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 015 read.
   --> MAS(C) Couple: Time: 3.47700882e+01  Time+Dt: 3.76675956e+01  s_cor: 0.00000000
@@ -1043,7 +1045,7 @@ Step: 000205  TIME: 3.47700882e+01  [JD   0.20082]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1374 seconds.
+  --> Compute time for step:             0.1345 seconds.
 Step: 000206  TIME: 3.76675956e+01  [JD   0.21755]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 016 read.
   --> MAS(C) Couple: Time: 3.76675956e+01  Time+Dt: 4.05651030e+01  s_cor: 0.00000000
@@ -1051,7 +1053,7 @@ Step: 000206  TIME: 3.76675956e+01  [JD   0.21755]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1355 seconds.
+  --> Compute time for step:             0.1386 seconds.
 Step: 000207  TIME: 4.05651030e+01  [JD   0.23428]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 017 read.
   --> MAS(C) Couple: Time: 4.05651030e+01  Time+Dt: 4.34626103e+01  s_cor: 0.00000000
@@ -1059,7 +1061,7 @@ Step: 000207  TIME: 4.05651030e+01  [JD   0.23428]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1352 seconds.
+  --> Compute time for step:             0.1369 seconds.
 Step: 000208  TIME: 4.34626103e+01  [JD   0.25102]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 018 read.
   --> MAS(C) Couple: Time: 4.34626103e+01  Time+Dt: 4.63601177e+01  s_cor: 0.00000000
@@ -1067,7 +1069,7 @@ Step: 000208  TIME: 4.34626103e+01  [JD   0.25102]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1345 seconds.
+  --> Compute time for step:             0.1349 seconds.
 Step: 000209  TIME: 4.63601177e+01  [JD   0.26775]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 019 read.
   --> MAS(C) Couple: Time: 4.63601177e+01  Time+Dt: 4.92576250e+01  s_cor: 0.00000000
@@ -1075,7 +1077,7 @@ Step: 000209  TIME: 4.63601177e+01  [JD   0.26775]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1344 seconds.
+  --> Compute time for step:             0.1359 seconds.
 Step: 000210  TIME: 4.92576250e+01  [JD   0.28449]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 020 read.
   --> MAS(C) Couple: Time: 4.92576250e+01  Time+Dt: 5.21551324e+01  s_cor: 0.00000000
@@ -1083,7 +1085,7 @@ Step: 000210  TIME: 4.92576250e+01  [JD   0.28449]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1340 seconds.
+  --> Compute time for step:             0.1357 seconds.
 Step: 000211  TIME: 5.21551324e+01  [JD   0.30122]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
@@ -1093,7 +1095,7 @@ Step: 000211  TIME: 5.21551324e+01  [JD   0.30122]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1413 seconds.
+  --> Compute time for step:             0.1405 seconds.
 Step: 000212  TIME: 5.50526397e+01  [JD   0.31796]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 022 read.
   --> MAS(C) Couple: Time: 5.50526397e+01  Time+Dt: 5.79501471e+01  s_cor: 0.00000000
@@ -1101,7 +1103,7 @@ Step: 000212  TIME: 5.50526397e+01  [JD   0.31796]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1371 seconds.
+  --> Compute time for step:             0.1355 seconds.
 Step: 000213  TIME: 5.79501471e+01  [JD   0.33469]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 023 read.
   --> MAS(C) Couple: Time: 5.79501471e+01  Time+Dt: 6.08476544e+01  s_cor: 0.00000000
@@ -1109,7 +1111,7 @@ Step: 000213  TIME: 5.79501471e+01  [JD   0.33469]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1367 seconds.
+  --> Compute time for step:             0.1354 seconds.
 Step: 000214  TIME: 6.08476544e+01  [JD   0.35143]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 024 read.
   --> MAS(C) Couple: Time: 6.08476544e+01  Time+Dt: 6.37451618e+01  s_cor: 0.00000000
@@ -1117,7 +1119,7 @@ Step: 000214  TIME: 6.08476544e+01  [JD   0.35143]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1367 seconds.
+  --> Compute time for step:             0.1364 seconds.
 Step: 000215  TIME: 6.37451618e+01  [JD   0.36816]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 025 read.
   --> MAS(C) Couple: Time: 6.37451618e+01  Time+Dt: 6.66426691e+01  s_cor: 0.00000000
@@ -1133,7 +1135,7 @@ Step: 000216  TIME: 6.66426691e+01  [JD   0.38490]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1362 seconds.
+  --> Compute time for step:             0.1367 seconds.
 Step: 000217  TIME: 6.95401765e+01  [JD   0.40163]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 027 read.
   --> MAS(C) Couple: Time: 6.95401765e+01  Time+Dt: 7.24376838e+01  s_cor: 0.00000000
@@ -1141,7 +1143,7 @@ Step: 000217  TIME: 6.95401765e+01  [JD   0.40163]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1364 seconds.
+  --> Compute time for step:             0.1365 seconds.
 Step: 000218  TIME: 7.24376838e+01  [JD   0.41837]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 028 read.
   --> MAS(C) Couple: Time: 7.24376838e+01  Time+Dt: 7.53351912e+01  s_cor: 0.00000000
@@ -1149,7 +1151,7 @@ Step: 000218  TIME: 7.24376838e+01  [JD   0.41837]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1363 seconds.
+  --> Compute time for step:             0.1366 seconds.
 Step: 000219  TIME: 7.53351912e+01  [JD   0.43510]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 029 read.
   --> MAS(C) Couple: Time: 7.53351912e+01  Time+Dt: 7.82326986e+01  s_cor: 0.00000000
@@ -1157,7 +1159,7 @@ Step: 000219  TIME: 7.53351912e+01  [JD   0.43510]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1362 seconds.
+  --> Compute time for step:             0.1361 seconds.
 Step: 000220  TIME: 7.82326986e+01  [JD   0.45183]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 030 read.
   --> MAS(C) Couple: Time: 7.82326986e+01  Time+Dt: 8.11302059e+01  s_cor: 0.00000000
@@ -1165,7 +1167,7 @@ Step: 000220  TIME: 7.82326986e+01  [JD   0.45183]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1365 seconds.
+  --> Compute time for step:             0.1359 seconds.
 Step: 000221  TIME: 8.11302059e+01  [JD   0.46857]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
@@ -1175,7 +1177,7 @@ Step: 000221  TIME: 8.11302059e+01  [JD   0.46857]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1392 seconds.
+  --> Compute time for step:             0.1407 seconds.
 Step: 000222  TIME: 8.40277133e+01  [JD   0.48530]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 032 read.
   --> MAS(C) Couple: Time: 8.40277133e+01  Time+Dt: 8.69252206e+01  s_cor: 0.00000000
@@ -1183,7 +1185,7 @@ Step: 000222  TIME: 8.40277133e+01  [JD   0.48530]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1348 seconds.
+  --> Compute time for step:             0.1365 seconds.
 Step: 000223  TIME: 8.69252206e+01  [JD   0.50204]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 033 read.
   --> MAS(C) Couple: Time: 8.69252206e+01  Time+Dt: 8.98227280e+01  s_cor: 0.00000000
@@ -1191,7 +1193,7 @@ Step: 000223  TIME: 8.69252206e+01  [JD   0.50204]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1346 seconds.
+  --> Compute time for step:             0.1365 seconds.
 Step: 000224  TIME: 8.98227280e+01  [JD   0.51877]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 034 read.
   --> MAS(C) Couple: Time: 8.98227280e+01  Time+Dt: 9.27202353e+01  s_cor: 0.00000000
@@ -1199,7 +1201,7 @@ Step: 000224  TIME: 8.98227280e+01  [JD   0.51877]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1350 seconds.
+  --> Compute time for step:             0.1362 seconds.
 Step: 000225  TIME: 9.27202353e+01  [JD   0.53551]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 035 read.
   --> MAS(C) Couple: Time: 9.27202353e+01  Time+Dt: 9.56177427e+01  s_cor: 0.00000000
@@ -1207,7 +1209,7 @@ Step: 000225  TIME: 9.27202353e+01  [JD   0.53551]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1349 seconds.
+  --> Compute time for step:             0.1363 seconds.
 Step: 000226  TIME: 9.56177427e+01  [JD   0.55224]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 036 read.
   --> MAS(C) Couple: Time: 9.56177427e+01  Time+Dt: 9.85152500e+01  s_cor: 0.00000000
@@ -1215,7 +1217,7 @@ Step: 000226  TIME: 9.56177427e+01  [JD   0.55224]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1347 seconds.
+  --> Compute time for step:             0.1370 seconds.
 Step: 000227  TIME: 9.85152500e+01  [JD   0.56898]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 037 read.
   --> MAS(C) Couple: Time: 9.85152500e+01  Time+Dt: 1.01412757e+02  s_cor: 0.00000000
@@ -1223,7 +1225,7 @@ Step: 000227  TIME: 9.85152500e+01  [JD   0.56898]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1349 seconds.
+  --> Compute time for step:             0.1366 seconds.
 Step: 000228  TIME: 1.01412757e+02  [JD   0.58571]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 038 read.
   --> MAS(C) Couple: Time: 1.01412757e+02  Time+Dt: 1.04310265e+02  s_cor: 0.00000000
@@ -1231,7 +1233,7 @@ Step: 000228  TIME: 1.01412757e+02  [JD   0.58571]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1347 seconds.
+  --> Compute time for step:             0.1352 seconds.
 Step: 000229  TIME: 1.04310265e+02  [JD   0.60245]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 039 read.
   --> MAS(C) Couple: Time: 1.04310265e+02  Time+Dt: 1.07207772e+02  s_cor: 0.00000000
@@ -1239,7 +1241,7 @@ Step: 000229  TIME: 1.04310265e+02  [JD   0.60245]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1347 seconds.
+  --> Compute time for step:             0.1366 seconds.
 Step: 000230  TIME: 1.07207772e+02  [JD   0.61918]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 040 read.
   --> MAS(C) Couple: Time: 1.07207772e+02  Time+Dt: 1.10105279e+02  s_cor: 0.00000000
@@ -1247,7 +1249,7 @@ Step: 000230  TIME: 1.07207772e+02  [JD   0.61918]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1347 seconds.
+  --> Compute time for step:             0.1346 seconds.
 Step: 000231  TIME: 1.10105279e+02  [JD   0.63592]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
@@ -1257,7 +1259,7 @@ Step: 000231  TIME: 1.10105279e+02  [JD   0.63592]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1392 seconds.
+  --> Compute time for step:             0.1408 seconds.
 Step: 000232  TIME: 1.13002787e+02  [JD   0.65265]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 042 read.
   --> MAS(C) Couple: Time: 1.13002787e+02  Time+Dt: 1.15900294e+02  s_cor: 0.00000000
@@ -1265,7 +1267,7 @@ Step: 000232  TIME: 1.13002787e+02  [JD   0.65265]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1340 seconds.
+  --> Compute time for step:             0.1349 seconds.
 Step: 000233  TIME: 1.15900294e+02  [JD   0.66938]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 043 read.
   --> MAS(C) Couple: Time: 1.15900294e+02  Time+Dt: 1.18797802e+02  s_cor: 0.00000000
@@ -1273,7 +1275,7 @@ Step: 000233  TIME: 1.15900294e+02  [JD   0.66938]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1343 seconds.
+  --> Compute time for step:             0.1351 seconds.
 Step: 000234  TIME: 1.18797802e+02  [JD   0.68612]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 044 read.
   --> MAS(C) Couple: Time: 1.18797802e+02  Time+Dt: 1.21695309e+02  s_cor: 0.00000000
@@ -1281,7 +1283,7 @@ Step: 000234  TIME: 1.18797802e+02  [JD   0.68612]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1343 seconds.
+  --> Compute time for step:             0.1352 seconds.
 Step: 000235  TIME: 1.21695309e+02  [JD   0.70285]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 045 read.
   --> MAS(C) Couple: Time: 1.21695309e+02  Time+Dt: 1.24592816e+02  s_cor: 0.00000000
@@ -1289,7 +1291,7 @@ Step: 000235  TIME: 1.21695309e+02  [JD   0.70285]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1344 seconds.
+  --> Compute time for step:             0.1335 seconds.
 Step: 000236  TIME: 1.24592816e+02  [JD   0.71959]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 046 read.
   --> MAS(C) Couple: Time: 1.24592816e+02  Time+Dt: 1.27490324e+02  s_cor: 0.00000000
@@ -1305,7 +1307,7 @@ Step: 000237  TIME: 1.27490324e+02  [JD   0.73632]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1344 seconds.
+  --> Compute time for step:             0.1352 seconds.
 Step: 000238  TIME: 1.30387831e+02  [JD   0.75306]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 048 read.
   --> MAS(C) Couple: Time: 1.30387831e+02  Time+Dt: 1.33285338e+02  s_cor: 0.00000000
@@ -1313,7 +1315,7 @@ Step: 000238  TIME: 1.30387831e+02  [JD   0.75306]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1347 seconds.
+  --> Compute time for step:             0.1346 seconds.
 Step: 000239  TIME: 1.33285338e+02  [JD   0.76979]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 049 read.
   --> MAS(C) Couple: Time: 1.33285338e+02  Time+Dt: 1.36182846e+02  s_cor: 0.00000000
@@ -1321,7 +1323,7 @@ Step: 000239  TIME: 1.33285338e+02  [JD   0.76979]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1345 seconds.
+  --> Compute time for step:             0.1354 seconds.
 Step: 000240  TIME: 1.36182846e+02  [JD   0.78653]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 050 read.
   --> MAS(C) Couple: Time: 1.36182846e+02  Time+Dt: 1.39080353e+02  s_cor: 0.00000000
@@ -1329,7 +1331,7 @@ Step: 000240  TIME: 1.36182846e+02  [JD   0.78653]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1343 seconds.
+  --> Compute time for step:             0.1337 seconds.
 Step: 000241  TIME: 1.39080353e+02  [JD   0.80326]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
@@ -1339,7 +1341,7 @@ Step: 000241  TIME: 1.39080353e+02  [JD   0.80326]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1412 seconds.
+  --> Compute time for step:             0.1401 seconds.
 Step: 000242  TIME: 1.41977860e+02  [JD   0.82000]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 052 read.
   --> MAS(C) Couple: Time: 1.41977860e+02  Time+Dt: 1.44875368e+02  s_cor: 0.00000000
@@ -1347,7 +1349,7 @@ Step: 000242  TIME: 1.41977860e+02  [JD   0.82000]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1364 seconds.
+  --> Compute time for step:             0.1358 seconds.
 Step: 000243  TIME: 1.44875368e+02  [JD   0.83673]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 053 read.
   --> MAS(C) Couple: Time: 1.44875368e+02  Time+Dt: 1.47772875e+02  s_cor: 0.00000000
@@ -1355,7 +1357,7 @@ Step: 000243  TIME: 1.44875368e+02  [JD   0.83673]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1362 seconds.
+  --> Compute time for step:             0.1359 seconds.
 Step: 000244  TIME: 1.47772875e+02  [JD   0.85346]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 054 read.
   --> MAS(C) Couple: Time: 1.47772875e+02  Time+Dt: 1.50670382e+02  s_cor: 0.00000000
@@ -1363,7 +1365,7 @@ Step: 000244  TIME: 1.47772875e+02  [JD   0.85346]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1361 seconds.
+  --> Compute time for step:             0.1357 seconds.
 Step: 000245  TIME: 1.50670382e+02  [JD   0.87020]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 055 read.
   --> MAS(C) Couple: Time: 1.50670382e+02  Time+Dt: 1.53567890e+02  s_cor: 0.00000000
@@ -1371,7 +1373,7 @@ Step: 000245  TIME: 1.50670382e+02  [JD   0.87020]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1360 seconds.
+  --> Compute time for step:             0.1358 seconds.
 Step: 000246  TIME: 1.53567890e+02  [JD   0.88693]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 056 read.
   --> MAS(C) Couple: Time: 1.53567890e+02  Time+Dt: 1.56465397e+02  s_cor: 0.00000000
@@ -1379,7 +1381,7 @@ Step: 000246  TIME: 1.53567890e+02  [JD   0.88693]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1362 seconds.
+  --> Compute time for step:             0.1352 seconds.
 Step: 000247  TIME: 1.56465397e+02  [JD   0.90367]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 057 read.
   --> MAS(C) Couple: Time: 1.56465397e+02  Time+Dt: 1.59362904e+02  s_cor: 0.00000000
@@ -1387,7 +1389,7 @@ Step: 000247  TIME: 1.56465397e+02  [JD   0.90367]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1361 seconds.
+  --> Compute time for step:             0.1352 seconds.
 Step: 000248  TIME: 1.59362904e+02  [JD   0.92040]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 058 read.
   --> MAS(C) Couple: Time: 1.59362904e+02  Time+Dt: 1.62260412e+02  s_cor: 0.00000000
@@ -1395,7 +1397,7 @@ Step: 000248  TIME: 1.59362904e+02  [JD   0.92040]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1364 seconds.
+  --> Compute time for step:             0.1357 seconds.
 Step: 000249  TIME: 1.62260412e+02  [JD   0.93714]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 059 read.
   --> MAS(C) Couple: Time: 1.62260412e+02  Time+Dt: 1.65157919e+02  s_cor: 0.00000000
@@ -1403,7 +1405,7 @@ Step: 000249  TIME: 1.62260412e+02  [JD   0.93714]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1361 seconds.
+  --> Compute time for step:             0.1353 seconds.
 Step: 000250  TIME: 1.65157919e+02  [JD   0.95387]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 060 read.
   --> MAS(C) Couple: Time: 1.65157919e+02  Time+Dt: 1.68055427e+02  s_cor: 0.00000000
@@ -1411,7 +1413,7 @@ Step: 000250  TIME: 1.65157919e+02  [JD   0.95387]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1363 seconds.
+  --> Compute time for step:             0.1347 seconds.
 Step: 000251  TIME: 1.68055427e+02  [JD   0.97061]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
@@ -1421,7 +1423,7 @@ Step: 000251  TIME: 1.68055427e+02  [JD   0.97061]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1395 seconds.
+  --> Compute time for step:             0.1399 seconds.
 Step: 000252  TIME: 1.70952934e+02  [JD   0.98734]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 062 read.
   --> MAS(C) Couple: Time: 1.70952934e+02  Time+Dt: 1.73850441e+02  s_cor: 0.00000000
@@ -1429,7 +1431,7 @@ Step: 000252  TIME: 1.70952934e+02  [JD   0.98734]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1345 seconds.
+  --> Compute time for step:             0.1343 seconds.
 Step: 000253  TIME: 1.73850441e+02  [JD   1.00408]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 063 read.
   --> MAS(C) Couple: Time: 1.73850441e+02  Time+Dt: 1.76747949e+02  s_cor: 0.00000000
@@ -1437,7 +1439,7 @@ Step: 000253  TIME: 1.73850441e+02  [JD   1.00408]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1344 seconds.
+  --> Compute time for step:             0.1351 seconds.
 Step: 000254  TIME: 1.76747949e+02  [JD   1.02081]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 064 read.
   --> MAS(C) Couple: Time: 1.76747949e+02  Time+Dt: 1.79645456e+02  s_cor: 0.00000000
@@ -1445,7 +1447,7 @@ Step: 000254  TIME: 1.76747949e+02  [JD   1.02081]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1342 seconds.
+  --> Compute time for step:             0.1345 seconds.
 Step: 000255  TIME: 1.79645456e+02  [JD   1.03755]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 065 read.
   --> MAS(C) Couple: Time: 1.79645456e+02  Time+Dt: 1.82542963e+02  s_cor: 0.00000000
@@ -1453,7 +1455,7 @@ Step: 000255  TIME: 1.79645456e+02  [JD   1.03755]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1348 seconds.
+  --> Compute time for step:             0.1344 seconds.
 Step: 000256  TIME: 1.82542963e+02  [JD   1.05428]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 066 read.
   --> MAS(C) Couple: Time: 1.82542963e+02  Time+Dt: 1.85440471e+02  s_cor: 0.00000000
@@ -1461,7 +1463,7 @@ Step: 000256  TIME: 1.82542963e+02  [JD   1.05428]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1343 seconds.
+  --> Compute time for step:             0.1349 seconds.
 Step: 000257  TIME: 1.85440471e+02  [JD   1.07101]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 067 read.
   --> MAS(C) Couple: Time: 1.85440471e+02  Time+Dt: 1.88337978e+02  s_cor: 0.00000000
@@ -1469,7 +1471,7 @@ Step: 000257  TIME: 1.85440471e+02  [JD   1.07101]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1343 seconds.
+  --> Compute time for step:             0.1352 seconds.
 Step: 000258  TIME: 1.88337978e+02  [JD   1.08775]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 068 read.
   --> MAS(C) Couple: Time: 1.88337978e+02  Time+Dt: 1.91235485e+02  s_cor: 0.00000000
@@ -1477,7 +1479,7 @@ Step: 000258  TIME: 1.88337978e+02  [JD   1.08775]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1342 seconds.
+  --> Compute time for step:             0.1347 seconds.
 Step: 000259  TIME: 1.91235485e+02  [JD   1.10448]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 069 read.
   --> MAS(C) Couple: Time: 1.91235485e+02  Time+Dt: 1.94132993e+02  s_cor: 0.00000000
@@ -1485,7 +1487,7 @@ Step: 000259  TIME: 1.91235485e+02  [JD   1.10448]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1340 seconds.
+  --> Compute time for step:             0.1352 seconds.
 Step: 000260  TIME: 1.94132993e+02  [JD   1.12122]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 070 read.
   --> MAS(C) Couple: Time: 1.94132993e+02  Time+Dt: 1.97030500e+02  s_cor: 0.00000000
@@ -1493,7 +1495,7 @@ Step: 000260  TIME: 1.94132993e+02  [JD   1.12122]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1342 seconds.
+  --> Compute time for step:             0.1346 seconds.
 Step: 000261  TIME: 1.97030500e+02  [JD   1.13795]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
@@ -1503,7 +1505,7 @@ Step: 000261  TIME: 1.97030500e+02  [JD   1.13795]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1429 seconds.
+  --> Compute time for step:             0.1407 seconds.
 Step: 000262  TIME: 1.99928007e+02  [JD   1.15469]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 072 read.
   --> MAS(C) Couple: Time: 1.99928007e+02  Time+Dt: 2.02825515e+02  s_cor: 0.00000000
@@ -1511,7 +1513,7 @@ Step: 000262  TIME: 1.99928007e+02  [JD   1.15469]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1379 seconds.
+  --> Compute time for step:             0.1351 seconds.
 Step: 000263  TIME: 2.02825515e+02  [JD   1.17142]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 073 read.
   --> MAS(C) Couple: Time: 2.02825515e+02  Time+Dt: 2.05723022e+02  s_cor: 0.00000000
@@ -1519,7 +1521,7 @@ Step: 000263  TIME: 2.02825515e+02  [JD   1.17142]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1378 seconds.
+  --> Compute time for step:             0.1351 seconds.
 Step: 000264  TIME: 2.05723022e+02  [JD   1.18816]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 074 read.
   --> MAS(C) Couple: Time: 2.05723022e+02  Time+Dt: 2.08620529e+02  s_cor: 0.00000000
@@ -1527,7 +1529,7 @@ Step: 000264  TIME: 2.05723022e+02  [JD   1.18816]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1379 seconds.
+  --> Compute time for step:             0.1349 seconds.
 Step: 000265  TIME: 2.08620529e+02  [JD   1.20489]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 075 read.
   --> MAS(C) Couple: Time: 2.08620529e+02  Time+Dt: 2.11518037e+02  s_cor: 0.00000000
@@ -1535,7 +1537,7 @@ Step: 000265  TIME: 2.08620529e+02  [JD   1.20489]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1378 seconds.
+  --> Compute time for step:             0.1348 seconds.
 Step: 000266  TIME: 2.11518037e+02  [JD   1.22163]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 076 read.
   --> MAS(C) Couple: Time: 2.11518037e+02  Time+Dt: 2.14415544e+02  s_cor: 0.00000000
@@ -1543,7 +1545,7 @@ Step: 000266  TIME: 2.11518037e+02  [JD   1.22163]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1375 seconds.
+  --> Compute time for step:             0.1352 seconds.
 Step: 000267  TIME: 2.14415544e+02  [JD   1.23836]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 077 read.
   --> MAS(C) Couple: Time: 2.14415544e+02  Time+Dt: 2.17313052e+02  s_cor: 0.00000000
@@ -1551,7 +1553,7 @@ Step: 000267  TIME: 2.14415544e+02  [JD   1.23836]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1376 seconds.
+  --> Compute time for step:             0.1352 seconds.
 Step: 000268  TIME: 2.17313052e+02  [JD   1.25510]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 078 read.
   --> MAS(C) Couple: Time: 2.17313052e+02  Time+Dt: 2.20210559e+02  s_cor: 0.00000000
@@ -1559,7 +1561,7 @@ Step: 000268  TIME: 2.17313052e+02  [JD   1.25510]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1379 seconds.
+  --> Compute time for step:             0.1357 seconds.
 Step: 000269  TIME: 2.20210559e+02  [JD   1.27183]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 079 read.
   --> MAS(C) Couple: Time: 2.20210559e+02  Time+Dt: 2.23108066e+02  s_cor: 0.00000000
@@ -1567,7 +1569,7 @@ Step: 000269  TIME: 2.20210559e+02  [JD   1.27183]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1375 seconds.
+  --> Compute time for step:             0.1349 seconds.
 Step: 000270  TIME: 2.23108066e+02  [JD   1.28856]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 080 read.
   --> MAS(C) Couple: Time: 2.23108066e+02  Time+Dt: 2.26005574e+02  s_cor: 0.00000000
@@ -1575,7 +1577,7 @@ Step: 000270  TIME: 2.23108066e+02  [JD   1.28856]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1377 seconds.
+  --> Compute time for step:             0.1351 seconds.
 Step: 000271  TIME: 2.26005574e+02  [JD   1.30530]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
@@ -1585,7 +1587,7 @@ Step: 000271  TIME: 2.26005574e+02  [JD   1.30530]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1396 seconds.
+  --> Compute time for step:             0.1402 seconds.
 Step: 000272  TIME: 2.28903081e+02  [JD   1.32203]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 082 read.
   --> MAS(C) Couple: Time: 2.28903081e+02  Time+Dt: 2.31800588e+02  s_cor: 0.00000000
@@ -1593,7 +1595,7 @@ Step: 000272  TIME: 2.28903081e+02  [JD   1.32203]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1346 seconds.
+  --> Compute time for step:             0.1324 seconds.
 Step: 000273  TIME: 2.31800588e+02  [JD   1.33877]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 083 read.
   --> MAS(C) Couple: Time: 2.31800588e+02  Time+Dt: 2.34698096e+02  s_cor: 0.00000000
@@ -1601,7 +1603,7 @@ Step: 000273  TIME: 2.31800588e+02  [JD   1.33877]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1347 seconds.
+  --> Compute time for step:             0.1312 seconds.
 Step: 000274  TIME: 2.34698096e+02  [JD   1.35550]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 084 read.
   --> MAS(C) Couple: Time: 2.34698096e+02  Time+Dt: 2.37595603e+02  s_cor: 0.00000000
@@ -1609,7 +1611,7 @@ Step: 000274  TIME: 2.34698096e+02  [JD   1.35550]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1347 seconds.
+  --> Compute time for step:             0.1345 seconds.
 Step: 000275  TIME: 2.37595603e+02  [JD   1.37224]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 085 read.
   --> MAS(C) Couple: Time: 2.37595603e+02  Time+Dt: 2.40493110e+02  s_cor: 0.00000000
@@ -1617,7 +1619,7 @@ Step: 000275  TIME: 2.37595603e+02  [JD   1.37224]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1346 seconds.
+  --> Compute time for step:             0.1339 seconds.
 Step: 000276  TIME: 2.40493110e+02  [JD   1.38897]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 086 read.
   --> MAS(C) Couple: Time: 2.40493110e+02  Time+Dt: 2.43390618e+02  s_cor: 0.00000000
@@ -1625,7 +1627,7 @@ Step: 000276  TIME: 2.40493110e+02  [JD   1.38897]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1346 seconds.
+  --> Compute time for step:             0.1315 seconds.
 Step: 000277  TIME: 2.43390618e+02  [JD   1.40571]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 087 read.
   --> MAS(C) Couple: Time: 2.43390618e+02  Time+Dt: 2.46288125e+02  s_cor: 0.00000000
@@ -1633,7 +1635,7 @@ Step: 000277  TIME: 2.43390618e+02  [JD   1.40571]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1347 seconds.
+  --> Compute time for step:             0.1346 seconds.
 Step: 000278  TIME: 2.46288125e+02  [JD   1.42244]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 088 read.
   --> MAS(C) Couple: Time: 2.46288125e+02  Time+Dt: 2.49185632e+02  s_cor: 0.00000000
@@ -1641,7 +1643,7 @@ Step: 000278  TIME: 2.46288125e+02  [JD   1.42244]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1354 seconds.
+  --> Compute time for step:             0.1311 seconds.
 Step: 000279  TIME: 2.49185632e+02  [JD   1.43918]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 089 read.
   --> MAS(C) Couple: Time: 2.49185632e+02  Time+Dt: 2.52083140e+02  s_cor: 0.00000000
@@ -1649,7 +1651,7 @@ Step: 000279  TIME: 2.49185632e+02  [JD   1.43918]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1346 seconds.
+  --> Compute time for step:             0.1339 seconds.
 Step: 000280  TIME: 2.52083140e+02  [JD   1.45591]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 090 read.
   --> MAS(C) Couple: Time: 2.52083140e+02  Time+Dt: 2.54980647e+02  s_cor: 0.00000000
@@ -1657,7 +1659,7 @@ Step: 000280  TIME: 2.52083140e+02  [JD   1.45591]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1346 seconds.
+  --> Compute time for step:             0.1325 seconds.
 Step: 000281  TIME: 2.54980647e+02  [JD   1.47265]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
@@ -1667,7 +1669,7 @@ Step: 000281  TIME: 2.54980647e+02  [JD   1.47265]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1422 seconds.
+  --> Compute time for step:             0.1407 seconds.
 Step: 000282  TIME: 2.57878154e+02  [JD   1.48938]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 092 read.
   --> MAS(C) Couple: Time: 2.57878154e+02  Time+Dt: 2.60775662e+02  s_cor: 0.00000000
@@ -1675,7 +1677,7 @@ Step: 000282  TIME: 2.57878154e+02  [JD   1.48938]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1373 seconds.
+  --> Compute time for step:             0.1347 seconds.
 Step: 000283  TIME: 2.60775662e+02  [JD   1.50611]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 093 read.
   --> MAS(C) Couple: Time: 2.60775662e+02  Time+Dt: 2.63673169e+02  s_cor: 0.00000000
@@ -1683,7 +1685,7 @@ Step: 000283  TIME: 2.60775662e+02  [JD   1.50611]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1372 seconds.
+  --> Compute time for step:             0.1348 seconds.
 Step: 000284  TIME: 2.63673169e+02  [JD   1.52285]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 094 read.
   --> MAS(C) Couple: Time: 2.63673169e+02  Time+Dt: 2.66570677e+02  s_cor: 0.00000000
@@ -1691,7 +1693,7 @@ Step: 000284  TIME: 2.63673169e+02  [JD   1.52285]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1373 seconds.
+  --> Compute time for step:             0.1347 seconds.
 Step: 000285  TIME: 2.66570677e+02  [JD   1.53958]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 095 read.
   --> MAS(C) Couple: Time: 2.66570677e+02  Time+Dt: 2.69468184e+02  s_cor: 0.00000000
@@ -1699,7 +1701,7 @@ Step: 000285  TIME: 2.66570677e+02  [JD   1.53958]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1372 seconds.
+  --> Compute time for step:             0.1349 seconds.
 Step: 000286  TIME: 2.69468184e+02  [JD   1.55632]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 096 read.
   --> MAS(C) Couple: Time: 2.69468184e+02  Time+Dt: 2.72365691e+02  s_cor: 0.00000000
@@ -1707,7 +1709,7 @@ Step: 000286  TIME: 2.69468184e+02  [JD   1.55632]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1372 seconds.
+  --> Compute time for step:             0.1357 seconds.
 Step: 000287  TIME: 2.72365691e+02  [JD   1.57305]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 097 read.
   --> MAS(C) Couple: Time: 2.72365691e+02  Time+Dt: 2.75263199e+02  s_cor: 0.00000000
@@ -1715,7 +1717,7 @@ Step: 000287  TIME: 2.72365691e+02  [JD   1.57305]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1372 seconds.
+  --> Compute time for step:             0.1356 seconds.
 Step: 000288  TIME: 2.75263199e+02  [JD   1.58979]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 098 read.
   --> MAS(C) Couple: Time: 2.75263199e+02  Time+Dt: 2.78160706e+02  s_cor: 0.00000000
@@ -1723,7 +1725,7 @@ Step: 000288  TIME: 2.75263199e+02  [JD   1.58979]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1371 seconds.
+  --> Compute time for step:             0.1350 seconds.
 Step: 000289  TIME: 2.78160706e+02  [JD   1.60652]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 099 read.
   --> MAS(C) Couple: Time: 2.78160706e+02  Time+Dt: 2.81058213e+02  s_cor: 0.00000000
@@ -1731,7 +1733,7 @@ Step: 000289  TIME: 2.78160706e+02  [JD   1.60652]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1373 seconds.
+  --> Compute time for step:             0.1349 seconds.
 Step: 000290  TIME: 2.81058213e+02  [JD   1.62326]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO MAS: Coronal sequence 100 read.
   --> MAS(C) Couple: Time: 2.81058213e+02  Time+Dt: 2.83955721e+02  s_cor: 0.00000000
@@ -1739,7 +1741,7 @@ Step: 000290  TIME: 2.81058213e+02  [JD   1.62326]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1372 seconds.
+  --> Compute time for step:             0.1348 seconds.
 Step: 000291  TIME: 2.83955721e+02  [JD   1.63999]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
@@ -1749,27 +1751,27 @@ Step: 000291  TIME: 2.83955721e+02  [JD   1.63999]  DTIME: 2.89750735e+00  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1381 seconds.
+  --> Compute time for step:             0.1405 seconds.
 Step: 000292  TIME: 2.86853228e+02  [JD   1.65673]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> MAS(C) Couple: Time: 2.86853228e+02  Time+Dt: 2.89750735e+02  s_cor: 0.00000000
   -->                idx0: 101  idx1: 101  masTime0: 2.89750735e+02  masTime1: 2.89750735e+02
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1327 seconds.
+  --> Compute time for step:             0.1343 seconds.
 Step: 000293  TIME: 2.89750735e+02  [JD   1.67346]  DTIME: 2.89750735e+00  [JD 0.01673]
   --> MAS(C) Couple: Time: 2.89750735e+02  Time+Dt: 2.92648243e+02  s_cor: 0.00000000
   -->                idx0: 101  idx1: 101  masTime0: 2.89750735e+02  masTime1: 2.89750735e+02
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 30 
   --> Minimum MFP timescale (tau): 3.58402641e-05    DTIME/TAU:       80845.03
-  --> Compute time for step:             0.1328 seconds.
+  --> Compute time for step:             0.1343 seconds.
  
 ********************************
 ****RUN COMPLETE****************
 ********************************
-Run started  on Wed Aug 20 12:53:54 2025
-Run finished on Wed Aug 20 12:54:11 2025
-Run real time duration is 0.283333 minutes (or 0.004722 hours, or 0.000197 days)
+Run started  on Thu Aug 20 14:13:07 2026
+Run finished on Thu Aug 20 14:13:25 2026
+Run real time duration is 0.300000 minutes (or 0.005000 hours, or 0.000208 days)
 Run data time duration is 1.6735 days
 ********************************

@@ -1,0 +1,1849 @@
+# eprem_digest granularity=global
+file obs000000.nc
+var Bp
+  shape=(11, 60) dtype=float64
+  min=-170.291 max=-1.10829 mean=-7.41008 sum=-4890.65 rms=23.6034
+  sha256=7f648161e15376f40de32f6112d9b2d0a2d44358ccfc8ba30d4f000f8eb077d4
+var Br
+  shape=(11, 60) dtype=float64
+  min=3.13365 max=73982 mean=1421.31 sum=938067 rms=9584.5
+  sha256=8c40b1ba0309b118007f3f06e7b5a8f40fcf9a634457c7731d7f64937666fa28
+var Bt
+  shape=(11, 60) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=569cfdcf139f915b2f1dabdfbc86320ec1c7d54e28c12a93132dae8ef4f91c83
+var Dist
+  shape=(11, 60, 1, 12, 6) dtype=float64
+  min=9.39337e-138 max=0.0184637 mean=3.94679e-05 sum=1.87551 rms=0.000706104
+  sha256=16bd60d87bf7dbe615fd581ec31bd5bbbff3bc578c4de6e685881ec264657711
+var P
+  shape=(11, 60) dtype=float64
+  min=2.39746 max=3.93442 mean=3.16594 sum=2089.52 rms=3.18453
+  sha256=fb35518b321e81c0fa6cea1294b9bc0a347a8597c59edadcd8dc7b7d77de0b80
+var R
+  shape=(11, 60) dtype=float64
+  min=0.00465047 max=0.714554 mean=0.359602 sum=237.337 rms=0.415613
+  sha256=8a2a632edd226efd06c08cc8d0112678156e45a4f36a448a14aea0889725fb3f
+var Rho
+  shape=(11, 60) dtype=float64
+  min=16.2558 max=383782 mean=7373.06 sum=4.86622e+06 rms=49719.6
+  sha256=888231e4f9adcf167190fe05e88b7221d5c8393e0ff35c58bf3d640bc619f282
+var T
+  shape=(11, 60) dtype=float64
+  min=0.61548 max=0.61548 mean=0.61548 sum=406.217 rms=0.61548
+  sha256=db7e444fb3b40fdd5795b98c5ea632d2415c3b7efc5bf70af6ab21370d738799
+var Vp
+  shape=(11, 60) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=569cfdcf139f915b2f1dabdfbc86320ec1c7d54e28c12a93132dae8ef4f91c83
+var Vr
+  shape=(11, 60) dtype=float64
+  min=500 max=500 mean=500 sum=330000 rms=500
+  sha256=3c481f65aaa45402a9b17a53115ba9de1e8ce740bb124140dbf404d588350917
+var Vt
+  shape=(11, 60) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=569cfdcf139f915b2f1dabdfbc86320ec1c7d54e28c12a93132dae8ef4f91c83
+var charge
+  shape=(1,) dtype=float64
+  min=1 max=1 mean=1 sum=1 rms=1
+  sha256=6c3c396ed6b5c36dcae172271f462051b1266b851e92df3deea8ac65478fd712
+var egrid
+  shape=(12,) dtype=float64
+  min=1 max=200 mean=44.4691 sum=533.629 rms=74.375
+  sha256=d6baed27c750ce4ae55d22b9d8255ccf660d6bda498a39e0feef191837a44a3f
+var mass
+  shape=(1,) dtype=float64
+  min=1 max=1 mean=1 sum=1 rms=1
+  sha256=6c3c396ed6b5c36dcae172271f462051b1266b851e92df3deea8ac65478fd712
+var mu
+  shape=(6,) dtype=float64
+  min=-0.833333 max=0.833333 mean=-5.55112e-17 sum=-3.33067e-16 rms=0.569275
+  sha256=9d3280f8656c6ff355e4b66ee9a8010bf1bb5c3ee9f11caaaa0f737496ca94d7
+var phiOffset
+  shape=(11,) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=10eef285deef7a4b7c82b22aa53589b7833df29de3814649c772bbd5c832f365
+var shell
+  shape=(60,) dtype=int32
+  min=0.0 max=59 mean=29.5 sum=1770 rms=34.2077
+  sha256=73d12d1733bd4b05c024ec5d6b4adbb1c9e8a1cd1afb48d6d904fcb536eadc40
+var time
+  shape=(11,) dtype=float64
+  min=0.125 max=3.875 mean=2 sum=22 rms=2.32513
+  sha256=78427705115680ca013e4a708a95938d218cd9c1e2355bc099e0f6754343a0f7
+var vgrid
+  shape=(12,) dtype=float64
+  min=13830.3 max=169732 mean=68463.1 sum=821558 rms=84493.5
+  sha256=caab3517fad11b848eecfe88d9db9482c1d3296fb95be80850c6a89c74427199
+file obs000001.nc
+var Bp
+  shape=(11, 60) dtype=float64
+  min=-170.291 max=-1.10829 mean=-7.41008 sum=-4890.65 rms=23.6034
+  sha256=d10e14cacd598cc59dbaae3ae176326f979757f48702350e191754bbd56b07bb
+var Br
+  shape=(11, 60) dtype=float64
+  min=3.13365 max=73982 mean=1421.31 sum=938067 rms=9584.5
+  sha256=21ecc88607e95da5f3a37cc1ee40041daf42e579e15d87fe808babaf4c54ca29
+var Bt
+  shape=(11, 60) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=569cfdcf139f915b2f1dabdfbc86320ec1c7d54e28c12a93132dae8ef4f91c83
+var Dist
+  shape=(11, 60, 1, 12, 6) dtype=float64
+  min=9.39337e-138 max=0.0184637 mean=3.94679e-05 sum=1.87551 rms=0.000706104
+  sha256=e11c80b750792e889798e76ede8eaca10dc52b639f7c89925b5cb4353555bb44
+var P
+  shape=(11, 60) dtype=float64
+  min=0.826659 max=2.36362 mean=1.59514 sum=1052.79 rms=1.63174
+  sha256=ac6dcc04f74acb850109789ae75eaec2a74d38c9bb7c0cdba792216a3e8e0671
+var R
+  shape=(11, 60) dtype=float64
+  min=0.00465047 max=0.714554 mean=0.359602 sum=237.337 rms=0.415613
+  sha256=bd3d09115b78bfb9afdc535b0aeb6720ad5c146a5a204adcf2023180eed2ef6a
+var Rho
+  shape=(11, 60) dtype=float64
+  min=16.2558 max=383782 mean=7373.06 sum=4.86622e+06 rms=49719.6
+  sha256=32a601ee8caf15fec54425f465654c56812dd82ac65ca5347b33578af482a794
+var T
+  shape=(11, 60) dtype=float64
+  min=0.61548 max=0.61548 mean=0.61548 sum=406.217 rms=0.61548
+  sha256=71fe9bfc8e4e97565d75f72e67c60f202bc73b659a1e7b70e816e102d2e81f65
+var Vp
+  shape=(11, 60) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=569cfdcf139f915b2f1dabdfbc86320ec1c7d54e28c12a93132dae8ef4f91c83
+var Vr
+  shape=(11, 60) dtype=float64
+  min=500 max=500 mean=500 sum=330000 rms=500
+  sha256=3c481f65aaa45402a9b17a53115ba9de1e8ce740bb124140dbf404d588350917
+var Vt
+  shape=(11, 60) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=569cfdcf139f915b2f1dabdfbc86320ec1c7d54e28c12a93132dae8ef4f91c83
+var charge
+  shape=(1,) dtype=float64
+  min=1 max=1 mean=1 sum=1 rms=1
+  sha256=6c3c396ed6b5c36dcae172271f462051b1266b851e92df3deea8ac65478fd712
+var egrid
+  shape=(12,) dtype=float64
+  min=1 max=200 mean=44.4691 sum=533.629 rms=74.375
+  sha256=d6baed27c750ce4ae55d22b9d8255ccf660d6bda498a39e0feef191837a44a3f
+var mass
+  shape=(1,) dtype=float64
+  min=1 max=1 mean=1 sum=1 rms=1
+  sha256=6c3c396ed6b5c36dcae172271f462051b1266b851e92df3deea8ac65478fd712
+var mu
+  shape=(6,) dtype=float64
+  min=-0.833333 max=0.833333 mean=-5.55112e-17 sum=-3.33067e-16 rms=0.569275
+  sha256=9d3280f8656c6ff355e4b66ee9a8010bf1bb5c3ee9f11caaaa0f737496ca94d7
+var phiOffset
+  shape=(11,) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=10eef285deef7a4b7c82b22aa53589b7833df29de3814649c772bbd5c832f365
+var shell
+  shape=(60,) dtype=int32
+  min=0.0 max=59 mean=29.5 sum=1770 rms=34.2077
+  sha256=73d12d1733bd4b05c024ec5d6b4adbb1c9e8a1cd1afb48d6d904fcb536eadc40
+var time
+  shape=(11,) dtype=float64
+  min=0.125 max=3.875 mean=2 sum=22 rms=2.32513
+  sha256=78427705115680ca013e4a708a95938d218cd9c1e2355bc099e0f6754343a0f7
+var vgrid
+  shape=(12,) dtype=float64
+  min=13830.3 max=169732 mean=68463.1 sum=821558 rms=84493.5
+  sha256=caab3517fad11b848eecfe88d9db9482c1d3296fb95be80850c6a89c74427199
+file obs000002.nc
+var Bp
+  shape=(11, 60) dtype=float64
+  min=-170.291 max=-1.10829 mean=-7.41008 sum=-4890.65 rms=23.6034
+  sha256=5d5d2b4f6b025d1e6fee057e39887f8bd5c99d86756abd36cc3c33d823999917
+var Br
+  shape=(11, 60) dtype=float64
+  min=3.13365 max=73982 mean=1421.31 sum=938067 rms=9584.5
+  sha256=3d9a4941ec2ec11593f14fe3452d34002fce07e106c213db2785dc34244c2cb4
+var Bt
+  shape=(11, 60) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=569cfdcf139f915b2f1dabdfbc86320ec1c7d54e28c12a93132dae8ef4f91c83
+var Dist
+  shape=(11, 60, 1, 12, 6) dtype=float64
+  min=9.39337e-138 max=0.0184637 mean=3.94679e-05 sum=1.87551 rms=0.000706104
+  sha256=86c5135e2e31ae87694194750b581d3018dcd4551cebd836cf72685cab1f2e8f
+var P
+  shape=(11, 60) dtype=float64
+  min=3.96825 max=5.50521 mean=4.73673 sum=3126.24 rms=4.74918
+  sha256=28811ec54c3cb5efd7ba7da5722c8b26cd949d9cd1ff1283b0266e373dd40b69
+var R
+  shape=(11, 60) dtype=float64
+  min=0.00465047 max=0.714554 mean=0.359602 sum=237.337 rms=0.415613
+  sha256=42738dfaa2fda82a23f40742e6b56edaa9eb2d5d49524409ac199f30f973244d
+var Rho
+  shape=(11, 60) dtype=float64
+  min=16.2558 max=383782 mean=7373.06 sum=4.86622e+06 rms=49719.6
+  sha256=ac9e5760952d8a8800e9e5e1a60e209fc94860f3049f88588e332097a6a51d80
+var T
+  shape=(11, 60) dtype=float64
+  min=0.61548 max=0.61548 mean=0.61548 sum=406.217 rms=0.61548
+  sha256=ef4e3aa3ece8659aad6803f2156f6e1fe39b7462f3ee85375652eb58813b1e6c
+var Vp
+  shape=(11, 60) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=569cfdcf139f915b2f1dabdfbc86320ec1c7d54e28c12a93132dae8ef4f91c83
+var Vr
+  shape=(11, 60) dtype=float64
+  min=500 max=500 mean=500 sum=330000 rms=500
+  sha256=3c481f65aaa45402a9b17a53115ba9de1e8ce740bb124140dbf404d588350917
+var Vt
+  shape=(11, 60) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=569cfdcf139f915b2f1dabdfbc86320ec1c7d54e28c12a93132dae8ef4f91c83
+var charge
+  shape=(1,) dtype=float64
+  min=1 max=1 mean=1 sum=1 rms=1
+  sha256=6c3c396ed6b5c36dcae172271f462051b1266b851e92df3deea8ac65478fd712
+var egrid
+  shape=(12,) dtype=float64
+  min=1 max=200 mean=44.4691 sum=533.629 rms=74.375
+  sha256=d6baed27c750ce4ae55d22b9d8255ccf660d6bda498a39e0feef191837a44a3f
+var mass
+  shape=(1,) dtype=float64
+  min=1 max=1 mean=1 sum=1 rms=1
+  sha256=6c3c396ed6b5c36dcae172271f462051b1266b851e92df3deea8ac65478fd712
+var mu
+  shape=(6,) dtype=float64
+  min=-0.833333 max=0.833333 mean=-5.55112e-17 sum=-3.33067e-16 rms=0.569275
+  sha256=9d3280f8656c6ff355e4b66ee9a8010bf1bb5c3ee9f11caaaa0f737496ca94d7
+var phiOffset
+  shape=(11,) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=10eef285deef7a4b7c82b22aa53589b7833df29de3814649c772bbd5c832f365
+var shell
+  shape=(60,) dtype=int32
+  min=0.0 max=59 mean=29.5 sum=1770 rms=34.2077
+  sha256=73d12d1733bd4b05c024ec5d6b4adbb1c9e8a1cd1afb48d6d904fcb536eadc40
+var time
+  shape=(11,) dtype=float64
+  min=0.125 max=3.875 mean=2 sum=22 rms=2.32513
+  sha256=78427705115680ca013e4a708a95938d218cd9c1e2355bc099e0f6754343a0f7
+var vgrid
+  shape=(12,) dtype=float64
+  min=13830.3 max=169732 mean=68463.1 sum=821558 rms=84493.5
+  sha256=caab3517fad11b848eecfe88d9db9482c1d3296fb95be80850c6a89c74427199
+file obs000003.nc
+var Bp
+  shape=(11, 60) dtype=float64
+  min=-170.291 max=-1.10829 mean=-7.41008 sum=-4890.65 rms=23.6034
+  sha256=7f500d9cb2ef56f4ac82a8f11212db4e28e1753244e17afda54df5de64276705
+var Br
+  shape=(11, 60) dtype=float64
+  min=3.13365 max=73982 mean=1421.31 sum=938067 rms=9584.5
+  sha256=beacb58707721bc1e980d1ab59c459220617dd18f84d50b46b44919df47da182
+var Bt
+  shape=(11, 60) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=569cfdcf139f915b2f1dabdfbc86320ec1c7d54e28c12a93132dae8ef4f91c83
+var Dist
+  shape=(11, 60, 1, 12, 6) dtype=float64
+  min=9.39337e-138 max=0.0184637 mean=3.94679e-05 sum=1.87551 rms=0.000706104
+  sha256=fafdb5d15af4370b14fe6c4edbee66c995877e2b7fd4952a1d6a03dcbffae8db
+var P
+  shape=(11, 60) dtype=float64
+  min=0.0088711 max=6.28174 mean=3.03266 sum=2001.55 rms=4.16819
+  sha256=2147ff2e9efe0a7b9c18683b24df888a7685a2164ef9a6a36e006a80df4db88f
+var R
+  shape=(11, 60) dtype=float64
+  min=0.00465047 max=0.714554 mean=0.359602 sum=237.337 rms=0.415613
+  sha256=257157d006dd7052d0f395868388e21a1c2e5937c6445b3ee2f7b7f9739bc4a4
+var Rho
+  shape=(11, 60) dtype=float64
+  min=16.2558 max=383782 mean=7373.06 sum=4.86622e+06 rms=49719.6
+  sha256=eab27e548d4ac871296955b13c8394b5bdc360b3f21c85f5c99eda6911b132b3
+var T
+  shape=(11, 60) dtype=float64
+  min=0.61548 max=0.61548 mean=0.61548 sum=406.217 rms=0.61548
+  sha256=4115d1214cab42207d0676d9aee2679f02ba221a66c7e47c8edf32329c242735
+var Vp
+  shape=(11, 60) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=569cfdcf139f915b2f1dabdfbc86320ec1c7d54e28c12a93132dae8ef4f91c83
+var Vr
+  shape=(11, 60) dtype=float64
+  min=500 max=500 mean=500 sum=330000 rms=500
+  sha256=3c481f65aaa45402a9b17a53115ba9de1e8ce740bb124140dbf404d588350917
+var Vt
+  shape=(11, 60) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=569cfdcf139f915b2f1dabdfbc86320ec1c7d54e28c12a93132dae8ef4f91c83
+var charge
+  shape=(1,) dtype=float64
+  min=1 max=1 mean=1 sum=1 rms=1
+  sha256=6c3c396ed6b5c36dcae172271f462051b1266b851e92df3deea8ac65478fd712
+var egrid
+  shape=(12,) dtype=float64
+  min=1 max=200 mean=44.4691 sum=533.629 rms=74.375
+  sha256=d6baed27c750ce4ae55d22b9d8255ccf660d6bda498a39e0feef191837a44a3f
+var mass
+  shape=(1,) dtype=float64
+  min=1 max=1 mean=1 sum=1 rms=1
+  sha256=6c3c396ed6b5c36dcae172271f462051b1266b851e92df3deea8ac65478fd712
+var mu
+  shape=(6,) dtype=float64
+  min=-0.833333 max=0.833333 mean=-5.55112e-17 sum=-3.33067e-16 rms=0.569275
+  sha256=9d3280f8656c6ff355e4b66ee9a8010bf1bb5c3ee9f11caaaa0f737496ca94d7
+var phiOffset
+  shape=(11,) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=10eef285deef7a4b7c82b22aa53589b7833df29de3814649c772bbd5c832f365
+var shell
+  shape=(60,) dtype=int32
+  min=0.0 max=59 mean=29.5 sum=1770 rms=34.2077
+  sha256=73d12d1733bd4b05c024ec5d6b4adbb1c9e8a1cd1afb48d6d904fcb536eadc40
+var time
+  shape=(11,) dtype=float64
+  min=0.125 max=3.875 mean=2 sum=22 rms=2.32513
+  sha256=78427705115680ca013e4a708a95938d218cd9c1e2355bc099e0f6754343a0f7
+var vgrid
+  shape=(12,) dtype=float64
+  min=13830.3 max=169732 mean=68463.1 sum=821558 rms=84493.5
+  sha256=caab3517fad11b848eecfe88d9db9482c1d3296fb95be80850c6a89c74427199
+file obs000004.nc
+var Bp
+  shape=(11, 60) dtype=float64
+  min=-170.291 max=-1.10829 mean=-7.41008 sum=-4890.65 rms=23.6034
+  sha256=2c097efc325e6f8796c3f5a82eaf4decd1cae34211771cf520dd3588cab866d2
+var Br
+  shape=(11, 60) dtype=float64
+  min=3.13365 max=73982 mean=1421.31 sum=938067 rms=9584.5
+  sha256=51a8a2eca5beff82721541b911b6fbcc79b7b4ef36be5e46c4a2dfe4aec85fcc
+var Bt
+  shape=(11, 60) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=569cfdcf139f915b2f1dabdfbc86320ec1c7d54e28c12a93132dae8ef4f91c83
+var Dist
+  shape=(11, 60, 1, 12, 6) dtype=float64
+  min=9.39337e-138 max=0.0184637 mean=3.94679e-05 sum=1.87551 rms=0.000706104
+  sha256=5838490bea014864e233ac671c455465a58447385e763a261040b3c56cbcdf67
+var P
+  shape=(11, 60) dtype=float64
+  min=0.826659 max=2.36362 mean=1.59514 sum=1052.79 rms=1.63174
+  sha256=bb0a9486af3c55384a8a208249f43527246630016fc0c10214d2becc10929e35
+var R
+  shape=(11, 60) dtype=float64
+  min=0.00465047 max=0.714554 mean=0.359602 sum=237.337 rms=0.415613
+  sha256=c129bdc150b2815439dcb361abe406aeb039f5b2f1e82b457bef807e5e13ba14
+var Rho
+  shape=(11, 60) dtype=float64
+  min=16.2558 max=383782 mean=7373.06 sum=4.86622e+06 rms=49719.6
+  sha256=59232e26b78af88f0e6d91d222d991e441864b132bd9d7d785fd44f0f374aeee
+var T
+  shape=(11, 60) dtype=float64
+  min=2.52611 max=2.52611 mean=2.52611 sum=1667.23 rms=2.52611
+  sha256=16b636c9abc8a7f44c59e85f587ef6fb3e122c0f328badf40daa1a229cd1fe42
+var Vp
+  shape=(11, 60) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=569cfdcf139f915b2f1dabdfbc86320ec1c7d54e28c12a93132dae8ef4f91c83
+var Vr
+  shape=(11, 60) dtype=float64
+  min=500 max=500 mean=500 sum=330000 rms=500
+  sha256=3c481f65aaa45402a9b17a53115ba9de1e8ce740bb124140dbf404d588350917
+var Vt
+  shape=(11, 60) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=569cfdcf139f915b2f1dabdfbc86320ec1c7d54e28c12a93132dae8ef4f91c83
+var charge
+  shape=(1,) dtype=float64
+  min=1 max=1 mean=1 sum=1 rms=1
+  sha256=6c3c396ed6b5c36dcae172271f462051b1266b851e92df3deea8ac65478fd712
+var egrid
+  shape=(12,) dtype=float64
+  min=1 max=200 mean=44.4691 sum=533.629 rms=74.375
+  sha256=d6baed27c750ce4ae55d22b9d8255ccf660d6bda498a39e0feef191837a44a3f
+var mass
+  shape=(1,) dtype=float64
+  min=1 max=1 mean=1 sum=1 rms=1
+  sha256=6c3c396ed6b5c36dcae172271f462051b1266b851e92df3deea8ac65478fd712
+var mu
+  shape=(6,) dtype=float64
+  min=-0.833333 max=0.833333 mean=-5.55112e-17 sum=-3.33067e-16 rms=0.569275
+  sha256=9d3280f8656c6ff355e4b66ee9a8010bf1bb5c3ee9f11caaaa0f737496ca94d7
+var phiOffset
+  shape=(11,) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=10eef285deef7a4b7c82b22aa53589b7833df29de3814649c772bbd5c832f365
+var shell
+  shape=(60,) dtype=int32
+  min=0.0 max=59 mean=29.5 sum=1770 rms=34.2077
+  sha256=73d12d1733bd4b05c024ec5d6b4adbb1c9e8a1cd1afb48d6d904fcb536eadc40
+var time
+  shape=(11,) dtype=float64
+  min=0.125 max=3.875 mean=2 sum=22 rms=2.32513
+  sha256=78427705115680ca013e4a708a95938d218cd9c1e2355bc099e0f6754343a0f7
+var vgrid
+  shape=(12,) dtype=float64
+  min=13830.3 max=169732 mean=68463.1 sum=821558 rms=84493.5
+  sha256=caab3517fad11b848eecfe88d9db9482c1d3296fb95be80850c6a89c74427199
+file obs000005.nc
+var Bp
+  shape=(11, 60) dtype=float64
+  min=-170.291 max=-1.10829 mean=-7.41008 sum=-4890.65 rms=23.6034
+  sha256=e775772faf2d9b083885031234b3f817bd84cd0024b495e8fbdd1e34ab87a956
+var Br
+  shape=(11, 60) dtype=float64
+  min=3.13365 max=73982 mean=1421.31 sum=938067 rms=9584.5
+  sha256=8a7915f25a6cfd93950f411b55ff84175cb7b0bcf796cc048c037f8951247920
+var Bt
+  shape=(11, 60) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=569cfdcf139f915b2f1dabdfbc86320ec1c7d54e28c12a93132dae8ef4f91c83
+var Dist
+  shape=(11, 60, 1, 12, 6) dtype=float64
+  min=9.39337e-138 max=0.0184637 mean=3.94679e-05 sum=1.87551 rms=0.000706104
+  sha256=63b18a644f60f313e9355382c08fe0df6109d90bc91cf10d7f0c3d914e33adf6
+var P
+  shape=(11, 60) dtype=float64
+  min=2.39746 max=3.93442 mean=3.16594 sum=2089.52 rms=3.18453
+  sha256=4668bf2ab42f1b0eac8edd4a1294dff6678673332e014962edfec5bc0ced841e
+var R
+  shape=(11, 60) dtype=float64
+  min=0.00465047 max=0.714554 mean=0.359602 sum=237.337 rms=0.415613
+  sha256=621eae1aebbc6a684f84a07235efe1839754ef972931bac19c280285ce613412
+var Rho
+  shape=(11, 60) dtype=float64
+  min=16.2558 max=383782 mean=7373.06 sum=4.86622e+06 rms=49719.6
+  sha256=d7e8c92d1e8cae987d9df52095f788625f9a51383d357f4f47a711a75b2f7b78
+var T
+  shape=(11, 60) dtype=float64
+  min=2.52611 max=2.52611 mean=2.52611 sum=1667.23 rms=2.52611
+  sha256=56a19380f34a1282e36928026bbe799c4f5e5e6fd5e6ef0c91225ab9442ab9ed
+var Vp
+  shape=(11, 60) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=569cfdcf139f915b2f1dabdfbc86320ec1c7d54e28c12a93132dae8ef4f91c83
+var Vr
+  shape=(11, 60) dtype=float64
+  min=500 max=500 mean=500 sum=330000 rms=500
+  sha256=3c481f65aaa45402a9b17a53115ba9de1e8ce740bb124140dbf404d588350917
+var Vt
+  shape=(11, 60) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=569cfdcf139f915b2f1dabdfbc86320ec1c7d54e28c12a93132dae8ef4f91c83
+var charge
+  shape=(1,) dtype=float64
+  min=1 max=1 mean=1 sum=1 rms=1
+  sha256=6c3c396ed6b5c36dcae172271f462051b1266b851e92df3deea8ac65478fd712
+var egrid
+  shape=(12,) dtype=float64
+  min=1 max=200 mean=44.4691 sum=533.629 rms=74.375
+  sha256=d6baed27c750ce4ae55d22b9d8255ccf660d6bda498a39e0feef191837a44a3f
+var mass
+  shape=(1,) dtype=float64
+  min=1 max=1 mean=1 sum=1 rms=1
+  sha256=6c3c396ed6b5c36dcae172271f462051b1266b851e92df3deea8ac65478fd712
+var mu
+  shape=(6,) dtype=float64
+  min=-0.833333 max=0.833333 mean=-5.55112e-17 sum=-3.33067e-16 rms=0.569275
+  sha256=9d3280f8656c6ff355e4b66ee9a8010bf1bb5c3ee9f11caaaa0f737496ca94d7
+var phiOffset
+  shape=(11,) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=10eef285deef7a4b7c82b22aa53589b7833df29de3814649c772bbd5c832f365
+var shell
+  shape=(60,) dtype=int32
+  min=0.0 max=59 mean=29.5 sum=1770 rms=34.2077
+  sha256=73d12d1733bd4b05c024ec5d6b4adbb1c9e8a1cd1afb48d6d904fcb536eadc40
+var time
+  shape=(11,) dtype=float64
+  min=0.125 max=3.875 mean=2 sum=22 rms=2.32513
+  sha256=78427705115680ca013e4a708a95938d218cd9c1e2355bc099e0f6754343a0f7
+var vgrid
+  shape=(12,) dtype=float64
+  min=13830.3 max=169732 mean=68463.1 sum=821558 rms=84493.5
+  sha256=caab3517fad11b848eecfe88d9db9482c1d3296fb95be80850c6a89c74427199
+file obs000006.nc
+var Bp
+  shape=(11, 60) dtype=float64
+  min=-170.291 max=-1.10829 mean=-7.41008 sum=-4890.65 rms=23.6034
+  sha256=73da3c8ebf946241867605474eaad71120dfdba642c220e30490491b4db9332a
+var Br
+  shape=(11, 60) dtype=float64
+  min=3.13365 max=73982 mean=1421.31 sum=938067 rms=9584.5
+  sha256=b7d0a9ce2c78a9abc8c4b2393faeed6f1ee73989777b55905acaef962dfc16c0
+var Bt
+  shape=(11, 60) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=569cfdcf139f915b2f1dabdfbc86320ec1c7d54e28c12a93132dae8ef4f91c83
+var Dist
+  shape=(11, 60, 1, 12, 6) dtype=float64
+  min=9.39337e-138 max=0.0184637 mean=3.94679e-05 sum=1.87551 rms=0.000706104
+  sha256=b620f6b360456c0aa570865d3a88bcc646c1b00fe505af9a93d858f98ba6395c
+var P
+  shape=(11, 60) dtype=float64
+  min=0.0088711 max=6.28174 mean=3.03266 sum=2001.55 rms=4.16819
+  sha256=cc52d347434880e47b064c6a049cbfde590cd70f22ed6e9ad9ffb274349b1695
+var R
+  shape=(11, 60) dtype=float64
+  min=0.00465047 max=0.714554 mean=0.359602 sum=237.337 rms=0.415613
+  sha256=7a9820705a22c771cd129c75b0d9e4b64e924acaa12d27554b270d0b7e469f2c
+var Rho
+  shape=(11, 60) dtype=float64
+  min=16.2558 max=383782 mean=7373.06 sum=4.86622e+06 rms=49719.6
+  sha256=d3c501e694bf8ed2ffd1c4fb9ab4fdf46ad733e759c061e3f6696ab571eee066
+var T
+  shape=(11, 60) dtype=float64
+  min=2.52611 max=2.52611 mean=2.52611 sum=1667.23 rms=2.52611
+  sha256=0b62997e8c20f54db3a7bee340a153ff8f0f6192d33f82eafb47f90038d8a610
+var Vp
+  shape=(11, 60) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=569cfdcf139f915b2f1dabdfbc86320ec1c7d54e28c12a93132dae8ef4f91c83
+var Vr
+  shape=(11, 60) dtype=float64
+  min=500 max=500 mean=500 sum=330000 rms=500
+  sha256=3c481f65aaa45402a9b17a53115ba9de1e8ce740bb124140dbf404d588350917
+var Vt
+  shape=(11, 60) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=569cfdcf139f915b2f1dabdfbc86320ec1c7d54e28c12a93132dae8ef4f91c83
+var charge
+  shape=(1,) dtype=float64
+  min=1 max=1 mean=1 sum=1 rms=1
+  sha256=6c3c396ed6b5c36dcae172271f462051b1266b851e92df3deea8ac65478fd712
+var egrid
+  shape=(12,) dtype=float64
+  min=1 max=200 mean=44.4691 sum=533.629 rms=74.375
+  sha256=d6baed27c750ce4ae55d22b9d8255ccf660d6bda498a39e0feef191837a44a3f
+var mass
+  shape=(1,) dtype=float64
+  min=1 max=1 mean=1 sum=1 rms=1
+  sha256=6c3c396ed6b5c36dcae172271f462051b1266b851e92df3deea8ac65478fd712
+var mu
+  shape=(6,) dtype=float64
+  min=-0.833333 max=0.833333 mean=-5.55112e-17 sum=-3.33067e-16 rms=0.569275
+  sha256=9d3280f8656c6ff355e4b66ee9a8010bf1bb5c3ee9f11caaaa0f737496ca94d7
+var phiOffset
+  shape=(11,) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=10eef285deef7a4b7c82b22aa53589b7833df29de3814649c772bbd5c832f365
+var shell
+  shape=(60,) dtype=int32
+  min=0.0 max=59 mean=29.5 sum=1770 rms=34.2077
+  sha256=73d12d1733bd4b05c024ec5d6b4adbb1c9e8a1cd1afb48d6d904fcb536eadc40
+var time
+  shape=(11,) dtype=float64
+  min=0.125 max=3.875 mean=2 sum=22 rms=2.32513
+  sha256=78427705115680ca013e4a708a95938d218cd9c1e2355bc099e0f6754343a0f7
+var vgrid
+  shape=(12,) dtype=float64
+  min=13830.3 max=169732 mean=68463.1 sum=821558 rms=84493.5
+  sha256=caab3517fad11b848eecfe88d9db9482c1d3296fb95be80850c6a89c74427199
+file obs000007.nc
+var Bp
+  shape=(11, 60) dtype=float64
+  min=-170.291 max=-1.10829 mean=-7.41008 sum=-4890.65 rms=23.6034
+  sha256=a7900211a5ba94384ac218cef7d10d9fa458674c9496ce51d99af38201cb81bc
+var Br
+  shape=(11, 60) dtype=float64
+  min=3.13365 max=73982 mean=1421.31 sum=938067 rms=9584.5
+  sha256=9a80644e832182aa12ddc20a536787ea4362f6706fa55e7287e5bf987f4b6f0d
+var Bt
+  shape=(11, 60) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=569cfdcf139f915b2f1dabdfbc86320ec1c7d54e28c12a93132dae8ef4f91c83
+var Dist
+  shape=(11, 60, 1, 12, 6) dtype=float64
+  min=9.39337e-138 max=0.0184637 mean=3.94679e-05 sum=1.87551 rms=0.000706104
+  sha256=27ab921f32e11437a4e50f46d932ce0531556bf4087aabb0cb96747615fbc01e
+var P
+  shape=(11, 60) dtype=float64
+  min=3.96825 max=5.50521 mean=4.73673 sum=3126.24 rms=4.74918
+  sha256=7e93d45387e1d2dc0f886b0a4ebd1ffa81c466c85ef6d94955d2e7c981655e83
+var R
+  shape=(11, 60) dtype=float64
+  min=0.00465047 max=0.714554 mean=0.359602 sum=237.337 rms=0.415613
+  sha256=63bb2d97b085252eafd6f61c8f316c8bb972e25c32fbb56cb972d5165dbbe752
+var Rho
+  shape=(11, 60) dtype=float64
+  min=16.2558 max=383782 mean=7373.06 sum=4.86622e+06 rms=49719.6
+  sha256=452a687da6f50c304cbfd0c1ac3d31d8a5daf0e2f871f3fe3ad5703928a6ff1f
+var T
+  shape=(11, 60) dtype=float64
+  min=2.52611 max=2.52611 mean=2.52611 sum=1667.23 rms=2.52611
+  sha256=088989b3c46f29485cc565b8cbe7a19425d7a06f843c9420f6394589e78142bd
+var Vp
+  shape=(11, 60) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=569cfdcf139f915b2f1dabdfbc86320ec1c7d54e28c12a93132dae8ef4f91c83
+var Vr
+  shape=(11, 60) dtype=float64
+  min=500 max=500 mean=500 sum=330000 rms=500
+  sha256=3c481f65aaa45402a9b17a53115ba9de1e8ce740bb124140dbf404d588350917
+var Vt
+  shape=(11, 60) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=569cfdcf139f915b2f1dabdfbc86320ec1c7d54e28c12a93132dae8ef4f91c83
+var charge
+  shape=(1,) dtype=float64
+  min=1 max=1 mean=1 sum=1 rms=1
+  sha256=6c3c396ed6b5c36dcae172271f462051b1266b851e92df3deea8ac65478fd712
+var egrid
+  shape=(12,) dtype=float64
+  min=1 max=200 mean=44.4691 sum=533.629 rms=74.375
+  sha256=d6baed27c750ce4ae55d22b9d8255ccf660d6bda498a39e0feef191837a44a3f
+var mass
+  shape=(1,) dtype=float64
+  min=1 max=1 mean=1 sum=1 rms=1
+  sha256=6c3c396ed6b5c36dcae172271f462051b1266b851e92df3deea8ac65478fd712
+var mu
+  shape=(6,) dtype=float64
+  min=-0.833333 max=0.833333 mean=-5.55112e-17 sum=-3.33067e-16 rms=0.569275
+  sha256=9d3280f8656c6ff355e4b66ee9a8010bf1bb5c3ee9f11caaaa0f737496ca94d7
+var phiOffset
+  shape=(11,) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=10eef285deef7a4b7c82b22aa53589b7833df29de3814649c772bbd5c832f365
+var shell
+  shape=(60,) dtype=int32
+  min=0.0 max=59 mean=29.5 sum=1770 rms=34.2077
+  sha256=73d12d1733bd4b05c024ec5d6b4adbb1c9e8a1cd1afb48d6d904fcb536eadc40
+var time
+  shape=(11,) dtype=float64
+  min=0.125 max=3.875 mean=2 sum=22 rms=2.32513
+  sha256=78427705115680ca013e4a708a95938d218cd9c1e2355bc099e0f6754343a0f7
+var vgrid
+  shape=(12,) dtype=float64
+  min=13830.3 max=169732 mean=68463.1 sum=821558 rms=84493.5
+  sha256=caab3517fad11b848eecfe88d9db9482c1d3296fb95be80850c6a89c74427199
+file obs000008.nc
+var Bp
+  shape=(11, 60) dtype=float64
+  min=-269.254 max=-1.75236 mean=-11.7164 sum=-7732.8 rms=37.3202
+  sha256=dc998b45b8ee122563cd6c22ed6efb1c6512345b04d7406fa92d741b836c2497
+var Br
+  shape=(11, 60) dtype=float64
+  min=3.13365 max=73982 mean=1421.31 sum=938067 rms=9584.5
+  sha256=6ee756387e4f1cf8ddaf9b03f5e4877f318e24a345d5da98e6ec4ad12d10dc49
+var Bt
+  shape=(11, 60) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=569cfdcf139f915b2f1dabdfbc86320ec1c7d54e28c12a93132dae8ef4f91c83
+var Dist
+  shape=(11, 60, 1, 12, 6) dtype=float64
+  min=9.53193e-138 max=0.0184637 mean=3.94376e-05 sum=1.87408 rms=0.000706089
+  sha256=2a89e54d39353e910b787611f1f0256ae64809734826b297f055e98f6b5eb353
+var P
+  shape=(11, 60) dtype=float64
+  min=0.000535729 max=6.27341 mean=1.44089 sum=950.989 rms=2.6014
+  sha256=7604eb7dc1dfb30b67e46af38a67631245cf572c7d8b9b54bce801fdc22478ce
+var R
+  shape=(11, 60) dtype=float64
+  min=0.00465047 max=0.714554 mean=0.359602 sum=237.337 rms=0.415613
+  sha256=a98681dbacbcb76273b385a467f1fe2aeb888d69e953492012d703adfd8fa6e1
+var Rho
+  shape=(11, 60) dtype=float64
+  min=16.2558 max=383782 mean=7373.06 sum=4.86622e+06 rms=49719.6
+  sha256=776e4fa7c6b9f0b0c44604dc1fde4f643350eb99f17ceae93c874177c96f007b
+var T
+  shape=(11, 60) dtype=float64
+  min=1.15026 max=1.15026 mean=1.15026 sum=759.173 rms=1.15026
+  sha256=b18c9fe6baddc252ffdd7822dfc35a78307308adc224614d81e256e9d42903c3
+var Vp
+  shape=(11, 60) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=569cfdcf139f915b2f1dabdfbc86320ec1c7d54e28c12a93132dae8ef4f91c83
+var Vr
+  shape=(11, 60) dtype=float64
+  min=500 max=500 mean=500 sum=330000 rms=500
+  sha256=3c481f65aaa45402a9b17a53115ba9de1e8ce740bb124140dbf404d588350917
+var Vt
+  shape=(11, 60) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=569cfdcf139f915b2f1dabdfbc86320ec1c7d54e28c12a93132dae8ef4f91c83
+var charge
+  shape=(1,) dtype=float64
+  min=1 max=1 mean=1 sum=1 rms=1
+  sha256=6c3c396ed6b5c36dcae172271f462051b1266b851e92df3deea8ac65478fd712
+var egrid
+  shape=(12,) dtype=float64
+  min=1 max=200 mean=44.4691 sum=533.629 rms=74.375
+  sha256=d6baed27c750ce4ae55d22b9d8255ccf660d6bda498a39e0feef191837a44a3f
+var mass
+  shape=(1,) dtype=float64
+  min=1 max=1 mean=1 sum=1 rms=1
+  sha256=6c3c396ed6b5c36dcae172271f462051b1266b851e92df3deea8ac65478fd712
+var mu
+  shape=(6,) dtype=float64
+  min=-0.833333 max=0.833333 mean=-5.55112e-17 sum=-3.33067e-16 rms=0.569275
+  sha256=9d3280f8656c6ff355e4b66ee9a8010bf1bb5c3ee9f11caaaa0f737496ca94d7
+var phiOffset
+  shape=(11,) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=10eef285deef7a4b7c82b22aa53589b7833df29de3814649c772bbd5c832f365
+var shell
+  shape=(60,) dtype=int32
+  min=0.0 max=59 mean=29.5 sum=1770 rms=34.2077
+  sha256=73d12d1733bd4b05c024ec5d6b4adbb1c9e8a1cd1afb48d6d904fcb536eadc40
+var time
+  shape=(11,) dtype=float64
+  min=0.125 max=3.875 mean=2 sum=22 rms=2.32513
+  sha256=78427705115680ca013e4a708a95938d218cd9c1e2355bc099e0f6754343a0f7
+var vgrid
+  shape=(12,) dtype=float64
+  min=13830.3 max=169732 mean=68463.1 sum=821558 rms=84493.5
+  sha256=caab3517fad11b848eecfe88d9db9482c1d3296fb95be80850c6a89c74427199
+file obs000009.nc
+var Bp
+  shape=(11, 60) dtype=float64
+  min=-269.254 max=-1.75236 mean=-11.7164 sum=-7732.8 rms=37.3202
+  sha256=72bb870f13e4ae6b9a1c522c1d258bbb945d81e14c62718bc386644f6c8caaf5
+var Br
+  shape=(11, 60) dtype=float64
+  min=3.13365 max=73982 mean=1421.31 sum=938067 rms=9584.5
+  sha256=3e0b38e652223bcbdcb57f74dd63dc2ba1c12d8a3f967ea7957acaae5e1cf9b2
+var Bt
+  shape=(11, 60) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=569cfdcf139f915b2f1dabdfbc86320ec1c7d54e28c12a93132dae8ef4f91c83
+var Dist
+  shape=(11, 60, 1, 12, 6) dtype=float64
+  min=9.53193e-138 max=0.0184637 mean=3.94376e-05 sum=1.87408 rms=0.000706089
+  sha256=0038b595b67dca37065495f163e064c6753a3aea0f3b1ec6f0738f244d5c3a91
+var P
+  shape=(11, 60) dtype=float64
+  min=0.504908 max=2.04187 mean=1.27339 sum=840.437 rms=1.31895
+  sha256=f59e4e961a3746e60510176888346864b40b3f869a832af16fe3ffdefb97f19f
+var R
+  shape=(11, 60) dtype=float64
+  min=0.00465047 max=0.714554 mean=0.359602 sum=237.337 rms=0.415613
+  sha256=187e7df1b2e8c78bccf3df4936263755b2f14890c9aa8f63a321e28296dc6849
+var Rho
+  shape=(11, 60) dtype=float64
+  min=16.2558 max=383782 mean=7373.06 sum=4.86622e+06 rms=49719.6
+  sha256=e50e8f227144e9aac945f1e6cc2690588bb0bf59fbb7aec2a90462e1ab78e8a7
+var T
+  shape=(11, 60) dtype=float64
+  min=1.15026 max=1.15026 mean=1.15026 sum=759.173 rms=1.15026
+  sha256=683890caa16807b45115259cda31eefc1524f98e666370a8faf487916c0a5904
+var Vp
+  shape=(11, 60) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=569cfdcf139f915b2f1dabdfbc86320ec1c7d54e28c12a93132dae8ef4f91c83
+var Vr
+  shape=(11, 60) dtype=float64
+  min=500 max=500 mean=500 sum=330000 rms=500
+  sha256=3c481f65aaa45402a9b17a53115ba9de1e8ce740bb124140dbf404d588350917
+var Vt
+  shape=(11, 60) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=569cfdcf139f915b2f1dabdfbc86320ec1c7d54e28c12a93132dae8ef4f91c83
+var charge
+  shape=(1,) dtype=float64
+  min=1 max=1 mean=1 sum=1 rms=1
+  sha256=6c3c396ed6b5c36dcae172271f462051b1266b851e92df3deea8ac65478fd712
+var egrid
+  shape=(12,) dtype=float64
+  min=1 max=200 mean=44.4691 sum=533.629 rms=74.375
+  sha256=d6baed27c750ce4ae55d22b9d8255ccf660d6bda498a39e0feef191837a44a3f
+var mass
+  shape=(1,) dtype=float64
+  min=1 max=1 mean=1 sum=1 rms=1
+  sha256=6c3c396ed6b5c36dcae172271f462051b1266b851e92df3deea8ac65478fd712
+var mu
+  shape=(6,) dtype=float64
+  min=-0.833333 max=0.833333 mean=-5.55112e-17 sum=-3.33067e-16 rms=0.569275
+  sha256=9d3280f8656c6ff355e4b66ee9a8010bf1bb5c3ee9f11caaaa0f737496ca94d7
+var phiOffset
+  shape=(11,) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=10eef285deef7a4b7c82b22aa53589b7833df29de3814649c772bbd5c832f365
+var shell
+  shape=(60,) dtype=int32
+  min=0.0 max=59 mean=29.5 sum=1770 rms=34.2077
+  sha256=73d12d1733bd4b05c024ec5d6b4adbb1c9e8a1cd1afb48d6d904fcb536eadc40
+var time
+  shape=(11,) dtype=float64
+  min=0.125 max=3.875 mean=2 sum=22 rms=2.32513
+  sha256=78427705115680ca013e4a708a95938d218cd9c1e2355bc099e0f6754343a0f7
+var vgrid
+  shape=(12,) dtype=float64
+  min=13830.3 max=169732 mean=68463.1 sum=821558 rms=84493.5
+  sha256=caab3517fad11b848eecfe88d9db9482c1d3296fb95be80850c6a89c74427199
+file obs000010.nc
+var Bp
+  shape=(11, 60) dtype=float64
+  min=-269.254 max=-1.75236 mean=-11.7164 sum=-7732.8 rms=37.3202
+  sha256=70a916d7beafdd230a1abe63fb1389e5e4e5cbb857e371eecb86d9e4379379e6
+var Br
+  shape=(11, 60) dtype=float64
+  min=3.13365 max=73982 mean=1421.31 sum=938067 rms=9584.5
+  sha256=a657de62a18a8843b5f11c9af7767fda1f8db53ec24ec4d5be8e75db7654183a
+var Bt
+  shape=(11, 60) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=569cfdcf139f915b2f1dabdfbc86320ec1c7d54e28c12a93132dae8ef4f91c83
+var Dist
+  shape=(11, 60, 1, 12, 6) dtype=float64
+  min=9.53193e-138 max=0.0184637 mean=3.94376e-05 sum=1.87408 rms=0.000706089
+  sha256=b247e713fd42fb901ddf7a1cd0bdbd9ef3d5b325b3783a360a47f29b0847c309
+var P
+  shape=(11, 60) dtype=float64
+  min=0.000535729 max=6.27341 mean=1.44089 sum=950.989 rms=2.6014
+  sha256=1f2ae2fbcecd34238bde454e6e51f9bf2786eaaa0f9ec8a50174f29b9e33bcc7
+var R
+  shape=(11, 60) dtype=float64
+  min=0.00465047 max=0.714554 mean=0.359602 sum=237.337 rms=0.415613
+  sha256=7275eb2d03afe2f3ec9e78b9dfbc9f4d9ef1676d8332390925b7568afd9fb4c8
+var Rho
+  shape=(11, 60) dtype=float64
+  min=16.2558 max=383782 mean=7373.06 sum=4.86622e+06 rms=49719.6
+  sha256=9481fcbc6bc876214b1135a2f2a9eaf4ba31bc003a9a0ac254dccc591f20559d
+var T
+  shape=(11, 60) dtype=float64
+  min=1.99133 max=1.99133 mean=1.99133 sum=1314.28 rms=1.99133
+  sha256=9cba7e9eb67c469e505033dd573a9de01c1960e8284f93558c84f5d039217975
+var Vp
+  shape=(11, 60) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=569cfdcf139f915b2f1dabdfbc86320ec1c7d54e28c12a93132dae8ef4f91c83
+var Vr
+  shape=(11, 60) dtype=float64
+  min=500 max=500 mean=500 sum=330000 rms=500
+  sha256=3c481f65aaa45402a9b17a53115ba9de1e8ce740bb124140dbf404d588350917
+var Vt
+  shape=(11, 60) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=569cfdcf139f915b2f1dabdfbc86320ec1c7d54e28c12a93132dae8ef4f91c83
+var charge
+  shape=(1,) dtype=float64
+  min=1 max=1 mean=1 sum=1 rms=1
+  sha256=6c3c396ed6b5c36dcae172271f462051b1266b851e92df3deea8ac65478fd712
+var egrid
+  shape=(12,) dtype=float64
+  min=1 max=200 mean=44.4691 sum=533.629 rms=74.375
+  sha256=d6baed27c750ce4ae55d22b9d8255ccf660d6bda498a39e0feef191837a44a3f
+var mass
+  shape=(1,) dtype=float64
+  min=1 max=1 mean=1 sum=1 rms=1
+  sha256=6c3c396ed6b5c36dcae172271f462051b1266b851e92df3deea8ac65478fd712
+var mu
+  shape=(6,) dtype=float64
+  min=-0.833333 max=0.833333 mean=-5.55112e-17 sum=-3.33067e-16 rms=0.569275
+  sha256=9d3280f8656c6ff355e4b66ee9a8010bf1bb5c3ee9f11caaaa0f737496ca94d7
+var phiOffset
+  shape=(11,) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=10eef285deef7a4b7c82b22aa53589b7833df29de3814649c772bbd5c832f365
+var shell
+  shape=(60,) dtype=int32
+  min=0.0 max=59 mean=29.5 sum=1770 rms=34.2077
+  sha256=73d12d1733bd4b05c024ec5d6b4adbb1c9e8a1cd1afb48d6d904fcb536eadc40
+var time
+  shape=(11,) dtype=float64
+  min=0.125 max=3.875 mean=2 sum=22 rms=2.32513
+  sha256=78427705115680ca013e4a708a95938d218cd9c1e2355bc099e0f6754343a0f7
+var vgrid
+  shape=(12,) dtype=float64
+  min=13830.3 max=169732 mean=68463.1 sum=821558 rms=84493.5
+  sha256=caab3517fad11b848eecfe88d9db9482c1d3296fb95be80850c6a89c74427199
+file obs000011.nc
+var Bp
+  shape=(11, 60) dtype=float64
+  min=-269.254 max=-1.75236 mean=-11.7164 sum=-7732.8 rms=37.3202
+  sha256=56c0a5e9b69cd747277ec809e922946ef31b214c3377aaad41a591c5982c9fd7
+var Br
+  shape=(11, 60) dtype=float64
+  min=3.13365 max=73982 mean=1421.31 sum=938067 rms=9584.5
+  sha256=3a1295d2bab525c600854ca4fa4892cf30c7803a6a7639d32f57bd9b47a037d2
+var Bt
+  shape=(11, 60) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=569cfdcf139f915b2f1dabdfbc86320ec1c7d54e28c12a93132dae8ef4f91c83
+var Dist
+  shape=(11, 60, 1, 12, 6) dtype=float64
+  min=9.53193e-138 max=0.0184637 mean=3.94376e-05 sum=1.87408 rms=0.000706089
+  sha256=a5ac831ff35569a5f0d5a9be41b786754718a88c1bdd96557779f2df3696d1d6
+var P
+  shape=(11, 60) dtype=float64
+  min=0.504908 max=2.04187 mean=1.27339 sum=840.437 rms=1.31895
+  sha256=f82408a9e4229b1b54004bdbe1e9a92f0b63e08426fcd55d1b16ba928cbff44a
+var R
+  shape=(11, 60) dtype=float64
+  min=0.00465047 max=0.714554 mean=0.359602 sum=237.337 rms=0.415613
+  sha256=e7ab2524dbede38a588e8551c129ef4c009488ce6dc5ee2a40c3893a3d71d375
+var Rho
+  shape=(11, 60) dtype=float64
+  min=16.2558 max=383782 mean=7373.06 sum=4.86622e+06 rms=49719.6
+  sha256=c99e0e3f786031080706b00e08cfa6ccdc8481a75f76fe01d0a33e0ee1d8e98d
+var T
+  shape=(11, 60) dtype=float64
+  min=1.99133 max=1.99133 mean=1.99133 sum=1314.28 rms=1.99133
+  sha256=d13cb66c6a47c6dacbb88aa511fb549e2356b912f09f9108b6da43e7a37423bd
+var Vp
+  shape=(11, 60) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=569cfdcf139f915b2f1dabdfbc86320ec1c7d54e28c12a93132dae8ef4f91c83
+var Vr
+  shape=(11, 60) dtype=float64
+  min=500 max=500 mean=500 sum=330000 rms=500
+  sha256=3c481f65aaa45402a9b17a53115ba9de1e8ce740bb124140dbf404d588350917
+var Vt
+  shape=(11, 60) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=569cfdcf139f915b2f1dabdfbc86320ec1c7d54e28c12a93132dae8ef4f91c83
+var charge
+  shape=(1,) dtype=float64
+  min=1 max=1 mean=1 sum=1 rms=1
+  sha256=6c3c396ed6b5c36dcae172271f462051b1266b851e92df3deea8ac65478fd712
+var egrid
+  shape=(12,) dtype=float64
+  min=1 max=200 mean=44.4691 sum=533.629 rms=74.375
+  sha256=d6baed27c750ce4ae55d22b9d8255ccf660d6bda498a39e0feef191837a44a3f
+var mass
+  shape=(1,) dtype=float64
+  min=1 max=1 mean=1 sum=1 rms=1
+  sha256=6c3c396ed6b5c36dcae172271f462051b1266b851e92df3deea8ac65478fd712
+var mu
+  shape=(6,) dtype=float64
+  min=-0.833333 max=0.833333 mean=-5.55112e-17 sum=-3.33067e-16 rms=0.569275
+  sha256=9d3280f8656c6ff355e4b66ee9a8010bf1bb5c3ee9f11caaaa0f737496ca94d7
+var phiOffset
+  shape=(11,) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=10eef285deef7a4b7c82b22aa53589b7833df29de3814649c772bbd5c832f365
+var shell
+  shape=(60,) dtype=int32
+  min=0.0 max=59 mean=29.5 sum=1770 rms=34.2077
+  sha256=73d12d1733bd4b05c024ec5d6b4adbb1c9e8a1cd1afb48d6d904fcb536eadc40
+var time
+  shape=(11,) dtype=float64
+  min=0.125 max=3.875 mean=2 sum=22 rms=2.32513
+  sha256=78427705115680ca013e4a708a95938d218cd9c1e2355bc099e0f6754343a0f7
+var vgrid
+  shape=(12,) dtype=float64
+  min=13830.3 max=169732 mean=68463.1 sum=821558 rms=84493.5
+  sha256=caab3517fad11b848eecfe88d9db9482c1d3296fb95be80850c6a89c74427199
+file obs000012.nc
+var Bp
+  shape=(11, 60) dtype=float64
+  min=-269.254 max=-1.75236 mean=-11.7164 sum=-7732.8 rms=37.3202
+  sha256=19f101ab9fbb5a16a30bfe585bdd42b301b81c85204a22551a6a46e8d31f1257
+var Br
+  shape=(11, 60) dtype=float64
+  min=3.13365 max=73982 mean=1421.31 sum=938067 rms=9584.5
+  sha256=072abf0072021270e880dfc9efaeafcc4f9209a65040afa736dd07c9599ca6d7
+var Bt
+  shape=(11, 60) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=569cfdcf139f915b2f1dabdfbc86320ec1c7d54e28c12a93132dae8ef4f91c83
+var Dist
+  shape=(11, 60, 1, 12, 6) dtype=float64
+  min=9.53193e-138 max=0.0184637 mean=3.94376e-05 sum=1.87408 rms=0.000706089
+  sha256=f6d388c09f020f3613af4d9134820d3144aa369e7496c090c8a45360c007d5a4
+var P
+  shape=(11, 60) dtype=float64
+  min=2.71921 max=4.25617 mean=3.48769 sum=2301.87 rms=3.50458
+  sha256=bf88aa2c2e6b327a0ab6d06d23e64a4b98e09ee3c6fe96a254a70ee36f9dfcc7
+var R
+  shape=(11, 60) dtype=float64
+  min=0.00465047 max=0.714554 mean=0.359602 sum=237.337 rms=0.415613
+  sha256=3eb2ebf7f599c414f7b00c538b1b07065a82d423f06a15c9e211b60dcc131f35
+var Rho
+  shape=(11, 60) dtype=float64
+  min=16.2558 max=383782 mean=7373.06 sum=4.86622e+06 rms=49719.6
+  sha256=dbe2003245982eeb4dc090a206cf35313658c6b28bea5472d3bb532126d7d505
+var T
+  shape=(11, 60) dtype=float64
+  min=1.15026 max=1.15026 mean=1.15026 sum=759.173 rms=1.15026
+  sha256=613d8f1f1266d0ce33e7d35cf1023db33c9a007b44da6ad64b731c247db922d9
+var Vp
+  shape=(11, 60) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=569cfdcf139f915b2f1dabdfbc86320ec1c7d54e28c12a93132dae8ef4f91c83
+var Vr
+  shape=(11, 60) dtype=float64
+  min=500 max=500 mean=500 sum=330000 rms=500
+  sha256=3c481f65aaa45402a9b17a53115ba9de1e8ce740bb124140dbf404d588350917
+var Vt
+  shape=(11, 60) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=569cfdcf139f915b2f1dabdfbc86320ec1c7d54e28c12a93132dae8ef4f91c83
+var charge
+  shape=(1,) dtype=float64
+  min=1 max=1 mean=1 sum=1 rms=1
+  sha256=6c3c396ed6b5c36dcae172271f462051b1266b851e92df3deea8ac65478fd712
+var egrid
+  shape=(12,) dtype=float64
+  min=1 max=200 mean=44.4691 sum=533.629 rms=74.375
+  sha256=d6baed27c750ce4ae55d22b9d8255ccf660d6bda498a39e0feef191837a44a3f
+var mass
+  shape=(1,) dtype=float64
+  min=1 max=1 mean=1 sum=1 rms=1
+  sha256=6c3c396ed6b5c36dcae172271f462051b1266b851e92df3deea8ac65478fd712
+var mu
+  shape=(6,) dtype=float64
+  min=-0.833333 max=0.833333 mean=-5.55112e-17 sum=-3.33067e-16 rms=0.569275
+  sha256=9d3280f8656c6ff355e4b66ee9a8010bf1bb5c3ee9f11caaaa0f737496ca94d7
+var phiOffset
+  shape=(11,) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=10eef285deef7a4b7c82b22aa53589b7833df29de3814649c772bbd5c832f365
+var shell
+  shape=(60,) dtype=int32
+  min=0.0 max=59 mean=29.5 sum=1770 rms=34.2077
+  sha256=73d12d1733bd4b05c024ec5d6b4adbb1c9e8a1cd1afb48d6d904fcb536eadc40
+var time
+  shape=(11,) dtype=float64
+  min=0.125 max=3.875 mean=2 sum=22 rms=2.32513
+  sha256=78427705115680ca013e4a708a95938d218cd9c1e2355bc099e0f6754343a0f7
+var vgrid
+  shape=(12,) dtype=float64
+  min=13830.3 max=169732 mean=68463.1 sum=821558 rms=84493.5
+  sha256=caab3517fad11b848eecfe88d9db9482c1d3296fb95be80850c6a89c74427199
+file obs000013.nc
+var Bp
+  shape=(11, 60) dtype=float64
+  min=-269.254 max=-1.75236 mean=-11.7164 sum=-7732.8 rms=37.3202
+  sha256=4363046320471c4787a708686764ed411864feee2ef1fc03f9eeeeec46b7fcf3
+var Br
+  shape=(11, 60) dtype=float64
+  min=3.13365 max=73982 mean=1421.31 sum=938067 rms=9584.5
+  sha256=8329125133563d448278ebf1967f0fccbb888a8ee7cfa351d1d3df772ccfe6fd
+var Bt
+  shape=(11, 60) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=569cfdcf139f915b2f1dabdfbc86320ec1c7d54e28c12a93132dae8ef4f91c83
+var Dist
+  shape=(11, 60, 1, 12, 6) dtype=float64
+  min=9.53193e-138 max=0.0184637 mean=3.94376e-05 sum=1.87408 rms=0.000706089
+  sha256=66e88f7a7b53f88754ee58133da8c422a32000d0fd2750d61c96f2fb685650bc
+var P
+  shape=(11, 60) dtype=float64
+  min=3.6465 max=5.18346 mean=4.41498 sum=2913.89 rms=4.42834
+  sha256=0e49bd5b042db588c53d7ed320594d9b1909309ba3224db07e9a350a5a5297aa
+var R
+  shape=(11, 60) dtype=float64
+  min=0.00465047 max=0.714554 mean=0.359602 sum=237.337 rms=0.415613
+  sha256=00b12b8678e21ed9a1c2ae361a97a61f35f6c7d36d491fdb87a0e39bd2387f8b
+var Rho
+  shape=(11, 60) dtype=float64
+  min=16.2558 max=383782 mean=7373.06 sum=4.86622e+06 rms=49719.6
+  sha256=0a56bac212f33c4ec510d8a8bd5502e6bb5de9cdc8d3e3dd9a6268ae4ef5a64f
+var T
+  shape=(11, 60) dtype=float64
+  min=1.15026 max=1.15026 mean=1.15026 sum=759.173 rms=1.15026
+  sha256=9db1e5524e75135390896f51ef1a10680ed6249f38b5807da305bc47dce11f53
+var Vp
+  shape=(11, 60) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=569cfdcf139f915b2f1dabdfbc86320ec1c7d54e28c12a93132dae8ef4f91c83
+var Vr
+  shape=(11, 60) dtype=float64
+  min=500 max=500 mean=500 sum=330000 rms=500
+  sha256=3c481f65aaa45402a9b17a53115ba9de1e8ce740bb124140dbf404d588350917
+var Vt
+  shape=(11, 60) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=569cfdcf139f915b2f1dabdfbc86320ec1c7d54e28c12a93132dae8ef4f91c83
+var charge
+  shape=(1,) dtype=float64
+  min=1 max=1 mean=1 sum=1 rms=1
+  sha256=6c3c396ed6b5c36dcae172271f462051b1266b851e92df3deea8ac65478fd712
+var egrid
+  shape=(12,) dtype=float64
+  min=1 max=200 mean=44.4691 sum=533.629 rms=74.375
+  sha256=d6baed27c750ce4ae55d22b9d8255ccf660d6bda498a39e0feef191837a44a3f
+var mass
+  shape=(1,) dtype=float64
+  min=1 max=1 mean=1 sum=1 rms=1
+  sha256=6c3c396ed6b5c36dcae172271f462051b1266b851e92df3deea8ac65478fd712
+var mu
+  shape=(6,) dtype=float64
+  min=-0.833333 max=0.833333 mean=-5.55112e-17 sum=-3.33067e-16 rms=0.569275
+  sha256=9d3280f8656c6ff355e4b66ee9a8010bf1bb5c3ee9f11caaaa0f737496ca94d7
+var phiOffset
+  shape=(11,) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=10eef285deef7a4b7c82b22aa53589b7833df29de3814649c772bbd5c832f365
+var shell
+  shape=(60,) dtype=int32
+  min=0.0 max=59 mean=29.5 sum=1770 rms=34.2077
+  sha256=73d12d1733bd4b05c024ec5d6b4adbb1c9e8a1cd1afb48d6d904fcb536eadc40
+var time
+  shape=(11,) dtype=float64
+  min=0.125 max=3.875 mean=2 sum=22 rms=2.32513
+  sha256=78427705115680ca013e4a708a95938d218cd9c1e2355bc099e0f6754343a0f7
+var vgrid
+  shape=(12,) dtype=float64
+  min=13830.3 max=169732 mean=68463.1 sum=821558 rms=84493.5
+  sha256=caab3517fad11b848eecfe88d9db9482c1d3296fb95be80850c6a89c74427199
+file obs000014.nc
+var Bp
+  shape=(11, 60) dtype=float64
+  min=-269.254 max=-1.75236 mean=-11.7164 sum=-7732.8 rms=37.3202
+  sha256=f650c1e40d18760bbfa877e1eef6bd6ffdd5588fee822b0faaadfb9b156778e6
+var Br
+  shape=(11, 60) dtype=float64
+  min=3.13365 max=73982 mean=1421.31 sum=938067 rms=9584.5
+  sha256=9578e3b7c316449ea1d7eba39b3453111128bc542d896dc6c666bd8c6d0357ae
+var Bt
+  shape=(11, 60) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=569cfdcf139f915b2f1dabdfbc86320ec1c7d54e28c12a93132dae8ef4f91c83
+var Dist
+  shape=(11, 60, 1, 12, 6) dtype=float64
+  min=9.53193e-138 max=0.0184637 mean=3.94376e-05 sum=1.87408 rms=0.000706089
+  sha256=3fac200c695006504cb7f00637e074336a17e01df9cf3169947dd883743bebd1
+var P
+  shape=(11, 60) dtype=float64
+  min=2.71921 max=4.25617 mean=3.48769 sum=2301.87 rms=3.50458
+  sha256=11162dc95ba2747bce8da63744defdcfe6bb05a31aa8f3dd1cf0ce256bc0e942
+var R
+  shape=(11, 60) dtype=float64
+  min=0.00465047 max=0.714554 mean=0.359602 sum=237.337 rms=0.415613
+  sha256=ca4d0e21fad736dceff22d542629a43dd19f7b5d6b98ccad9b7f081ac4e02928
+var Rho
+  shape=(11, 60) dtype=float64
+  min=16.2558 max=383782 mean=7373.06 sum=4.86622e+06 rms=49719.6
+  sha256=8b0f7831ded83c5623d030c8fa22cabe1c354fa3132903448e8ab1becfa02637
+var T
+  shape=(11, 60) dtype=float64
+  min=1.99133 max=1.99133 mean=1.99133 sum=1314.28 rms=1.99133
+  sha256=e78c10c3d0ea0fed6eea3e08833101e75e98d627a6bdc045712e1a2ec5ab9b6c
+var Vp
+  shape=(11, 60) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=569cfdcf139f915b2f1dabdfbc86320ec1c7d54e28c12a93132dae8ef4f91c83
+var Vr
+  shape=(11, 60) dtype=float64
+  min=500 max=500 mean=500 sum=330000 rms=500
+  sha256=3c481f65aaa45402a9b17a53115ba9de1e8ce740bb124140dbf404d588350917
+var Vt
+  shape=(11, 60) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=569cfdcf139f915b2f1dabdfbc86320ec1c7d54e28c12a93132dae8ef4f91c83
+var charge
+  shape=(1,) dtype=float64
+  min=1 max=1 mean=1 sum=1 rms=1
+  sha256=6c3c396ed6b5c36dcae172271f462051b1266b851e92df3deea8ac65478fd712
+var egrid
+  shape=(12,) dtype=float64
+  min=1 max=200 mean=44.4691 sum=533.629 rms=74.375
+  sha256=d6baed27c750ce4ae55d22b9d8255ccf660d6bda498a39e0feef191837a44a3f
+var mass
+  shape=(1,) dtype=float64
+  min=1 max=1 mean=1 sum=1 rms=1
+  sha256=6c3c396ed6b5c36dcae172271f462051b1266b851e92df3deea8ac65478fd712
+var mu
+  shape=(6,) dtype=float64
+  min=-0.833333 max=0.833333 mean=-5.55112e-17 sum=-3.33067e-16 rms=0.569275
+  sha256=9d3280f8656c6ff355e4b66ee9a8010bf1bb5c3ee9f11caaaa0f737496ca94d7
+var phiOffset
+  shape=(11,) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=10eef285deef7a4b7c82b22aa53589b7833df29de3814649c772bbd5c832f365
+var shell
+  shape=(60,) dtype=int32
+  min=0.0 max=59 mean=29.5 sum=1770 rms=34.2077
+  sha256=73d12d1733bd4b05c024ec5d6b4adbb1c9e8a1cd1afb48d6d904fcb536eadc40
+var time
+  shape=(11,) dtype=float64
+  min=0.125 max=3.875 mean=2 sum=22 rms=2.32513
+  sha256=78427705115680ca013e4a708a95938d218cd9c1e2355bc099e0f6754343a0f7
+var vgrid
+  shape=(12,) dtype=float64
+  min=13830.3 max=169732 mean=68463.1 sum=821558 rms=84493.5
+  sha256=caab3517fad11b848eecfe88d9db9482c1d3296fb95be80850c6a89c74427199
+file obs000015.nc
+var Bp
+  shape=(11, 60) dtype=float64
+  min=-269.254 max=-1.75236 mean=-11.7164 sum=-7732.8 rms=37.3202
+  sha256=3ef6af629722a5314f924257740c33d9380cc2c057b7232abe67c04babdd7ecc
+var Br
+  shape=(11, 60) dtype=float64
+  min=3.13365 max=73982 mean=1421.31 sum=938067 rms=9584.5
+  sha256=d28b777ddc662486f767035cbfb1e26bd11f83fb0782170afb63fbbdde4e19c3
+var Bt
+  shape=(11, 60) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=569cfdcf139f915b2f1dabdfbc86320ec1c7d54e28c12a93132dae8ef4f91c83
+var Dist
+  shape=(11, 60, 1, 12, 6) dtype=float64
+  min=9.53193e-138 max=0.0184637 mean=3.94376e-05 sum=1.87408 rms=0.000706089
+  sha256=4eb0d011453fd7e21a7fc2da8e76361d31983b11e8d939347417d885b9b4308b
+var P
+  shape=(11, 60) dtype=float64
+  min=3.6465 max=5.18346 mean=4.41498 sum=2913.89 rms=4.42834
+  sha256=00ae4bfacf86c0a2ecff62623e40deb73453b53276fbbc061cedee1484ca0683
+var R
+  shape=(11, 60) dtype=float64
+  min=0.00465047 max=0.714554 mean=0.359602 sum=237.337 rms=0.415613
+  sha256=2c378ec3acde902b6dbdb70e46a919466f41f21f4ba62b456661bc21348da2b3
+var Rho
+  shape=(11, 60) dtype=float64
+  min=16.2558 max=383782 mean=7373.06 sum=4.86622e+06 rms=49719.6
+  sha256=8c25445458328de97951914084e08ad7d376ece0f27c9eecceec15c8cf0ba4a2
+var T
+  shape=(11, 60) dtype=float64
+  min=1.99133 max=1.99133 mean=1.99133 sum=1314.28 rms=1.99133
+  sha256=78a8634918fe9f6519aa4a57303f3dc72973b370290962788c7fba77e4782232
+var Vp
+  shape=(11, 60) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=569cfdcf139f915b2f1dabdfbc86320ec1c7d54e28c12a93132dae8ef4f91c83
+var Vr
+  shape=(11, 60) dtype=float64
+  min=500 max=500 mean=500 sum=330000 rms=500
+  sha256=3c481f65aaa45402a9b17a53115ba9de1e8ce740bb124140dbf404d588350917
+var Vt
+  shape=(11, 60) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=569cfdcf139f915b2f1dabdfbc86320ec1c7d54e28c12a93132dae8ef4f91c83
+var charge
+  shape=(1,) dtype=float64
+  min=1 max=1 mean=1 sum=1 rms=1
+  sha256=6c3c396ed6b5c36dcae172271f462051b1266b851e92df3deea8ac65478fd712
+var egrid
+  shape=(12,) dtype=float64
+  min=1 max=200 mean=44.4691 sum=533.629 rms=74.375
+  sha256=d6baed27c750ce4ae55d22b9d8255ccf660d6bda498a39e0feef191837a44a3f
+var mass
+  shape=(1,) dtype=float64
+  min=1 max=1 mean=1 sum=1 rms=1
+  sha256=6c3c396ed6b5c36dcae172271f462051b1266b851e92df3deea8ac65478fd712
+var mu
+  shape=(6,) dtype=float64
+  min=-0.833333 max=0.833333 mean=-5.55112e-17 sum=-3.33067e-16 rms=0.569275
+  sha256=9d3280f8656c6ff355e4b66ee9a8010bf1bb5c3ee9f11caaaa0f737496ca94d7
+var phiOffset
+  shape=(11,) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=10eef285deef7a4b7c82b22aa53589b7833df29de3814649c772bbd5c832f365
+var shell
+  shape=(60,) dtype=int32
+  min=0.0 max=59 mean=29.5 sum=1770 rms=34.2077
+  sha256=73d12d1733bd4b05c024ec5d6b4adbb1c9e8a1cd1afb48d6d904fcb536eadc40
+var time
+  shape=(11,) dtype=float64
+  min=0.125 max=3.875 mean=2 sum=22 rms=2.32513
+  sha256=78427705115680ca013e4a708a95938d218cd9c1e2355bc099e0f6754343a0f7
+var vgrid
+  shape=(12,) dtype=float64
+  min=13830.3 max=169732 mean=68463.1 sum=821558 rms=84493.5
+  sha256=caab3517fad11b848eecfe88d9db9482c1d3296fb95be80850c6a89c74427199
+file obs000016.nc
+var Bp
+  shape=(11, 60) dtype=float64
+  min=-269.254 max=-1.75236 mean=-11.7164 sum=-7732.8 rms=37.3202
+  sha256=a425d76d35cd009968caaa1300d302f1ba915d5a0085027422b8cf862af35e05
+var Br
+  shape=(11, 60) dtype=float64
+  min=3.13365 max=73982 mean=1421.31 sum=938067 rms=9584.5
+  sha256=e2f97975e2a30d612298ac8ac7d1804c9a566b72198bace225875e13e7f3d90d
+var Bt
+  shape=(11, 60) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=569cfdcf139f915b2f1dabdfbc86320ec1c7d54e28c12a93132dae8ef4f91c83
+var Dist
+  shape=(11, 60, 1, 12, 6) dtype=float64
+  min=9.53193e-138 max=0.0184637 mean=3.94376e-05 sum=1.87408 rms=0.000706089
+  sha256=5b06a61cd8591cf6a10992e395c5643720623d633c66bc14a3c645ac54152b46
+var P
+  shape=(11, 60) dtype=float64
+  min=1.14841 max=2.68537 mean=1.91689 sum=1265.15 rms=1.94745
+  sha256=1f757477a8208afb01ebb008690eebabea04fb3afef27b0b90d1184c481d48cd
+var R
+  shape=(11, 60) dtype=float64
+  min=0.00465047 max=0.714554 mean=0.359602 sum=237.337 rms=0.415613
+  sha256=13aad63fa300a82499685a656e9735cdb0562ba958989dcc3248c2344de3e119
+var Rho
+  shape=(11, 60) dtype=float64
+  min=16.2558 max=383782 mean=7373.06 sum=4.86622e+06 rms=49719.6
+  sha256=a9f381f4586110f097dba5834fc925e8f0162f593e4d4edde5c6c42682884c05
+var T
+  shape=(11, 60) dtype=float64
+  min=1.15026 max=1.15026 mean=1.15026 sum=759.173 rms=1.15026
+  sha256=6fd58484777bd3215e23e89a08bc514a5993c5bcb2b5a71ac12e42ab72de5a4d
+var Vp
+  shape=(11, 60) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=569cfdcf139f915b2f1dabdfbc86320ec1c7d54e28c12a93132dae8ef4f91c83
+var Vr
+  shape=(11, 60) dtype=float64
+  min=500 max=500 mean=500 sum=330000 rms=500
+  sha256=3c481f65aaa45402a9b17a53115ba9de1e8ce740bb124140dbf404d588350917
+var Vt
+  shape=(11, 60) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=569cfdcf139f915b2f1dabdfbc86320ec1c7d54e28c12a93132dae8ef4f91c83
+var charge
+  shape=(1,) dtype=float64
+  min=1 max=1 mean=1 sum=1 rms=1
+  sha256=6c3c396ed6b5c36dcae172271f462051b1266b851e92df3deea8ac65478fd712
+var egrid
+  shape=(12,) dtype=float64
+  min=1 max=200 mean=44.4691 sum=533.629 rms=74.375
+  sha256=d6baed27c750ce4ae55d22b9d8255ccf660d6bda498a39e0feef191837a44a3f
+var mass
+  shape=(1,) dtype=float64
+  min=1 max=1 mean=1 sum=1 rms=1
+  sha256=6c3c396ed6b5c36dcae172271f462051b1266b851e92df3deea8ac65478fd712
+var mu
+  shape=(6,) dtype=float64
+  min=-0.833333 max=0.833333 mean=-5.55112e-17 sum=-3.33067e-16 rms=0.569275
+  sha256=9d3280f8656c6ff355e4b66ee9a8010bf1bb5c3ee9f11caaaa0f737496ca94d7
+var phiOffset
+  shape=(11,) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=10eef285deef7a4b7c82b22aa53589b7833df29de3814649c772bbd5c832f365
+var shell
+  shape=(60,) dtype=int32
+  min=0.0 max=59 mean=29.5 sum=1770 rms=34.2077
+  sha256=73d12d1733bd4b05c024ec5d6b4adbb1c9e8a1cd1afb48d6d904fcb536eadc40
+var time
+  shape=(11,) dtype=float64
+  min=0.125 max=3.875 mean=2 sum=22 rms=2.32513
+  sha256=78427705115680ca013e4a708a95938d218cd9c1e2355bc099e0f6754343a0f7
+var vgrid
+  shape=(12,) dtype=float64
+  min=13830.3 max=169732 mean=68463.1 sum=821558 rms=84493.5
+  sha256=caab3517fad11b848eecfe88d9db9482c1d3296fb95be80850c6a89c74427199
+file obs000017.nc
+var Bp
+  shape=(11, 60) dtype=float64
+  min=-269.254 max=-1.75236 mean=-11.7164 sum=-7732.8 rms=37.3202
+  sha256=67d13a0235ed75a2c20e9acad2e5164c383cb98c51cecade6bd437a0fe748d3e
+var Br
+  shape=(11, 60) dtype=float64
+  min=3.13365 max=73982 mean=1421.31 sum=938067 rms=9584.5
+  sha256=8163c27aaf8af46632d86dc59a72434d5dff3d841e21c07b71af3aac73cab921
+var Bt
+  shape=(11, 60) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=569cfdcf139f915b2f1dabdfbc86320ec1c7d54e28c12a93132dae8ef4f91c83
+var Dist
+  shape=(11, 60, 1, 12, 6) dtype=float64
+  min=9.53193e-138 max=0.0184637 mean=3.94376e-05 sum=1.87408 rms=0.000706089
+  sha256=d30695e6e8dc8acff4c0ceddc146762e7c4c1c02bedcf42496419141b107c2bd
+var P
+  shape=(11, 60) dtype=float64
+  min=2.0757 max=3.61267 mean=2.84419 sum=1877.16 rms=2.86487
+  sha256=b6143c8683e4a02c36ca7f420189b23828014434c74455360b8105bf113a62ae
+var R
+  shape=(11, 60) dtype=float64
+  min=0.00465047 max=0.714554 mean=0.359602 sum=237.337 rms=0.415613
+  sha256=91c4b69ac067ac7be8aa3d22b1f70d27f256399b428eb5155c70976a056773ab
+var Rho
+  shape=(11, 60) dtype=float64
+  min=16.2558 max=383782 mean=7373.06 sum=4.86622e+06 rms=49719.6
+  sha256=a686aa8159a8d938f46576040ee2665f18c8a1b18ced076fe57bde9bec2b81ea
+var T
+  shape=(11, 60) dtype=float64
+  min=1.15026 max=1.15026 mean=1.15026 sum=759.173 rms=1.15026
+  sha256=92047fd8723cd4bc31562e5b94bf5ef3ee12481fae424682b39f60ffa34e6cb2
+var Vp
+  shape=(11, 60) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=569cfdcf139f915b2f1dabdfbc86320ec1c7d54e28c12a93132dae8ef4f91c83
+var Vr
+  shape=(11, 60) dtype=float64
+  min=500 max=500 mean=500 sum=330000 rms=500
+  sha256=3c481f65aaa45402a9b17a53115ba9de1e8ce740bb124140dbf404d588350917
+var Vt
+  shape=(11, 60) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=569cfdcf139f915b2f1dabdfbc86320ec1c7d54e28c12a93132dae8ef4f91c83
+var charge
+  shape=(1,) dtype=float64
+  min=1 max=1 mean=1 sum=1 rms=1
+  sha256=6c3c396ed6b5c36dcae172271f462051b1266b851e92df3deea8ac65478fd712
+var egrid
+  shape=(12,) dtype=float64
+  min=1 max=200 mean=44.4691 sum=533.629 rms=74.375
+  sha256=d6baed27c750ce4ae55d22b9d8255ccf660d6bda498a39e0feef191837a44a3f
+var mass
+  shape=(1,) dtype=float64
+  min=1 max=1 mean=1 sum=1 rms=1
+  sha256=6c3c396ed6b5c36dcae172271f462051b1266b851e92df3deea8ac65478fd712
+var mu
+  shape=(6,) dtype=float64
+  min=-0.833333 max=0.833333 mean=-5.55112e-17 sum=-3.33067e-16 rms=0.569275
+  sha256=9d3280f8656c6ff355e4b66ee9a8010bf1bb5c3ee9f11caaaa0f737496ca94d7
+var phiOffset
+  shape=(11,) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=10eef285deef7a4b7c82b22aa53589b7833df29de3814649c772bbd5c832f365
+var shell
+  shape=(60,) dtype=int32
+  min=0.0 max=59 mean=29.5 sum=1770 rms=34.2077
+  sha256=73d12d1733bd4b05c024ec5d6b4adbb1c9e8a1cd1afb48d6d904fcb536eadc40
+var time
+  shape=(11,) dtype=float64
+  min=0.125 max=3.875 mean=2 sum=22 rms=2.32513
+  sha256=78427705115680ca013e4a708a95938d218cd9c1e2355bc099e0f6754343a0f7
+var vgrid
+  shape=(12,) dtype=float64
+  min=13830.3 max=169732 mean=68463.1 sum=821558 rms=84493.5
+  sha256=caab3517fad11b848eecfe88d9db9482c1d3296fb95be80850c6a89c74427199
+file obs000018.nc
+var Bp
+  shape=(11, 60) dtype=float64
+  min=-269.254 max=-1.75236 mean=-11.7164 sum=-7732.8 rms=37.3202
+  sha256=ce8d9d5f0f80cf8076e04d26c997a89dd345f343e008c84ff47d08292e98c3f1
+var Br
+  shape=(11, 60) dtype=float64
+  min=3.13365 max=73982 mean=1421.31 sum=938067 rms=9584.5
+  sha256=d9736b9ce6d11256411dd71d4c5d72aa5a9a4206681ca92be717995c308128e6
+var Bt
+  shape=(11, 60) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=569cfdcf139f915b2f1dabdfbc86320ec1c7d54e28c12a93132dae8ef4f91c83
+var Dist
+  shape=(11, 60, 1, 12, 6) dtype=float64
+  min=9.53193e-138 max=0.0184637 mean=3.94376e-05 sum=1.87408 rms=0.000706089
+  sha256=b98242c9e645d5c97a09385de5b929bddd632fa4603c5b1aefd14815b418c96f
+var P
+  shape=(11, 60) dtype=float64
+  min=1.14841 max=2.68537 mean=1.91689 sum=1265.15 rms=1.94745
+  sha256=e6c481acf02ba7fea1f880ea597dcd7ed4f2cbfc8f29443f1b6a41ec0bb8a844
+var R
+  shape=(11, 60) dtype=float64
+  min=0.00465047 max=0.714554 mean=0.359602 sum=237.337 rms=0.415613
+  sha256=c3fdccd05fd63e823bf59af200644e239f82f858f87c94f175d25bd42e2c1994
+var Rho
+  shape=(11, 60) dtype=float64
+  min=16.2558 max=383782 mean=7373.06 sum=4.86622e+06 rms=49719.6
+  sha256=96dc1add3fa7c8367998f2542cb51cc8ab860923133331740604fb9125ded35e
+var T
+  shape=(11, 60) dtype=float64
+  min=1.99133 max=1.99133 mean=1.99133 sum=1314.28 rms=1.99133
+  sha256=719f4ccf7248acc7483f9d042f6993bb8c63e155558f08d6dbb87dc508f5fa3f
+var Vp
+  shape=(11, 60) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=569cfdcf139f915b2f1dabdfbc86320ec1c7d54e28c12a93132dae8ef4f91c83
+var Vr
+  shape=(11, 60) dtype=float64
+  min=500 max=500 mean=500 sum=330000 rms=500
+  sha256=3c481f65aaa45402a9b17a53115ba9de1e8ce740bb124140dbf404d588350917
+var Vt
+  shape=(11, 60) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=569cfdcf139f915b2f1dabdfbc86320ec1c7d54e28c12a93132dae8ef4f91c83
+var charge
+  shape=(1,) dtype=float64
+  min=1 max=1 mean=1 sum=1 rms=1
+  sha256=6c3c396ed6b5c36dcae172271f462051b1266b851e92df3deea8ac65478fd712
+var egrid
+  shape=(12,) dtype=float64
+  min=1 max=200 mean=44.4691 sum=533.629 rms=74.375
+  sha256=d6baed27c750ce4ae55d22b9d8255ccf660d6bda498a39e0feef191837a44a3f
+var mass
+  shape=(1,) dtype=float64
+  min=1 max=1 mean=1 sum=1 rms=1
+  sha256=6c3c396ed6b5c36dcae172271f462051b1266b851e92df3deea8ac65478fd712
+var mu
+  shape=(6,) dtype=float64
+  min=-0.833333 max=0.833333 mean=-5.55112e-17 sum=-3.33067e-16 rms=0.569275
+  sha256=9d3280f8656c6ff355e4b66ee9a8010bf1bb5c3ee9f11caaaa0f737496ca94d7
+var phiOffset
+  shape=(11,) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=10eef285deef7a4b7c82b22aa53589b7833df29de3814649c772bbd5c832f365
+var shell
+  shape=(60,) dtype=int32
+  min=0.0 max=59 mean=29.5 sum=1770 rms=34.2077
+  sha256=73d12d1733bd4b05c024ec5d6b4adbb1c9e8a1cd1afb48d6d904fcb536eadc40
+var time
+  shape=(11,) dtype=float64
+  min=0.125 max=3.875 mean=2 sum=22 rms=2.32513
+  sha256=78427705115680ca013e4a708a95938d218cd9c1e2355bc099e0f6754343a0f7
+var vgrid
+  shape=(12,) dtype=float64
+  min=13830.3 max=169732 mean=68463.1 sum=821558 rms=84493.5
+  sha256=caab3517fad11b848eecfe88d9db9482c1d3296fb95be80850c6a89c74427199
+file obs000019.nc
+var Bp
+  shape=(11, 60) dtype=float64
+  min=-269.254 max=-1.75236 mean=-11.7164 sum=-7732.8 rms=37.3202
+  sha256=6c6702131ae4c96c926c7ea89b6717752365eab93e601796ba6efcd7124f9123
+var Br
+  shape=(11, 60) dtype=float64
+  min=3.13365 max=73982 mean=1421.31 sum=938067 rms=9584.5
+  sha256=c65626079eb411174f508f09d0786bc0e3a85014afb023e7e44159903be695a2
+var Bt
+  shape=(11, 60) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=569cfdcf139f915b2f1dabdfbc86320ec1c7d54e28c12a93132dae8ef4f91c83
+var Dist
+  shape=(11, 60, 1, 12, 6) dtype=float64
+  min=9.53193e-138 max=0.0184637 mean=3.94376e-05 sum=1.87408 rms=0.000706089
+  sha256=c67a8b88d61638978d565b66845de490b6a9f95110ec9dfa755019fad4f6a327
+var P
+  shape=(11, 60) dtype=float64
+  min=2.0757 max=3.61267 mean=2.84419 sum=1877.16 rms=2.86487
+  sha256=55b49d056456209bbcd3f90b475eaf32c42fa577f7785b1cd9d80f1de8365e52
+var R
+  shape=(11, 60) dtype=float64
+  min=0.00465047 max=0.714554 mean=0.359602 sum=237.337 rms=0.415613
+  sha256=75fd2d536cf74291fec26fde4cc3b4329e3c9c6efcd364cf852f673f56faa1e8
+var Rho
+  shape=(11, 60) dtype=float64
+  min=16.2558 max=383782 mean=7373.06 sum=4.86622e+06 rms=49719.6
+  sha256=e1cea26e7821e40388d82ae60d53092d286f58501fadce727f9f7178d84d2ba2
+var T
+  shape=(11, 60) dtype=float64
+  min=1.99133 max=1.99133 mean=1.99133 sum=1314.28 rms=1.99133
+  sha256=54d8918e9964483e116b7ecbeacf654af880cb383e1f360bd92976b8a7ff5b5b
+var Vp
+  shape=(11, 60) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=569cfdcf139f915b2f1dabdfbc86320ec1c7d54e28c12a93132dae8ef4f91c83
+var Vr
+  shape=(11, 60) dtype=float64
+  min=500 max=500 mean=500 sum=330000 rms=500
+  sha256=3c481f65aaa45402a9b17a53115ba9de1e8ce740bb124140dbf404d588350917
+var Vt
+  shape=(11, 60) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=569cfdcf139f915b2f1dabdfbc86320ec1c7d54e28c12a93132dae8ef4f91c83
+var charge
+  shape=(1,) dtype=float64
+  min=1 max=1 mean=1 sum=1 rms=1
+  sha256=6c3c396ed6b5c36dcae172271f462051b1266b851e92df3deea8ac65478fd712
+var egrid
+  shape=(12,) dtype=float64
+  min=1 max=200 mean=44.4691 sum=533.629 rms=74.375
+  sha256=d6baed27c750ce4ae55d22b9d8255ccf660d6bda498a39e0feef191837a44a3f
+var mass
+  shape=(1,) dtype=float64
+  min=1 max=1 mean=1 sum=1 rms=1
+  sha256=6c3c396ed6b5c36dcae172271f462051b1266b851e92df3deea8ac65478fd712
+var mu
+  shape=(6,) dtype=float64
+  min=-0.833333 max=0.833333 mean=-5.55112e-17 sum=-3.33067e-16 rms=0.569275
+  sha256=9d3280f8656c6ff355e4b66ee9a8010bf1bb5c3ee9f11caaaa0f737496ca94d7
+var phiOffset
+  shape=(11,) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=10eef285deef7a4b7c82b22aa53589b7833df29de3814649c772bbd5c832f365
+var shell
+  shape=(60,) dtype=int32
+  min=0.0 max=59 mean=29.5 sum=1770 rms=34.2077
+  sha256=73d12d1733bd4b05c024ec5d6b4adbb1c9e8a1cd1afb48d6d904fcb536eadc40
+var time
+  shape=(11,) dtype=float64
+  min=0.125 max=3.875 mean=2 sum=22 rms=2.32513
+  sha256=78427705115680ca013e4a708a95938d218cd9c1e2355bc099e0f6754343a0f7
+var vgrid
+  shape=(12,) dtype=float64
+  min=13830.3 max=169732 mean=68463.1 sum=821558 rms=84493.5
+  sha256=caab3517fad11b848eecfe88d9db9482c1d3296fb95be80850c6a89c74427199
+file obs000020.nc
+var Bp
+  shape=(11, 60) dtype=float64
+  min=-269.254 max=-1.75236 mean=-11.7164 sum=-7732.8 rms=37.3202
+  sha256=00ecbc013d8f51d13762a4cfbe40c9a558d3bcb1c4ff9c4bf21fc50dc510c1a2
+var Br
+  shape=(11, 60) dtype=float64
+  min=3.13365 max=73982 mean=1421.31 sum=938067 rms=9584.5
+  sha256=2254acdd84e0775ac268e2a96afe2ae4cf85c7a9a9b51c9868c4b2dcc5fc822d
+var Bt
+  shape=(11, 60) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=569cfdcf139f915b2f1dabdfbc86320ec1c7d54e28c12a93132dae8ef4f91c83
+var Dist
+  shape=(11, 60, 1, 12, 6) dtype=float64
+  min=9.53193e-138 max=0.0184637 mean=3.94376e-05 sum=1.87408 rms=0.000706089
+  sha256=2e5e5ddc7d0ea3379bdcaf7cd23dca733739fa12e62092b1c5342c8d6cd69c04
+var P
+  shape=(11, 60) dtype=float64
+  min=4.29 max=5.82696 mean=5.05848 sum=3338.6 rms=5.07014
+  sha256=3087ee307cba110c44b338974855ec883297c55630e2e8b89b3a25c97f82ebaa
+var R
+  shape=(11, 60) dtype=float64
+  min=0.00465047 max=0.714554 mean=0.359602 sum=237.337 rms=0.415613
+  sha256=d219b581d9ff25f9fa0c06451c99b57b3468bda1fb7afc49c7fc399856df9fd1
+var Rho
+  shape=(11, 60) dtype=float64
+  min=16.2558 max=383782 mean=7373.06 sum=4.86622e+06 rms=49719.6
+  sha256=020f77aaa6c8cee703ecb676aab329174dd242700e4882e8e2cd662950b30724
+var T
+  shape=(11, 60) dtype=float64
+  min=1.15026 max=1.15026 mean=1.15026 sum=759.173 rms=1.15026
+  sha256=1817097af1f3aa4e0b051bda19d46e8e26f7961539eee1a5cf4ab1260b557519
+var Vp
+  shape=(11, 60) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=569cfdcf139f915b2f1dabdfbc86320ec1c7d54e28c12a93132dae8ef4f91c83
+var Vr
+  shape=(11, 60) dtype=float64
+  min=500 max=500 mean=500 sum=330000 rms=500
+  sha256=3c481f65aaa45402a9b17a53115ba9de1e8ce740bb124140dbf404d588350917
+var Vt
+  shape=(11, 60) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=569cfdcf139f915b2f1dabdfbc86320ec1c7d54e28c12a93132dae8ef4f91c83
+var charge
+  shape=(1,) dtype=float64
+  min=1 max=1 mean=1 sum=1 rms=1
+  sha256=6c3c396ed6b5c36dcae172271f462051b1266b851e92df3deea8ac65478fd712
+var egrid
+  shape=(12,) dtype=float64
+  min=1 max=200 mean=44.4691 sum=533.629 rms=74.375
+  sha256=d6baed27c750ce4ae55d22b9d8255ccf660d6bda498a39e0feef191837a44a3f
+var mass
+  shape=(1,) dtype=float64
+  min=1 max=1 mean=1 sum=1 rms=1
+  sha256=6c3c396ed6b5c36dcae172271f462051b1266b851e92df3deea8ac65478fd712
+var mu
+  shape=(6,) dtype=float64
+  min=-0.833333 max=0.833333 mean=-5.55112e-17 sum=-3.33067e-16 rms=0.569275
+  sha256=9d3280f8656c6ff355e4b66ee9a8010bf1bb5c3ee9f11caaaa0f737496ca94d7
+var phiOffset
+  shape=(11,) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=10eef285deef7a4b7c82b22aa53589b7833df29de3814649c772bbd5c832f365
+var shell
+  shape=(60,) dtype=int32
+  min=0.0 max=59 mean=29.5 sum=1770 rms=34.2077
+  sha256=73d12d1733bd4b05c024ec5d6b4adbb1c9e8a1cd1afb48d6d904fcb536eadc40
+var time
+  shape=(11,) dtype=float64
+  min=0.125 max=3.875 mean=2 sum=22 rms=2.32513
+  sha256=78427705115680ca013e4a708a95938d218cd9c1e2355bc099e0f6754343a0f7
+var vgrid
+  shape=(12,) dtype=float64
+  min=13830.3 max=169732 mean=68463.1 sum=821558 rms=84493.5
+  sha256=caab3517fad11b848eecfe88d9db9482c1d3296fb95be80850c6a89c74427199
+file obs000021.nc
+var Bp
+  shape=(11, 60) dtype=float64
+  min=-269.254 max=-1.75236 mean=-11.7164 sum=-7732.8 rms=37.3202
+  sha256=9d44c1fd63f91c75ffd0061d5afb32a382d611be0794536057e4f58d3c1d2ec5
+var Br
+  shape=(11, 60) dtype=float64
+  min=3.13365 max=73982 mean=1421.31 sum=938067 rms=9584.5
+  sha256=db8e3bfe01d9cd5e39b833fb1b20f3c30842cf19a8400d724e76fd45d0bc7ebb
+var Bt
+  shape=(11, 60) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=569cfdcf139f915b2f1dabdfbc86320ec1c7d54e28c12a93132dae8ef4f91c83
+var Dist
+  shape=(11, 60, 1, 12, 6) dtype=float64
+  min=9.53193e-138 max=0.0184637 mean=3.94376e-05 sum=1.87408 rms=0.000706089
+  sha256=11ff022aa1bfb0621a0d86a527965858a57b9580a655c7634306052edc712737
+var P
+  shape=(11, 60) dtype=float64
+  min=0.00689129 max=6.27976 mean=4.64346 sum=3064.68 rms=5.20042
+  sha256=ed5f71374c855681251d08c2d0d261b517a9a6566e80ffd19855f4c7467971e7
+var R
+  shape=(11, 60) dtype=float64
+  min=0.00465047 max=0.714554 mean=0.359602 sum=237.337 rms=0.415613
+  sha256=e74a8eecc773a28d9d8bacf10dc6f4e3d6cb76669026b2c5c57b8c6d0fc98815
+var Rho
+  shape=(11, 60) dtype=float64
+  min=16.2558 max=383782 mean=7373.06 sum=4.86622e+06 rms=49719.6
+  sha256=99bc265eca6a6986e93f8d6afb02cc8d4469f549f7bde4bdb98f6ecf56d1001e
+var T
+  shape=(11, 60) dtype=float64
+  min=1.15026 max=1.15026 mean=1.15026 sum=759.173 rms=1.15026
+  sha256=25db215bcf868a54b22ed81494aab625dd361b8e05460d7ef4b9e9e6ef5a981d
+var Vp
+  shape=(11, 60) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=569cfdcf139f915b2f1dabdfbc86320ec1c7d54e28c12a93132dae8ef4f91c83
+var Vr
+  shape=(11, 60) dtype=float64
+  min=500 max=500 mean=500 sum=330000 rms=500
+  sha256=3c481f65aaa45402a9b17a53115ba9de1e8ce740bb124140dbf404d588350917
+var Vt
+  shape=(11, 60) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=569cfdcf139f915b2f1dabdfbc86320ec1c7d54e28c12a93132dae8ef4f91c83
+var charge
+  shape=(1,) dtype=float64
+  min=1 max=1 mean=1 sum=1 rms=1
+  sha256=6c3c396ed6b5c36dcae172271f462051b1266b851e92df3deea8ac65478fd712
+var egrid
+  shape=(12,) dtype=float64
+  min=1 max=200 mean=44.4691 sum=533.629 rms=74.375
+  sha256=d6baed27c750ce4ae55d22b9d8255ccf660d6bda498a39e0feef191837a44a3f
+var mass
+  shape=(1,) dtype=float64
+  min=1 max=1 mean=1 sum=1 rms=1
+  sha256=6c3c396ed6b5c36dcae172271f462051b1266b851e92df3deea8ac65478fd712
+var mu
+  shape=(6,) dtype=float64
+  min=-0.833333 max=0.833333 mean=-5.55112e-17 sum=-3.33067e-16 rms=0.569275
+  sha256=9d3280f8656c6ff355e4b66ee9a8010bf1bb5c3ee9f11caaaa0f737496ca94d7
+var phiOffset
+  shape=(11,) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=10eef285deef7a4b7c82b22aa53589b7833df29de3814649c772bbd5c832f365
+var shell
+  shape=(60,) dtype=int32
+  min=0.0 max=59 mean=29.5 sum=1770 rms=34.2077
+  sha256=73d12d1733bd4b05c024ec5d6b4adbb1c9e8a1cd1afb48d6d904fcb536eadc40
+var time
+  shape=(11,) dtype=float64
+  min=0.125 max=3.875 mean=2 sum=22 rms=2.32513
+  sha256=78427705115680ca013e4a708a95938d218cd9c1e2355bc099e0f6754343a0f7
+var vgrid
+  shape=(12,) dtype=float64
+  min=13830.3 max=169732 mean=68463.1 sum=821558 rms=84493.5
+  sha256=caab3517fad11b848eecfe88d9db9482c1d3296fb95be80850c6a89c74427199
+file obs000022.nc
+var Bp
+  shape=(11, 60) dtype=float64
+  min=-269.254 max=-1.75236 mean=-11.7164 sum=-7732.8 rms=37.3202
+  sha256=5881e11b0ee5da5c3277c16f57ae6a80a6e4fbd42314c4ca128519381a0f5993
+var Br
+  shape=(11, 60) dtype=float64
+  min=3.13365 max=73982 mean=1421.31 sum=938067 rms=9584.5
+  sha256=5afe55546ef4804c6719bb32ec8b20a3f696db40d453498accba5f4c390e08b5
+var Bt
+  shape=(11, 60) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=569cfdcf139f915b2f1dabdfbc86320ec1c7d54e28c12a93132dae8ef4f91c83
+var Dist
+  shape=(11, 60, 1, 12, 6) dtype=float64
+  min=9.53193e-138 max=0.0184637 mean=3.94376e-05 sum=1.87408 rms=0.000706089
+  sha256=f09da46097c2f3ae54e05f057ca68507f4075eb1152a5ad71e09271215a16e00
+var P
+  shape=(11, 60) dtype=float64
+  min=4.29 max=5.82696 mean=5.05848 sum=3338.6 rms=5.07014
+  sha256=a981ce2c2a5c9d1feb678c9b8dd8b10021b21887cdc79a4c8444a2dfe298c915
+var R
+  shape=(11, 60) dtype=float64
+  min=0.00465047 max=0.714554 mean=0.359602 sum=237.337 rms=0.415613
+  sha256=8f3961112e2cf90809ea6e391aeeed834035b59f6bcc12a6017cf4b5c85bb88e
+var Rho
+  shape=(11, 60) dtype=float64
+  min=16.2558 max=383782 mean=7373.06 sum=4.86622e+06 rms=49719.6
+  sha256=fca4e069efc124639601ae17d486dc3936e11f61ae7d7128df0bc808e918c174
+var T
+  shape=(11, 60) dtype=float64
+  min=1.99133 max=1.99133 mean=1.99133 sum=1314.28 rms=1.99133
+  sha256=9252f06553456b15f920b515314139336091a0652319661ff095993dab84ebcf
+var Vp
+  shape=(11, 60) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=569cfdcf139f915b2f1dabdfbc86320ec1c7d54e28c12a93132dae8ef4f91c83
+var Vr
+  shape=(11, 60) dtype=float64
+  min=500 max=500 mean=500 sum=330000 rms=500
+  sha256=3c481f65aaa45402a9b17a53115ba9de1e8ce740bb124140dbf404d588350917
+var Vt
+  shape=(11, 60) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=569cfdcf139f915b2f1dabdfbc86320ec1c7d54e28c12a93132dae8ef4f91c83
+var charge
+  shape=(1,) dtype=float64
+  min=1 max=1 mean=1 sum=1 rms=1
+  sha256=6c3c396ed6b5c36dcae172271f462051b1266b851e92df3deea8ac65478fd712
+var egrid
+  shape=(12,) dtype=float64
+  min=1 max=200 mean=44.4691 sum=533.629 rms=74.375
+  sha256=d6baed27c750ce4ae55d22b9d8255ccf660d6bda498a39e0feef191837a44a3f
+var mass
+  shape=(1,) dtype=float64
+  min=1 max=1 mean=1 sum=1 rms=1
+  sha256=6c3c396ed6b5c36dcae172271f462051b1266b851e92df3deea8ac65478fd712
+var mu
+  shape=(6,) dtype=float64
+  min=-0.833333 max=0.833333 mean=-5.55112e-17 sum=-3.33067e-16 rms=0.569275
+  sha256=9d3280f8656c6ff355e4b66ee9a8010bf1bb5c3ee9f11caaaa0f737496ca94d7
+var phiOffset
+  shape=(11,) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=10eef285deef7a4b7c82b22aa53589b7833df29de3814649c772bbd5c832f365
+var shell
+  shape=(60,) dtype=int32
+  min=0.0 max=59 mean=29.5 sum=1770 rms=34.2077
+  sha256=73d12d1733bd4b05c024ec5d6b4adbb1c9e8a1cd1afb48d6d904fcb536eadc40
+var time
+  shape=(11,) dtype=float64
+  min=0.125 max=3.875 mean=2 sum=22 rms=2.32513
+  sha256=78427705115680ca013e4a708a95938d218cd9c1e2355bc099e0f6754343a0f7
+var vgrid
+  shape=(12,) dtype=float64
+  min=13830.3 max=169732 mean=68463.1 sum=821558 rms=84493.5
+  sha256=caab3517fad11b848eecfe88d9db9482c1d3296fb95be80850c6a89c74427199
+file obs000023.nc
+var Bp
+  shape=(11, 60) dtype=float64
+  min=-269.254 max=-1.75236 mean=-11.7164 sum=-7732.8 rms=37.3202
+  sha256=c8d113931ed2c539dfe835b11cda801147e0415c17e731a380bc2a98162074be
+var Br
+  shape=(11, 60) dtype=float64
+  min=3.13365 max=73982 mean=1421.31 sum=938067 rms=9584.5
+  sha256=dc6eb7091a2893c56bd40fd74286d633e3cf41a4b994f8b815bf11e50a0c255e
+var Bt
+  shape=(11, 60) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=569cfdcf139f915b2f1dabdfbc86320ec1c7d54e28c12a93132dae8ef4f91c83
+var Dist
+  shape=(11, 60, 1, 12, 6) dtype=float64
+  min=9.53193e-138 max=0.0184637 mean=3.94376e-05 sum=1.87408 rms=0.000706089
+  sha256=3a511d293583e5a0c6232e18fd39872b8bb8904cc696764e759435784ee85293
+var P
+  shape=(11, 60) dtype=float64
+  min=0.00689129 max=6.27976 mean=4.64346 sum=3064.68 rms=5.20042
+  sha256=c19cb8db05d4be9d2f3acaa855a5b1a5431a5a77773fa32c616221af149fb374
+var R
+  shape=(11, 60) dtype=float64
+  min=0.00465047 max=0.714554 mean=0.359602 sum=237.337 rms=0.415613
+  sha256=9e2683b8e501c5de545d92e732da69a11b092618e396368e980b95000a9cef3a
+var Rho
+  shape=(11, 60) dtype=float64
+  min=16.2558 max=383782 mean=7373.06 sum=4.86622e+06 rms=49719.6
+  sha256=05b63648de958e45ead6d8fd98d3c5f89c76251e29bc53f546afa893d9ebef3c
+var T
+  shape=(11, 60) dtype=float64
+  min=1.99133 max=1.99133 mean=1.99133 sum=1314.28 rms=1.99133
+  sha256=b68acf9433f663d637e79db37d818881e8ad6f3ebe93c7f5f5e468241cca231d
+var Vp
+  shape=(11, 60) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=569cfdcf139f915b2f1dabdfbc86320ec1c7d54e28c12a93132dae8ef4f91c83
+var Vr
+  shape=(11, 60) dtype=float64
+  min=500 max=500 mean=500 sum=330000 rms=500
+  sha256=3c481f65aaa45402a9b17a53115ba9de1e8ce740bb124140dbf404d588350917
+var Vt
+  shape=(11, 60) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=569cfdcf139f915b2f1dabdfbc86320ec1c7d54e28c12a93132dae8ef4f91c83
+var charge
+  shape=(1,) dtype=float64
+  min=1 max=1 mean=1 sum=1 rms=1
+  sha256=6c3c396ed6b5c36dcae172271f462051b1266b851e92df3deea8ac65478fd712
+var egrid
+  shape=(12,) dtype=float64
+  min=1 max=200 mean=44.4691 sum=533.629 rms=74.375
+  sha256=d6baed27c750ce4ae55d22b9d8255ccf660d6bda498a39e0feef191837a44a3f
+var mass
+  shape=(1,) dtype=float64
+  min=1 max=1 mean=1 sum=1 rms=1
+  sha256=6c3c396ed6b5c36dcae172271f462051b1266b851e92df3deea8ac65478fd712
+var mu
+  shape=(6,) dtype=float64
+  min=-0.833333 max=0.833333 mean=-5.55112e-17 sum=-3.33067e-16 rms=0.569275
+  sha256=9d3280f8656c6ff355e4b66ee9a8010bf1bb5c3ee9f11caaaa0f737496ca94d7
+var phiOffset
+  shape=(11,) dtype=float64
+  min=0.0 max=0.0 mean=0.0 sum=0.0 rms=0.0
+  sha256=10eef285deef7a4b7c82b22aa53589b7833df29de3814649c772bbd5c832f365
+var shell
+  shape=(60,) dtype=int32
+  min=0.0 max=59 mean=29.5 sum=1770 rms=34.2077
+  sha256=73d12d1733bd4b05c024ec5d6b4adbb1c9e8a1cd1afb48d6d904fcb536eadc40
+var time
+  shape=(11,) dtype=float64
+  min=0.125 max=3.875 mean=2 sum=22 rms=2.32513
+  sha256=78427705115680ca013e4a708a95938d218cd9c1e2355bc099e0f6754343a0f7
+var vgrid
+  shape=(12,) dtype=float64
+  min=13830.3 max=169732 mean=68463.1 sum=821558 rms=84493.5
+  sha256=caab3517fad11b848eecfe88d9db9482c1d3296fb95be80850c6a89c74427199

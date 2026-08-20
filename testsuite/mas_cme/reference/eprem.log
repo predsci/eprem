@@ -17,8 +17,9 @@ dsh_min: 5.0000e-05
 dsh_hel_min: 2.5000e-04
 kperxkpar: 1.0000e-02
 lamo: 1.0000e+00
+mfpType: 1
 mfpRadialPower: 2.0000e+00
-mfpInverseB: 0
+mfpBPower: 7.5000e-01
 rigidityPower: 3.3333e-01
 focusingLimit: 1.0000e+00
 eMin: 1.0000e+00
@@ -94,6 +95,7 @@ boundaryFunctXi: 1.0000e-01
 boundaryFunctGamma: 2.0000e+00
 boundaryFunctBeta: 1.7000e+00
 boundaryFunctEcutoff: 1.0000e+00
+boundaryFunctR0: 1.0000e+00
 shockSolver: 0
 shockDetectPercent: 1.0000e+00
 minInjectionEnergy: 1.0000e-02
@@ -145,7 +147,7 @@ Cross count: 23 / 24  DistFromOrigPos:   1.03251319e-11
 Cross count: 24 / 24  DistFromOrigPos:   2.57732873e-11
 
 ******************************************************************
-*******************  EPREM Version 1.16.0  ************************
+*******************  EPREM Version 2.3.0  ************************
 ******************************************************************
 Shells: 200
 Processors: 6
@@ -161,804 +163,804 @@ Start: 0.000000 JD, EP Calc: 0.002000 JD, MAS Start: 0.000000 JD
 Step: 000001  TIME: -3.46289265e+01  [JD  -0.20000]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -3.46289265e+01  Time+Dt: -3.44557819e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0011 seconds.
+  --> Compute time for step:             0.0017 seconds.
 Step: 000002  TIME: -3.44557819e+01  [JD  -0.19900]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -3.44557819e+01  Time+Dt: -3.42826373e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0021 seconds.
+  --> Compute time for step:             0.0018 seconds.
 Step: 000003  TIME: -3.42826373e+01  [JD  -0.19800]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -3.42826373e+01  Time+Dt: -3.41094926e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0012 seconds.
+  --> Compute time for step:             0.0018 seconds.
 Step: 000004  TIME: -3.41094926e+01  [JD  -0.19700]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -3.41094926e+01  Time+Dt: -3.39363480e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0013 seconds.
+  --> Compute time for step:             0.0358 seconds.
 Step: 000005  TIME: -3.39363480e+01  [JD  -0.19600]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -3.39363480e+01  Time+Dt: -3.37632034e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0013 seconds.
+  --> Compute time for step:             0.0020 seconds.
 Step: 000006  TIME: -3.37632034e+01  [JD  -0.19500]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -3.37632034e+01  Time+Dt: -3.35900587e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0014 seconds.
+  --> Compute time for step:             0.0021 seconds.
 Step: 000007  TIME: -3.35900587e+01  [JD  -0.19400]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -3.35900587e+01  Time+Dt: -3.34169141e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0014 seconds.
+  --> Compute time for step:             0.0022 seconds.
 Step: 000008  TIME: -3.34169141e+01  [JD  -0.19300]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -3.34169141e+01  Time+Dt: -3.32437695e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0014 seconds.
+  --> Compute time for step:             0.0022 seconds.
 Step: 000009  TIME: -3.32437695e+01  [JD  -0.19200]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -3.32437695e+01  Time+Dt: -3.30706248e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0015 seconds.
+  --> Compute time for step:             0.0023 seconds.
 Step: 000010  TIME: -3.30706248e+01  [JD  -0.19100]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -3.30706248e+01  Time+Dt: -3.28974802e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0016 seconds.
+  --> Compute time for step:             0.0024 seconds.
 Step: 000011  TIME: -3.28974802e+01  [JD  -0.19000]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -3.28974802e+01  Time+Dt: -3.27243356e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0016 seconds.
+  --> Compute time for step:             0.0025 seconds.
 Step: 000012  TIME: -3.27243356e+01  [JD  -0.18900]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -3.27243356e+01  Time+Dt: -3.25511909e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0016 seconds.
+  --> Compute time for step:             0.0026 seconds.
 Step: 000013  TIME: -3.25511909e+01  [JD  -0.18800]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -3.25511909e+01  Time+Dt: -3.23780463e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0017 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000014  TIME: -3.23780463e+01  [JD  -0.18700]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -3.23780463e+01  Time+Dt: -3.22049017e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0017 seconds.
+  --> Compute time for step:             0.0027 seconds.
 Step: 000015  TIME: -3.22049017e+01  [JD  -0.18600]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -3.22049017e+01  Time+Dt: -3.20317570e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000016  TIME: -3.20317570e+01  [JD  -0.18500]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -3.20317570e+01  Time+Dt: -3.18586124e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000017  TIME: -3.18586124e+01  [JD  -0.18400]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -3.18586124e+01  Time+Dt: -3.16854678e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0029 seconds.
 Step: 000018  TIME: -3.16854678e+01  [JD  -0.18300]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -3.16854678e+01  Time+Dt: -3.15123231e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0019 seconds.
+  --> Compute time for step:             0.0030 seconds.
 Step: 000019  TIME: -3.15123231e+01  [JD  -0.18200]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -3.15123231e+01  Time+Dt: -3.13391785e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0019 seconds.
+  --> Compute time for step:             0.0030 seconds.
 Step: 000020  TIME: -3.13391785e+01  [JD  -0.18100]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -3.13391785e+01  Time+Dt: -3.11660339e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0020 seconds.
+  --> Compute time for step:             0.0030 seconds.
 Step: 000021  TIME: -3.11660339e+01  [JD  -0.18000]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -3.11660339e+01  Time+Dt: -3.09928892e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0019 seconds.
+  --> Compute time for step:             0.0031 seconds.
 Step: 000022  TIME: -3.09928892e+01  [JD  -0.17900]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -3.09928892e+01  Time+Dt: -3.08197446e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0019 seconds.
+  --> Compute time for step:             0.0030 seconds.
 Step: 000023  TIME: -3.08197446e+01  [JD  -0.17800]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -3.08197446e+01  Time+Dt: -3.06466000e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0019 seconds.
+  --> Compute time for step:             0.0030 seconds.
 Step: 000024  TIME: -3.06466000e+01  [JD  -0.17700]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -3.06466000e+01  Time+Dt: -3.04734554e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0019 seconds.
+  --> Compute time for step:             0.0030 seconds.
 Step: 000025  TIME: -3.04734554e+01  [JD  -0.17600]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -3.04734554e+01  Time+Dt: -3.03003107e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0019 seconds.
+  --> Compute time for step:             0.0030 seconds.
 Step: 000026  TIME: -3.03003107e+01  [JD  -0.17500]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -3.03003107e+01  Time+Dt: -3.01271661e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0019 seconds.
+  --> Compute time for step:             0.0030 seconds.
 Step: 000027  TIME: -3.01271661e+01  [JD  -0.17400]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -3.01271661e+01  Time+Dt: -2.99540215e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0019 seconds.
+  --> Compute time for step:             0.0030 seconds.
 Step: 000028  TIME: -2.99540215e+01  [JD  -0.17300]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -2.99540215e+01  Time+Dt: -2.97808768e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0019 seconds.
+  --> Compute time for step:             0.0030 seconds.
 Step: 000029  TIME: -2.97808768e+01  [JD  -0.17200]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -2.97808768e+01  Time+Dt: -2.96077322e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0019 seconds.
+  --> Compute time for step:             0.0030 seconds.
 Step: 000030  TIME: -2.96077322e+01  [JD  -0.17100]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -2.96077322e+01  Time+Dt: -2.94345876e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0019 seconds.
+  --> Compute time for step:             0.0030 seconds.
 Step: 000031  TIME: -2.94345876e+01  [JD  -0.17000]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -2.94345876e+01  Time+Dt: -2.92614429e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0019 seconds.
+  --> Compute time for step:             0.0030 seconds.
 Step: 000032  TIME: -2.92614429e+01  [JD  -0.16900]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -2.92614429e+01  Time+Dt: -2.90882983e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0019 seconds.
+  --> Compute time for step:             0.0029 seconds.
 Step: 000033  TIME: -2.90882983e+01  [JD  -0.16800]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -2.90882983e+01  Time+Dt: -2.89151537e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0029 seconds.
 Step: 000034  TIME: -2.89151537e+01  [JD  -0.16700]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -2.89151537e+01  Time+Dt: -2.87420090e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000035  TIME: -2.87420090e+01  [JD  -0.16600]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -2.87420090e+01  Time+Dt: -2.85688644e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000036  TIME: -2.85688644e+01  [JD  -0.16500]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -2.85688644e+01  Time+Dt: -2.83957198e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000037  TIME: -2.83957198e+01  [JD  -0.16400]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -2.83957198e+01  Time+Dt: -2.82225751e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000038  TIME: -2.82225751e+01  [JD  -0.16300]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -2.82225751e+01  Time+Dt: -2.80494305e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000039  TIME: -2.80494305e+01  [JD  -0.16200]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -2.80494305e+01  Time+Dt: -2.78762859e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000040  TIME: -2.78762859e+01  [JD  -0.16100]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -2.78762859e+01  Time+Dt: -2.77031412e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0029 seconds.
 Step: 000041  TIME: -2.77031412e+01  [JD  -0.16000]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -2.77031412e+01  Time+Dt: -2.75299966e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000042  TIME: -2.75299966e+01  [JD  -0.15900]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -2.75299966e+01  Time+Dt: -2.73568520e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000043  TIME: -2.73568520e+01  [JD  -0.15800]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -2.73568520e+01  Time+Dt: -2.71837073e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000044  TIME: -2.71837073e+01  [JD  -0.15700]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -2.71837073e+01  Time+Dt: -2.70105627e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000045  TIME: -2.70105627e+01  [JD  -0.15600]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -2.70105627e+01  Time+Dt: -2.68374181e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000046  TIME: -2.68374181e+01  [JD  -0.15500]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -2.68374181e+01  Time+Dt: -2.66642734e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000047  TIME: -2.66642734e+01  [JD  -0.15400]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -2.66642734e+01  Time+Dt: -2.64911288e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000048  TIME: -2.64911288e+01  [JD  -0.15300]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -2.64911288e+01  Time+Dt: -2.63179842e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000049  TIME: -2.63179842e+01  [JD  -0.15200]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -2.63179842e+01  Time+Dt: -2.61448395e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000050  TIME: -2.61448395e+01  [JD  -0.15100]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -2.61448395e+01  Time+Dt: -2.59716949e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000051  TIME: -2.59716949e+01  [JD  -0.15000]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -2.59716949e+01  Time+Dt: -2.57985503e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000052  TIME: -2.57985503e+01  [JD  -0.14900]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -2.57985503e+01  Time+Dt: -2.56254056e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000053  TIME: -2.56254056e+01  [JD  -0.14800]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -2.56254056e+01  Time+Dt: -2.54522610e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000054  TIME: -2.54522610e+01  [JD  -0.14700]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -2.54522610e+01  Time+Dt: -2.52791164e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000055  TIME: -2.52791164e+01  [JD  -0.14600]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -2.52791164e+01  Time+Dt: -2.51059717e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000056  TIME: -2.51059717e+01  [JD  -0.14500]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -2.51059717e+01  Time+Dt: -2.49328271e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000057  TIME: -2.49328271e+01  [JD  -0.14400]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -2.49328271e+01  Time+Dt: -2.47596825e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000058  TIME: -2.47596825e+01  [JD  -0.14300]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -2.47596825e+01  Time+Dt: -2.45865378e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000059  TIME: -2.45865378e+01  [JD  -0.14200]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -2.45865378e+01  Time+Dt: -2.44133932e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000060  TIME: -2.44133932e+01  [JD  -0.14100]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -2.44133932e+01  Time+Dt: -2.42402486e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000061  TIME: -2.42402486e+01  [JD  -0.14000]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -2.42402486e+01  Time+Dt: -2.40671039e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000062  TIME: -2.40671039e+01  [JD  -0.13900]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -2.40671039e+01  Time+Dt: -2.38939593e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000063  TIME: -2.38939593e+01  [JD  -0.13800]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -2.38939593e+01  Time+Dt: -2.37208147e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000064  TIME: -2.37208147e+01  [JD  -0.13700]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -2.37208147e+01  Time+Dt: -2.35476700e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000065  TIME: -2.35476700e+01  [JD  -0.13600]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -2.35476700e+01  Time+Dt: -2.33745254e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000066  TIME: -2.33745254e+01  [JD  -0.13500]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -2.33745254e+01  Time+Dt: -2.32013808e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000067  TIME: -2.32013808e+01  [JD  -0.13400]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -2.32013808e+01  Time+Dt: -2.30282361e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000068  TIME: -2.30282361e+01  [JD  -0.13300]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -2.30282361e+01  Time+Dt: -2.28550915e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000069  TIME: -2.28550915e+01  [JD  -0.13200]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -2.28550915e+01  Time+Dt: -2.26819469e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000070  TIME: -2.26819469e+01  [JD  -0.13100]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -2.26819469e+01  Time+Dt: -2.25088022e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000071  TIME: -2.25088022e+01  [JD  -0.13000]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -2.25088022e+01  Time+Dt: -2.23356576e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000072  TIME: -2.23356576e+01  [JD  -0.12900]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -2.23356576e+01  Time+Dt: -2.21625130e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000073  TIME: -2.21625130e+01  [JD  -0.12800]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -2.21625130e+01  Time+Dt: -2.19893683e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000074  TIME: -2.19893683e+01  [JD  -0.12700]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -2.19893683e+01  Time+Dt: -2.18162237e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000075  TIME: -2.18162237e+01  [JD  -0.12600]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -2.18162237e+01  Time+Dt: -2.16430791e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000076  TIME: -2.16430791e+01  [JD  -0.12500]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -2.16430791e+01  Time+Dt: -2.14699345e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000077  TIME: -2.14699345e+01  [JD  -0.12400]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -2.14699345e+01  Time+Dt: -2.12967898e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0029 seconds.
 Step: 000078  TIME: -2.12967898e+01  [JD  -0.12300]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -2.12967898e+01  Time+Dt: -2.11236452e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0029 seconds.
 Step: 000079  TIME: -2.11236452e+01  [JD  -0.12200]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -2.11236452e+01  Time+Dt: -2.09505006e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000080  TIME: -2.09505006e+01  [JD  -0.12100]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -2.09505006e+01  Time+Dt: -2.07773559e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000081  TIME: -2.07773559e+01  [JD  -0.12000]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -2.07773559e+01  Time+Dt: -2.06042113e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000082  TIME: -2.06042113e+01  [JD  -0.11900]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -2.06042113e+01  Time+Dt: -2.04310667e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000083  TIME: -2.04310667e+01  [JD  -0.11800]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -2.04310667e+01  Time+Dt: -2.02579220e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000084  TIME: -2.02579220e+01  [JD  -0.11700]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -2.02579220e+01  Time+Dt: -2.00847774e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000085  TIME: -2.00847774e+01  [JD  -0.11600]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -2.00847774e+01  Time+Dt: -1.99116328e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000086  TIME: -1.99116328e+01  [JD  -0.11500]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -1.99116328e+01  Time+Dt: -1.97384881e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000087  TIME: -1.97384881e+01  [JD  -0.11400]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -1.97384881e+01  Time+Dt: -1.95653435e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000088  TIME: -1.95653435e+01  [JD  -0.11300]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -1.95653435e+01  Time+Dt: -1.93921989e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000089  TIME: -1.93921989e+01  [JD  -0.11200]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -1.93921989e+01  Time+Dt: -1.92190542e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000090  TIME: -1.92190542e+01  [JD  -0.11100]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -1.92190542e+01  Time+Dt: -1.90459096e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000091  TIME: -1.90459096e+01  [JD  -0.11000]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -1.90459096e+01  Time+Dt: -1.88727650e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000092  TIME: -1.88727650e+01  [JD  -0.10900]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -1.88727650e+01  Time+Dt: -1.86996203e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000093  TIME: -1.86996203e+01  [JD  -0.10800]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -1.86996203e+01  Time+Dt: -1.85264757e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000094  TIME: -1.85264757e+01  [JD  -0.10700]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -1.85264757e+01  Time+Dt: -1.83533311e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000095  TIME: -1.83533311e+01  [JD  -0.10600]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -1.83533311e+01  Time+Dt: -1.81801864e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000096  TIME: -1.81801864e+01  [JD  -0.10500]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -1.81801864e+01  Time+Dt: -1.80070418e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000097  TIME: -1.80070418e+01  [JD  -0.10400]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -1.80070418e+01  Time+Dt: -1.78338972e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000098  TIME: -1.78338972e+01  [JD  -0.10300]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -1.78338972e+01  Time+Dt: -1.76607525e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000099  TIME: -1.76607525e+01  [JD  -0.10200]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -1.76607525e+01  Time+Dt: -1.74876079e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000100  TIME: -1.74876079e+01  [JD  -0.10100]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -1.74876079e+01  Time+Dt: -1.73144633e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000101  TIME: -1.73144633e+01  [JD  -0.10000]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -1.73144633e+01  Time+Dt: -1.71413186e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000102  TIME: -1.71413186e+01  [JD  -0.09900]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -1.71413186e+01  Time+Dt: -1.69681740e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000103  TIME: -1.69681740e+01  [JD  -0.09800]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -1.69681740e+01  Time+Dt: -1.67950294e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000104  TIME: -1.67950294e+01  [JD  -0.09700]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -1.67950294e+01  Time+Dt: -1.66218847e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000105  TIME: -1.66218847e+01  [JD  -0.09600]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -1.66218847e+01  Time+Dt: -1.64487401e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000106  TIME: -1.64487401e+01  [JD  -0.09500]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -1.64487401e+01  Time+Dt: -1.62755955e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000107  TIME: -1.62755955e+01  [JD  -0.09400]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -1.62755955e+01  Time+Dt: -1.61024508e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000108  TIME: -1.61024508e+01  [JD  -0.09300]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -1.61024508e+01  Time+Dt: -1.59293062e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000109  TIME: -1.59293062e+01  [JD  -0.09200]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -1.59293062e+01  Time+Dt: -1.57561616e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000110  TIME: -1.57561616e+01  [JD  -0.09100]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -1.57561616e+01  Time+Dt: -1.55830169e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000111  TIME: -1.55830169e+01  [JD  -0.09000]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -1.55830169e+01  Time+Dt: -1.54098723e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000112  TIME: -1.54098723e+01  [JD  -0.08900]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -1.54098723e+01  Time+Dt: -1.52367277e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000113  TIME: -1.52367277e+01  [JD  -0.08800]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -1.52367277e+01  Time+Dt: -1.50635830e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000114  TIME: -1.50635830e+01  [JD  -0.08700]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -1.50635830e+01  Time+Dt: -1.48904384e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000115  TIME: -1.48904384e+01  [JD  -0.08600]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -1.48904384e+01  Time+Dt: -1.47172938e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000116  TIME: -1.47172938e+01  [JD  -0.08500]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -1.47172938e+01  Time+Dt: -1.45441491e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000117  TIME: -1.45441491e+01  [JD  -0.08400]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -1.45441491e+01  Time+Dt: -1.43710045e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000118  TIME: -1.43710045e+01  [JD  -0.08300]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -1.43710045e+01  Time+Dt: -1.41978599e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000119  TIME: -1.41978599e+01  [JD  -0.08200]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -1.41978599e+01  Time+Dt: -1.40247152e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000120  TIME: -1.40247152e+01  [JD  -0.08100]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -1.40247152e+01  Time+Dt: -1.38515706e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000121  TIME: -1.38515706e+01  [JD  -0.08000]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -1.38515706e+01  Time+Dt: -1.36784260e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000122  TIME: -1.36784260e+01  [JD  -0.07900]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -1.36784260e+01  Time+Dt: -1.35052813e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0029 seconds.
 Step: 000123  TIME: -1.35052813e+01  [JD  -0.07800]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -1.35052813e+01  Time+Dt: -1.33321367e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0029 seconds.
 Step: 000124  TIME: -1.33321367e+01  [JD  -0.07700]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -1.33321367e+01  Time+Dt: -1.31589921e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0029 seconds.
 Step: 000125  TIME: -1.31589921e+01  [JD  -0.07600]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -1.31589921e+01  Time+Dt: -1.29858475e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0030 seconds.
 Step: 000126  TIME: -1.29858475e+01  [JD  -0.07500]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -1.29858475e+01  Time+Dt: -1.28127028e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0029 seconds.
 Step: 000127  TIME: -1.28127028e+01  [JD  -0.07400]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -1.28127028e+01  Time+Dt: -1.26395582e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0029 seconds.
 Step: 000128  TIME: -1.26395582e+01  [JD  -0.07300]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -1.26395582e+01  Time+Dt: -1.24664136e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0029 seconds.
 Step: 000129  TIME: -1.24664136e+01  [JD  -0.07200]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -1.24664136e+01  Time+Dt: -1.22932689e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0029 seconds.
 Step: 000130  TIME: -1.22932689e+01  [JD  -0.07100]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -1.22932689e+01  Time+Dt: -1.21201243e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0029 seconds.
 Step: 000131  TIME: -1.21201243e+01  [JD  -0.07000]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -1.21201243e+01  Time+Dt: -1.19469797e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0029 seconds.
 Step: 000132  TIME: -1.19469797e+01  [JD  -0.06900]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -1.19469797e+01  Time+Dt: -1.17738350e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000133  TIME: -1.17738350e+01  [JD  -0.06800]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -1.17738350e+01  Time+Dt: -1.16006904e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0029 seconds.
 Step: 000134  TIME: -1.16006904e+01  [JD  -0.06700]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -1.16006904e+01  Time+Dt: -1.14275458e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0029 seconds.
 Step: 000135  TIME: -1.14275458e+01  [JD  -0.06600]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -1.14275458e+01  Time+Dt: -1.12544011e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0029 seconds.
 Step: 000136  TIME: -1.12544011e+01  [JD  -0.06500]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -1.12544011e+01  Time+Dt: -1.10812565e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0029 seconds.
 Step: 000137  TIME: -1.10812565e+01  [JD  -0.06400]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -1.10812565e+01  Time+Dt: -1.09081119e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0029 seconds.
 Step: 000138  TIME: -1.09081119e+01  [JD  -0.06300]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -1.09081119e+01  Time+Dt: -1.07349672e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0029 seconds.
 Step: 000139  TIME: -1.07349672e+01  [JD  -0.06200]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -1.07349672e+01  Time+Dt: -1.05618226e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0029 seconds.
 Step: 000140  TIME: -1.05618226e+01  [JD  -0.06100]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -1.05618226e+01  Time+Dt: -1.03886780e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0029 seconds.
 Step: 000141  TIME: -1.03886780e+01  [JD  -0.06000]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -1.03886780e+01  Time+Dt: -1.02155333e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0029 seconds.
 Step: 000142  TIME: -1.02155333e+01  [JD  -0.05900]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -1.02155333e+01  Time+Dt: -1.00423887e+01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0029 seconds.
 Step: 000143  TIME: -1.00423887e+01  [JD  -0.05800]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -1.00423887e+01  Time+Dt: -9.86924406e+00  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000144  TIME: -9.86924406e+00  [JD  -0.05700]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -9.86924406e+00  Time+Dt: -9.69609943e+00  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000145  TIME: -9.69609943e+00  [JD  -0.05600]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -9.69609943e+00  Time+Dt: -9.52295480e+00  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000146  TIME: -9.52295480e+00  [JD  -0.05500]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -9.52295480e+00  Time+Dt: -9.34981016e+00  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000147  TIME: -9.34981016e+00  [JD  -0.05400]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -9.34981016e+00  Time+Dt: -9.17666553e+00  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000148  TIME: -9.17666553e+00  [JD  -0.05300]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -9.17666553e+00  Time+Dt: -9.00352090e+00  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000149  TIME: -9.00352090e+00  [JD  -0.05200]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -9.00352090e+00  Time+Dt: -8.83037627e+00  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000150  TIME: -8.83037627e+00  [JD  -0.05100]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -8.83037627e+00  Time+Dt: -8.65723163e+00  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0019 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000151  TIME: -8.65723163e+00  [JD  -0.05000]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -8.65723163e+00  Time+Dt: -8.48408700e+00  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000152  TIME: -8.48408700e+00  [JD  -0.04900]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -8.48408700e+00  Time+Dt: -8.31094237e+00  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000153  TIME: -8.31094237e+00  [JD  -0.04800]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -8.31094237e+00  Time+Dt: -8.13779774e+00  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000154  TIME: -8.13779774e+00  [JD  -0.04700]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -8.13779774e+00  Time+Dt: -7.96465310e+00  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000155  TIME: -7.96465310e+00  [JD  -0.04600]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -7.96465310e+00  Time+Dt: -7.79150847e+00  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000156  TIME: -7.79150847e+00  [JD  -0.04500]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -7.79150847e+00  Time+Dt: -7.61836384e+00  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000157  TIME: -7.61836384e+00  [JD  -0.04400]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -7.61836384e+00  Time+Dt: -7.44521920e+00  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000158  TIME: -7.44521920e+00  [JD  -0.04300]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -7.44521920e+00  Time+Dt: -7.27207457e+00  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000159  TIME: -7.27207457e+00  [JD  -0.04200]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -7.27207457e+00  Time+Dt: -7.09892994e+00  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000160  TIME: -7.09892994e+00  [JD  -0.04100]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -7.09892994e+00  Time+Dt: -6.92578531e+00  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000161  TIME: -6.92578531e+00  [JD  -0.04000]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -6.92578531e+00  Time+Dt: -6.75264067e+00  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000162  TIME: -6.75264067e+00  [JD  -0.03900]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -6.75264067e+00  Time+Dt: -6.57949604e+00  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000163  TIME: -6.57949604e+00  [JD  -0.03800]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -6.57949604e+00  Time+Dt: -6.40635141e+00  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000164  TIME: -6.40635141e+00  [JD  -0.03700]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -6.40635141e+00  Time+Dt: -6.23320678e+00  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000165  TIME: -6.23320678e+00  [JD  -0.03600]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -6.23320678e+00  Time+Dt: -6.06006214e+00  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000166  TIME: -6.06006214e+00  [JD  -0.03500]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -6.06006214e+00  Time+Dt: -5.88691751e+00  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000167  TIME: -5.88691751e+00  [JD  -0.03400]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -5.88691751e+00  Time+Dt: -5.71377288e+00  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000168  TIME: -5.71377288e+00  [JD  -0.03300]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -5.71377288e+00  Time+Dt: -5.54062825e+00  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000169  TIME: -5.54062825e+00  [JD  -0.03200]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -5.54062825e+00  Time+Dt: -5.36748361e+00  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000170  TIME: -5.36748361e+00  [JD  -0.03100]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -5.36748361e+00  Time+Dt: -5.19433898e+00  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000171  TIME: -5.19433898e+00  [JD  -0.03000]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -5.19433898e+00  Time+Dt: -5.02119435e+00  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000172  TIME: -5.02119435e+00  [JD  -0.02900]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -5.02119435e+00  Time+Dt: -4.84804971e+00  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000173  TIME: -4.84804971e+00  [JD  -0.02800]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -4.84804971e+00  Time+Dt: -4.67490508e+00  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000174  TIME: -4.67490508e+00  [JD  -0.02700]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -4.67490508e+00  Time+Dt: -4.50176045e+00  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000175  TIME: -4.50176045e+00  [JD  -0.02600]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -4.50176045e+00  Time+Dt: -4.32861582e+00  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000176  TIME: -4.32861582e+00  [JD  -0.02500]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -4.32861582e+00  Time+Dt: -4.15547118e+00  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000177  TIME: -4.15547118e+00  [JD  -0.02400]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -4.15547118e+00  Time+Dt: -3.98232655e+00  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000178  TIME: -3.98232655e+00  [JD  -0.02300]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -3.98232655e+00  Time+Dt: -3.80918192e+00  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000179  TIME: -3.80918192e+00  [JD  -0.02200]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -3.80918192e+00  Time+Dt: -3.63603729e+00  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000180  TIME: -3.63603729e+00  [JD  -0.02100]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -3.63603729e+00  Time+Dt: -3.46289265e+00  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000181  TIME: -3.46289265e+00  [JD  -0.02000]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -3.46289265e+00  Time+Dt: -3.28974802e+00  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000182  TIME: -3.28974802e+00  [JD  -0.01900]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -3.28974802e+00  Time+Dt: -3.11660339e+00  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000183  TIME: -3.11660339e+00  [JD  -0.01800]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -3.11660339e+00  Time+Dt: -2.94345876e+00  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000184  TIME: -2.94345876e+00  [JD  -0.01700]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -2.94345876e+00  Time+Dt: -2.77031412e+00  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000185  TIME: -2.77031412e+00  [JD  -0.01600]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -2.77031412e+00  Time+Dt: -2.59716949e+00  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000186  TIME: -2.59716949e+00  [JD  -0.01500]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -2.59716949e+00  Time+Dt: -2.42402486e+00  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000187  TIME: -2.42402486e+00  [JD  -0.01400]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -2.42402486e+00  Time+Dt: -2.25088022e+00  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000188  TIME: -2.25088022e+00  [JD  -0.01300]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -2.25088022e+00  Time+Dt: -2.07773559e+00  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000189  TIME: -2.07773559e+00  [JD  -0.01200]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -2.07773559e+00  Time+Dt: -1.90459096e+00  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000190  TIME: -1.90459096e+00  [JD  -0.01100]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -1.90459096e+00  Time+Dt: -1.73144633e+00  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000191  TIME: -1.73144633e+00  [JD  -0.01000]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -1.73144633e+00  Time+Dt: -1.55830169e+00  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000192  TIME: -1.55830169e+00  [JD  -0.00900]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -1.55830169e+00  Time+Dt: -1.38515706e+00  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000193  TIME: -1.38515706e+00  [JD  -0.00800]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -1.38515706e+00  Time+Dt: -1.21201243e+00  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000194  TIME: -1.21201243e+00  [JD  -0.00700]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -1.21201243e+00  Time+Dt: -1.03886780e+00  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000195  TIME: -1.03886780e+00  [JD  -0.00600]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -1.03886780e+00  Time+Dt: -8.65723163e-01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0029 seconds.
 Step: 000196  TIME: -8.65723163e-01  [JD  -0.00500]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -8.65723163e-01  Time+Dt: -6.92578531e-01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0029 seconds.
 Step: 000197  TIME: -6.92578531e-01  [JD  -0.00400]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -6.92578531e-01  Time+Dt: -5.19433898e-01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000198  TIME: -5.19433898e-01  [JD  -0.00300]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -5.19433898e-01  Time+Dt: -3.46289265e-01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000199  TIME: -3.46289265e-01  [JD  -0.00200]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> MAS(C) Couple: Time: -3.46289265e-01  Time+Dt: -1.73144633e-01  s_cor: 0.00000000
   -->                idx0: 001  idx1: 001  masTime0: 0.00000000e+00  masTime1: 0.00000000e+00
-  --> Compute time for step:             0.0018 seconds.
+  --> Compute time for step:             0.0028 seconds.
 Step: 000200  TIME: -1.73144633e-01  [JD  -0.00100]  DTIME: 1.73144633e-01  [JD 0.00100]
   --> IO MAS: Coronal sequence 002 read.
   --> MAS(C) Couple: Time: -1.73144633e-01  Time+Dt: 1.43773882e-14  s_cor: 0.00000000
   -->                idx0: 001  idx1: 002  masTime0: 0.00000000e+00  masTime1: 5.80592035e-01
-  --> Compute time for step:             0.0031 seconds.
+  --> Compute time for step:             0.0038 seconds.
  
 *************************************************
 ****STARTING SIMULATION**************************
@@ -969,7 +971,7 @@ Step: 000201  TIME: 0.00000000e+00  [JD   0.00000]  DTIME: 5.80592035e-01  [JD 0
   --> IO MAS: Coronal sequence 003 read.
   --> MAS(C) Couple: Time: 0.00000000e+00  Time+Dt: 5.80592035e-01  s_cor: 0.00000000
   -->                idx0: 002  idx1: 003  masTime0: 5.80592035e-01  masTime1: 1.15881205e+00
-  --> Compute time for step:             0.0049 seconds.
+  --> Compute time for step:             0.0059 seconds.
  
 *************************************************
 ****STARTING ENERGETIC PARTICLE CALCULATIONS*****
@@ -983,7 +985,7 @@ Step: 000202  TIME: 5.80592035e-01  [JD   0.00335]  DTIME: 5.78220019e-01  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 50 
   --> Minimum MFP timescale (tau): 3.06243398e-05    DTIME/TAU:       18881.06
-  --> Compute time for step:             0.1938 seconds.
+  --> Compute time for step:             0.1937 seconds.
 Step: 000203  TIME: 1.15881205e+00  [JD   0.00669]  DTIME: 5.78220019e-01  [JD 0.00334]
   --> IO: Wrote observer data to file.
   --> IO: Wrote domain to file.
@@ -992,13 +994,13 @@ Step: 000203  TIME: 1.15881205e+00  [JD   0.00669]  DTIME: 5.78220019e-01  [JD 0
   --> Maximum subcycles for Adiabatic Change:   1 
   --> Maximum subcycles for Adiabatic Focusing: 53 
   --> Minimum MFP timescale (tau): 3.06243398e-05    DTIME/TAU:       18881.06
-  --> Compute time for step:             0.1958 seconds.
+  --> Compute time for step:             0.1993 seconds.
  
 ********************************
 ****RUN COMPLETE****************
 ********************************
-Run started  on Wed Aug 20 12:54:15 2025
-Run finished on Wed Aug 20 12:54:16 2025
-Run real time duration is 0.016667 minutes (or 0.000278 hours, or 0.000012 days)
+Run started  on Thu Aug 20 14:13:26 2026
+Run finished on Thu Aug 20 14:13:28 2026
+Run real time duration is 0.033333 minutes (or 0.000556 hours, or 0.000023 days)
 Run data time duration is 0.0067 days
 ********************************

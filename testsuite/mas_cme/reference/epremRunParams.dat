@@ -1,6 +1,6 @@
 
 ******************************************************************
-*******************  EPREM Version 1.16.0  ************************
+*******************  EPREM Version 2.3.0  ************************
 ******************************************************************
 Inner coupling boundary: 1.000000 Rs -- Outer coupling boundary: 17.343704 Rs
 Start: 0.000000 JD, EP Calc: 0.002000 JD, MAS Start: 0.000000 JD, Eruption: 0.002000 JD, Stop: 0.006693 JD
@@ -28,26 +28,26 @@ TOTAL_NUM_SHELLS
 
 TIMING
 ********************************
-Run started on Wed Aug 20 12:54:15 2025
-Run finished on Wed Aug 20 12:54:16 2025
-Run real time duration is 0.016667 minutes (or 0.000278 hours, or 0.000012 days)
+Run started on Thu Aug 20 14:13:26 2026
+Run finished on Thu Aug 20 14:13:28 2026
+Run real time duration is 0.033333 minutes (or 0.000556 hours, or 0.000023 days)
 Run data time duration is 0.0067 days
 ********************************
 -------------------DETAILED TIMING-----------------------
 Code portion                   mean        max        min
 ---------------------------------------------------------
-|->MPI (Gather/Scatter)        0.11       0.13       0.08
-|->MPI (Send/Recv)             0.17       0.27       0.00
-Initialization                 0.39       0.40       0.36
+|->MPI (Gather/Scatter)        0.11       0.14       0.08
+|->MPI (Send/Recv)             0.29       0.47       0.04
+Initialization                 0.56       0.60       0.53
 IO (EPREM)                     0.01       0.01       0.01
-IO (MAS)                       0.01       0.03       0.00
-EP Total                       0.37       0.38       0.37
-|->EP DiffuseStream            0.18       0.19       0.16
+IO (MAS)                       0.02       0.03       0.01
+EP Total                       0.38       0.38       0.38
+|->EP DiffuseStream            0.18       0.20       0.16
 |->EP Adiabatic Focus          0.04       0.07       0.02
 |->EP Adiabatic Change         0.03       0.03       0.03
 |->EP Diffuse Shell            0.00       0.00       0.00
 |->EP Drift Shell              0.00       0.00       0.00
-Other                          0.38       0.41       0.34
-Total (Wall)                   1.16       1.16       1.16
+Other                          0.58       0.63       0.54
+Total (Wall)                   1.55       1.55       1.55
 ---------------------------------------------------------
 

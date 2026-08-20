@@ -1,6 +1,6 @@
 
 ******************************************************************
-*******************  EPREM Version 1.16.0  ************************
+*******************  EPREM Version 2.3.0  ************************
 ******************************************************************
 Inner coupling boundary: 0.999570 Rs
 Start: 0.000000 JD, EP Calc: 0.000000 JD
@@ -28,26 +28,26 @@ TOTAL_NUM_SHELLS
 
 TIMING
 ********************************
-Run started on Wed Aug 20 12:53:35 2025
-Run finished on Wed Aug 20 12:53:37 2025
-Run real time duration is 0.033333 minutes (or 0.000556 hours, or 0.000023 days)
+Run started on Thu Aug 20 14:12:51 2026
+Run finished on Thu Aug 20 14:12:52 2026
+Run real time duration is 0.016667 minutes (or 0.000278 hours, or 0.000012 days)
 Run data time duration is 4.0000 days
 ********************************
 -------------------DETAILED TIMING-----------------------
 Code portion                   mean        max        min
 ---------------------------------------------------------
-|->MPI (Gather/Scatter)        0.69       0.87       0.15
-|->MPI (Send/Recv)             0.03       0.10       0.00
-Initialization                 0.01       0.01       0.00
-IO (EPREM)                     0.03       0.04       0.02
+|->MPI (Gather/Scatter)        0.69       0.87       0.19
+|->MPI (Send/Recv)             0.03       0.12       0.01
+Initialization                 0.01       0.01       0.01
+IO (EPREM)                     0.04       0.04       0.03
 IO (MAS)                       0.00       0.00       0.00
-EP Total                       1.58       1.62       1.51
-|->EP DiffuseStream            0.41       0.43       0.40
-|->EP Adiabatic Focus          0.27       0.84       0.10
+EP Total                       1.59       1.62       1.51
+|->EP DiffuseStream            0.41       0.43       0.38
+|->EP Adiabatic Focus          0.28       0.84       0.11
 |->EP Adiabatic Change         0.15       0.16       0.14
 |->EP Diffuse Shell            0.00       0.00       0.00
 |->EP Drift Shell              0.00       0.00       0.00
-Other                          0.04       0.11       0.02
-Total (Wall)                   1.66       1.66       1.66
+Other                          0.06       0.13       0.03
+Total (Wall)                   1.69       1.69       1.69
 ---------------------------------------------------------
 
