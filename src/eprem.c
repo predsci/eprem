@@ -57,6 +57,15 @@
  --
  -- NOTE TO DEVS: BE SURE TO UPDATE VERSION NUMBER IN GLOBAL.H!
  --
+ -- ## Version 2.4.0, 10/28/2026
+ -- ### modified by RC+MY
+ --       - Changed if..else logic in masGetNode that selects between
+ --         masTriLinear (corona) and masHelTriLinear (heliosphere).
+ --       - Changed masTriLinear to convert coronal Vphi to the inertial frame.
+ --       - Removed incremental phi update (+= dtPhiOffset) from nodes and 
+ --         point observers in rotateCoupledDomain.
+ --       - Removed point-observer update from resetDomainOffset.
+ --
  -- ## Version 2.3.0, 04/29/2026
  -- ### modified by RC
  --       - Added support for MAS resolution changes within the CME simulaton.
@@ -622,9 +631,7 @@ int main(int argc, char *argv[]) {
     else
       moveNodes( config.tDel );
 
-    // Phi-shift nodes in co-rotating coronal frame
-    // (equivalent to converting corotating frame to inertial with a +Vphi?)
-    // During node seeding, this also phi-shifts nodes in helio-coupled domain.
+    // Calculate phi offset for interpolation
     if ( (config.masRotateSolution > 0) && (config.masCouple > 0) )
       rotateCoupledDomain( config.tDel );
 
