@@ -40,27 +40,27 @@ Index_t unwindPhiOffset;
 /*-----------------------------------------------------------------------*/
 {
 
-  if (position.r <= (config.masRadialMax * RSAU))
-  {
-
-    masTriLinear(position,  masBp_0, masBt_0, masBr_0,
-                            masVp_0, masVt_0, masVr_0,
-                            masD_0,
-                            masBp_1, masBt_1, masBr_1,
-                            masVp_1, masVt_1, masVr_1,
-                            masD_1,  s_cor);
-
-  } else if ( (config.masHelCouple > 0) && (position.r <= (config.masHelRadialMax * RSAU)) ) {
-
+  // If we're coupling to the MAS heliosphere and we're inside the heliospheric domain ...
+  if ( (config.masHelCouple > 0) && (position.r <= (config.masHelRadialMax * RSAU)) && (position.r >= config.masHelRadialMin * RSAU) ) {
+    // ... interpolate heliospheric MAS data.
     masHelTriLinear(position, masHelBp_0, masHelBt_0, masHelBr_0,
                               masHelVp_0, masHelVt_0, masHelVr_0,
                               masHelD_0,
                               masHelBp_1, masHelBt_1, masHelBr_1,
                               masHelVp_1, masHelVt_1, masHelVr_1,
                               masHelD_1,  s_hel);
-
+  // Else, if we're inside the coronal domain ...
+  } else if ( (position.r <= (config.masRadialMax * RSAU)) ) {
+    // ... interpolate coronal MAS data.
+    masTriLinear(position,  masBp_0, masBt_0, masBr_0,
+                            masVp_0, masVt_0, masVr_0,
+                            masD_0,
+                            masBp_1, masBt_1, masBr_1,
+                            masVp_1, masVt_1, masVr_1,
+                            masD_1,  s_cor);
+  // Otherwise, ...
   } else {
-
+    // ... get MHD values from a Parker-wind model.
     masWind(node);
 
   }
@@ -572,7 +572,7 @@ Index_t unwindPhiOffset;
   r.r = position.r / RSAU;
   r.theta = position.theta;
 
-  // do the angular offset in phi
+  // rotate phi to interpolate in proper place for MAS in co-rotating frame
   r.phi = position.phi - phiOffset;
 
   if (r.phi < 0.0)
@@ -664,6 +664,11 @@ Index_t unwindPhiOffset;
                                                 r0_1, r1_1, t0_1, t1_1, p0_1, p1_1,
                                                 rd_1, td_1, pd_1,
                                                 masVprDimMax_1[0], masVptDimMax_1[0])) * MAS_V_CONVERT;
+  // add Omega*rsin(theta) to convert coronal Vphi to inertial frame as long as
+  // we're not in the fake co-rotating frame
+  if (config.masCorRotateFake == 0) {
+    masNode.mhdV.phi += config.omegaSun * position.r * sin(position.theta);
+  }
 
   //Vt
   rd_0 = masTriLinearBinarySearch(masVtrDim_0, r.r, &r0_0, &r1_0, masDimMin_0[0], masVtrDimMax_0[0]-1);
@@ -1077,120 +1082,13 @@ Index_t unwindPhiOffset;
 /*------------------------------------------------------------------*/
 {
 
-  Index_t face, row, col, shell, pObsIndex;
-
-  Scalar_t rmag, dtPhiOffset;
-
-  SphVec_t rSpherical, rOldSpherical;
+  Scalar_t dtPhiOffset;
 
   // Set the phi offset for this timestep
   dtPhiOffset = dt * config.omegaSun;
 
   // Set the phi offset for the MAS solution rotation
   phiOffset += dtPhiOffset;
-
-  for (face = 0; face < NUM_FACES; face++)
-  {
-    for (row = 0; row < FACE_ROWS; row++)
-    {
-      for (col = 0; col < FACE_COLS; col++)
-      {
-        for (shell = INNER_ACTIVE_SHELL; shell < LOCAL_NUM_SHELLS; shell++)
-        {
-
-          // rmag in units of solar radius
-          rmag = grid[idx_frcs(face,row,col,shell)].rmag * config.rScale / RSAU;
-
-          if ( (rmag >= config.masRadialMin) && (rmag <= config.masRadialMax) )
-          {
-
-            // Apply the phi offset
-            rSpherical = cartToSphPos(grid[idx_frcs(face,row,col,shell)].r);
-            rSpherical.phi += dtPhiOffset;
-
-            if (rSpherical.phi < 0.0)
-              while (rSpherical.phi < 0.0) rSpherical.phi += (2.0 * PI);
-
-            if ( rSpherical.phi > (2.0 * PI) )
-              while ( rSpherical.phi > (2.0 * PI) ) rSpherical.phi -= (2.0 * PI);
-
-            if ( (rSpherical.phi < 0.0) || (rSpherical.phi > 2.0 * PI) ) {
-              if (mpi_rank == 0) printf("WARNING: rSpherical.phi (%f) out of bounds\n", rSpherical.phi);
-            }
-
-            rOldSpherical = cartToSphPos(grid[idx_frcs(face,row,col,shell)].rOld);
-            rOldSpherical.phi += dtPhiOffset;
-
-            if (rOldSpherical.phi < 0.0)
-              while (rOldSpherical.phi < 0.0) rOldSpherical.phi += (2.0 * PI);
-
-            if ( rOldSpherical.phi > (2.0 * PI) )
-              while ( rOldSpherical.phi > (2.0 * PI) ) rOldSpherical.phi -= (2.0 * PI);
-
-            if ( (rOldSpherical.phi < 0.0) || (rOldSpherical.phi > 2.0 * PI) ) {
-              if (mpi_rank == 0) printf("WARNING: rOldSpherical.phi (%f) out of bounds\n", rOldSpherical.phi);
-            }
-
-            grid[idx_frcs(face,row,col,shell)].r = sphToCartPos(rSpherical);
-            grid[idx_frcs(face,row,col,shell)].rOld = sphToCartPos(rOldSpherical);
-
-          }
-        }
-
-      }
-
-    }
-
-  }
-
-  // check for point observers living inside the coupled domain
-  // RMC: this is probably broken for helio runs?
-  for (pObsIndex = 0; pObsIndex < config.numObservers; pObsIndex++)
-  {
-
-    rmag = config.obsR[pObsIndex] / RSAU;
-
-    // are we in the coupled domain?
-    // if so, adjust the position through the entire run
-    if ( (rmag > config.masRadialMin) && (rmag <= config.masRadialMax) )
-    {
-
-      config.obsPhi[pObsIndex] += dtPhiOffset;
-
-      if (config.obsPhi[pObsIndex] < 0.0)
-        while (config.obsPhi[pObsIndex] < 0.0) config.obsPhi[pObsIndex] += (2.0 * PI);
-
-      if ( config.obsPhi[pObsIndex] > (2.0 * PI) )
-        while ( config.obsPhi[pObsIndex] > (2.0 * PI) ) config.obsPhi[pObsIndex] -= (2.0 * PI);
-
-      if ( (config.obsPhi[pObsIndex] < 0.0) || (config.obsPhi[pObsIndex] > 2.0 * PI) ) {
-        if (mpi_rank == 0) printf("WARNING: config.obsPhi[pObsIndex] (%f) out of bounds\n", config.obsPhi[pObsIndex]);
-      }
-
-    }
-
-    // are we outside of the coupled domain?
-    // if so, adjust the position only during the equilibrium phase.
-    if ( (rmag > config.masRadialMax) && (simStarted == 0) )
-    {
-
-      config.obsPhi[pObsIndex] += dtPhiOffset;
-
-      if (config.obsPhi[pObsIndex] < 0.0)
-        while (config.obsPhi[pObsIndex] < 0.0) config.obsPhi[pObsIndex] += (2.0 * PI);
-
-      if ( config.obsPhi[pObsIndex] > (2.0 * PI) )
-        while ( config.obsPhi[pObsIndex] > (2.0 * PI) ) config.obsPhi[pObsIndex] -= (2.0 * PI);
-
-      if ( (config.obsPhi[pObsIndex] < 0.0) || (config.obsPhi[pObsIndex] > 2.0 * PI) ) {
-        if (mpi_rank == 0) printf("WARNING: config.obsPhi[pObsIndex] (%f) out of bounds\n", config.obsPhi[pObsIndex]);
-      }
-
-    }
-
-
-  }
-
 
 }
 /*------------------------------------------------------------------*/
@@ -1206,7 +1104,7 @@ Index_t unwindPhiOffset;
 /*------------------------------------------------------------------*/
 {
 
-  Index_t face, row, col, shell, pObsIndex;
+  Index_t face, row, col, shell;
   SphVec_t rSpherical, rOldSpherical;
 
   for (face = 0; face < NUM_FACES; face++) {
@@ -1247,23 +1145,6 @@ Index_t unwindPhiOffset;
         }
       }
     }
-  }
-
-  // adjust the point observers
-  for (pObsIndex = 0; pObsIndex < config.numObservers; pObsIndex++)
-  {
-
-      config.obsPhi[pObsIndex] -= phiOffset;
-
-      if (config.obsPhi[pObsIndex] < 0.0)
-        config.obsPhi[pObsIndex] += (2.0 * PI);
-
-      if (config.obsPhi[pObsIndex] < 0.0)
-        while (config.obsPhi[pObsIndex] < 0.0) config.obsPhi[pObsIndex] += (2.0 * PI);
-
-      if (config.obsPhi[pObsIndex] > (2.0 * PI) )
-        while (config.obsPhi[pObsIndex] > (2.0 * PI) ) config.obsPhi[pObsIndex] -= (2.0 * PI);
-
   }
 
   // reset the offset to zero
