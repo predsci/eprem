@@ -666,7 +666,7 @@ Index_t unwindPhiOffset;
                                                 masVprDimMax_1[0], masVptDimMax_1[0])) * MAS_V_CONVERT;
   // add Omega*rsin(theta) to convert coronal Vphi to inertial frame as long as
   // we're not in the fake co-rotating frame
-  if (config.masCorRotateFake == 0) {
+  if ((config.masCorRotateFake == 0) && (gridStructInitialized > 0)) {
     masNode.mhdV.phi += config.omegaSun * position.r * sin(position.theta);
   }
 
@@ -1040,6 +1040,8 @@ Index_t unwindPhiOffset;
 
   // if we're co-rotating the inner solution then tack on the necessary phi component once outside.
   // If performing a heliospheric coupled run, this is not needed.
+  // [RMC] Is this only needed for 'fake' corotation?
+  // It seems we should NOT do this for true corotation...
   if ((config.masCorRotateFake > 0) && (config.masRotateSolution > 0) && (config.masHelCouple == 0))
   {
     theta = acos(node.r.z / rmag);

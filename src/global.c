@@ -41,6 +41,7 @@ Scalar_t s_cor;
 Scalar_t s_hel;
 
 Index_t simStarted;
+Index_t gridStructInitialized;
 
 Index_t FACE_ROWS, FACE_COLS, LOCAL_NUM_SHELLS, innerComputeShell;
 Index_t NUM_SPECIES, NUM_ESTEPS, NUM_MUSTEPS;
