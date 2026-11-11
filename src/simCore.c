@@ -158,14 +158,14 @@ Index_t sync_hel=0;
     config.epremDomainOutputTime = config.masStartTime + 0.5 * masDt * DAY;
 
     masStopTime = config.masStartTime + masRunDuration;
-    if ((config.simStopTime == 0.0) || (config.simStopTime > masStopTime)) {
+    if (config.simStopTime == 0.0){
+      config.simStopTime = masStopTime;
+    } else {
       if (config.simStopTime > masStopTime) {
         if (mpi_rank == 0) {
-          printf("NOTE: Input value of simStopTime (%14.8e) > masStopTime (%14.8e).\n", config.simStopTime, masStopTime);
-          printf("NOTE: Setting simStopTime == masStopTime.\n");
+          printf("WARNING: Input value of simStopTime (%14.8e) > masStopTime (%14.8e).\n", config.simStopTime, masStopTime);
         }
-      }
-      config.simStopTime = masStopTime;
+      } 
     }
 
   } else {
