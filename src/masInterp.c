@@ -666,7 +666,7 @@ Index_t unwindPhiOffset;
                                                 masVprDimMax_1[0], masVptDimMax_1[0])) * MAS_V_CONVERT;
   // add Omega*rsin(theta) to convert coronal Vphi to inertial frame as long as
   // we're not in the fake co-rotating frame
-  if (config.masCorRotateFake == 0) {
+  if ((config.masCorRotateFake == 0) && (gridStructInitialized > 0)) {
     masNode.mhdV.phi += config.omegaSun * position.r * sin(position.theta);
   }
 

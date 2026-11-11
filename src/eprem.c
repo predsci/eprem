@@ -57,6 +57,12 @@
  --
  -- NOTE TO DEVS: BE SURE TO UPDATE VERSION NUMBER IN GLOBAL.H!
  --
+ -- ## Version 2.4.1, 11/10/2026
+ -- ### modified by MY
+ --       - Add gridStructInitialized parameter with initial value 0.
+ --       - Set gridStructInitialized to 1 after gridStructInit finishes.
+ --       - Only apply Vphi correction in masTriLinear when 
+ --         gridStructInitialized == 1 (all other conditions stay the same).
  -- ## Version 2.4.0, 10/28/2026
  -- ### modified by RC+MY
  --       - Changed if..else logic in masGetNode that selects between
@@ -444,6 +450,7 @@ int main(int argc, char *argv[]) {
   timer_tmp = 0;
   rciter = 0;
   simStarted = 0;
+  gridStructInitialized = 0;
 
   // Record the starting MPI time and real time.
   if (mpi_rank == 0) time ( &start_time );
@@ -490,6 +497,7 @@ int main(int argc, char *argv[]) {
   // Initialize the cube / shell structure
   // and set node positions through backward integration.
   gridStructInit();
+  gridStructInitialized = 1;
 
   // Create the names for the output files
   buildOutputNames();

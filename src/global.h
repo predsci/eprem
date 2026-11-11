@@ -16,7 +16,7 @@
 #include "baseTypes.h"
 #include "cubeShellStruct.h"
 
-#define VERSION "2.4.0"
+#define VERSION "2.4.1"
 
 // All permutations defined
 extern Index_t RC;
@@ -103,6 +103,7 @@ extern Scalar_t s_cor;
 extern Scalar_t s_hel;
 
 extern Index_t simStarted;
+extern Index_t gridStructInitialized;
 
 extern Index_t FACE_ROWS;
 extern Index_t FACE_COLS;
