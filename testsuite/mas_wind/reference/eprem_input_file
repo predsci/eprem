@@ -23,7 +23,8 @@ numMuSteps=4
 # 0 Don't use
 # 1 One node cross + const time step
 # 2 All nodes cross + const time step
-masInitFromOuterBoundary=2
+masInitFromOuterBoundary=0
+masInitRadius=230.0
 
 #Time step for the backward propogation of nodes [JD]
 masInitTimeStep=0.0001
@@ -36,6 +37,9 @@ masCouple=1
 
 # Directory of MAS run.
 masDirectory="../input/data/"
+
+# Indicate if MAS is in corotating frame or not.
+masCorRotateFake=1
 
 # Simulation times.
 # =================
@@ -151,9 +155,6 @@ charge=[1.0]
 
 # Floor distribution if it drops below background.
 checkSeedPopulation=1
-
-# Flag to use the flux limiter in the adiabatic change function or not
-fluxLimiter=1
 
 # Off-limits parameters.
 # ======================
