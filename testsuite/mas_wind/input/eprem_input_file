@@ -24,7 +24,6 @@ numMuSteps=4
 # 1 One node cross + const time step
 # 2 All nodes cross + const time step
 masInitFromOuterBoundary=0
-masInitRadius=230.0
 
 #Time step for the backward propogation of nodes [JD]
 masInitTimeStep=0.0001
