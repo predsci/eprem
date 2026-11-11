@@ -67,7 +67,7 @@ getParams( char* configFilename)
   config.mhdBAu = readDouble("mhdBAu", 1.60e-5, VERYSMALL, BADVALUE);
   config.simStartTime = readDouble("simStartTime", 0.0, 0.0, BADVALUE);
   config.tDel = readDouble("tDel", 0.01041666666667, VERYSMALL, BADVALUE);
-  config.simStopTime = readDouble("simStopTime", config.simStartTime + config.tDel, config.simStartTime, BADVALUE);
+  config.simStopTime = readDouble("simStopTime", 0.0, config.simStartTime, BADVALUE);
   config.numEpSteps = readInt("numEpSteps", 30, 1, BADINT);
   config.aziSunStart = readDouble("aziSunStart", 0.0, 0.0, BADVALUE);
   // This omega makes EPREM and MAS omega values equal to double precision.
