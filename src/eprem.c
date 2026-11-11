@@ -57,9 +57,9 @@
  --
  -- NOTE TO DEVS: BE SURE TO UPDATE VERSION NUMBER IN GLOBAL.H!
  --
- -- ## Version 2.4.2, 11/11/2026
+ -- ## Version 2.5.0, 11/11/2026
  -- ### modified by MY
- --       - Allow user to request a custom simStopTime less than MAS stop time.
+ --       - Allow user to request a custom simStopTime for MAS coupled runs.
  -- ## Version 2.4.1, 11/10/2026
  -- ### modified by MY
  --       - Add gridStructInitialized parameter with initial value 0.
